@@ -1,0 +1,9 @@
+.production-world-wide-chart {
+    width: 90%;
+}
+
+.chart-dark-bg {
+    font-family: 'Poppins-Bold', sans-serif;
+    fill: white; 
+    font-weight: bold;
+}

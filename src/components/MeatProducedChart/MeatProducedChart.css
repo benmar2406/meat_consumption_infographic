@@ -1,0 +1,80 @@
+/* Layout for the entire production section */
+.meat-production-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10vh;
+}
+
+/* Sticky counter positioned beside the meat graphics */
+.counter {
+  position: sticky;
+  left: 10vw;
+  top: 20vh;
+  width: 25%;
+  text-align: center;
+  font-family: 'Poppins-Bold', sans-serif;
+  border: solid #a2d3e2 5px;
+  background-color: transparent;
+}
+
+.counter h2 {
+  font-size: 3rem;
+  color: #ff3e2c;
+  margin: 0;
+  border: solid #a2d3e2 5px;
+  background-color: transparent;
+  border-radius: 20px;
+  width: 50%;
+  margin: auto;
+  padding-top: 0.7rem;
+}
+
+.counter p {
+  font-size: 1.2rem;
+  color:  #e3e3e3;
+}
+
+/* Wrapper for the meat grid */
+.meat-production-wrapper {
+  width: 50%;
+  margin-left: 20px;
+}
+
+/* Each step wrapper (a full-width container for each step) */
+.meat-step {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Container for 20 meat icons */
+.meat-grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+  opacity: 0;  /* Initially hidden */
+  transition: opacity 0.5s ease-in-out;  /* Transition for fading in */
+}
+
+/* Make sure each container fades in when its step becomes active */
+.scrollama-step-active .meat-grid-container {
+  opacity: 1;  /* Make visible when the step is active */
+}
+
+/* Individual grid item styling */
+.meat-grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+}
+
+.meat-icon {
+  width: 100%;
+  height: auto;
+
+}

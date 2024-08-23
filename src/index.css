@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  src: url(assets/fonts/Poppins-SemiBold.ttf) format('truetype');
+  font-weight: 600; /* SemiBold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url(assets/fonts/Poppins-Medium.ttf) format('truetype');
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url(assets/fonts/Poppins-Bold.ttf) format('truetype');
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSerif-Bold';
+  src: url(assets/fonts/PTSerif-Bold.ttf) format('truetype');
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSerif-Regular';
+  src: url(assets/fonts/PTSerif-Regular.ttf) format('truetype');
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+
+:root {
+  font-family: 'PTSerif-Regular', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #352f36;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #ff3e2c;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #ff3e2c;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #352f36;
+}
+
+h1 {
+  font-family: 'Poppins-Bold', sans-serif;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-family: 'Poppins-SemiBold', sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  color: #ff3e2c;
+}
+
+h3 {
+  font-family: 'Poppins-SemiBold', sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #ff3e2c;
+}
+
+p {
+  font-size: 1.3rem;
+  color:#352f36;
+}
+
+hr {
+  border: #ff3e2c solid 1px;
+}
+
+article {
+  background-color: #e3e3e3;
+  text-align: left;
+  padding: 20px;
+  height: fit-content;
+  border-radius: 10px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ff3e2c;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.highlight {
+  font-family: 'Poppins-Bold', sans-serif;
+  font-weight: 1000;
+}

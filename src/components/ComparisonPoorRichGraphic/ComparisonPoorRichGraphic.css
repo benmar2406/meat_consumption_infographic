@@ -1,0 +1,121 @@
+.scroll-container {
+  position: relative;
+  height: auto; 
+  min-height: 100vh; 
+  background: 
+  linear-gradient(to top, rgba(53, 47, 54, 0) 70%, rgba(53, 47, 54, 1) 100%),
+  linear-gradient(to bottom, rgba(53, 47, 54, 0) 70%, rgba(53, 47, 54, 1) 100%), 
+  url("../../assets/img/supermarket.jpg") no-repeat center top;
+background-size: cover;
+  
+}
+
+.sticky-container {
+  height: fit-content; /* Match viewport height for sticky container */
+  position: sticky;
+  top: 0; /* Stick to the top of the viewport */
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  margin: 0 20vw;
+  width: 60vw;
+   background: 
+    linear-gradient(to top, rgba(227, 227, 227, 0.9) 70%, rgba(53, 47, 54, 0.9) 100%),
+    linear-gradient(to bottom, rgba(53, 47, 54, 0) 70%, rgba(53, 47, 54, 1) 100%);
+}
+
+.background-overlay {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: rgba(53, 47, 54, 0.); 
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-container {
+  display: block;
+  width: 100%; 
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.meat-icon-grid {
+  display: grid;
+  width: 25%;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 10px; 
+  justify-content: center; 
+  align-content: center; 
+  margin: auto; 
+  justify-content: center;
+  align-items: center;
+}
+
+.info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  max-height: 100px;
+  width: auto;
+}
+
+.info-text {
+  font-family: 'Poppins-Bold', sans-serif;
+  padding: 8px;
+  width: 70%;
+  background-color: #352f36;
+  margin: auto;
+}
+
+.info-text-poor {
+  color: #a8d5ba;
+  border: solid #a8d5ba 3px;  
+}
+
+.info-text-rich {
+  color: #a2d3e2;
+  border: solid #a2d3e2  3px; 
+}
+
+.info-box {
+  margin:auto;
+  width: 90%;
+  text-align: center;
+  padding: 8px;
+}
+
+.box-tonnes-produced-rich {
+  
+  color: #a2d3e2;
+  font-family: 'Poppins-Bold', sans-serif;
+}
+
+.info-container {
+  background-color: #352f36;
+  text-align: center;
+  width: 70%; 
+  margin: auto;
+  border: solid #e3e3e3 6px;
+}
+
+.info-container-headline {
+  color:#ff3e2c;
+  font-size: 5rem;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.info-container-sub-headline {
+  margin-top: 0;  
+  color: #e3e3e3;
+  font-size: 1.8rem;
+}
+
+
+
