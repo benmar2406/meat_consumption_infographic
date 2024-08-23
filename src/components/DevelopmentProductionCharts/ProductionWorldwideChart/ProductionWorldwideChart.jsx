@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
-import './ProductionWorldWideChart.css';
+import './ProductionWorldwideChart.css';
 import meatProductionData from '../../../data/production_global.json';
 
 export default function ProductionWorldWideChart() {
