@@ -1,27 +1,18 @@
 .scroll-container {
   position: relative;
   height: auto; 
-  min-height: 100vh; 
-  background: 
-  linear-gradient(to top, rgba(53, 47, 54, 0) 70%, rgba(53, 47, 54, 1) 100%),
-  linear-gradient(to bottom, rgba(53, 47, 54, 0) 70%, rgba(53, 47, 54, 1) 100%), 
-  url("../../assets/img/supermarket.jpg") no-repeat center top;
-background-size: cover;
-  
+  min-height: 100vh;   
 }
 
 .sticky-container {
-  height: fit-content; /* Match viewport height for sticky container */
+  height: fit-content; 
   position: sticky;
-  top: 0; /* Stick to the top of the viewport */
+  top: 0; 
   display: flex;
   justify-content: center;
   padding: 40px;
   margin: 0 20vw;
   width: 60vw;
-   background: 
-    linear-gradient(to top, rgba(227, 227, 227, 0.9) 70%, rgba(53, 47, 54, 0.9) 100%),
-    linear-gradient(to bottom, rgba(53, 47, 54, 0) 70%, rgba(53, 47, 54, 1) 100%);
 }
 
 .background-overlay {
@@ -48,6 +39,7 @@ background-size: cover;
   justify-content: center; 
   align-content: center; 
   margin: auto; 
+  margin-bottom: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -99,22 +91,22 @@ background-size: cover;
 .info-container {
   background-color: #352f36;
   text-align: center;
-  width: 70%; 
+  width: 50%; 
   margin: auto;
-  border: solid #e3e3e3 6px;
+  border: solid #e3e3e3 3px;
+  padding: 8px;
 }
 
 .info-container-headline {
-  color:#ff3e2c;
-  font-size: 5rem;
+  font-size: 4rem;
   margin: 10px;
   margin-top: 20px;
+  box-sizing: border-box;
 }
 
 .info-container-sub-headline {
   margin-top: 0;  
   color: #e3e3e3;
-  font-size: 1.8rem;
 }
 
 

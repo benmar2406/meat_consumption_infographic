@@ -30,11 +30,11 @@ const IndustrializedConsumptionChart = () => {
         animate={{ opacity: isLastIconRendered ? 1 : 0 }}
         transition={{ duration: 1, ease: 'easeInOut' }}
       >
-        <KgConsumed kgConsumed={kgConsumed} />
+        <KgConsumed kgConsumed={kgConsumed} color="#a2d3e2"/>
       </motion.div>
     </>
   );
-};  
+};    
 
 const MeatIconWrapper = ({ index, onLastIconRendered }) => {
   const controls = useAnimation();

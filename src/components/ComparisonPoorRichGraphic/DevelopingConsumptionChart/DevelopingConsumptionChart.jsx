@@ -31,7 +31,7 @@ const DevelopingConsumptionChart = () => {
         transition={{ duration: 1, ease: 'easeInOut' }}
         
       >
-        <KgConsumed kgConsumed={kgConsumed} />
+        <KgConsumed kgConsumed={kgConsumed} color="#a8d5ba"/>
       </motion.div>
     </>
   );

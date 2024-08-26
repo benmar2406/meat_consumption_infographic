@@ -6,7 +6,6 @@ import IndustrializedConsumptionChart from './IndustrializedConsumptionChart/Ind
 const ComparisonPoorRichGraphic = () => {
   return (
     <div className="scroll-container">
-      <div className='background-overlay'>
       <div className="sticky-container">
         <div className="chart-container">
           <DevelopingConsumptionChart />
@@ -16,7 +15,6 @@ const ComparisonPoorRichGraphic = () => {
         </div>
       </div>
       </div>
-    </div>
   );
 };
 
