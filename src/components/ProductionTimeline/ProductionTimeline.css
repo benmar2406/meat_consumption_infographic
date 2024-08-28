@@ -5,8 +5,8 @@
     padding: 10px 20px;
     border: solid 3px #e3e3e3;
     font-family: 'Poppins-Bold';
-
 }
+
 .yearBlock {
     display: flex;
     flex-direction: column;
@@ -14,10 +14,9 @@
     height: fit-content;
   }
 
-  
   .yearLabel {
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin: 10px 0;
     font-weight: bold;
     padding: 8px;
     border-radius: 100px;

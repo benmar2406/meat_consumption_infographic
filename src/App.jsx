@@ -1,19 +1,21 @@
 import './App.css';
 import DevelopmentProductionCharts from './components/DevelopmentProductionCharts/DevelopmentProductionCharts';
 import ComparisonPoorRichGraphic from './components/ComparisonPoorRichGraphic/ComparisonPoorRichGraphic';
-import MeatProducedChart from './components/MeatProducedChart/MeatProducedChart'
+import MeatProducedGraphic from './components/MeatProducedGraphic/MeatProducedGraphic'
 import ProductionTimeline from './components/ProductionTimeline/ProductionTimeline'
 import data from './data/production_global.json';
+import Impact from './components/Impact/Impact';
 
 
 function App() {
 
   return (
     <>
-      <MeatProducedChart />
+      <MeatProducedGraphic />
       <ProductionTimeline data={data}/>
       <DevelopmentProductionCharts />
       <ComparisonPoorRichGraphic />
+      <Impact />
       
     </>
   )

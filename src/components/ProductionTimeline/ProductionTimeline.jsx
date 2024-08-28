@@ -1,14 +1,12 @@
 import React from 'react';
 import YearBlock from './YearBlock/YearBlock';
 
-// Function to group data by decades, excluding the 2020s
 const groupDataByDecade = (data) => {
   const groupedData = {};
 
   data.forEach((item) => {
     const decade = Math.floor(item.Year / 10) * 10;
 
-    // Exclude the 2020s data
     if (decade >= 2020) {
       return;
     }

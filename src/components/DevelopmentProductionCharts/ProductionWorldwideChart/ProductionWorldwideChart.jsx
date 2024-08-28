@@ -18,15 +18,14 @@ export default function ProductionWorldWideChart() {
       .attr("preserveAspectRatio", "xMinYMin meet");
 
     function redraw() {
-      // Get the dimensions of the parent element
       const width = parentDiv.clientWidth;
       const height = parentDiv.clientHeight;
 
       const margin = { top: 20, right: 30, bottom: 30, left: 40 };
-      const innerWidth = 800 - margin.left - margin.right;  // Based on viewBox
-      const innerHeight = 400 - margin.top - margin.bottom;  // Based on viewBox
+      const innerWidth = 800 - margin.left - margin.right;  
+      const innerHeight = 400 - margin.top - margin.bottom;  
 
-      svg.selectAll("*").remove(); // Clear previous content
+      svg.selectAll("*").remove(); 
 
       const x = d3.scaleLinear()
         .domain(d3.extent(meatProductionData, d => d.Year))
@@ -60,13 +59,11 @@ export default function ProductionWorldWideChart() {
 
       svg.append("g")
         .attr("transform", `translate(${margin.left},0)`)
-        .call(d3.axisLeft(y).tickFormat(d3.format(".2s")));  // Adjusted formatting
+        .call(d3.axisLeft(y).tickFormat(d3.format(".2s")));  
     }
 
-    // Initial draw
     redraw();
 
-    // Redraw on window resize
     window.addEventListener('resize', redraw);
 
     return () => {
