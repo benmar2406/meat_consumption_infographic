@@ -1,5 +1,5 @@
 import React from 'react';
-import '../ProductionTimeLine.css'; 
+import '../ProductionTimeline.css'; 
 
 const YearBlock = ({ year, production }) => {
   const circleCount = Math.floor(production / 10000000);
