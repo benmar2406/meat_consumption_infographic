@@ -3,8 +3,9 @@
     height: 100vh;
   }
   
-  .impact-headline {
+  .environmental-impact-headline {
     margin: 20px;
+    padding-top: 30px;
     color: #352f36;
   }
   
@@ -18,19 +19,21 @@
   }
   
   .impact-card {
-    perspective: 1000px;
+    perspective: 600px;
     cursor: pointer;
     flex: 1 1 33%;
     position: relative;
-    height: 30vh; 
+    height: 40vh; 
     margin: 10px;
-    overflow: hidden; /* Ensure content doesn't overflow */
+    overflow: hidden; 
+    border-radius: 10px;
   }
+
   
   .card-inner {
     position: relative;
     text-align: center;
-    transition: transform 0.9s;
+    transition: transform 1.3s;
     transform-style: preserve-3d;
     width: 100%;
     height: 100%;
@@ -53,25 +56,55 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10px; /* Add padding to avoid content touching edges */
+    padding: 0 10px; 
     box-sizing: border-box;
   }
   
   .front-impact-card {
+    display: flex;
     z-index: 2;
     transform: rotateY(0deg);
+    transition: transform 0.5s ease-in-out; 
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .front-impact-card:hover, .front-impact-card:focus {
+    transform: scale(1.1); 
+
+  }
+
+  .environmental-card-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.5s ease-in-out; 
+  }
+
+  .environmental-card-overlay:hover {
+    background-color: rgba(53, 47, 54, 0.7); ;
+  }
+  
+  
+  .environmental-impact-card-headline {
+    font-size: 3rem;
+    color: #a8d5ba;
+    text-align: center; 
+    transition: transform 0.5s ease-in-out; 
+  }
+  
+  .front-impact-card:hover .environmental-impact-card-headline,
+  .front-impact-card:focus .environmental-impact-card-headline {
+    transform: scale(1); /* Zoom in on the text */
   }
   
   .back-impact-card {
     transform: rotateY(180deg);
     z-index: 1;
     background-color: #352f36;
-  }
-  
-  .environmental-impact-card-headline {
-    font-size: 3rem;
-    color: #a8d5ba;
-    text-align: center; /* Ensure text is centered */
   }
   
   .back-impact-card h3, .back-impact-card p {

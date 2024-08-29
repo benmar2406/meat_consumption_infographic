@@ -10,7 +10,7 @@ const Impact = () => {
   return (
     <>  
       <section className="impact">
-        <h2 className="environmental-impact-headline">Environmental impacts</h2>
+        <h2 className="environmental-impact-headline">The Environmental Impacts</h2>
         <div className="impact-cards-grid">
           <ImpactCard topic="Soil degradation" backgroundImage={soil} />
           <ImpactCard topic="Water pollution" backgroundImage={water} />

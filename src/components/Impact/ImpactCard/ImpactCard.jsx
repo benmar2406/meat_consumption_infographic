@@ -13,7 +13,9 @@ const ImpactCard = ({ backgroundImage, topic }) => {
       <div className={`impact-card ${isFlipped ? 'flipped' : ''}`} onClick={handleClick}>
         <div className="card-inner">
           <article className="front-impact-card" style={{ backgroundImage: `url(${backgroundImage})` }}>
-          <h3 className="impact-card-headline">{topic}</h3>
+            <div className='environmental-card-overlay'>
+                <h3 className="environmental-impact-card-headline">{topic}</h3>
+            </div>
           </article>
           
           <article className="back-impact-card">
