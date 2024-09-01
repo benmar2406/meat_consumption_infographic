@@ -4,6 +4,7 @@ import MeatGridContainer from './MeatGridContainer/MeatGridContainer';
 import Counter from './Counter/Counter';
 import './MeatProducedGraphic.css';
 
+
 const MeatProducedGraphic = () => {
   const [visibleSteps, setVisibleSteps] = useState(0);
   const itemsPerContainer = 20; 

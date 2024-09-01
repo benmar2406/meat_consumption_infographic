@@ -4,18 +4,19 @@ import ComparisonPoorRichGraphic from './components/ComparisonPoorRichGraphic/Co
 import MeatProducedGraphic from './components/MeatProducedGraphic/MeatProducedGraphic'
 import ProductionTimeline from './components/ProductionTimeline/ProductionTimeline'
 import data from './data/production_global.json';
-import Impact from './components/Impact/Impact';
-
+import EnvironmentalImpact from './components/EnvironmentalImpact/EnvironmentalImpact';
+import LandAllocation from './components/EnvironmentalImpact/LandAllocation/LandAllocation'
 
 function App() {
 
   return (
     <>
+      <LandAllocation />
       <MeatProducedGraphic />
       <ProductionTimeline data={data}/>
       <DevelopmentProductionCharts />
       <ComparisonPoorRichGraphic />
-      <Impact />
+      <EnvironmentalImpact />
       
     </>
   )

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import HumanIndustrializedCountries from './HumanIndustrializedCountries/HumanIndustrializedCountries';
 import MeatIconContainer from '../MeatIconContainer/MeatIconContainer';
@@ -6,11 +6,13 @@ import KgConsumed from '../KgConsumed/KgConsumed';
 
 const kgConsumed = 76;
 
-const IndustrializedConsumptionChart = () => {
+const IndustrializedConsumptionChart = (isInView) => {
   const [isLastIconRendered, setIsLastIconRendered] = useState(false);
 
   return (
-    <>
+    <div style={{transform: isInView ? "none" : "translateX(-200px)",
+      opacity: isInView ? 1 : 0,
+      transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"}}>
       <HumanIndustrializedCountries />
       <div className="meat-icon-grid">
         {Array.from({ length: kgConsumed }).map((_, index) => (
@@ -32,7 +34,7 @@ const IndustrializedConsumptionChart = () => {
       >
         <KgConsumed kgConsumed={kgConsumed} color="#a2d3e2"/>
       </motion.div>
-    </>
+    </div>
   );
 };    
 
@@ -41,7 +43,7 @@ const MeatIconWrapper = ({ index, onLastIconRendered }) => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { triggerOnce: true });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isInView) {
       controls.start({
         opacity: 1,
