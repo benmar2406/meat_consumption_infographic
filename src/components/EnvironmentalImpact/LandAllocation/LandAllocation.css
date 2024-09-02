@@ -2,35 +2,45 @@
     position: relative;   
     height: 600vh; 
     overflow-y: auto; 
-    padding-top: 50px; 
+    padding-top: 0; 
     overflow: visible; 
+    margin-top: 0;
 }
 
 .landuse-chart-container {
     position: sticky;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: center;
-    align-items:center;
     margin-bottom: 10vh;
+    margin-top: 10vh;
+}
+
+.landuse-headline {
+    display: block;
+    width: 100%;
+    padding: 6vh 0;
+    margin: 3vh 5vw;
 }
 
 .landuse-chart {
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     background-color: #a8d5ba;
     border-radius: 20px;
-}
-
-.landuse-chart::before {
-    background-color: #a8d5ba;
+    background-image: 
+        linear-gradient(rgba(168, 213, 186, 0.5), rgba(168, 213, 186, 0.5)),
+        url("../../../assets/img/farming.jpg");
+        
+    background-size: cover; 
+    background-position: bottom 10px; 
+    background-repeat: no-repeat; 
+    transform: scaleX(-1);
 }
 
 .landuse-chart-meat {
-    width: 75%;
+    width: 70%;
     height: 100%;
     border-radius: 20px;    
 }
@@ -38,10 +48,26 @@
 .landuse-chart-fill {
     height: 100%;
     width: 0%; 
-    background-color: #ff3e2c; 
+    background-color: rgba(255, 62, 44, 0.8); 
     transition: width 0.1s ease-out; 
     border-radius: 20px;
+    display: flex; 
+    justify-content:flex-end; 
+    align-items: center; 
+    position: relative; 
 }
+
+.landuse-chart-fill-text {
+    color: white; /* Text color */
+    font-size: 1.5rem; /* Adjust the font size as needed */
+    position: absolute; /* Ensure the text is positioned correctly */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    white-space: nowrap; /* Prevent text wrapping */
+    pointer-events: none; /* Ensure the text doesn't interfere with user interactions */
+}
+
 
 .landuse-text {
     color: white;
