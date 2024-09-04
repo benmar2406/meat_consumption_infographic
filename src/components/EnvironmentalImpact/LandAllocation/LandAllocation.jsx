@@ -18,7 +18,7 @@ const LandAllocation = () => {
 
   useEffect(() => {
     const unsubscribe = percentage.onChange((latestPercentage) => {
-      if (latestPercentage >= 70) { 
+      if (latestPercentage >= 40) { 
         setDisplayChartText(true);
       } else {
         setDisplayChartText(false);
