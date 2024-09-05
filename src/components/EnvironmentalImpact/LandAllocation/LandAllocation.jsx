@@ -52,7 +52,6 @@ const LandAllocation = () => {
             </motion.div>
           </div>
           <article className='landuse-text'>
-            {/* Additional text or content can be placed here */}
           </article>
         </div>
       </div>
