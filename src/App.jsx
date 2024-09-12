@@ -5,19 +5,22 @@ import MeatProducedGraphic from './components/MeatProducedGraphic/MeatProducedGr
 import ProductionTimeline from './components/ProductionTimeline/ProductionTimeline'
 import data from './data/production_global.json';
 import EnvironmentalImpact from './components/EnvironmentalImpact/EnvironmentalImpact';
-import LandAllocation from './components/EnvironmentalImpact/LandAllocation/LandAllocation'
+import Soil from './components/Soil/Soil'
+import WaterPollution from './components/WaterPollution/WaterPollution'
+import WaterRessources from './components/WaterRessources/WaterRessources'
 
 function App() {
 
   return (
     <>
-      <LandAllocation />
+      <WaterRessources />
       <MeatProducedGraphic />
       <ProductionTimeline data={data}/>
       <DevelopmentProductionCharts />
       <ComparisonPoorRichGraphic />
       <EnvironmentalImpact />
-      
+      <Soil />
+      <WaterPollution />
     </>
   )
 }

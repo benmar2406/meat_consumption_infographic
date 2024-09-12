@@ -1,0 +1,79 @@
+.landuse-scroll-container {
+    position: relative;   
+    height: 600vh; 
+    overflow-y: auto; 
+    padding-top: 0; 
+    overflow: visible; 
+    margin-top: 0;
+}
+
+.landuse-chart-container {
+    position: sticky;
+    margin: 0 auto;
+    height:fit-content;
+    width: 85%;
+    top: 0;
+    left: 0;
+    overflow: visible;
+}
+
+.landuse-headline {
+    padding: 4vh 0;
+    margin: 3vh 10px;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+.landuse-chart {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* The height of your container */
+    border-radius: 20px;
+    overflow: hidden; /* Ensure any overflow of the background is hidden */
+}
+
+.landuse-chart-meat {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.landuse-chart-fill {
+    height: 100%;
+    width: 0%; 
+    transition: width 0.1s ease-out; 
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    position: relative;
+}
+
+.text-second-chart {
+    color: white; 
+    font-size: 1.5rem; 
+    position: absolute; 
+    top: 50%;
+    left: 70%;
+    transform: translate(-90%, -50%);
+    white-space: nowrap; 
+    pointer-events: none; 
+}
+
+.landuse-chart-fill-text {
+    color: white; 
+    font-size: 1.5rem; 
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap; 
+    pointer-events: none; 
+}
+
+.landuse-text p article {
+    color: white;
+    background-color: black;
+}
+
+

@@ -45,7 +45,7 @@ export default function ProductionWorldWideChart() {
         .attr("y", margin.top)
         .attr("text-anchor", "middle")
         .attr("class", "chart-dark-bg")
-        .text("Werstern Europe: Meat Production Over Time (tonnes)");
+        .text("Western Europe: Meat Production Over Time (tonnes)");
 
       svg.append("path")
         .datum(meatProductionDataEurope)

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import HumanIndustrializedCountries from './HumanIndustrializedCountries/HumanIndustrializedCountries';
 import MeatIconContainer from '../MeatIconContainer/MeatIconContainer';
@@ -40,7 +40,7 @@ const IndustrializedConsumptionChart = (isInView) => {
 
 const MeatIconWrapper = ({ index, onLastIconRendered }) => {
   const controls = useAnimation();
-  const ref = React.useRef(null);
+  const ref = useRef(null);
   const isInView = useInView(ref, { triggerOnce: true });
 
   useEffect(() => {

@@ -19,10 +19,10 @@ const EnvironmentalImpact = () => {
   };
 
   const impactTopics = [
-    { topic: 'Soil degradation', image: soil },
-    { topic: 'Water pollution', image: water },
-    { topic: 'Air pollution', image: air },
-    { topic: 'Climate change', image: fire },
+    { topic: 'Soil', image: soil, details: '<ul><li>Overgrazing and Soil Erosion</li><li>Overfarming and the Impact of Monoculture Farming</li><p>Deforestation To Make Way for More Pastures</li></ul>' },
+    { topic: 'Water', image: water, details: 'test' },
+    { topic: 'Air', image: air, details: 'test' },
+    { topic: 'Climate', image: fire, details: 'test' },
   ];
 
   return (
@@ -42,6 +42,7 @@ const EnvironmentalImpact = () => {
             isFlipped={flippedCardIndex === index} 
             topic={impact.topic}
             backgroundImage={impact.image}
+            details={impact.details}
           />
         ))}
       </div>

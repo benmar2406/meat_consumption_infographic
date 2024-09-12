@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useScroll, useTransform, motion, useInView } from "framer-motion";
-import './LandAllocation.css';
+import './Soil.css';
 
 const LandAllocation = () => {
   
@@ -47,11 +47,12 @@ const LandAllocation = () => {
                   opacity: displayChartText ? 1 : 0,
                   transition: "opacity 0.5s ease-in-out"}}
               >
-                between 60% and 70% of farmland<br /> utilized for meat production.
+                In the European Union between 60% and 70% <br /> of farmland are utilized for meat production.
               </motion.span>
             </motion.div>
           </div>
           <article className='landuse-text'>
+            <p>Every agricultural usage has its impact on the land. But especially animal famirng is taking its toll on soil.</p>
           </article>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../EnvironmentalImpact.css';
 
-const ImpactCard = ({ backgroundImage, topic, onClick, isFlipped }) => {
+const ImpactCard = ({ backgroundImage, topic, onClick, isFlipped, details }) => {
   return (
     <div className={`impact-card ${isFlipped ? 'flipped' : ''}`} onClick={onClick}>
       <div className="card-inner">
@@ -11,8 +11,9 @@ const ImpactCard = ({ backgroundImage, topic, onClick, isFlipped }) => {
             </div>
         </article>
         <article className="back-impact-card">
-          <h3>Details</h3>
-          <p>More information about {topic}</p>
+          <p 
+            dangerouslySetInnerHTML={{ __html: details }}
+          ></p>
         </article>
       </div>
     </div>
