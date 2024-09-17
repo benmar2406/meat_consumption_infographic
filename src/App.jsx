@@ -8,16 +8,18 @@ import EnvironmentalImpact from './components/EnvironmentalImpact/EnvironmentalI
 import Soil from './components/Soil/Soil'
 import WaterPollution from './components/WaterPollution/WaterPollution'
 import WaterRessources from './components/WaterRessources/WaterRessources'
+import RessourcesIntro from './components/RessourcesIntro/RessourcesIntro';
 
 function App() {
 
   return (
     <>
-      <WaterRessources />
       <MeatProducedGraphic />
       <ProductionTimeline data={data}/>
       <DevelopmentProductionCharts />
       <ComparisonPoorRichGraphic />
+      <RessourcesIntro />
+      <WaterRessources />
       <EnvironmentalImpact />
       <Soil />
       <WaterPollution />
