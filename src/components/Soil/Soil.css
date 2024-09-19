@@ -71,9 +71,13 @@
     pointer-events: none; 
 }
 
-.landuse-text p article {
+.landuse-text  {
+    width: 70%;
+    background-color: transparent;
+}
+
+.landuse-text p {
     color: white;
-    background-color: black;
 }
 
 

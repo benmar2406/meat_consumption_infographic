@@ -12,6 +12,7 @@ const ComparisonPoorRichGraphic = () => {
   
   return (
     <>
+    <section className="comparison-rich-poor-countries">
       <div className="scroll-container" ref={ref}> 
         <div className="sticky-container">
           <div className="chart-container">
@@ -23,12 +24,14 @@ const ComparisonPoorRichGraphic = () => {
             <IndustrializedConsumptionChart />
           </div>
         </div>
-      </div>
-      <SectionButton 
+    </div>
+    <SectionButton 
         buttonText="What does it cost?"
         sectionLink="ressources-intro"
+        buttonColor="#ff3e2c"
         isInView={isInView}
         />
+      </section>
     </>
 
   );

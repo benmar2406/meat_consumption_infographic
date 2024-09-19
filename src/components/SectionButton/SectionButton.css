@@ -13,3 +13,8 @@
     display: block;
 
 }
+
+.button-container {
+    margin: auto;
+    width: 50%;
+}

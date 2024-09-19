@@ -1,7 +1,11 @@
+.comparison-rich-poor-countries {
+  margin-bottom: 20vh;
+}
+
 .scroll-container {
   position: relative;
   height: auto; 
-  min-height: 100vh;   
+  min-height: 100vh; 
 }
 
 .sticky-container {

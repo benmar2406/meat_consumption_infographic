@@ -1,8 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import { Element } from 'react-scroll';
 import { motion, useAnimation, useInView } from 'framer-motion'
-import MeatIcon from '../../assets/img/icons/meat_large.png'
 import './RessourcesIntro.css'
+import MeatIcon from '../../assets/img/icons/meat_large.png'
+import SectionButton from '../SectionButton/SectionButton';
+
 
 const RessourcesIntro = () => {
     
@@ -44,32 +46,38 @@ const RessourcesIntro = () => {
                         ref={ressourceInfoRef}
                     />
                 <motion.h1
+                    className="ressources-1kg-title"
                     initial={{ opacity: 0, x: 200 }}
                     animate={ controls }
-                >
-                    <h1 className="ressources-1kg-title">1kg</h1>
-                </motion.h1>
+                >1kg</motion.h1>
                 </div>
                 <motion.h2
+                    className="ressources-1kg-sub-title"
                     initial={{ opacity: 0, x: -200 }}
                     animate={ controls }
-                >
-                    <h2 className="ressources-1kg-sub-title">What does it cost?</h2>
-                </motion.h2>
+                >What does it cost?</motion.h2>
                 <motion.ul
                     initial={{ opacity: 0, y: 200 }}
                     animate={ listControls }
                 >
                     <ul className="ressources-list">
                         <li className="ressources-list-item">water</li>
-                        <li className="ressources-list-item">soy & wheat</li>
+                        <li className="ressources-list-item">food</li>
                         <li className="ressources-list-item">land</li>
-                        <li className="ressources-list-item">environment & climate</li>
+                        <li className="ressources-list-item">environment</li>
                     </ul>
                 </motion.ul>
             </div>
         </section>
+        <div>
+            <SectionButton 
+                buttonText="Water" 
+                sectionLink="water-ressources"
+                buttonColor="#a2d3e2" 
+            />
+        </div>
         </Element>
+
     )
 }
 

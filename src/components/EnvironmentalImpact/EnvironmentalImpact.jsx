@@ -20,9 +20,9 @@ const EnvironmentalImpact = () => {
 
   const impactTopics = [
     { topic: 'Soil', image: soil, details: '<ul><li>Overgrazing and Soil Erosion</li><li>Overfarming and the Impact of Monoculture Farming</li><p>Deforestation To Make Way for More Pastures</li></ul>' },
-    { topic: 'Water', image: water, details: 'test' },
-    { topic: 'Air', image: air, details: 'test' },
-    { topic: 'Climate', image: fire, details: 'test' },
+    { topic: 'Water', image: water, details: '<ul><li>Animal Waste in Water</li><li>Fertilizers and Pesticides</li><li>WWater Overuse</li>' },
+    { topic: 'Air', image: air, details: '<ul><li>Gas from Animals (Methane)</li><li>Manure Releases Chemicals (Ammonia)</li><li>Worse air quality to deforestation</li>' },
+    { topic: 'Climate', image: fire, details: 'Besides the other mentioned aspects: Energy Use for Meat Production: Producing meat requires a lot of energy for things like running farms, processing plants, and transporting meat. This energy often comes from burning fossil fuels, which releases carbon dioxide and other greenhouse gases that contribute to climate change.' },
   ];
 
   return (

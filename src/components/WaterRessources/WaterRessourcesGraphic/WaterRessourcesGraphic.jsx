@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useInView } from "framer-motion";
+import { useInView, motion } from "framer-motion";
 import '../WaterRessources.css'
 import WaterIconContainer from '../../WaterIconContainer/WaterIconContainer'
 
@@ -11,7 +11,7 @@ const WaterRessourcesGraphic = ( {displayAgrUsage, displayMeatUsage} ) => {
     const agriculturalNumberDrops = 245;
     const meatNumberDrops = 100;
 
-    const defaultDropFill = '#0078A0'; // Default color
+    const defaultDropFill = '#0078A0'; 
     const agriculturalDropFill = '#00ADEF'; 
     const meatDropFill = '#FF5733'; 
     const dropWidth = '5%';
@@ -25,34 +25,36 @@ const WaterRessourcesGraphic = ( {displayAgrUsage, displayMeatUsage} ) => {
 
     return(
         <>
-        <div 
-            className='water-ressources-icon-grid' 
-            ref={WaterGraphicRef}
-            style={{
-                transform: isInView ? "none" : "translateX(+200px)", 
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-              }}
-            >
-            {Array.from({ length: totalNumberDrops }, (_, index) => {
-                
-                let fillColor = defaultDropFill;
-                if (displayAgrUsage && index < agriculturalNumberDrops) {
-                    fillColor = agriculturalDropFill;
-                }
-                if (displayMeatUsage && index < meatNumberDrops) {
-                    fillColor = meatDropFill;
-                }
+        <motion.div>
+            <div 
+                className='water-ressources-icon-grid' 
+                ref={WaterGraphicRef}
+                style={{
+                    transform: isInView ? "none" : "translateX(+200px)", 
+                    opacity: isInView ? 1 : 0,
+                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                }}
+                >
+                {Array.from({ length: totalNumberDrops }, (_, index) => {
+                    
+                    let fillColor = defaultDropFill;
+                    if (displayAgrUsage && index < agriculturalNumberDrops) {
+                        fillColor = agriculturalDropFill;
+                    }
+                    if (displayMeatUsage && index < meatNumberDrops) {
+                        fillColor = meatDropFill;
+                    }
 
-                return(
-                <WaterIconContainer 
-                    key={index}
-                    {...waterDropProps}
-                    dropFill={fillColor}
-                />)
-            }
-        )}
-        </div>
+                    return(
+                    <WaterIconContainer 
+                        key={index}
+                        {...waterDropProps}
+                        dropFill={fillColor}
+                    />)
+                }
+            )}
+            </div>
+            </motion.div>
         </>
     )
 

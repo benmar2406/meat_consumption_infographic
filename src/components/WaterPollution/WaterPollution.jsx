@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 import './WaterPollution.css';
 
-function DevelopmentProductionCharts() {
+function WaterPollution() {
   const [data, setData] = useState(0);
-  const [textOpacity, setTextOpacity] = useState(0);
+  const [textOpacity, setTextOpacity] = useState(1);
 
   const steps = [10, 20, 30, 40];
 
@@ -45,11 +45,11 @@ function DevelopmentProductionCharts() {
                 const isVisible = value === data;
 
                 const stepText = value === 10 
-                  ? "<p>Since the 1960s, global meat production has been steadily increasing.</p><p>This growth is closely linked to the rise of mass meat production and the expansion of the fast food industry.</p>"
+                  ? "<p>Meat production is a major global contributor to water pollution. It discharges large amounts of pollutants into water systems each year. <p>These pollutants include manure, chemicals, and antibiotics from industrial farming practices. The pollution exacerbates water-quality degradation, threatening ecosystems and human health.</p>"
                   : value === 20 
-                  ? "<p>In Western Europe and many industrialized regions meat production and consumption are declining for the last few years.</p><aside><p>he short-term downturn in the 1990s and 2000s in the popularity of meat cravings was due to to increasing health, ethical and sustainable awareness, but also to the outbreak of BSE.</p><p>The subsequent increase can be related to marketing strategies and new (to-go) products/snacks, globalization effects and thus increased availability.</p>"
+                  ? "<pOne of the main sources of this water pollution comes from livestock waste, which contaminates nearby water bodies.</p><p>For example, runoff from industrial farms leads to nutrient pollution that can cause harmful algal blooms, which reduce oxygen levels in water and harm aquatic life.</p>"
                   : value === 30 
-                  ? "<p>But the decline in meat consumption in industrialized regions doesn't mean that rich countries have given up meat, nor that developing countries are now the primary consumers of it...</p>"
+                  ? "<p>The scale of pollution linked to meat production has severe implications for global water security, with efforts to reduce these impacts remaining insufficient.</p>"
                   : "";
 
                 return (
@@ -69,4 +69,4 @@ function DevelopmentProductionCharts() {
   );
 }
 
-export default DevelopmentProductionCharts;
+export default WaterPollution;

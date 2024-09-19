@@ -18,7 +18,7 @@ const Soil = () => {
       meatWidth: '70%',
       chartText: 'Between 60% and 70% of farmland<br /> are utilized for meat production.',
       chartText2: '',
-      article: "<p>Meat production is taking alot of space of available farming land.</p><p>This land isn't available for other agricultural usages which could produce more food with less ressources",
+      article: "<p>Meat production is taking alot of space of available farming land. This land isn't available for other agricultural usages which could produce more food with less ressources",
     },  
 
     { 

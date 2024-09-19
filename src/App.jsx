@@ -20,9 +20,8 @@ function App() {
       <ComparisonPoorRichGraphic />
       <RessourcesIntro />
       <WaterRessources />
-      <EnvironmentalImpact />
-      <Soil />
       <WaterPollution />
+      <Soil />
     </>
   )
 }

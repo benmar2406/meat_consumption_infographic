@@ -21,7 +21,8 @@
 
 .ressources-1kg-title {
     position: absolute;
-    left: 50%;
+    top: 30%;
+    left: 40%;
     transform: translate(-50%, -50%);
     font-size: 10rem;
 }

@@ -8,34 +8,34 @@
       url("../../assets/img/water.jpg") no-repeat center center;
     background-size: cover;
     background-attachment: fixed; 
-  }
+}
 
-  .water-impacts-headline {
-    position: sticky;
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 20px;
-    top: 20px;
-    left: 250px;
-    color: white;
-  }
+.water-impacts-headline {
+  position: sticky;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  top: 20px;
+  left: 250px;
+  color: white;
+  z-index: 0;
+}
 
-  .water-scroller {
-    width: 100%;
-    margin: auto;
+.water-scroller {
+  width: 100%;
+  margin: auto;
+}
+
+.water-step {
+  margin: 0 auto;
+  border: 0;
+  z-index: 30;
+  width: 40vw;
+  padding: 150px 10px;
+  margin: 100px auto;
 }
   
-  .water-step {
-    margin: 0 auto;
-    border: 0;
-    z-index: 10;
-    width: 40vw;
-    padding: 70px 10px;
-    margin: 100px auto;
-  }
-  
-  .water-step-text {
-    opacity: 0;
-    background-color: #e3e3e3;
-  }
+.water-step-text {
+  background-color: #e3e3e3;
+}
   
