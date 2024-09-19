@@ -17,8 +17,6 @@
         /*background-color: blueviolet;*/
     }
 
-    
-
     .water-ressources-article {
         color: black;
     }
@@ -34,10 +32,13 @@
     }
 
     .water-ressources-icon-grid {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        width: 100%;
         position: sticky;
         top: 3vh;
         left: 50px;
         height: 85vh;
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr)); /* Adjust 100px to the size of your icons */
+        gap: 15px;
+        row-gap: 5px;
     }

@@ -14,12 +14,12 @@ const WaterRessourcesGraphic = ( {displayAgrUsage, displayMeatUsage} ) => {
     const defaultDropFill = '#0078A0'; 
     const agriculturalDropFill = '#00ADEF'; 
     const meatDropFill = '#FF5733'; 
-    const dropWidth = '5%';
-    const dropHeight = '5%';
-    const mindropHeight = '20px';
-    const mindropWidth = '20px';
-    const maxdropHeight = '40px';
-    const maxdropWidth = '40px';
+    const dropWidth = '15%';
+    const dropHeight = '15%';
+    const mindropHeight = '25px';
+    const mindropWidth = '25px';
+    const maxdropHeight = '60px';
+    const maxdropWidth = '60px';
     const altText = '11.43 billion cubic meters of water'
     const waterDropProps = { dropWidth, dropHeight, mindropHeight, mindropWidth, maxdropHeight, maxdropWidth, altText, defaultDropFill, agriculturalDropFill, meatDropFill };
 
