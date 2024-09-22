@@ -4,7 +4,6 @@ import ComparisonPoorRichGraphic from './components/ComparisonPoorRichGraphic/Co
 import MeatProducedGraphic from './components/MeatProducedGraphic/MeatProducedGraphic'
 import ProductionTimeline from './components/ProductionTimeline/ProductionTimeline'
 import data from './data/production_global.json';
-import EnvironmentalImpact from './components/EnvironmentalImpact/EnvironmentalImpact';
 import Soil from './components/Soil/Soil'
 import WaterPollution from './components/WaterPollution/WaterPollution'
 import WaterRessources from './components/WaterRessources/WaterRessources'

@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import './WaterPollution.css';
 
 function WaterPollution() {
+
   const [data, setData] = useState(0);
-  const [textOpacity, setTextOpacity] = useState(1);
+  const [textOpacity, setTextOpacity] = useState(1);  
+  const scrollRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: scrollRef
+  });
+
+
+  console.log("scrollYProgress: " + scrollYProgress)
+    const waterHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  console.log("waterHeight: " + waterHeight)
 
   const steps = [10, 20, 30, 40];
 
@@ -27,12 +38,18 @@ function WaterPollution() {
     }
   };
 
-
   const onStepExit = () => {
-  };
+  };  
 
   return (
-      <section id="scroll" className="water-scroll-section">
+      <section id="scroll" className="water-scroll-section" ref={scrollRef}>
+        <motion.div 
+          className="water-level"
+          style={{
+            height: waterHeight,
+            transformOrigin: "bottom"
+          }}
+        >
         <h3 className="water-impacts-headline">Impacts on water quality</h3>
           <div className="water-scroller">
             <Scrollama 
@@ -65,6 +82,7 @@ function WaterPollution() {
               })}
             </Scrollama>
           </div>
+          </motion.div>
       </section>
   );
 }

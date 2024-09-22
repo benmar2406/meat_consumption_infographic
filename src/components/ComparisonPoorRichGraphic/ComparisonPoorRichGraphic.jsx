@@ -1,39 +1,55 @@
-import React, { useRef } from 'react'; 
-import { useInView } from 'framer-motion'; 
+import React, { useRef, useEffect } from 'react'; 
+import { useAnimation, motion, useInView } from 'framer-motion'; 
 import './ComparisonPoorRichGraphic.css';
 import DevelopingConsumptionChart from './DevelopingConsumptionChart/DevelopingConsumptionChart';
 import IndustrializedConsumptionChart from './IndustrializedConsumptionChart/IndustrializedConsumptionChart';
 import SectionButton from '../SectionButton/SectionButton';
 
 const ComparisonPoorRichGraphic = () => {
-  
-  const ref = useRef(null); 
-  const isInView = useInView(ref); 
-  
+  const buttonRef = useRef(null); 
+  const buttonIsInView = useInView(buttonRef);  
+  const buttonControls = useAnimation();  
+
+  useEffect(() => {
+    if (buttonIsInView) {
+      buttonControls.start({
+        scale: [1, 1.3, 1, 1.3, 1, 1.3, 1],
+        transition: { duration: 4 },
+        opacity: [0, 1, 1, 1, 1, 1, 1]
+      });
+    } else {
+      buttonControls.start({
+        scale: 1,
+        rotate: 0,
+        borderRadius: "0%",
+        transition: { duration: 0.5 }
+      });
+    }
+  }, [buttonIsInView, buttonControls]);
+
   return (
     <>
-    <section className="comparison-rich-poor-countries">
-      <div className="scroll-container" ref={ref}> 
-        <div className="sticky-container">
-          <div className="chart-container">
-            <DevelopingConsumptionChart 
-              isInView={isInView}
-            />
-          </div>
-          <div className="chart-container">
-            <IndustrializedConsumptionChart />
+      <section className="comparison-rich-poor-countries">
+        <div className="scroll-container"> 
+          <div className="sticky-container">
+            <div className="chart-container">
+              <DevelopingConsumptionChart />
+            </div>
+            <div className="chart-container">
+              <IndustrializedConsumptionChart />
+            </div>
           </div>
         </div>
-    </div>
-    <SectionButton 
-        buttonText="What does it cost?"
-        sectionLink="ressources-intro"
-        buttonColor="#ff3e2c"
-        isInView={isInView}
-        />
+        {/* Motion div around the button to control animation */}
+        <motion.div animate={buttonControls} ref={buttonRef}>
+          <SectionButton 
+            buttonText="What does it cost?"
+            sectionLink="ressources-intro"
+            buttonColor="#ff3e2c"
+          />
+        </motion.div>
       </section>
     </>
-
   );
 };
 

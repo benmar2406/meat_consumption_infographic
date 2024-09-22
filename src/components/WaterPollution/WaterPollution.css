@@ -20,6 +20,12 @@
   color: white;
   z-index: 0;
 }
+.water-level {
+  width: 100%;
+  transform-origin: bottom;
+  background-color: blue;
+}
+
 
 .water-scroller {
   width: 100%;

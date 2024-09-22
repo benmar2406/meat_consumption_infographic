@@ -30,7 +30,7 @@ const SoilChart = ({
   const [displayChartTextTwo, setDisplayChartTextTwo] = useState(false);
 
   useEffect(() => {
-    const unsubscribe = percentage.onChange((latestPercentage) => {
+    const unsubscribe = percentage.on("change", (latestPercentage) => {
       if (latestPercentage >= requiredPercentage) { 
         setDisplayChartText(true);
         setDisplayChartTextTwo(true);
@@ -58,8 +58,8 @@ const SoilChart = ({
             opacity: isInView ? 1 : 0,
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
             background: backgroundImage,
-            backgroundSize: 'cover', // Moved from CSS to inline
-            backgroundRepeat: 'no-repeat', // Moved from CSS to inline
+            backgroundSize: 'cover', 
+            backgroundRepeat: 'no-repeat',
           }}
         ><motion.span 
             className='text-second-chart'

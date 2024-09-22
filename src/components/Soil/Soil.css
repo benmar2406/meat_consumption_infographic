@@ -27,9 +27,9 @@
 .landuse-chart {
     position: relative;
     width: 100%;
-    height: 60vh; /* The height of your container */
+    height: 60vh;
     border-radius: 20px;
-    overflow: hidden; /* Ensure any overflow of the background is hidden */
+    overflow: hidden; 
 }
 
 .landuse-chart-meat {
@@ -50,6 +50,7 @@
 }
 
 .text-second-chart {
+    font-family: "PTSerif-Bold";
     color: white; 
     font-size: 1.5rem; 
     position: absolute; 
@@ -58,9 +59,11 @@
     transform: translate(-90%, -50%);
     white-space: nowrap; 
     pointer-events: none; 
+    z-index: 10;
 }
 
 .landuse-chart-fill-text {
+    font-family: "PTSerif-Bold";
     color: white; 
     font-size: 1.5rem; 
     position: absolute; 
@@ -78,6 +81,9 @@
 
 .landuse-text p {
     color: white;
+    font-family: "PTSerif-Bold";
+    margin-top: 0;
+
 }
 
 
