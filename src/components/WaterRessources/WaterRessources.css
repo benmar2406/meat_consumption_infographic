@@ -39,5 +39,4 @@
         height: 85vh;
         grid-template-columns: repeat(auto-fit, minmax(20px, 1fr)); 
         gap: 15px;
-        row-gap: 0;
     }

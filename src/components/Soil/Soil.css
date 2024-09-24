@@ -27,6 +27,7 @@
 .landuse-chart {
     position: relative;
     width: 100%;
+    max-width: 1220px;
     height: 60vh;
     border-radius: 20px;
     overflow: hidden; 
@@ -55,7 +56,7 @@
     font-size: 1.5rem; 
     position: absolute; 
     top: 50%;
-    left: 70%;
+    left: 72%;
     transform: translate(-90%, -50%);
     white-space: nowrap; 
     pointer-events: none; 
@@ -76,6 +77,8 @@
 
 .landuse-text  {
     width: 70%;
+    min-width: 640px;
+    max-width: 950px;
     background-color: transparent;
 }
 
@@ -86,4 +89,27 @@
 
 }
 
+@media screen and (max-width: 730px) {
+    .landuse-chart-fill-text {
+        word-wrap: break-word; /* Ensures long words break to the next line */
+        overflow-wrap: break-word; /* Ensures text breaks when it overflows */
+        white-space: normal; 
+    }
 
+    .landuse-text  {
+        width: 100%;
+        min-width: auto;
+        max-width: auto;
+    }
+
+    
+}
+
+@media screen and (max-width: 840px) {
+    .text-second-chart {
+        left: 72%;
+        word-wrap: break-word; /* Ensures long words break to the next line */
+        overflow-wrap: break-word; /* Ensures text breaks when it overflows */
+        white-space: normal; 
+    }
+}

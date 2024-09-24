@@ -40,7 +40,7 @@ const ProductionTimeline = ({ data }) => {
           }}
         >
             <div className='chart-container-timeline'>
-            <h2>Development of meat production over the decades</h2>
+              <h2>Development of meat production over the decades</h2>
             {groupedData.map((d) => (
                 <YearBlock key={d.decade} year={`${d.decade}s`} production={d.totalProduction} />
             ))}

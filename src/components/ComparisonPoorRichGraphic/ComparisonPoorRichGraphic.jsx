@@ -13,9 +13,9 @@ const ComparisonPoorRichGraphic = () => {
   useEffect(() => {
     if (buttonIsInView) {
       buttonControls.start({
-        scale: [1, 1.3, 1, 1.3, 1, 1.3, 1],
-        transition: { duration: 4 },
-        opacity: [0, 1, 1, 1, 1, 1, 1]
+        scale: [1, 1.3, 1, 1.3, 1],
+        transition: { duration: 2.5 },
+        opacity: [0, 1, 1, 1, 1 ]
       });
     } else {
       buttonControls.start({

@@ -1,38 +1,37 @@
 @font-face {
   font-family: 'Poppins-SemiBold';
-  src: url(assets/fonts/Poppins-SemiBold.ttf) format('truetype');
+  src: url(./assets/fonts/Poppins-SemiBold.ttf) format('truetype');
   font-weight: 600; /* SemiBold weight */
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Poppins-Medium';
-  src: url(assets/fonts/Poppins-Medium.ttf) format('truetype');
+  src: url(./assets/fonts/Poppins-Medium.ttf) format('truetype');
   font-weight: 500; 
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Poppins-Bold';
-  src: url(assets/fonts/Poppins-Bold.ttf) format('truetype');
+  src: url(./assets/fonts/Poppins-Bold.ttf) format('truetype');
   font-weight: 700; 
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PTSerif-Bold';
-  src: url(assets/fonts/PTSerif-Bold.ttf) format('truetype');
+  src: url(./assets/fonts/PTSerif-Bold.ttf) format('truetype');
   font-weight: 700; 
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PTSerif-Regular';
-  src: url(assets/fonts/PTSerif-Regular.ttf) format('truetype');
+  src: url(./assets/fonts/PTSerif-Regular.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
 }
-
 
 :root {
   font-family: 'PTSerif-Regular', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -50,6 +49,7 @@ a {
   color: #ff3e2c;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #ff3e2c;
 }
@@ -112,6 +112,7 @@ button {
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

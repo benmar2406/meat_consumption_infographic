@@ -1,5 +1,5 @@
 .chart-container-timeline {
-    width: 60vh;
+    width: 630px;
     text-align: center;
     margin: auto;
     padding: 10px 20px;
@@ -53,4 +53,10 @@
     background-color: #444;
     margin-top: 20px;
   }
+
+  @media screen and (max-width: 750px) {
+    .chart-container-timeline {
+      width: 75%;
+  }
+    }
   

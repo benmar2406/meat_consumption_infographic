@@ -8,16 +8,14 @@ import './WaterRessources.css'
 const WaterRessources = () => {
 
     const article1 = '<p>Globally, about 4,000 to 4,500 billion cubic meters of freshwater are withdrawn each year to meet the needs of households, industries, and agriculture.</p>'
-    const article2 = "<p>Agriculture alone uses around 70% (2,800 to 3,150 billion cubic meters) of the world's freshwater annually.</p><p>The high water demand in agriculture places enormous pressure on global water resources​</p>"
+    const article2 = "<p>Agriculture alone uses around <span className='highlight'>70%</span> (2,800 to 3,150 billion cubic meters) of the world's freshwater annually.</p><p>The high water demand in agriculture places enormous pressure on global water resources​</p>"
     const article3 = "<p>Meat production is responsible for a substantial share of this agricultural water use. Around 41% of agricultural water is allocated to growing feed for livestock and supporting animal farming.</p><p>Beef production has the largest water footprint, highlighting the significant water cost behind meat consumption.</p>"
-    const steps = [[10, article1], [20, article2], [30, article3], [40, "placeholder"]];
+    const steps = [[10, article1], [20, article2], [30, article3], [40, "placeholder"]]; // Last step is not displayed and only used for controlling behaviour after last actual step 
     const lastStep = steps[steps.length - 1][0];
-
     const [currentStep, setCurrentStep] = useState(null);
     const [displayAgrUsage, setDisplayAgrUsage] = useState(false)
     const [displayMeatUsage, setDisplayMeatUsage] = useState(false)
     
-
     const handleStepEnter = ({ data, data: stepData }) => {
         setCurrentStep(data);
 
@@ -67,7 +65,6 @@ const WaterRessources = () => {
             </section>
         </Element>
     )
-
 };
 
 export default WaterRessources;

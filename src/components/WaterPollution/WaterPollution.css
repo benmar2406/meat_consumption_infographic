@@ -20,9 +20,10 @@
   color: white;
   z-index: 0;
 }
+
 .water-level {
   width: 100%;
-  transform-origin: bottom;
+  height: 0vh;
   background-color: blue;
 }
 
@@ -37,11 +38,13 @@
   border: 0;
   z-index: 30;
   width: 40vw;
+  min-width: 600px;
+
   padding: 150px 10px;
   margin: 100px auto;
 }
   
-.water-step-text {
+.water-step-text {  
   background-color: #e3e3e3;
 }
   
