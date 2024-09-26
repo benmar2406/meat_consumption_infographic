@@ -83,13 +83,12 @@ const RessourcesIntro = () => {
                     <motion.ul
                         initial={{ opacity: 0, y: 200 }}
                         animate={listControls}
+                        className="ressources-list"
                     >
-                        <ul className="ressources-list">
-                            <li className="ressources-list-item">water</li>
-                            <li className="ressources-list-item">food</li>
-                            <li className="ressources-list-item">land</li>
-                            <li className="ressources-list-item">environment</li>
-                        </ul>
+                        <li className="ressources-list-item">water</li>
+                        <li className="ressources-list-item">food</li>
+                        <li className="ressources-list-item">land</li>
+                        <li className="ressources-list-item">environment</li>
                     </motion.ul>
                 </div>
             </section>

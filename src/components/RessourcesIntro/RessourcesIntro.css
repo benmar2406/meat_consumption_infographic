@@ -35,12 +35,15 @@
 .ressources-1kg-sub-title {
     margin: auto;
     text-align: center;
+    padding: 30px;
 }
 
 .ressources-list {
     display: flex;
     list-style: none;
-    justify-content:space-around;
+    justify-content: space-around;
+    margin: auto;
+
 }
 
 .ressources-list-item {
@@ -51,3 +54,45 @@
     margin: 0.7rem;
 }
 
+@media screen and (max-width: 800px) {
+    .ressources-intro {
+        width: 100%;
+    }
+
+    .ressources-graphic-container {
+        height: 55vh;
+    }
+
+    .ressources-intro-graphic {
+        width: 60%;
+    }
+
+    .ressources-1kg-title {
+        top: 30%;
+        left: 45%;
+        font-size: 8rem;
+    }
+
+    .ressources-list {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .ressources-1kg-title {
+        top: 30%;
+        font-size: 6rem;
+    }
+
+    .ressources-graphic-container {
+        height: 35vh;
+    }
+
+    .ressources-list {
+        padding: 0;
+    }
+
+    .ressources-list-item {
+        margin: 0;
+    }
+}
