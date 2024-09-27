@@ -8,6 +8,7 @@ import Soil from './components/Soil/Soil'
 import WaterPollution from './components/WaterPollution/WaterPollution'
 import WaterRessources from './components/WaterRessources/WaterRessources'
 import RessourcesIntro from './components/RessourcesIntro/RessourcesIntro';
+import WaterRessourcesOneKg from './components/WaterRessources/WaterRessourcesOneKg/WaterRessourcesOneKg';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <RessourcesIntro />
       <WaterRessources />
       <WaterPollution />
+      <WaterRessourcesOneKg />
       <Soil />
     </>
   )
