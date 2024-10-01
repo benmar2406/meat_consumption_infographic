@@ -29,6 +29,7 @@ const WaterRessourcesOneKg = ( ) => {
                     return(
                         <FoodTypeChart 
                             key={index}
+                            chartIndex={index}
                            food={food}
                         />
                 )})}
