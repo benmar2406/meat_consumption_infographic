@@ -1,0 +1,13 @@
+.water-usage-1kg-charts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 90%;
+    justify-content: center;
+}
+
+.water-usage-chart-title {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
