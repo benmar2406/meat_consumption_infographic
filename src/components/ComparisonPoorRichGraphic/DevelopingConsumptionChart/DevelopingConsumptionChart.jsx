@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import HumanDevelopingCountries from './HumanDevelopingCountries/HumanDevelopingCountries';
 import MeatIconContainer from '../MeatIconContainer/MeatIconContainer';
@@ -39,10 +39,10 @@ const DevelopingConsumptionChart = () => {
 
 const MeatIconWrapper = ({ index, onLastIconRendered }) => {
   const controls = useAnimation();
-  const ref = React.useRef(null);
+  const ref = useRef(null);
   const isInView = useInView(ref, { triggerOnce: true });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isInView) {
       controls.start({
         opacity: 1,

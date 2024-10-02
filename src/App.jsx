@@ -9,11 +9,13 @@ import WaterPollution from './components/WaterPollution/WaterPollution'
 import WaterRessources from './components/WaterRessources/WaterRessources'
 import RessourcesIntro from './components/RessourcesIntro/RessourcesIntro';
 import WaterRessourcesOneKg from './components/WaterRessources/WaterRessourcesOneKg/WaterRessourcesOneKg';
+import Navigation from './components/Navigation/Navigation';
 
 function App() {
 
   return (
     <>
+      <Navigation />
       <MeatProducedGraphic />
       <ProductionTimeline data={data}/>
       <DevelopmentProductionCharts />

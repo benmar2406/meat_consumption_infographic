@@ -17,14 +17,7 @@ const ComparisonPoorRichGraphic = () => {
         transition: { duration: 2.5 },
         opacity: [0, 1, 1, 1, 1 ]
       });
-    } else {
-      buttonControls.start({
-        scale: 1,
-        rotate: 0,
-        borderRadius: "0%",
-        transition: { duration: 0.5 }
-      });
-    }
+    } 
   }, [buttonIsInView, buttonControls]);
 
   return (
@@ -40,8 +33,16 @@ const ComparisonPoorRichGraphic = () => {
             </div>
           </div>
         </div>
-        {/* Motion div around the button to control animation */}
-        <motion.div animate={buttonControls} ref={buttonRef}>
+        <motion.div 
+          animate={buttonControls} 
+          ref={buttonRef}
+          style={{
+            width: '100%', // Ensure it takes full width of the parent container
+            maxWidth: '400px', // Or set a fixed width (adjust as necessary)
+            overflow: 'hidden', // Prevent overflow during scaling
+            margin: '0 auto', // Center it within its container
+          }}
+        >
           <SectionButton 
             buttonText="What does it cost?"
             sectionLink="ressources-intro"

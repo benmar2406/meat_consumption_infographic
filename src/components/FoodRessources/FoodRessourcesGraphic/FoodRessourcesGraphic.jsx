@@ -1,7 +1,10 @@
 import React, { useRef } from 'react';
 import { useInView, motion } from "framer-motion";
-import '../WaterRessources.css'
-import WaterIconContainer from '../../WaterIconContainer/WaterIconContainer'
+import '../FoodRessources.css'
+import WheatIconContainer from '../../WheatIconContainer/WheatIconContainer'
+import CornIconContainer from '../../CornIconContainer/CornIconContainer'
+import SoyIconContainer from '../../SoyIconContainer/SoyIconContainer'
+
 
 const WaterRessourcesGraphic = ( {displayAgrUsage, displayMeatUsage} ) => {
     const WaterGraphicRef = useRef()

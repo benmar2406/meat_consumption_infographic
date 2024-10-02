@@ -9,7 +9,7 @@ const SectionButton = forwardRef(({ buttonText, sectionLink, buttonColor }, ref)
                 <button
                     ref={ref}
                     className="section-button"
-                    style={{ backgroundColor: buttonColor }}
+                    style={{ backgroundColor: buttonColor, transformOrigin: 'center' }}
                 >
                     {buttonText}
                 </button>
