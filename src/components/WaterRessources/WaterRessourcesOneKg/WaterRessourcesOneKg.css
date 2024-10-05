@@ -8,6 +8,7 @@
 
 .water-usage-chart-title {
     width: 80%;
-    margin: auto;
+    margin: 50px auto;
+    padding-bottom: 30px;
     text-align: center;
 }

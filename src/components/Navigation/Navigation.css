@@ -1,15 +1,16 @@
 .navigation {
     position: fixed;
-    height: 200px;
-    width: 30px;
+    width: fit-content;
     right: 20px;
+    z-index: 1000;
+    height: fit-content;
 }
 
 .navigation.active {
     right: 10vw;
 }
 
-.navigation-menu {
+.navigation-button {
     width: 30px;
     height: 30px;
     border-radius: 100%;
@@ -24,12 +25,11 @@
     right: 0;
     cursor: pointer;
     transition: all ease-in-out 0.5s;
-    z-index: 1000;
 }
 
-.navigation-menu:hover {
-    width: 35px;
-    height: 35px;
+.navigation-button:hover {
+    width: 32px;
+    height: 32px;
 }
 
 .menu-bar {
@@ -41,32 +41,97 @@
     transition: all 0.3s ease;
 }
 
-.navigation-menu.active .menu-bar:nth-child(1) {
+.navigation-button.active .menu-bar:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
     width: 80%;
   }
   
-.navigation-menu.active .menu-bar:nth-child(2) {
+.navigation-button.active .menu-bar:nth-child(2) {
     opacity: 0;
 }
 
-.navigation-menu.active .menu-bar:nth-child(3) {
+.navigation-button.active .menu-bar:nth-child(3) {
     transform: translateY(-6px) rotate(-45deg);
     width: 80%;
 }
 
 .section-list-container {
-    height: 400px;
-    width: 20vw;
+    position: absolute;
+    min-height: 400px;
+    height: 100%;
+    width: fit-content;
+    right: 15px;
+    
 }
 
 .nav-line {
     height: 100%;
     border-left: 1px solid antiquewhite;
-    left: 50%;
-    top: 35px;
+    left: 50%;  
+    top: 55px;
     position: absolute;
     background-color: antiquewhite;
     position: absolute;
     z-index: 900;
+    transform: translateX(-50%)
+
+}
+
+.start-dot, .end-dot, .section-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: antiquewhite;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+    margin: 0;
+}
+
+.start-dot  {
+    top: 0;
+}
+
+.end-dot {
+    bottom: 0px;
+}
+
+.section-dot {
+    top: 40px;
+}
+
+.active-dot {
+    background-color: #ff3e2c;
+}
+
+.navigation-link {
+    white-space: nowrap;
+    cursor: pointer; 
+    color: white;
+    padding: 3px 7px;
+    padding-right: 5px;
+    
+}
+
+.navigation-link:hover {
+    color: #ff3e2c;
+    transition: all 0.4s ease;
+    text-decoration-line: underline;
+}
+
+.section-list-element {
+    position: absolute;
+    font-size: 0.8rem;
+    text-align: right;
+    right: 30px;
+    width: fit-content;
+    padding: 5px 7px;
+    padding-right: 5px;
+    background-color: RGB(53, 47, 54, 0.7);
+}
+
+.active {
+    color: #ff3e2c;
+    text-decoration-line: underline;
 }

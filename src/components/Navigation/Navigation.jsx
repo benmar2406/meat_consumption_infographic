@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './Navigation.css';
 import NavigationButton from "./NavigationButton/NavigationButton";
 import SectionList from './SectionList/SectionList'
@@ -6,20 +6,27 @@ import SectionList from './SectionList/SectionList'
 const Navigation = () => {
 
     const [navIsOpen, setNavIsOpen] = useState(false)
-    
-    const sectionsToNavigate = [
-        {name: 'ressources used', link: 'ressources-intro'}
-    ];
 
-    const toggleNavigation = () => {
-        if(navIsOpen === false) {
-            setNavIsOpen(true)
-            console.log('open menu')
-        } else {
-            setNavIsOpen(false)
-            console.log('close menu')
-        }
+        // Handle closing the nav when clicking outside
+        useEffect(() => {
+            const handleWindowClick = (event) => {
+                if (navIsOpen) {
+                    setNavIsOpen(false);
+                }
+            };
+            window.addEventListener('click', handleWindowClick);
+
+            return () => {
+                window.removeEventListener('click', handleWindowClick);
+            };
+        }, [navIsOpen]);
+
+
+    const toggleNavigation = (event) => {
+        event.stopPropagation(); 
+        setNavIsOpen((prevState) => !prevState); 
     }
+
 
     return(
         <nav className='navigation'>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { Element } from 'react-scroll';
 import { Scrollama, Step } from 'react-scrollama';
-import Intro from '../Intro/Intro';
 import ProductionWorldwideChart from './ProductionWorldwideChart/ProductionWorldwideChart';
 import ProductionEuropeChart from './ProductionEuropeChart/ProductionEuropeChart'
 import './DevelopmentProductionCharts.css';
@@ -44,7 +44,7 @@ function DevelopmentProductionCharts() {
 
   return (
     <>
-      <Intro />
+      <Element name="development-production">
       <section id="scroll" className="scroll-section">
         <div className="graphic-container">
           <div className="scroller">
@@ -88,6 +88,7 @@ function DevelopmentProductionCharts() {
           </div>
         </div>
       </section>
+      </Element>
     </>
   );
 }

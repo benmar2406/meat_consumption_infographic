@@ -1,30 +1,81 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion'
+import SectionListElement from './SectionListElement/SectionListElement'
+import SectionDot from './SectionDot/SectionDot';
 
-const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
+const SectionList = ({ sectionsToNavigate, navIsOpen }) => {  
+    
+    const [clickedIndex, setClickedIndex] = useState(null)
+
+    sectionsToNavigate = [
+        {title: 'production: historical developement', link: 'development-production'},
+        {title: 'Where is meat consumed?', link: 'comparison-rich-poor-countries'},
+        {title: 'ressources: 1kg', link: 'ressources-intro'},
+        {title: 'ressource: water', link: 'water-ressources'},
+        {title: 'impact on soil', link: 'soil-impact'}
+    ]
 
     const controls = useAnimation();
+
+    const transitionSettings = {
+        type: 'spring',
+        stiffness: 100,
+        damping: 20,
+        duration: 1
+    };
 
     useEffect(() => {
         if (navIsOpen) {
             controls.start({
-                scale: 1,
                 opacity: 1,
-                transition: {
-                    type: 'spring',
-                    stiffness: 600,
-                    damping: 20 
-        }})
-        } 
+                height: 1,
+                transition: transitionSettings
+            })
+        } else {
+            controls.start({
+                opacity: 0,
+                height: 0,
+                transition: transitionSettings
+            })
+        }
     }, [navIsOpen])
+
+
+    const handleIndexClick = (index) => {
+        setClickedIndex(index)
+    }
+
 
     return(
         <motion.div 
             className='section-list-container'
-            initial={{ opacity: 0, scale: 0 }}
+            initial={{ opacity: 0, height: 0 }}
             animate={controls}
         >
-            <div className='nav-line'></div>
+            
+            <div className='nav-line'>
+                <div className="start-dot"></div>
+                <div className="end-dot"></div>
+
+                {sectionsToNavigate.map((section, index) => {
+                    return(
+                        <SectionDot index={index} key={index} clickedIndex={clickedIndex}/>
+                    )
+                })}
+                
+            </div>
+            {sectionsToNavigate.map((section, index) => {
+
+                return(
+                    <SectionListElement 
+                        index={index}
+                        key={index}
+                        title={section.title}
+                        link={section.link}
+                        clickedIndex={clickedIndex}
+                        onLinkClick={handleIndexClick}
+                    />)
+            })}
         </motion.div>
     )
 }

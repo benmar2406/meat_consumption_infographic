@@ -1,4 +1,5 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import './Soil.css';
 import SoilChart from './SoilChart/SoilChart';
 import farmingImg from '../../assets/img/farming.jpg';
@@ -38,24 +39,26 @@ const Soil = () => {
   ]
 
   return (
-    <section>
-      {soilChartsData.map((soilChart, index) => (
-        <SoilChart 
-          key={index}
-          requiredPercentage={soilChart.requiredPercentage}
-          fullWidthValue={soilChart.fullWidthValue}
-          headline={soilChart.headline}
-          backgroundImage={soilChart.backgroundImage}
-          backgroundColor={soilChart.backgroundColor}
-          chartText={soilChart.chartText}
-          article={soilChart.article}
-          requiredPercentageArticle={soilChart.requiredPercentageArticle}
-          scrollEffectDirection={soilChart.scrollEffectDirection}
-          meatWidth={soilChart.meatWidth}
-          chartText2={soilChart.chartText2}
-        />
-      ))}
-    </section>
+    <Element name='soil-impact'>
+      <section>
+        {soilChartsData.map((soilChart, index) => (
+          <SoilChart 
+            key={index}
+            requiredPercentage={soilChart.requiredPercentage}
+            fullWidthValue={soilChart.fullWidthValue}
+            headline={soilChart.headline}
+            backgroundImage={soilChart.backgroundImage}
+            backgroundColor={soilChart.backgroundColor}
+            chartText={soilChart.chartText}
+            article={soilChart.article}
+            requiredPercentageArticle={soilChart.requiredPercentageArticle}
+            scrollEffectDirection={soilChart.scrollEffectDirection}
+            meatWidth={soilChart.meatWidth}
+            chartText2={soilChart.chartText2}
+          />
+        ))}
+      </section>
+    </Element>
   );    
 }
 

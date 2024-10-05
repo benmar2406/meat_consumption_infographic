@@ -5,7 +5,7 @@ const NavigationButton = ({ onClick, navIsOpen }) => {
     
     return(
         <div 
-            className={`navigation-menu ${navIsOpen ? 'active' : ''}`}
+            className={`navigation-button ${navIsOpen ? 'active' : ''}`}
             onClick={onClick}
         >
             <div className="menu-bar"></div>

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Element } from 'react-scroll';
 import { Scrollama, Step } from 'react-scrollama';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import './WaterPollution.css';
@@ -13,51 +14,21 @@ function WaterPollution() {
     offset: ["start end", "end start"]
   });
 
-
-  console.log("scrollYProgress: " + scrollYProgress)
-    const waterHeight = useTransform(scrollYProgress, [0.2, 0.5], ["0vh", "70vh"]);
-  console.log("waterHeight: " + waterHeight)
-
-  const steps = [10, 20, 30, 40];
+  const steps = [10, 20, 30];
 
   const onStepEnter = ({ data, data: stepData }) => {
     setData(data);
-    
-    if (stepData != 40) { 
-      setTextOpacity(1);
-    }
   
   };
-
-  const onStepProgress = ({ progress, data: stepData }) => {
-  
-    if (stepData === data && progress >= 0.8) {
-      setTextOpacity(0);
-    }
-    if (stepData === data && progress < 0.8 && stepData != 40) {
-      setTextOpacity(1);
-    }
-  };
-
-  const onStepExit = () => {
-  };  
+ 
 
   return (
+    <Element name='water-pollution'>
       <section id="scroll" className="water-scroll-section" ref={scrollRef}>
           <h3 className="water-impacts-headline">Impacts on water quality</h3>
-          {/*<motion.div 
-            className="water-level"
-            style={{
-              height: waterHeight,
-              transformOrigin: "bottom"
-            }}
-          >*/}
             <div className="water-scroller">
               <Scrollama 
                 onStepEnter={onStepEnter} 
-                onStepExit={onStepExit}
-                progress 
-                onStepProgress={onStepProgress}
               >
                 {steps.map(value => {
                   const isVisible = value === data;
@@ -74,7 +45,6 @@ function WaterPollution() {
                     <Step data={value} key={value}>
                       <div className="water-step">
                         <article className='water-step-text'
-                          style={{ opacity: isVisible ? textOpacity : 0, transition: 'opacity 1s ease-in-out'}} 
                           dangerouslySetInnerHTML={{ __html: stepText }}
                         ></article> 
                       </div>
@@ -85,6 +55,7 @@ function WaterPollution() {
             </div>
             {/*</section>*/}
       </section>
+      </Element>
   );
 }
 

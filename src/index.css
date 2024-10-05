@@ -60,6 +60,10 @@ body {
   background-color: #352f36;
 }
 
+nav {
+  font-family: "Poppins-Bold";
+}
+
 h1 {
   font-family: 'Poppins-Bold', sans-serif;
   font-size: 3rem;

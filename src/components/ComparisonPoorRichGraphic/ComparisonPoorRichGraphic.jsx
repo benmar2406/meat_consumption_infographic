@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react'; 
+import { Element } from 'react-scroll';
 import { useAnimation, motion, useInView } from 'framer-motion'; 
 import './ComparisonPoorRichGraphic.css';
 import DevelopingConsumptionChart from './DevelopingConsumptionChart/DevelopingConsumptionChart';
@@ -22,34 +23,36 @@ const ComparisonPoorRichGraphic = () => {
 
   return (
     <>
-      <section className="comparison-rich-poor-countries">
-        <div className="scroll-container"> 
-          <div className="sticky-container">
-            <div className="chart-container">
-              <DevelopingConsumptionChart />
-            </div>
-            <div className="chart-container">
-              <IndustrializedConsumptionChart />
+      <Element name='comparison-rich-poor-countries'>
+        <section className="comparison-rich-poor-countries">
+          <div className="scroll-container"> 
+            <div className="sticky-container">
+              <div className="chart-container">
+                <DevelopingConsumptionChart />
+              </div>
+              <div className="chart-container">
+                <IndustrializedConsumptionChart />
+              </div>
             </div>
           </div>
-        </div>
-        <motion.div 
-          animate={buttonControls} 
-          ref={buttonRef}
-          style={{
-            width: '100%', // Ensure it takes full width of the parent container
-            maxWidth: '400px', // Or set a fixed width (adjust as necessary)
-            overflow: 'hidden', // Prevent overflow during scaling
-            margin: '0 auto', // Center it within its container
-          }}
-        >
-          <SectionButton 
-            buttonText="What does it cost?"
-            sectionLink="ressources-intro"
-            buttonColor="#ff3e2c"
-          />
-        </motion.div>
-      </section>
+          <motion.div 
+            animate={buttonControls} 
+            ref={buttonRef}
+            style={{
+              width: '100%', 
+              maxWidth: '400px', 
+              overflow: 'hidden',
+              margin: '0 auto', 
+            }}
+          >
+            <SectionButton 
+              buttonText="What does it cost?"
+              sectionLink="ressources-intro"
+              buttonColor="#ff3e2c"
+            />
+          </motion.div>
+        </section>
+      </Element>
     </>
   );
 };
