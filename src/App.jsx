@@ -11,6 +11,8 @@ import RessourcesIntro from './components/RessourcesIntro/RessourcesIntro';
 import WaterRessourcesOneKg from './components/WaterRessources/WaterRessourcesOneKg/WaterRessourcesOneKg';
 import Intro from './components/Intro/Intro';
 import Navigation from './components/Navigation/Navigation';
+import FoodRessources from './components/FoodRessources/FoodRessources';
+
 
 function App() {
 
@@ -26,6 +28,7 @@ function App() {
       <WaterRessources />
       <WaterPollution />
       <WaterRessourcesOneKg />
+      <FoodRessources />
       <Soil />
     </>
   )

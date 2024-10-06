@@ -1,42 +1,74 @@
 
-    .water-ressources-scroll-container {
-        display: flex;
-        width: 100%;
-    }
+.food-ressource {
+    height: fit-content
+}
 
-    .scroller-water-ressources {
-        /*background-color: aqua;*/
-        flex-basis: 40%;
-    }
+.food-ressources-scroll-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+    height: fit-content;
+}
 
-    .step-water-ressources {
-        flex-basis: 40%;
-        padding: 100px 0;
-        width: 80%;
-        margin: auto;
-        /*background-color: blueviolet;*/
-    }
+.scroller-food-ressources {
+    flex-basis: 40%;
+}
 
-    .water-ressources-article {
-        color: black;
-    }
+.step-food-ressources {
+    flex-basis: 40%;
+    padding: 100px 0;
+    width: 80%;
+    margin: auto;
+}
 
-    .water-ressources-chart {    
-        position: sticky;
-        flex-basis: 50%; 
-        align-self: flex-start; 
-        top: 10px;
-        left: 10px;
-        padding: 30px 0;
-        padding-left: 40px;
-    }
+.food-ressources-article {
+    color: black;
+}
 
-    .water-ressources-icon-grid {
-        display: grid;
-        position: sticky;
-        top: 3vh;
-        left: 50px;
-        height: 85vh;
-        grid-template-columns: repeat(auto-fit, minmax(20px, 1fr)); 
-        gap: 15px;
-    }
+.food-ressources-chart {
+    flex-basis: 50%;
+    position: sticky;
+    height: fit-content;
+    top: 10px;
+}
+
+.food-ressources-title {
+    margin-bottom: 1rem;
+    margin-top: 0.2rem;
+    color: antiquewhite;
+    font-family: 'PTSerif-Bold';
+}
+
+.food-ressources-text {
+    color: antiquewhite;
+    font-size: 1.2rem;
+}
+
+.food-container {    
+    flex-basis: 50%; 
+    align-self: flex-start; 
+    top: 10px;
+    left: 10px;
+    padding: 20px 0;
+    padding-left: 40px;
+    height: fit-content;
+}
+
+.food-icon-grid {
+    display: grid;
+    justify-content: start; 
+    justify-items: start; 
+    height: fit-content;
+    padding: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(20px, auto)); /* Use 'auto' to avoid stretching */
+    gap: 20px;
+    border: solid 2px antiquewhite;
+}
+
+.food-usage-title {
+    width: 80%;
+    margin: 50px auto;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    text-align: center;
+}

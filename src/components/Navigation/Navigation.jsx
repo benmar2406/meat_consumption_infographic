@@ -7,7 +7,6 @@ const Navigation = () => {
 
     const [navIsOpen, setNavIsOpen] = useState(false)
 
-        // Handle closing the nav when clicking outside
         useEffect(() => {
             const handleWindowClick = (event) => {
                 if (navIsOpen) {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Element } from 'react-scroll'
 import { Scrollama, Step } from 'react-scrollama';
 import WaterRessourcesGraphic from './WaterRessourcesGraphic/WaterRessourcesGraphic';
+import SectionButton from '../SectionButton/SectionButton';
 import './WaterRessources.css'
 
 
@@ -43,7 +44,6 @@ const WaterRessources = () => {
                                     isVisible = false
                                 }
                                 
-                                
                                 return(
                                 <Step data={step[0]} key={step[0]}>
                                     <div 
@@ -62,6 +62,7 @@ const WaterRessources = () => {
                         <WaterRessourcesGraphic displayAgrUsage={displayAgrUsage} displayMeatUsage={displayMeatUsage}/>
                     </div>
                 </div>
+                
             </section>
         </Element>
     )

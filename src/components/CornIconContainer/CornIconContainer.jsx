@@ -1,9 +1,9 @@
 import React from 'react';
-import WheatIcon from '../../assets/img/icons/wheat_color.png'
-import './WheatIconContainer.css';
+import WheatIcon from '../../assets/img/icons/corn_color.png'
+import './CornIconContainer.css';
 
 
-const WheatIconContainer = ({
+const CornIconContainer = ({
   wheatWidth,
   wheatHeight,
   minWheatHeight,
@@ -23,8 +23,8 @@ const WheatIconContainer = ({
         maxWidth: maxdWheatWidth,
         maxHeight: maxWheatHeight,
         backgroundImage: `url(${WheatIcon})`,
-        backgroundPosition: 'center', /* Center the image */
-        backgroundRepeat: 'no-repeat', /* Do not repeat the image */
+        backgroundPosition: 'center', 
+        backgroundRepeat: 'no-repeat', 
         backgroundSize: 'cover',
 
       }}
@@ -33,4 +33,4 @@ const WheatIconContainer = ({
   );
 };
 
-export default WheatIconContainer;
+export default CornIconContainer;

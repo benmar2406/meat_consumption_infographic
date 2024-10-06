@@ -1,66 +1,62 @@
-import React, { useRef } from 'react';
-import { useInView, motion } from "framer-motion";
-import '../FoodRessources.css'
-import WheatIconContainer from '../../WheatIconContainer/WheatIconContainer'
-import CornIconContainer from '../../CornIconContainer/CornIconContainer'
-import SoyIconContainer from '../../SoyIconContainer/SoyIconContainer'
+import React, { useRef, useEffect, useState } from 'react';
+import { motion, useAnimation } from "framer-motion";
+import '../FoodRessources.css';
+import FoodIconContainer from './FoodIconContainer/FoodIconContainer';
 
+const FoodRessourcesGraphic = ({ index, name, numberOfIcons, displayWhen, tonnes, displayMeatWhen, usedForMeat }) => {
 
-const WaterRessourcesGraphic = ( {displayAgrUsage, displayMeatUsage} ) => {
-    const WaterGraphicRef = useRef()
-    const isInView = useInView(WaterGraphicRef)
-    
-    const totalNumberDrops = 350 /* 11.43 billion cubic meters (4,000 ÷ 350 = 11.43).*/ 
-    const agriculturalNumberDrops = 245;
-    const meatNumberDrops = 100;
+    const ref = useRef();
+    const controls = useAnimation();
 
-    const defaultDropFill = '#0078A0'; 
-    const agriculturalDropFill = '#00ADEF'; 
-    const meatDropFill = '#FF5733'; 
-    const dropWidth = '15%';
-    const dropHeight = '15%';
-    const mindropHeight = '25px';
-    const mindropWidth = '25px';
-    const maxdropHeight = '60px';
-    const maxdropWidth = '60px';
-    const altText = '11.43 billion cubic meters of water'
-    const waterDropProps = { dropWidth, dropHeight, mindropHeight, mindropWidth, maxdropHeight, maxdropWidth, altText, defaultDropFill, agriculturalDropFill, meatDropFill };
-
-    return(
-        <>
-        <motion.div>
-            <div 
-                className='water-ressources-icon-grid' 
-                ref={WaterGraphicRef}
-                style={{
-                    transform: isInView ? "none" : "translateX(100px)", 
-                    opacity: isInView ? 1 : 0,
-                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                }}
-                >
-                {Array.from({ length: totalNumberDrops }, (_, index) => {
-                    
-                    let fillColor = defaultDropFill;
-                    if (displayAgrUsage && index < agriculturalNumberDrops) {
-                        fillColor = agriculturalDropFill;
-                    }
-                    if (displayMeatUsage && index < meatNumberDrops) {
-                        fillColor = meatDropFill;
-                    }
-
-                    return(
-                    <WaterIconContainer 
-                        key={index}
-                        {...waterDropProps}
-                        dropFill={fillColor}
-                    />)
+    useEffect(() => {
+        if (displayWhen) {
+            controls.start({
+                scale: 1,
+                opacity: 1,
+                transition: {
+                    type: 'spring',
+                    stiffness: 600,
+                    damping: 20,
+                    delay: 0.3 * index 
                 }
-            )}
-            </div>
-            </motion.div>
-        </>
-    )
+            });
+        }
+    }, [displayWhen, index, controls]); 
 
+    return (
+        <motion.div 
+            className='food-container'
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={controls}
+        >
+            <p className="food-ressources-title">{name}</p>
+            <div 
+                className='food-icon-grid'
+                ref={ref}
+            >
+            {Array.from({ length: numberOfIcons }, (_, index) => {
+
+                const meatColor = displayMeatWhen && index < usedForMeat;
+
+                return (
+                    <FoodIconContainer 
+                        key={index}
+                        wheatWidth="30px"
+                        wheatHeight="30px"
+                        minWheatHeight="10px"
+                        minWheatWidth="10px"
+                        maxWheatHeight="50px"
+                        maxWheatWidth="50px"
+                        altText={name}
+                        name={name}
+                        meatColor={meatColor}
+                    />
+                );
+                })}
+            </div>
+            <p className='food-ressources-text'> {tonnes} tonnes produced worldwide</p>
+        </motion.div>
+    );
 };
 
-export default WaterRessourcesGraphic;
+export default FoodRessourcesGraphic;

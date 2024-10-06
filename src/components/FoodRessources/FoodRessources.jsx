@@ -1,36 +1,53 @@
 import React, { useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
-import WaterRessourcesGraphic from './WaterRessourcesGraphic/WaterRessourcesGraphic';
-import './WaterRessources.css'
+import { Element } from 'react-scroll';
+import FoodRessourcesGraphic from './FoodRessourcesGraphic/FoodRessourcesGraphic'
+import './FoodRessources.css'
 
 
-const WaterRessources = () => {
+const FoodRessources = () => {
+    
+    const [stepOne, setStepOne] = useState(false);
+    const [stepTwo, setStepTwo] = useState(false);
+    const [stepThree, setStepThree] = useState(false);
+    const [stepFour, setStepFour] = useState(false);
 
-    const article1 = '<p>Globally, about 4,000 to 4,500 billion cubic meters of freshwater are withdrawn each year to meet the needs of households, industries, and agriculture.</p>'
-    const article2 = "<p>Agriculture alone uses around <span className='highlight'>70%</span> (2,800 to 3,150 billion cubic meters) of the world's freshwater annually.</p><p>The high water demand in agriculture places enormous pressure on global water resources​</p>"
-    const article3 = "<p>Meat production is responsible for a substantial share of this agricultural water use. Around 41% of agricultural water is allocated to growing feed for livestock and supporting animal farming.</p><p>Beef production has the largest water footprint, highlighting the significant water cost behind meat consumption.</p>"
-    const steps = [[10, article1], [20, article2], [30, article3], [40, "placeholder"]]; // Last step is not displayed and only used for controlling behaviour after last actual step 
+
+    const foodRessources = [
+        {name: "wheat", tonnes: "780 mio.", numberOfIcons: 20, usedForMeat: 4, displayWhen: stepOne, displayMeatWhen: stepTwo },
+        {name: "corn", tonnes: "1.2 bn", numberOfIcons: 30, usedForMeat: 20, displayWhen: stepOne, displayMeatWhen: stepThree },
+        {name: "soy", tonnes: "380 mio.", numberOfIcons: 10, usedForMeat: 8, displayWhen: stepOne, displayMeatWhen: stepFour }
+    ]
+
+    const article1 = '<p>A large faction of food produced worldwide is consumed through livestock breeding.</p>'
+    const article2 = "<p>​20% of all wheat produced worldwide is used by the meat industry indirectly as animal food.</p>"
+    const article3 = "<p>For corn the picture is different: 65% of all corn produced worldwide is used to feed animals.</p>"
+    const article4 = "<p>For soy it is even more crass: 80% of soy is consumed through livestock breeding</p>"
+    const article5 = "<p>Food used for meat production is not available to be directly consumed by humans.</p><p>Producing meat is inefficient compared to eating plant-based foods directly. </p>"
+    const steps = [[10, article1], [20, article2], [30, article3], [40, article4], [50, article5], [60, "placeholder"]]; // Last step is not displayed and only used for controlling behaviour after last actual step 
     const lastStep = steps[steps.length - 1][0];
     const [currentStep, setCurrentStep] = useState(null);
-    const [displayAgrUsage, setDisplayAgrUsage] = useState(false)
-    const [displayMeatUsage, setDisplayMeatUsage] = useState(false)
     
     const handleStepEnter = ({ data, data: stepData }) => {
         setCurrentStep(data);
-
-        if(stepData === 20) {
-            setDisplayAgrUsage(true)
-        }
-        if(stepData === 30) {
-            setDisplayMeatUsage(true)
-        }
-    }
+        switch(stepData) {
+            case 10: setStepOne(true)
+            break;
+            case 20: setStepTwo(true)
+            break;
+            case 30: setStepThree(true)
+            break;
+            case 40: setStepFour(true)
+            break;
+            default:
+        }};
 
     return(
-        <Element name='water-ressources'>
-            <section className='water-ressources'>
-                <div className='water-ressources-scroll-container'>
-                        <div className='scroller-water-ressources'>
+        <Element name='food-ressources'>
+            <section className='food-ressources'>
+                <h2 className='food-usage-title'>Food ressources: factions consumed by the meat industry</h2>
+                <div className='food-ressources-scroll-container'>
+                        <div className='scroller-food-ressources'>
                             <Scrollama
                                 onStepEnter={handleStepEnter}
                             >
@@ -46,19 +63,35 @@ const WaterRessources = () => {
                                 return(
                                 <Step data={step[0]} key={step[0]}>
                                     <div 
-                                        className='step-water-ressources'
+                                        className='step-food-ressources'
                                         style={{opacity: isVisible ? "1" : "0", transition: 'opacity 1s ease-in-out'}}
                                     >
                                         <article 
-                                            className='water-ressources-article'
+                                            className='food-ressources-article'
                                             dangerouslySetInnerHTML={{__html: step[1]}}>
                                         </article>
                                     </div>
                                 </Step>)})}
                             </Scrollama>
                         </div>
-                    <div className='water-ressources-chart'>
-                        <WaterRessourcesGraphic displayAgrUsage={displayAgrUsage} displayMeatUsage={displayMeatUsage}/>
+                    <div 
+                        className='food-ressources-chart'
+                    >   
+                    {foodRessources.map((foodType, index) => {
+                    return(
+                        <FoodRessourcesGraphic 
+                            key={index}
+                            index={index}
+                            name={foodType.name}
+                            numberOfIcons={foodType.numberOfIcons}
+                            displayWhen={foodType.displayWhen}
+                            tonnes={foodType.tonnes}
+                            icon={foodType.icon}
+                            displayMeatWhen={foodType.displayMeatWhen}
+                            usedForMeat={foodType.usedForMeat}
+                        />
+                    )})}
+                                
                     </div>
                 </div>
             </section>
@@ -66,4 +99,4 @@ const WaterRessources = () => {
     )
 };
 
-export default WaterRessources;
+export default FoodRessources;
