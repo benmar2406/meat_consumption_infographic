@@ -14,9 +14,9 @@ const FoodRessources = () => {
 
 
     const foodRessources = [
-        {name: "wheat", tonnes: "780 mio.", numberOfIcons: 20, usedForMeat: 4, displayWhen: stepOne, displayMeatWhen: stepTwo },
-        {name: "corn", tonnes: "1.2 bn", numberOfIcons: 30, usedForMeat: 20, displayWhen: stepOne, displayMeatWhen: stepThree },
-        {name: "soy", tonnes: "380 mio.", numberOfIcons: 10, usedForMeat: 8, displayWhen: stepOne, displayMeatWhen: stepFour }
+        {name: "wheat", tonnes: "780 mio.", numberOfIcons: 20, usedForMeat: 4, percentageForMeat: 20, displayWhen: stepOne, displayMeatWhen: stepTwo },
+        {name: "corn", tonnes: "1.2 bn", numberOfIcons: 30, usedForMeat: 20, percentageForMeat: 65, displayWhen: stepOne, displayMeatWhen: stepThree },
+        {name: "soy", tonnes: "380 mio.", numberOfIcons: 10, usedForMeat: 8, percentageForMeat: 80, displayWhen: stepOne, displayMeatWhen: stepFour }
     ]
 
     const article1 = '<p>A large faction of food produced worldwide is consumed through livestock breeding.</p>'
@@ -89,6 +89,7 @@ const FoodRessources = () => {
                             icon={foodType.icon}
                             displayMeatWhen={foodType.displayMeatWhen}
                             usedForMeat={foodType.usedForMeat}
+                            percentageForMeat={foodType.percentageForMeat}
                         />
                     )})}
                                 

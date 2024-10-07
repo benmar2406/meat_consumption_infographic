@@ -25,7 +25,7 @@ const WaterRessourcesGraphic = ( {displayAgrUsage, displayMeatUsage} ) => {
 
     return(
         <>
-        <motion.div>
+        <motion.div aria-hidden="true">
             <div 
                 className='water-ressources-icon-grid' 
                 ref={WaterGraphicRef}

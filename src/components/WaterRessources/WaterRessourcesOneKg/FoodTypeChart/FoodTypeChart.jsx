@@ -12,7 +12,7 @@ const FoodTypeChart = ({ food, chartIndex }) => {
     const mindropWidth = '25px'
     const maxdropHeight = '50px'
     const maxdropWidth  = '50px'
-    const altText = '100 litres of water'
+    const altText = '1 litre of water'
     const dropFill = '#a2d3e2'
 
     const waterDropProps = { dropWidth, dropHeight, mindropHeight, mindropWidth, maxdropHeight, maxdropWidth, altText, dropFill };
@@ -55,19 +55,19 @@ const FoodTypeChart = ({ food, chartIndex }) => {
                 role="img" 
                 aria-hidden="true"
                 ref={gridRef}
-
             >
             {Array.from({ length: food.numberOfDrops }, (_ ,index) => {
                 return(
                     <WaterIconContainer 
                         key={index}
                         {...waterDropProps}
+                        alt={altText}
                     />
                 )
             })}
             </div>
             <div className='water-used-for-1kg'>
-                <h3 className='food-type-title' aria-label={`Amount of water required for producing 1kg of ${food.type}: `}>{food.waterUsage} ltrs</h3>
+                <h3 className='food-type-title' aria-description={`Amount of water required for producing 1kg of ${food.type}: `}>{food.waterUsage} ltrs</h3>
             </div>
         </motion.div>
     )

@@ -9,7 +9,7 @@ function Intro() {
 
 
   return (
-    <div className='background'>
+    <div className='background' alt="photography of a butchers place">
         <div className='background-overlay'>
           <div className='intro-container'>
             <article className='intro' 

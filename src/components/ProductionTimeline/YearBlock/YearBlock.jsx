@@ -7,7 +7,7 @@ const YearBlock = ({ year, production }) => {
   return (
     <div className="yearBlock">
       <div className="yearLabel">{year}</div>
-      <div className="circlesContainer">
+      <div className="circlesContainer" aria-hidden="true">
         {[...Array(circleCount)].map((_, index) => (
           <div key={index} className="circle"></div>
         ))}

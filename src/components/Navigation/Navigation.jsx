@@ -28,15 +28,17 @@ const Navigation = () => {
 
 
     return(
-        <nav className='navigation'>
-            <NavigationButton  
-                onClick={toggleNavigation}
-                navIsOpen={navIsOpen}
-            />
-            <SectionList 
-                navIsOpen={navIsOpen}
-            />
-        </nav>
+        <header>
+            <nav className='navigation'>
+                <NavigationButton  
+                    onClick={toggleNavigation}
+                    navIsOpen={navIsOpen}
+                />
+                <SectionList 
+                    navIsOpen={navIsOpen}
+                />
+            </nav>
+        </header>
     )
 }
 

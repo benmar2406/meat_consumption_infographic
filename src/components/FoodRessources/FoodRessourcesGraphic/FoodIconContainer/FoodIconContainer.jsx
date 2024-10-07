@@ -15,12 +15,13 @@ const FoodIconContainer = ({
   maxWheatHeight,
   maxdWheatWidth,
   name,
-  meatColor
+  meatColor,
+  altText
 }) => {
 
     let url = null
 
-  if(name === 'wheat' && meatColor === false) {
+  if (name === 'wheat' && meatColor === false) {
     url = WheatIcon
   } else if(name === 'corn' && meatColor === false) {
     url = CornIcon
@@ -28,7 +29,7 @@ const FoodIconContainer = ({
     url = soyIcon
   } else if(name === 'wheat' && meatColor === true) {
     url = WheatIconRed
-  }  else if(name === 'corn' && meatColor === true) {
+  } else if(name === 'corn' && meatColor === true) {
     url = CornIconRed
   } else if(name === 'soy' && meatColor === true) {
     url = soyIconRed
@@ -48,9 +49,9 @@ const FoodIconContainer = ({
         backgroundPosition: 'center', 
         backgroundRepeat: 'no-repeat', 
         backgroundSize: 'cover',
-        transition: 'background-image 0.5s ease-in-out'
-
+        transition: 'background-image 0.5s ease-in-out',
       }}
+      alt={altText}
     >    
     </div>
   );
