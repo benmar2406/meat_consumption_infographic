@@ -15,7 +15,7 @@ const MeatProducedGraphic = () => {
   };
 
   return (
-    <div className="meat-production-layout">
+    <section className="meat-production-layout" aria-hidden="true">
       <Counter count={visibleSteps * itemsPerContainer} />
 
       <div className="meat-production-wrapper">
@@ -31,7 +31,7 @@ const MeatProducedGraphic = () => {
           ))}
         </Scrollama>
       </div>
-    </div>
+    </section>
   );
 };
 

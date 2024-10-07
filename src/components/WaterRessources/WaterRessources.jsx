@@ -29,8 +29,8 @@ const WaterRessources = () => {
     }
 
     return(
-        <Element name='water-ressources'>
-            <section className='water-ressources'>
+        <section className='water-ressources'>
+            <Element name='water-ressources'>
                 <div className='water-ressources-scroll-container'>
                         <div className='scroller-water-ressources'>
                             <Scrollama
@@ -62,9 +62,8 @@ const WaterRessources = () => {
                         <WaterRessourcesGraphic displayAgrUsage={displayAgrUsage} displayMeatUsage={displayMeatUsage}/>
                     </div>
                 </div>
-                
-            </section>
-        </Element>
+            </Element>
+        </section>
     )
 };
 

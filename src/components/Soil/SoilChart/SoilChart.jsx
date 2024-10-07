@@ -52,7 +52,8 @@ const SoilChart = ({
     <div className='landuse-scroll-container' ref={refScrollContainer}>
       <div className='landuse-chart-container'>
       <h2 className='landuse-headline'>{headline}</h2>
-        <div className='landuse-chart'
+        <div 
+          className='landuse-chart'
           style={{
             transform: isInView ? "none" : "translateX(-200px)",
             opacity: isInView ? 1 : 0,
@@ -61,6 +62,7 @@ const SoilChart = ({
             backgroundSize: 'cover', 
             backgroundRepeat: 'no-repeat',
           }}
+          aria-label={`${chartText}${chartText2}`}
         ><motion.span 
             className='text-second-chart'
             dangerouslySetInnerHTML={{ __html: chartText2 }}
@@ -68,12 +70,14 @@ const SoilChart = ({
               opacity: displayChartTextTwo ? 1 : 0,
               transition: "opacity 0.5s ease-in-out"
             }}
+            aria-hidden='true'
           ></motion.span>
           <div 
             className='landuse-chart-meat'
             style= {{
               width: meatWidth,
             }}
+            aria-hidden='true'
           >
             <motion.div 
               className='landuse-chart-fill' 
@@ -81,6 +85,8 @@ const SoilChart = ({
                 width: width,
                 backgroundColor: backgroundColor 
                }} 
+              aria-hidden='true'
+
             >
               <motion.span className='landuse-chart-fill-text'
                 style={{ 
@@ -88,6 +94,7 @@ const SoilChart = ({
                   transition: "opacity 0.5s ease-in-out"
                 }}
                 dangerouslySetInnerHTML={{ __html: chartText }}
+                aria-hidden='true'
               >
               </motion.span>
             </motion.div>

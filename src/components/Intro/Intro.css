@@ -45,6 +45,10 @@
     width: 40%;
 }
 
+.intro-subtitle {
+    color: #ff3e2c;
+}
+
 @media screen and (max-width: 650px) {
     .intro {
         width: 80%;

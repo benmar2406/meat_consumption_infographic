@@ -7,6 +7,9 @@ const NavigationButton = ({ onClick, navIsOpen }) => {
         <div 
             className={`navigation-button ${navIsOpen ? 'active' : ''}`}
             onClick={onClick}
+            role="button"
+            aria-label='Click to open navigation'
+
         >
             <div className="menu-bar"></div>
             <div className="menu-bar"></div>

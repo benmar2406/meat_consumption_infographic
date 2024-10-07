@@ -31,22 +31,20 @@ const ProductionTimeline = ({ data }) => {
   const groupedData = groupDataByDecade(data);
 
   return (
-    <>  
-        <section className='production-timeline' 
-          ref={ref}
-          style={{
-              opacity: isInView ? 1 : 0,
-              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-          }}
-        >
-            <div className='chart-container-timeline'>
-              <h2>Development of meat production over the decades</h2>
-            {groupedData.map((d) => (
-                <YearBlock key={d.decade} year={`${d.decade}s`} production={d.totalProduction} />
-            ))}
-            </div>
-        </section>
-    </>
+    <section className='production-timeline' 
+      ref={ref}
+      style={{
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+      }}
+    >
+        <div className='chart-container-timeline'>
+          <h2>Development of meat production over the decades</h2>
+        {groupedData.map((d) => (
+            <YearBlock key={d.decade} year={`${d.decade}s`} production={d.totalProduction} />
+        ))}
+        </div>
+    </section>
   );
 };
 

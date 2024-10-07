@@ -46,7 +46,7 @@ const FoodTypeChart = ({ food, chartIndex }) => {
             animate={controls}
         >
             <div 
-                className={food.cssSelector}
+                className={food.cssSelector} 
             >
                 <img className='type-water-ressources-icon' src={food.icon} alt={`${food.type}-icon`}/>
             </div>
@@ -62,12 +62,13 @@ const FoodTypeChart = ({ food, chartIndex }) => {
                         key={index}
                         {...waterDropProps}
                         alt={altText}
+                        aria-hidden="true"
                     />
                 )
             })}
             </div>
             <div className='water-used-for-1kg'>
-                <h3 className='food-type-title' aria-description={`Amount of water required for producing 1kg of ${food.type}: `}>{food.waterUsage} ltrs</h3>
+                <h3 className='food-type-title' aria-label={`Amount of water required for producing 1kg of ${food.type}: ${food.waterUsage} litres.`}>{food.waterUsage} ltrs</h3>
             </div>
         </motion.div>
     )

@@ -22,9 +22,9 @@ const ComparisonPoorRichGraphic = () => {
   }, [buttonIsInView, buttonControls]);
 
   return (
-    <>
-      <Element name='comparison-rich-poor-countries'>
-        <section className="comparison-rich-poor-countries">
+    
+      <section className="comparison-rich-poor-countries">
+        <Element name='comparison-rich-poor-countries'>
           <div className="scroll-container"> 
             <div className="sticky-container">
               <div className="chart-container">
@@ -51,9 +51,8 @@ const ComparisonPoorRichGraphic = () => {
               buttonColor="#ff3e2c"
             />
           </motion.div>
-        </section>
-      </Element>
-    </>
+          </Element>
+      </section>
   );
 };
 

@@ -53,22 +53,24 @@ const RessourcesIntro = () => {
     }, [buttonIsInView, buttonControls]);
 
     return (
-        <Element name="ressources-intro">
-            <section className="ressources-intro-container"> 
+        <section className="ressources-intro-container"> 
+            <Element name="ressources-intro">
                 <div className="ressources-intro">
                     <div className="ressources-graphic-container">
                         <motion.img
                             src={MeatIcon} 
-                            alt="1kg meat icon"
+                            alt="1kg of meat icon"
                             className="ressources-intro-graphic"
                             initial={{ opacity: 0, x: -200, rotate: 180 }}
                             animate={controls}
-                            ref={ressourceInfoRef} // Attach ref to image container
+                            ref={ressourceInfoRef} 
+                            aria-label="One kilogramm of meat"
                         />
                         <motion.h1
                             className="ressources-1kg-title"
                             initial={{ opacity: 0, x: 200 }}
                             animate={controls}
+                            aria-hidden="true"
                         >
                             1kg
                         </motion.h1>
@@ -84,6 +86,7 @@ const RessourcesIntro = () => {
                         initial={{ opacity: 0, y: 200 }}
                         animate={listControls}
                         className="ressources-list"
+                        role="presentation"
                     >
                         <li className="ressources-list-item">water</li>
                         <li className="ressources-list-item">food</li>
@@ -91,16 +94,19 @@ const RessourcesIntro = () => {
                         <li className="ressources-list-item">environment</li>
                     </motion.ul>
                 </div>
-            </section>
-            {/* Motion div around the button to control animation */}
-            <motion.div animate={buttonControls} ref={buttonRef}>
-                <SectionButton 
-                    buttonText="Water" 
-                    sectionLink="water-ressources"
-                    buttonColor="#a2d3e2" 
-                />
-            </motion.div>
-        </Element>
+        
+                <motion.div 
+                    animate={buttonControls} 
+                    ref={buttonRef}>
+                    <SectionButton 
+                        buttonText="Water" 
+                        sectionLink="water-ressources"
+                        buttonColor="#a2d3e2" 
+                    />
+                </motion.div>
+                    
+            </Element>
+        </section>
     );
 }
 

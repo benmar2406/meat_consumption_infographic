@@ -43,8 +43,8 @@ const FoodRessources = () => {
         }};
 
     return(
-        <Element name='food-ressources'>
-            <section className='food-ressources'>
+        <section className='food-ressources'>
+            <Element name='food-ressources'>
                 <h2 className='food-usage-title'>Food ressources: factions consumed by the meat industry</h2>
                 <div className='food-ressources-scroll-container'>
                         <div className='scroller-food-ressources'>
@@ -95,8 +95,9 @@ const FoodRessources = () => {
                                 
                     </div>
                 </div>
-            </section>
-        </Element>
+            </Element>
+        </section>
+
     )
 };
 

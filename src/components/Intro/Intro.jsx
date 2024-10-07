@@ -9,7 +9,7 @@ function Intro() {
 
 
   return (
-    <div className='background' alt="photography of a butchers place">
+    <section className='background' alt="photography of a butchers place">
         <div className='background-overlay'>
           <div className='intro-container'>
             <article className='intro' 
@@ -18,7 +18,7 @@ function Intro() {
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"}}
               >
                 <h1>Meat on the plate, damage to the earth</h1>
-                <h3>1kg - The costs of consumption</h3>
+                <h2 className="intro-subtitle">1kg - The costs of consumption</h2>
                 <hr className='title-line'/>
                 <p>A juicy steak, a greasy burger, or crispy chicken—meat remains a staple on plates worldwide today. 
                   Global meat consumption continues to rise annually, and it remains a significant part of many people's diets.</p>
@@ -28,7 +28,7 @@ function Intro() {
           </article>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

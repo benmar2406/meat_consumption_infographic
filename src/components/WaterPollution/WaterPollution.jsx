@@ -23,8 +23,9 @@ function WaterPollution() {
  
 
   return (
-    <Element name='water-pollution'>
+
       <section id="scroll" className="water-scroll-section" ref={scrollRef} alt="photography of polluted water">
+        <Element name='water-pollution'>
           <h3 className="water-impacts-headline">Impacts on water quality</h3>
             <div className="water-scroller">
               <Scrollama 
@@ -53,9 +54,9 @@ function WaterPollution() {
                 })}
               </Scrollama>
             </div>
-            {/*</section>*/}
+      
+        </Element>
       </section>
-      </Element>
   );
 }
 

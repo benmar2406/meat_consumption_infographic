@@ -27,6 +27,7 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
     useEffect(() => {
         if (navIsOpen) {
             controls.start({
+                display: 'block',
                 opacity: 1,
                 height: 1,
                 transition: transitionSettings
@@ -35,7 +36,8 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
             controls.start({
                 opacity: 0,
                 height: 0,
-                transition: transitionSettings
+                transition: transitionSettings,
+                display: 'none'
             })
         }
     }, [navIsOpen])
@@ -49,8 +51,9 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
     return(
         <motion.div 
             className='section-list-container'
-            initial={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, height: 0, display: 'none' }}
             animate={controls}
+            role='presentation'
         >
             
             <div className='nav-line'>

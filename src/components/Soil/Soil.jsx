@@ -39,8 +39,9 @@ const Soil = () => {
   ]
 
   return (
-    <Element name='soil-impact'>
-      <section>
+    
+    <section className='soil-section'>
+      <Element name='soil-impact'>
         {soilChartsData.map((soilChart, index) => (
           <SoilChart 
             key={index}
@@ -57,8 +58,9 @@ const Soil = () => {
             chartText2={soilChart.chartText2}
           />
         ))}
-      </section>
-    </Element>
+        </Element>
+    </section>
+  
   );    
 }
 
