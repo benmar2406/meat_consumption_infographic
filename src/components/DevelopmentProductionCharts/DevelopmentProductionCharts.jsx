@@ -80,6 +80,7 @@ function DevelopmentProductionCharts() {
             <div 
               className="graphic" 
               style={{ opacity: chartOpacity, transition: 'opacity 1s ease-in-out' }} 
+              aria-label="Two charts the depicting the increase of meat production globally and in Western Europe"
             >
               {!displayEuropeChart &&<ProductionWorldwideChart />}
               {displayEuropeChart && <ProductionEuropeChart />}

@@ -60,13 +60,11 @@ export default function ProductionWorldWideChart() {
 
       svg.append("g")
         .attr("transform", `translate(${margin.left},0)`)
-        .call(d3.axisLeft(y).tickFormat(d3.format(".2s")));  // Adjusted formatting
+        .call(d3.axisLeft(y).tickFormat(d3.format(".2s")));
     }
 
-    // Initial draw
     redraw();
 
-    // Redraw on window resize
     window.addEventListener('resize', redraw);
 
     return () => {
@@ -75,7 +73,11 @@ export default function ProductionWorldWideChart() {
   }, []);
 
   return (
-    <div ref={chartRef} className="production-world-wide-chart">
+    <div 
+      ref={chartRef} 
+      className="production-world-wide-chart"
+      aria-hidden="true" 
+    >
     </div>
   );
 }

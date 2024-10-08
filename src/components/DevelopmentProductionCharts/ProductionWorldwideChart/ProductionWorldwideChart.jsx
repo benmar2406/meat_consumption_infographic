@@ -72,7 +72,11 @@ export default function ProductionWorldWideChart() {
   }, []);
 
   return (
-    <div ref={chartRef} className="production-world-wide-chart">
+    <div 
+      ref={chartRef} 
+      className="production-world-wide-chart"
+      aria-hidden="true"  
+    >
     </div>
   );
 }
