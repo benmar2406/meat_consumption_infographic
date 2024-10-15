@@ -14,10 +14,10 @@ const WaterRessourcesGraphic = ( {displayAgrUsage, displayMeatUsage} ) => {
     const defaultDropFill = '#0078A0'; 
     const agriculturalDropFill = '#00ADEF'; 
     const meatDropFill = '#FF5733'; 
-    const dropWidth = '15%';
-    const dropHeight = '15%';
-    const mindropHeight = '25px';
-    const mindropWidth = '25px';
+    const dropWidth = '100%';
+    const dropHeight = '100%';
+    const mindropHeight = '20px';
+    const mindropWidth = '20px';
     const maxdropHeight = '60px';
     const maxdropWidth = '60px';
     const altText = '11.43 billion cubic meters of water'

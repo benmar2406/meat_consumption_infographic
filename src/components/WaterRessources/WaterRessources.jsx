@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Element } from 'react-scroll'
 import { Scrollama, Step } from 'react-scrollama';
 import WaterRessourcesGraphic from './WaterRessourcesGraphic/WaterRessourcesGraphic';
-import SectionButton from '../SectionButton/SectionButton';
 import './WaterRessources.css'
 
 

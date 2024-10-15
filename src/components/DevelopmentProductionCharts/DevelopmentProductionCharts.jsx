@@ -43,7 +43,7 @@ function DevelopmentProductionCharts() {
   };
 
   return (
-      <section id="scroll" className="scroll-section">
+      <section id="scroll" className="production-development-scroll-section">
         <Element name="development-production">
           <div className="graphic-container">
             <div className="scroller">

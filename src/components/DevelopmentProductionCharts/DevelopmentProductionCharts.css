@@ -1,11 +1,13 @@
-d.scroll-section {
+.production-development-scroll-section {
     padding: 3vh 0;
-    margin: 0 5vw;
+    margin: 0 auto;
+    max-width: 3000px;
   }
   
   .graphic-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin: auto;
   }
   
   .graphic {
@@ -32,6 +34,7 @@ d.scroll-section {
   
   .scroller {
     flex-basis: 40%;
+    
   }
   
   .step {
@@ -45,4 +48,13 @@ d.scroll-section {
   .step-text {
     opacity: 0;
     background-color: #e3e3e3
+  }
+
+
+  @media screen and (min-width: 1920px) {
+    .scroller {
+      max-width: 800px;
+      justify-self: right;
+
+    }
   }

@@ -3,6 +3,7 @@
 }
 
 .scroll-container {
+  margin: auto;
   position: relative;
   height: auto; 
   min-height: 100vh; 
@@ -15,8 +16,10 @@
   display: flex;
   justify-content: center;
   padding: 40px;
-  margin: 0 20vw;
+  margin: 0 auto;
   width: 60vw;
+  max-width: 1000px;
+  min-width: 800px;
 }
 
 .background-overlay {

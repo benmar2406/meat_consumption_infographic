@@ -54,7 +54,7 @@
   grid-template-columns: repeat(10, 1fr);
   gap: 10px;
   justify-content: center;
-  align-content: center;
+  align-content: center;;
   opacity: 0;  /* Initially hidden */
   transition: opacity 0.5s ease-in-out;  /* Transition for fading in */
 }
@@ -76,4 +76,26 @@
   width: 100%;
   height: auto;
 
+}
+
+
+@media screen and (min-width: 1920px) {
+  .meat-production-layout {
+    width: 50%;
+  }
+
+  .meat-grid-container {
+    max-width: 600px;
+  }
+
+  .counter {
+    position: sticky;
+    left: 30vw;
+    top: 20vh;
+    width: 25%;
+    text-align: center;
+    font-family: 'Poppins-Bold', sans-serif;
+    border: solid #a2d3e2 3px;
+    background-color: transparent;
+  }
 }

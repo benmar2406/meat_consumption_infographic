@@ -1,6 +1,6 @@
 
 .food-ressource {
-    height: fit-content
+    height: fit-content;
 }
 
 .food-ressources-scroll-container {
@@ -29,7 +29,7 @@
     flex-basis: 50%;
     position: sticky;
     height: fit-content;
-    top: 10px;
+    top: 3vh;
 }
 
 .food-ressources-title {
@@ -60,7 +60,7 @@
     justify-items: start; 
     height: fit-content;
     padding: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(20px, auto)); /* Use 'auto' to avoid stretching */
+    grid-template-columns: repeat(auto-fit, minmax(20px, auto)); 
     gap: 20px;
     border: solid 2px antiquewhite;
 }
@@ -72,3 +72,20 @@
     padding-bottom: 30px;
     text-align: center;
 }
+
+
+  @media screen and (min-width: 1450px) {
+    .food-ressources-chart {
+        flex-basis: 50%;
+        position: sticky;
+        height: fit-content;
+        top: 15vh;
+    }
+    }
+
+    @media screen and (min-width: 1530px) {
+        .water-ressources-icon-grid {
+            height: auto;
+            max-width: 890px;
+        }
+    }

@@ -1,10 +1,12 @@
+
+
 .landuse-scroll-container {
     position: relative;   
     height: 600vh; 
     overflow-y: auto; 
     padding-top: 0; 
     overflow: visible; 
-    margin-top: 0;
+    margin: 0 10vw;
 }
 
 .landuse-chart-container {
@@ -27,7 +29,7 @@
 .landuse-chart {
     position: relative;
     width: 100%;
-    max-width: 1220px;
+    max-width: 1400px;
     height: 60vh;
     border-radius: 20px;
     overflow: hidden; 
