@@ -8,7 +8,7 @@
     .scroller-water-ressources {
         flex-basis: 40%;
         max-width: 1510px;
-        height: 300vh;
+        height: fit-content;
     }
 
     .step-water-ressources {
