@@ -24,6 +24,7 @@
     "react-scrollama": "^2.3.3",
     "react-vertical-timeline-component": "^3.6.0",
     "react-window": "^1.8.10",
+    "react-xarrows": "^2.0.2",
     "scrollama": "^3.2.0"
   },
   "devDependencies": {

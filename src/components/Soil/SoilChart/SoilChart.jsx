@@ -62,7 +62,7 @@ const SoilChart = ({
             backgroundSize: 'cover', 
             backgroundRepeat: 'no-repeat',
           }}
-          aria-label={`${chartText}${chartText2}`}
+          aria-describedby={`${chartText}${chartText2}`}
         ><motion.span 
             className='text-second-chart'
             dangerouslySetInnerHTML={{ __html: chartText2 }}

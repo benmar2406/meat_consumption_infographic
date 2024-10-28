@@ -4,7 +4,7 @@ import ComparisonPoorRichGraphic from './components/ComparisonPoorRichGraphic/Co
 import MeatProducedGraphic from './components/MeatProducedGraphic/MeatProducedGraphic'
 import ProductionTimeline from './components/ProductionTimeline/ProductionTimeline'
 import data from './data/production_global.json';
-import Soil from './components/Soil/Soil'
+import Soil from './components/Soil/Soil';
 import WaterPollution from './components/WaterPollution/WaterPollution'
 import WaterRessources from './components/WaterRessources/WaterRessources'
 import RessourcesIntro from './components/RessourcesIntro/RessourcesIntro';
@@ -12,6 +12,7 @@ import WaterRessourcesOneKg from './components/WaterRessources/WaterRessourcesOn
 import Intro from './components/Intro/Intro';
 import Navigation from './components/Navigation/Navigation';
 import FoodRessources from './components/FoodRessources/FoodRessources';
+import FoodRessourcesOneKg from './components/FoodRessources/FoodRessourcesOneKg/FoodRessourcesOneKg'; 
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <WaterPollution />
       <WaterRessourcesOneKg />
       <FoodRessources />
+      <FoodRessourcesOneKg />
       <Soil />
     </>
   )

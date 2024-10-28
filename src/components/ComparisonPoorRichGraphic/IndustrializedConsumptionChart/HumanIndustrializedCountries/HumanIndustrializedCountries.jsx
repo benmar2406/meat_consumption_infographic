@@ -5,7 +5,7 @@ const HumanIndustrializedCountries = () => {
 
   return (
     <div className="info-box">
-      <img className='icon' src={Human}/>
+      <img className='icon' src={Human} alt="human-icon"/>
         <p className='info-text info-text-rich'>high and higher income countries</p>
       </div>
   );

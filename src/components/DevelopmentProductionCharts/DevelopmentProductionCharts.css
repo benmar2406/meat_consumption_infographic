@@ -31,10 +31,8 @@
     opacity: 0; 
   }
   
-  
   .scroller {
     flex-basis: 40%;
-    
   }
   
   .step {

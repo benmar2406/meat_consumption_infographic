@@ -7,7 +7,7 @@
     display: flex;
     width: 100%;
     position: relative;
-    height: fit-content;
+    height: 2500px;
 }
 
 .scroller-food-ressources {
@@ -35,12 +35,12 @@
 .food-ressources-title {
     margin-bottom: 1rem;
     margin-top: 0.2rem;
-    color: antiquewhite;
+    color: #e3e3e3;
     font-family: 'PTSerif-Bold';
 }
 
 .food-ressources-text {
-    color: antiquewhite;
+    color: #e3e3e3;
     font-size: 1.2rem;
 }
 
@@ -62,7 +62,7 @@
     padding: 15px;
     grid-template-columns: repeat(auto-fit, minmax(20px, auto)); 
     gap: 20px;
-    border: solid 2px antiquewhite;
+    border: solid 2px #e3e3e3;
 }
 
 .food-usage-title {

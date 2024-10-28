@@ -36,35 +36,30 @@
   color:  #e3e3e3;
 }
 
-/* Wrapper for the meat grid */
 .meat-production-wrapper {
   width: 50%;
   margin-left: 20px;
 }
 
-/* Each step wrapper (a full-width container for each step) */
 .meat-step {
   width: 100%;
   margin-bottom: 10px;
 }
 
-/* Container for 20 meat icons */
 .meat-grid-container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   gap: 10px;
   justify-content: center;
   align-content: center;;
-  opacity: 0;  /* Initially hidden */
-  transition: opacity 0.5s ease-in-out;  /* Transition for fading in */
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out;  
 }
 
-/* Make sure each container fades in when its step becomes active */
 .scrollama-step-active .meat-grid-container {
-  opacity: 1;  /* Make visible when the step is active */
+  opacity: 1;  
 }
 
-/* Individual grid item styling */
 .meat-grid-item {
   display: flex;
   justify-content: center;
@@ -75,7 +70,6 @@
 .meat-icon {
   width: 100%;
   height: auto;
-
 }
 
 

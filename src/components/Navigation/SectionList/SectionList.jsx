@@ -12,6 +12,7 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
         {title: 'Where is meat consumed?', link: 'comparison-rich-poor-countries'},
         {title: 'ressources: 1kg', link: 'ressources-intro'},
         {title: 'ressource: water', link: 'water-ressources'},
+        {title: 'ressource: food', link: 'food-ressources'},
         {title: 'impact on soil', link: 'soil-impact'}
     ]
 
@@ -62,7 +63,7 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
 
                 {sectionsToNavigate.map((section, index) => {
                     return(
-                        <SectionDot index={index} key={index} clickedIndex={clickedIndex}/>
+                        <SectionDot index={index} key={index} />
                     )
                 })}
                 

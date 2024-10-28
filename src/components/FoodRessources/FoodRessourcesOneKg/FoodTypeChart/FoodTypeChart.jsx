@@ -1,26 +1,26 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, forwardRef, useImperativeHandle } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
-import WaterIconContainer from '../../../WaterIconContainer/WaterIconContainer';
+import CornIconContainer from '../../../CornIconContainer/CornIconContainer';
 import './FoodTypeChart.css'
 
+const FoodTypeChart = forwardRef(({ ressource }, ref) => {
+    const cornWidth = "27px";
+    const cornHeight = "27px";
+    const minCornHeight = "20px";
+    const minCornWidth = "20px";
+    const maxCornHeight = "40px";
+    const maxCornWidth = "40px";
 
-const FoodTypeChart = ({ food, chartIndex }) => {
+    const cornIconProps = { cornWidth, cornHeight, minCornHeight, minCornWidth, maxCornHeight, maxCornWidth };
 
-    const dropWidth = '35%'
-    const dropHeight = '35%'
-    const mindropHeight = '25px'
-    const mindropWidth = '25px'
-    const maxdropHeight = '50px'
-    const maxdropWidth  = '50px'
-    const altText = '100 litres of water'
-    const dropFill = '#a2d3e2'
-
-    const waterDropProps = { dropWidth, dropHeight, mindropHeight, mindropWidth, maxdropHeight, maxdropWidth, altText, dropFill };
-
-    const gridRef = useRef();
-    const isInView = useInView(gridRef, { once: true }); 
+    const gridRef = useRef(); // Internal ref to be used within the component
+    const isInView = useInView(gridRef, { once: true });
     const controls = useAnimation();
 
+    // Use useImperativeHandle to expose the gridRef to the parent correctly
+    useImperativeHandle(ref, () => ({
+        gridElement: gridRef.current // Expose the gridRef to the parent component
+    }));
 
     useEffect(() => {
         if (isInView) {
@@ -31,46 +31,42 @@ const FoodTypeChart = ({ food, chartIndex }) => {
                     type: 'spring',
                     stiffness: 600,
                     damping: 20,
-                    delay: 0.3 * chartIndex 
+                    delay: 0.3
                 }
-            })
+            });
         }
-    }, [isInView, controls])
+    }, [isInView, controls]);
 
-
-    return(
-        <motion.div 
-            className='food-chart-container' 
+    return (
+        <motion.div
+            className="food-consumed-chart-container"
             aria-labelledby="chart-title"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={controls}
         >
-            <div 
-                className={food.cssSelector}
-            >
-                <img className='type-water-ressources-icon' src={food.icon} alt={`${food.type}-icon`}/>
+            <div className="animal-icon-container">
+                <img className="type-animal-icon" src={ressource.AnimalIcon} alt={`${ressource.type}-icon`} />
             </div>
-            <h2 className='food-type-water-usage'>1kg of {food.type}</h2>
-            <div className='grid-water-usage-1kg'
-                role="img" 
+            <p className="animal-type-ressource-usage">{`The amount of food required to produce one kg of meat (beef):`}</p>
+            <div
+                className="grid-food-usage-1kg"
+                role="img"
                 aria-hidden="true"
-                ref={gridRef}
-
+                ref={gridRef} 
             >
-            {Array.from({ length: food.numberOfDrops }, (_ ,index) => {
-                return(
-                    <WaterIconContainer 
-                        key={index}
-                        {...waterDropProps}
-                    />
-                )
-            })}
+                {Array.from({ length: ressource.foodUsageKg }, (_, index) => {
+                    return (
+                        <CornIconContainer key={index} {...cornIconProps} />
+                    );
+                })}
             </div>
-            <div className='water-used-for-1kg'>
-                <h3 className='food-type-title' aria-label={`Amount of water required for producing 1kg of ${food.type}: `}>{food.waterUsage} ltrs</h3>
+            <div className="food-used-for-1kg">
+                <h3 className="food-consumed-title" aria-label={`Amount of food required for producing 1kg of`}>
+                    {ressource.foodUsageKg} kg of food
+                </h3>
             </div>
         </motion.div>
-    )
-}
+    );
+});
 
 export default FoodTypeChart;

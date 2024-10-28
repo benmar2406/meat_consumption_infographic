@@ -14,7 +14,7 @@ const IndustrializedConsumptionChart = (isInView) => {
       opacity: isInView ? 1 : 0,
       transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"}}>
       <HumanIndustrializedCountries />
-      <div className="meat-icon-grid">
+      <div className="meat-icon-grid" aria-hidden="true">
         {Array.from({ length: kgConsumed }).map((_, index) => (
           <MeatIconWrapper 
             key={index} 

@@ -1,4 +1,4 @@
-.food-chart-container {
+.food-ressources-chart-container {
     width: 30%;
     min-width: 348px;
     max-width: 500px;
@@ -9,39 +9,35 @@
     margin: 10px;
 }
 
-.grid-water-usage-1kg {
+.grid-food-usage-1kg {
     display: grid;
     width: 80%;
-    grid-template-columns: repeat(10, minmax(15px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
     justify-content: center;
-    gap: 5px;
-    padding: 10px;
+    gap: 10px;
+    padding: 20px;
     border: solid 3px white;
 }
 
-.water-icon-container {
-    justify-self: center;
-}
 
-.water-used-for-1kg {
+.food-used-for-1kg {
     color: #a2d3e2;
 }
 
-.food-type-title {
+.food-consumed-title {
     text-align: center;
     margin-top: 1.5vh;
-    color: #a2d3e2;
-
+    color: #a8d5ba
 }
 
-.food-type-water-usage {
+.animal-type-ressource-usage {
     margin: 10px;
     margin-top: 0;
     font-size: 1.4rem;
     color: #ff3e2c;
 }
 
-.type-water-ressources-container img {
+.animal-icon-container img {
     object-fit: contain;
     height: 60px;
     margin: 10px;
@@ -59,16 +55,16 @@
     margin: 10px;
 }
 
-.type-water-ressources-icon {
+.type-animal-icon {
     display: block;
     margin: auto;
+    width: 100%;
 }
-
 
 
 @media screen and (max-width: 810px) {
     .food-chart-container {
-        width: 90%;
+        width: 100%;
         min-width: auto;
         max-width: none;
     }
@@ -76,6 +72,4 @@
     .grid-water-usage-1kg {
         width: 100%;
     }
-
-    
 }

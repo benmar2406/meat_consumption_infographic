@@ -66,11 +66,11 @@
 
 .nav-line {
     height: 100%;
-    border-left: 1px solid antiquewhite;
+    border-left: 1px solid #e3e3e3;
     left: 50%;  
     top: 55px;
     position: absolute;
-    background-color: antiquewhite;
+    background-color: #e3e3e3;
     position: absolute;
     z-index: 900;
     transform: translateX(-50%)
@@ -81,7 +81,7 @@
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    background-color: antiquewhite;
+    background-color: #e3e3e3;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -108,7 +108,7 @@
 .navigation-link {
     white-space: nowrap;
     cursor: pointer; 
-    color: white;
+    color: #e3e3e3;
     padding: 3px 7px;
     padding-right: 5px;
     

@@ -4,7 +4,6 @@
 }
 
 .scroller-water-ressources {
-    background-color: aqua;
     flex-basis: 40%;
 }
 
@@ -17,7 +16,6 @@
 }
 
 .water-ressources-chart {
-    background-color: brown;
     flex-basis: 60%;
     position: sticky;
     top: 0px;

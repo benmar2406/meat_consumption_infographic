@@ -12,7 +12,7 @@ const DevelopingConsumptionChart = () => {
   return (
     <>
       <HumanDevelopingCountries />
-      <div className="meat-icon-grid">
+      <div className="meat-icon-grid"  aria-hidden="true">
         {Array.from({ length: kgConsumed }).map((_, index) => (
           <MeatIconWrapper 
           key={index} 

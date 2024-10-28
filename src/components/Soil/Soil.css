@@ -54,7 +54,7 @@
 
 .text-second-chart {
     font-family: "PTSerif-Bold";
-    color: white; 
+    color: #e3e3e3; 
     font-size: 1.5rem; 
     position: absolute; 
     top: 50%;
@@ -67,7 +67,7 @@
 
 .landuse-chart-fill-text {
     font-family: "PTSerif-Bold";
-    color: white; 
+    color: #e3e3e3; 
     font-size: 1.5rem; 
     position: absolute; 
     top: 50%;
@@ -85,7 +85,7 @@
 }
 
 .landuse-text p {
-    color: white;
+    color: #e3e3e3;
     font-family: "PTSerif-Bold";
     margin-top: 0;
 
