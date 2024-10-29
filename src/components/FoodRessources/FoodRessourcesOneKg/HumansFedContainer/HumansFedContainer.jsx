@@ -15,7 +15,7 @@ const HumansFedContainer = forwardRef((props, ref) => {
                     )
                 })}
             </div>
-            <p className='humans-fed-text'>{props.humansFed} {props.humansFed === 1 ? 'human' : 'humans'} fed for 1 day</p>
+            <p className='humans-fed-text'>{props.humansFed} {props.humansFed === 1 ? 'human' : 'humans'} for 1 day</p>
         </>
     )
 

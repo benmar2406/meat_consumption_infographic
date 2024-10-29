@@ -1,24 +1,22 @@
 .food-ressources-chart-container {
-    width: 30%;
     min-width: 348px;
-    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: center;
-    margin: 10px;
+    margin: 10p auto;
 }
 
 .grid-food-usage-1kg {
     display: grid;
-    width: 80%;
+    width: 60%;
     grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
     justify-content: center;
     gap: 10px;
     padding: 20px;
     border: solid 3px white;
+    margin: auto;
 }
-
 
 .food-used-for-1kg {
     color: #a2d3e2;
@@ -59,6 +57,12 @@
     display: block;
     margin: auto;
     width: 100%;
+}
+
+.food-consumed-chart-container p {
+    opacity: 1;
+    color: white;
+    text-align: center;
 }
 
 
