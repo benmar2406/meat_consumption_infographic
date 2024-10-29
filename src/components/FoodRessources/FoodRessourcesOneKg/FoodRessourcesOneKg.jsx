@@ -22,8 +22,10 @@
       const chartRef = useRef(null);
       const meatIconBorderRef = useRef(null); 
       const infoCircle1Ref = useRef(null); 
+      const humansFed1Ref = useRef(null)
       const [path1, setPath1] = useState('');
       const [path2, setPath2] = useState('');
+      const [path3, setPath3] = useState('');
       const isInView = useInView(chartRef, { once: true })
       const scrollContainerRef = useRef(null);
       
@@ -96,14 +98,29 @@
             const infoCircle1Rect = infoCircle1Ref.current.getBoundingClientRect();
 
             // Calculate path from the bottom center of chartRef to the top center of meatIconBorderRef
-            const startX2 = meatRect.left + meatRect.width / 2;
-            const startY2 = meatRect.bottom;
+            const startX = meatRect.left + meatRect.width / 2;
+            const startY = meatRect.bottom;
             
-            const endX2 = infoCircle1Rect.left + infoCircle1Rect.width / 2;
-            const endY2 = infoCircle1Rect.top;
+            const endX = infoCircle1Rect.left + infoCircle1Rect.width / 2;
+            const endY = infoCircle1Rect.top;
 
             // Define the SVG path for a smooth curve
-            setPath2(`M ${startX2},${startY2} C ${startX2},${startY2 + 50} ${endX2},${endY2 - 50} ${endX2},${endY2}`);
+            setPath2(`M ${startX},${startY} C ${startX},${startY + 50} ${endX},${endY - 50} ${endX},${endY}`);
+
+            if (infoCircle1Ref.current && humansFed1Ref.current) {
+              const infoCircle1Rect = infoCircle1Ref.current.getBoundingClientRect();
+              const humansFed1Rect = humansFed1Ref.current.getBoundingClientRect();
+
+              // Calculate path from the bottom center of chartRef to the top center of meatIconBorderRef
+              const startX = infoCircle1Rect.left + infoCircle1Rect.width / 2;
+              const startY = infoCircle1Rect.bottom;
+              
+              const endX = humansFed1Rect.left + humansFed1Rect.width / 2;
+              const endY = humansFed1Rect.top;
+  
+              // Define the SVG path for a smooth curve
+              setPath3(`M ${startX},${startY} C ${startX},${startY + 50} ${endX},${endY - 50} ${endX},${endY}`);
+          }
         }
       };
 
@@ -137,7 +154,6 @@
                       />
                   ))}
               </motion.div>
-
               <div className="food-produced-container">
                   <div className="meat-based-container">
                       <div className='one-kg-meat-container' ref={meatIconBorderRef}>
@@ -148,7 +164,7 @@
                         ref={infoCircle1Ref}
                       />
                       <div className='humans-fed-container'>
-                          <HumansFedContainer humansFed={ressourceUsage[0].humansFedwithMeat} />
+                          <HumansFedContainer humansFed={ressourceUsage[0].humansFedwithMeat} ref={humansFed1Ref} />
                       </div>
                   </div>
 
@@ -194,6 +210,19 @@
             <motion.path
                 d={path2}
                 id="path2"
+                stroke="#ff3e2c"
+                strokeWidth="4"
+                fill="none"
+                strokeLinecap="round"
+                strokeDasharray="8, 16"
+                style={{
+                    animation: 'dashReverseAnimation 2s linear infinite'
+                }}
+                
+            />
+            <motion.path
+                d={path3}
+                id="path3"
                 stroke="#ff3e2c"
                 strokeWidth="4"
                 fill="none"
