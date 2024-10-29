@@ -10,8 +10,11 @@ const InfoCircle =  forwardRef(({ infoCircle }, ref) => {
         <div 
             className='info-circle'
             ref={ref}
+            style={{
+                marginTop: infoCircle.marginTop
+            }}
         >
-                <p style={{color: infoCircle.color}}>feeds</p>
+                <p style={{color: infoCircle.color}}>{infoCircle.text}</p>
         </div>
     )
 });
