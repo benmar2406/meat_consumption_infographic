@@ -52,7 +52,14 @@
 .humans-fed-container {
     width: fit-content;
     margin: auto;
+    text-align: center;
 }
+
+.humans-fed-container-2 {
+    margin: auto;
+    width: 70%;
+}
+
 
 .one-kg-meat-container {
     display: flex;

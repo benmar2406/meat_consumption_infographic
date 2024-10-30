@@ -1,5 +1,5 @@
   import React, { useRef, useEffect, useState } from 'react';
-  import { motion, useAnimation, useTransform, useScroll, useInView } from 'framer-motion'
+  import { motion, useAnimation, useInView } from 'framer-motion'
   import FoodTypeChart from './FoodTypeChart/FoodTypeChart';
   import updatePath from './updatePath'
   import './FoodRessourcesOneKg.css';
@@ -109,7 +109,9 @@
                     className='humans-fed-container'>
                       <HumansFedContainer 
                         humansFed={ressourceUsage[0].humansFedwithMeat} 
-                        ref={humansFed1Ref} />
+                        ref={humansFed1Ref} 
+                        display={'inline-grid'}
+                        />
                   </div>
                 </div>
 
@@ -122,6 +124,7 @@
                     <HumansFedContainer 
                       humansFed={ressourceUsage[0].humansFedAlternative}
                       ref={humansFed2Ref} 
+                      display={'grid'}
                     />
                 </div>
                 </div>

@@ -6,7 +6,11 @@ const HumansFedContainer = forwardRef((props, ref) => {
 
     return(
         <>
-            <div className="human-icon-grid" ref={ref}>
+            <div 
+                className="human-icon-grid" 
+                ref={ref}
+                style={{display: props.display}}
+                >
                 {Array.from({length: props.humansFed}, (_, index) => {
                     return(
                     <div className='human-icon-container'> 
