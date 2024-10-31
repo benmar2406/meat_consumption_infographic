@@ -6,7 +6,7 @@ import soil from '../../assets/img/soil_degradation.jpg';
 import water from '../../assets/img/water.jpg';
 import air from '../../assets/img/air.jpg';
 import fire from '../../assets/img/fire.jpg';
-
+ 
 const EnvironmentalImpact = () => {
 
   const ref = useRef(null)
