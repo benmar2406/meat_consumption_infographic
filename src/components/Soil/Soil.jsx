@@ -23,10 +23,10 @@ const Soil = () => {
     },  
 
     { 
-      requiredPercentage: 60,   
+      requiredPercentage: 40,   
       requiredPercentageArticle: 70, 
-      fullWidthValue: 0.7, 
-      scrollEffectDirection: ["100%", "30%"],
+      fullWidthValue: 0.9, 
+      scrollEffectDirection: ["100%", "25%"],
       headline: 'Soil degradation', 
       backgroundImage: `linear-gradient(rgba(255, 62, 44, 0.5), rgba(255, 62, 44, 0.5)), url(${soilDegradation})`,
       backgroundColor: "rgba(168, 213, 186, 0.8)",

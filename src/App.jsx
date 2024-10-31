@@ -13,6 +13,7 @@ import Intro from './components/Intro/Intro';
 import Navigation from './components/Navigation/Navigation';
 import FoodRessources from './components/FoodRessources/FoodRessources';
 import FoodRessourcesOneKg from './components/FoodRessources/FoodRessourcesOneKg/FoodRessourcesOneKg'; 
+import EnvironmentalImpact from './components/EnvironmentalImpact/EnvironmentalImpact.jsx'
 
 
 function App() {
@@ -22,16 +23,18 @@ function App() {
       <Navigation />
       <MeatProducedGraphic />
       <Intro />
+      <EnvironmentalImpact />
+      <Soil />
+      <WaterPollution />
       <ProductionTimeline data={data}/>
       <DevelopmentProductionCharts />
       <ComparisonPoorRichGraphic />
       <RessourcesIntro />
       <WaterRessources />
-      <WaterPollution />
       <WaterRessourcesOneKg />
       <FoodRessources />
       <FoodRessourcesOneKg />
-      <Soil />
+      
     </>
   )
 }

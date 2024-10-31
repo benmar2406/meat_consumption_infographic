@@ -1,13 +1,13 @@
 .impact {
-    background-color: #e3e3e3;
     min-height: 100vh;
   }
   
   .environmental-impact-headline {
     margin: 0 5vw;
     padding: 40px 0;
-    color: #352f36;
+    color: #e3e3e3;
   }
+
   
   .impact-cards-grid {
     margin: 0 5vw;
@@ -86,9 +86,8 @@
   }
 
   .environmental-card-overlay:hover {
-    background-color: rgba(53, 47, 54, 0.7); ;
+    background-color: rgba(255, 62, 4, 0.7); ;
   }
-  
   
   .environmental-impact-card-headline {
     font-size: 3rem;
@@ -105,13 +104,13 @@
   .back-impact-card {
     transform: rotateY(180deg);
     z-index: 1;
-    background-color: #352f36;
+    background-color: #e3e3e3;
   }
-  
+
   .back-impact-card h3, .back-impact-card p {
     margin: 0;
     padding: 0;
-    color: #e3e3e3; 
+    color: #352f36; 
     text-align: center;
   }
   
