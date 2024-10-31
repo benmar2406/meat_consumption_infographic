@@ -8,7 +8,6 @@ import air from '../../assets/img/air.jpg';
 import fire from '../../assets/img/fire.jpg';
  
 const EnvironmentalImpact = () => {
-
   const ref = useRef(null)
   const isInView = useInView(ref)
 
