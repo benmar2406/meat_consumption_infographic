@@ -2,8 +2,6 @@ import React, { forwardRef } from 'react';
 import './OneKgMeatContainer.css'
 import MeatIconContainer from '../../../MeatIconContainer/MeatIconContainer';
 
-
-
 const OneKgMeatContainer = forwardRef((props, ref) => {
    
     return(

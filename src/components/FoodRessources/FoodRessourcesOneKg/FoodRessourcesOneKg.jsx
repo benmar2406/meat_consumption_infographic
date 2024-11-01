@@ -1,22 +1,24 @@
   import React, { useRef, useEffect, useState } from 'react';
   import { motion, useAnimation, useInView } from 'framer-motion'
   import FoodTypeChart from './FoodTypeChart/FoodTypeChart';
-  import updatePath from './updatePath'
+  import useDrawPath from '../../hooks/useDrawPath';
+  import useAnimateOnView from '../../hooks/useAnimateOnView';
   import './FoodRessourcesOneKg.css';
   import cowIcon from '../../../assets/img/icons/cow.png';
   import OneKgMeatContainer from './OneKgMeatContainer/OneKgMeatContainer';
   import HumansFedContainer from './HumansFedContainer/HumansFedContainer';
   import InfoCircle from './InfoCircle/InfoCircle';
 
-  const FoodRessourcesOneKg = () => {
-      const ressourceUsage = [
-          { type: "beef", foodUsageKg: 25, AnimalIcon: cowIcon, humansFedwithMeat: 1, humansFedAlternative: 36, cssSelector: "type-meat-water-container" }
-      ];
+  const ressourceUsage = [
+    { type: "beef", foodUsageKg: 25, AnimalIcon: cowIcon, humansFedwithMeat: 1, humansFedAlternative: 36, cssSelector: "type-meat-water-container" }
+];
 
-      const infoCircles = [
-        {type: 'meat', color: '#ff3e2c', text: 'feeds', marginTop: '0'},
-        {type: 'vegetarian', color: '#a8d5ba', text: 'feed', marginTop: '0'},
-      ]
+  const infoCircles = [
+    {type: 'meat', color: '#ff3e2c', text: 'feeds', marginTop: '0'},
+    {type: 'vegetarian', color: '#a8d5ba', text: 'feed', marginTop: '0'},
+  ]
+
+  const FoodRessourcesOneKg = () => {
 
       const foodUsageRef = useRef(null)
       const chartRef = useRef(null);
@@ -26,59 +28,27 @@
       const infoCircle2Ref = useRef(null); 
       const humansFed2Ref = useRef(null);
       
-      const [path1, setPath1] = useState('');
-      const [path2, setPath2] = useState('');
-      const [path3, setPath3] = useState('');
-      const [path4, setPath4] = useState('');
-      const [path5, setPath5] = useState('');
 
-      const isInView = useInView(chartRef, { once: true })
+      const { path1, path2, path3, path4, path5 } = useDrawPath(
+        chartRef,
+        meatIconRef,
+        infoCircle1Ref,
+        humansFed1Ref,
+        infoCircle2Ref,
+        humansFed2Ref
+      )
 
-      const inViewControls = useAnimation()
-
-
-      useEffect(() => {
-        if (isInView) {
-          inViewControls.start({
-              scale: 1,
-              opacity: 1,
-              transition: {
-                  type: 'spring',
-                  stiffness: 600,
-                  damping: 20,
-              }
-            })
-        }
-      }, [inViewControls, isInView])
-
-
-      useEffect(() => {
-        updatePath(
-            chartRef, meatIconRef, infoCircle1Ref, humansFed1Ref, infoCircle2Ref, humansFed2Ref, setPath1, setPath2, setPath3, setPath4, setPath5
-        );
-
-        window.addEventListener('resize', () =>
-            updatePath(
-              chartRef, meatIconRef, infoCircle1Ref, humansFed1Ref, infoCircle2Ref, humansFed2Ref, setPath1, setPath2, setPath3, setPath4, setPath5
-            )
-        );
-        window.addEventListener('scroll', () =>
-            updatePath(
-              chartRef, meatIconRef, infoCircle1Ref, humansFed1Ref, infoCircle2Ref, humansFed2Ref, setPath1, setPath2, setPath3, setPath4, setPath5
-            )
-        );
-
-        return () => {
-            window.removeEventListener('resize', updatePath);
-            window.removeEventListener('scroll', updatePath);
-        };
-    }, []);
+      const { inViewControls, initial } = useAnimateOnView(
+        foodUsageRef
+      )
 
 
       return (
           <section className="food-usage-1kg">
               <h2 className='food-usage-chart-title'>Food required to produce 1kg of meat</h2>
-              <div 
+              <motion.div 
+                initial={initial}
+                animate={inViewControls}
                 className='food-usage-1kg-chart'
                 ref={foodUsageRef}
               >
@@ -89,7 +59,7 @@
                         ref={chartRef} 
                       />
                   ))}
-              </div>
+              </motion.div>
               <div className="food-produced-container">
                 <div className="meat-based-container"
                 >

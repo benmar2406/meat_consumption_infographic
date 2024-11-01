@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from 'react';
-import { motion, useAnimation, useInView } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import MeatIconContainer from './MeatIconContainer/MeatIconContainer';
 import useInViewAnimation from '../hooks/useInViewAnimation';
 
