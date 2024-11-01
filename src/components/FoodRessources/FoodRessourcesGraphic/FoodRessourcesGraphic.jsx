@@ -2,32 +2,21 @@ import React, { useRef, useEffect, useState } from 'react';
 import { motion, useAnimation } from "framer-motion";
 import '../FoodRessources.css';
 import FoodIconContainer from './FoodIconContainer/FoodIconContainer';
+import useAnimateOnView from '../../hooks/useAnimateOnView';
 
 const FoodRessourcesGraphic = ({ index, name, numberOfIcons, displayWhen, tonnes, displayMeatWhen, usedForMeat, percentageForMeat }) => {
 
     const ref = useRef();
-    const controls = useAnimation();
-
-    useEffect(() => {
-        if (displayWhen) {
-            controls.start({
-                scale: 1,
-                opacity: 1,
-                transition: {
-                    type: 'spring',
-                    stiffness: 600,
-                    damping: 20,
-                    delay: 0.3 * index 
-                }
-            });
-        }
-    }, [displayWhen, index, controls]); 
+    
+    const { inViewControls, initial } = useAnimateOnView(
+        ref
+      )
 
     return (
         <motion.div 
             className='food-container'
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={controls}
+            initial={ initial }
+            animate={inViewControls}
             aria-describedby={`In 2022 ${tonnes} tonnes of ${name} were produced worldwide. ${percentageForMeat} percent were consumed through livestock breeding`}
         >
             <p className="food-ressources-title" aria-hidden="true">{name}</p>
