@@ -1,7 +1,7 @@
 import { useAnimation, useInView } from 'framer-motion';
 import { useRef, useEffect } from 'react';
 
-const useInViewAnimation = (index, onLastIconRendered, isLastItem) => {
+const useInfoBoxAnimation = (index, onLastIconRendered, isLastItem) => {
   const controls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref, { triggerOnce: true });
@@ -13,7 +13,10 @@ const useInViewAnimation = (index, onLastIconRendered, isLastItem) => {
         transform: 'translateY(0px)',
         transition: { delay: index * 0.02, duration: 0.07 },
       }).then(() => {
-        if (isLastItem) onLastIconRendered();
+        if (isLastItem) {
+          console.log("Last item is in view. Triggering onLastIconRendered."); // Debugging output
+          onLastIconRendered();
+        }
       });
     }
   }, [isInView, controls, index, isLastItem, onLastIconRendered]);
@@ -21,4 +24,4 @@ const useInViewAnimation = (index, onLastIconRendered, isLastItem) => {
   return { ref, controls };
 };
 
-export default useInViewAnimation;
+export default useInfoBoxAnimation;

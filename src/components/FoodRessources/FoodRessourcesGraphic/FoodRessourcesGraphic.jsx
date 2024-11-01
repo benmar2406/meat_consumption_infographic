@@ -15,7 +15,7 @@ const FoodRessourcesGraphic = ({ name, numberOfIcons, tonnes, displayMeatWhen, u
     return (
         <motion.div 
             className='food-container'
-            initial={ initial }
+            initial={initial}
             animate={inViewControls}
             aria-describedby={`In 2022 ${tonnes} tonnes of ${name} were produced worldwide. ${percentageForMeat} percent were consumed through livestock breeding`}
         >

@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import MeatIconContainer from './MeatIconContainer/MeatIconContainer';
-import useInViewAnimation from '../hooks/useInViewAnimation';
+import useInfoBoxAnimation from '../hooks/useInfoBoxAnimation';
 
 const MeatIconWrapper = ({ index, onLastIconRendered, kgConsumed }) => {
   
-  const { ref, controls } = useInViewAnimation(
+  const { ref, controls } = useInfoBoxAnimation(
     index, 
     onLastIconRendered, 
     index === kgConsumed - 1

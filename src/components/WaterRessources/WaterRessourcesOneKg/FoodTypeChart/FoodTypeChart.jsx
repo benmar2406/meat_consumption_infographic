@@ -26,7 +26,7 @@ const FoodTypeChart = ({ food, chartIndex }) => {
         <motion.div 
             className='food-chart-container' 
             aria-labelledby="chart-title"
-            initial={ initial }
+            initial={initial}
             animate={inViewControls}
         >
             <div 
