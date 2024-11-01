@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
+import useAnimateOnView from '../../../hooks/useAnimateOnView';
 import WaterIconContainer from '../../../WaterIconContainer/WaterIconContainer';
 import './FoodTypeChart.css'
 
@@ -21,29 +22,14 @@ const FoodTypeChart = ({ food, chartIndex }) => {
     const isInView = useInView(gridRef, { once: true }); 
     const controls = useAnimation();
 
-
-    useEffect(() => {
-        if (isInView) {
-            controls.start({
-                scale: 1,
-                opacity: 1,
-                transition: {
-                    type: 'spring',
-                    stiffness: 600,
-                    damping: 20,
-                    delay: 0.3 * chartIndex 
-                }
-            })
-        }
-    }, [isInView, controls])
-
+    const { initial, inViewControls } = useAnimateOnView(gridRef)
 
     return(
         <motion.div 
             className='food-chart-container' 
             aria-labelledby="chart-title"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={controls}
+            initial={ initial }
+            animate={inViewControls}
         >
             <div 
                 className={food.cssSelector} 
