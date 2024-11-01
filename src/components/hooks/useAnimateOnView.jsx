@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { useAnimation, useInView } from 'framer-motion';
 
-const useAnimateOnView = (elementToAnimate, options = { once: true }) => {
+const useAnimateOnView = (elementToAnimate) => {
+    const options = { once: true }
     const isInView = useInView(elementToAnimate, options);
     const inViewControls = useAnimation();
     const initial = { opacity: 0, scale: 0.8 };

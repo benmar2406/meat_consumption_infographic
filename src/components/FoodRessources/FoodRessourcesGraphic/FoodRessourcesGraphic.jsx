@@ -4,7 +4,7 @@ import '../FoodRessources.css';
 import FoodIconContainer from './FoodIconContainer/FoodIconContainer';
 import useAnimateOnView from '../../hooks/useAnimateOnView';
 
-const FoodRessourcesGraphic = ({ index, name, numberOfIcons, displayWhen, tonnes, displayMeatWhen, usedForMeat, percentageForMeat }) => {
+const FoodRessourcesGraphic = ({ name, numberOfIcons, tonnes, displayMeatWhen, usedForMeat, percentageForMeat }) => {
 
     const ref = useRef();
     
