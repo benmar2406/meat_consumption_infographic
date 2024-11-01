@@ -3,6 +3,7 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import HumanDevelopingCountries from './HumanDevelopingCountries/HumanDevelopingCountries';
 import MeatIconContainer from '../MeatIconContainer/MeatIconContainer';
 import KgConsumed from '../KgConsumed/KgConsumed';
+import MeatIconWrapper from '../MeatIconWrapper';
 
 const kgConsumed = 15;
 
@@ -34,36 +35,6 @@ const DevelopingConsumptionChart = () => {
         <KgConsumed kgConsumed={kgConsumed} color="#a8d5ba"/>
       </motion.div>
     </>
-  );
-};
-
-const MeatIconWrapper = ({ index, onLastIconRendered }) => {
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const isInView = useInView(ref, { triggerOnce: true });
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start({
-        opacity: 1,
-        transform: 'translateY(0px)',
-        transition: { delay: index * 0.02, duration: 0.07 },
-      }).then(() => {
-        if (index === kgConsumed - 1) {
-          onLastIconRendered();
-        }
-      });
-    }
-  }, [isInView, controls, index, onLastIconRendered]);
-
-  return (
-    <motion.div
-      ref={ref}
-      animate={controls}
-      initial={{ opacity: 0, transform: 'translateY(20px)' }}
-    >
-      <MeatIconContainer />
-    </motion.div>
   );
 };
 

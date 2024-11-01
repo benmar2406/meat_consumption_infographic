@@ -7,7 +7,6 @@ import './DevelopmentProductionCharts.css';
 
 function DevelopmentProductionCharts() {
   const [data, setData] = useState(0);
-  const [progress, setProgress] = useState(0);
   const [chartOpacity, setChartOpacity] = useState(1); 
   const [textOpacity, setTextOpacity] = useState(0);
   const [displayEuropeChart, setDisplayEuropeChart] = useState(false);
@@ -28,7 +27,6 @@ function DevelopmentProductionCharts() {
   };
 
   const onStepProgress = ({ progress, data: stepData }) => {
-    setProgress(progress);
   
     if (stepData === data && progress >= 0.8) {
       setTextOpacity(0);
