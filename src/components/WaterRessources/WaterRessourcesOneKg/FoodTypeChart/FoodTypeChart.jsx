@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from 'react';
-import { motion, useAnimation, useInView } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion } from 'framer-motion';
 import useAnimateOnView from '../../../hooks/useAnimateOnView';
 import WaterIconContainer from '../../../WaterIconContainer/WaterIconContainer';
 import './FoodTypeChart.css'
@@ -19,8 +19,6 @@ const FoodTypeChart = ({ food, chartIndex }) => {
     const waterDropProps = { dropWidth, dropHeight, mindropHeight, mindropWidth, maxdropHeight, maxdropWidth, altText, dropFill };
 
     const gridRef = useRef();
-    const isInView = useInView(gridRef, { once: true }); 
-    const controls = useAnimation();
 
     const { initial, inViewControls } = useAnimateOnView(gridRef)
 
