@@ -25,3 +25,4 @@ const useInfoBoxAnimation = (index, onLastIconRendered, isLastItem) => {
 };
 
 export default useInfoBoxAnimation;
+
