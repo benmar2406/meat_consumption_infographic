@@ -27,7 +27,7 @@ const FoodTypeChart = ({ food, chartIndex }) => {
             className='food-chart-container' 
             initial={initial}
             animate={inViewControls}
-            aria-details={`Producing 1kg of ${food.type} requires ${food.waterUsage} litres of water.`}
+            aria-description={`Producing 1kg of ${food.type} requires ${food.waterUsage} litres of water.`}
         >
             <div 
                 className={food.cssSelector} 
