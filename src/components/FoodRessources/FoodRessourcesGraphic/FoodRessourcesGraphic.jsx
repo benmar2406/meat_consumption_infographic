@@ -17,7 +17,7 @@ const FoodRessourcesGraphic = ({ name, numberOfIcons, tonnes, displayMeatWhen, u
             className='food-container'
             initial={initial}
             animate={inViewControls}
-            aria-describedby={`In 2022 ${tonnes} tonnes of ${name} were produced worldwide. ${percentageForMeat} percent were consumed through livestock breeding`}
+            aria-details={`In 2022 ${tonnes} tonnes of ${name} were produced worldwide. ${percentageForMeat} percent were consumed through livestock breeding`}
         >
             <p className="food-ressources-title" aria-hidden="true">{name}</p>
             <div 

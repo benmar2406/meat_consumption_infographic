@@ -1,11 +1,15 @@
 import React from 'react';
 import '../EnvironmentalImpact.css';
 
-const ImpactCard = ({ backgroundImage, topic, onClick, isFlipped, details }) => {
+const ImpactCard = ({ backgroundImage, topic, onClick, isFlipped, details, alt }) => {
   return (
     <div className={`impact-card ${isFlipped ? 'flipped' : ''}`} onClick={onClick}>
       <div className="card-inner">
-        <article className="front-impact-card" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <article 
+          className="front-impact-card" 
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+          aria-label={alt}
+          >
             <div className='environmental-card-overlay'>
             <h3 className="environmental-impact-card-headline">{topic}</h3>
             </div>

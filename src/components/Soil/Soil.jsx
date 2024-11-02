@@ -19,6 +19,7 @@ const Soil = () => {
       meatWidth: '70%',
       chartText: 'Between 60% and 70% of farmland<br /> are utilized for meat production.',
       chartText2: '',
+      altText: 'aerial view of farmland',
       article: "<p>Meat production is taking alot of space of available farming land. This land isn't available for other agricultural usages which could produce more food with less ressources",
     },  
 
@@ -33,6 +34,7 @@ const Soil = () => {
       meatWidth: '100%',
       chartText: '',
       chartText2: 'Around 75% percent of soil degradation caused<br /> by farming is caused by meat production.',
+      altText: 'corroded soil',
       article: '<p>Every agricultural usage has its impact on the land. But especially animal farming is taking its toll on soil.</p>'
     }
     

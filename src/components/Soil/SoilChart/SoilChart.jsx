@@ -13,7 +13,8 @@ const SoilChart = ({
   backgroundColor, 
   scrollEffectDirection, 
   meatWidth, 
-  chartText2 
+  chartText2,
+  altText
 }) => {
   const refScrollContainer = useRef(null);
   const isInView = useInView(refScrollContainer, { once: true });
@@ -62,7 +63,7 @@ const SoilChart = ({
             backgroundSize: 'cover', 
             backgroundRepeat: 'no-repeat',
           }}
-          aria-describedby={`${chartText}${chartText2}`}
+          aria-label={altText}
         ><motion.span 
             className='text-second-chart'
             dangerouslySetInnerHTML={{ __html: chartText2 }}

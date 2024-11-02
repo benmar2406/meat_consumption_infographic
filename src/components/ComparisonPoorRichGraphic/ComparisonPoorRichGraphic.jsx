@@ -34,6 +34,7 @@ const ComparisonPoorRichGraphic = () => {
                 <IndustrializedConsumptionChart />
               </div>
             </div>
+            <span className="sr-only">In the high and higher income countries on average around 5 times more meat is consumed than in low and lower income countries</span>
           </div>
           <motion.div 
             animate={buttonControls} 

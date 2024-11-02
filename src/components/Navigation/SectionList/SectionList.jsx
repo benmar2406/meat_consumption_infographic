@@ -52,6 +52,7 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
     return(
         <motion.div 
             className='section-list-container'
+            id='section-list'
             initial={{ opacity: 0, height: 0, display: 'none' }}
             animate={controls}
             role='presentation'

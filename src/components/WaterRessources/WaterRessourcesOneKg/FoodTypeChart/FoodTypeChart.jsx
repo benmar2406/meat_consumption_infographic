@@ -25,16 +25,19 @@ const FoodTypeChart = ({ food, chartIndex }) => {
     return(
         <motion.div 
             className='food-chart-container' 
-            aria-labelledby="chart-title"
             initial={initial}
             animate={inViewControls}
+            aria-details={`Producing 1kg of ${food.type} requires ${food.waterUsage} litres of water.`}
         >
             <div 
                 className={food.cssSelector} 
             >
                 <img className='type-water-ressources-icon' src={food.icon} alt={`${food.type}-icon`}/>
             </div>
-            <h2 className='food-type-water-usage'>1kg of {food.type}</h2>
+            <h2 
+                aria-hidden="true"
+                className='food-type-water-usage'>1kg of {food.type}
+            </h2>
             <div className='grid-water-usage-1kg'
                 role="img" 
                 aria-hidden="true"
@@ -51,8 +54,11 @@ const FoodTypeChart = ({ food, chartIndex }) => {
                 )
             })}
             </div>
-            <div className='water-used-for-1kg'>
-                <h3 className='food-type-title' aria-label={`Amount of water required for producing 1kg of ${food.type}: ${food.waterUsage} litres.`}>{food.waterUsage} ltrs</h3>
+            <div 
+                className='water-used-for-1kg'
+                aria-hidden="true"
+                >
+                <h3 className='food-type-title'>{food.waterUsage} ltrs</h3>
             </div>
         </motion.div>
     )
