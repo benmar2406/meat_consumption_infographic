@@ -19,6 +19,7 @@ import FoodRessourcesConclusion1 from './components/FoodRessources/FoodRessource
 import FoodRessourcesConclusion2 from './components/FoodRessources/FoodRessourcesConclusion2/FoodRessourcesConclusion2.jsx'
 import Sources from './components/Sources/Sources'
 import Imprint from './components/Imprint/Imprint'
+import ImprintLink from './components/Imprint/ImprintLink'
 
 
 
@@ -48,6 +49,7 @@ function App() {
                 <FoodRessourcesConclusion1 />
                 <FoodRessourcesOneKg />
                 <FoodRessourcesConclusion2 />
+                <ImprintLink/>
               </>
             } 
           />

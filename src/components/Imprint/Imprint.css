@@ -1,8 +1,19 @@
+.imprint-text .imprint-lin  {
+    color: white;
+    font-family: 'PTSerif-Bold';
+}
 
+.imprint-link {
+    display: block;
+    font-size: 0.8rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 3vh;
+}
 
 .imprint-text {
-    color: white;
     font-size: 1.3rem;
-    font-family: 'PTSerif-Bold';
     text-align: center;
+    color: white;
+    font-family: 'PTSerif-Bold';
 }
