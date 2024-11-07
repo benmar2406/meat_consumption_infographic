@@ -14,8 +14,8 @@ const useAnimateTitleOnView = (triggerRef , delay) => {
                 x: 0, 
                 transition: {
                     type: 'spring',
-                    stiffness: 200,
-                    damping: 30,
+                    stiffness: 600,
+                    damping: 20,
                     delay: 1 * delay
                 },
             });

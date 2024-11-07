@@ -14,7 +14,6 @@ const useInfoBoxAnimation = (index, onLastIconRendered, isLastItem) => {
         transition: { delay: index * 0.02, duration: 0.07 },
       }).then(() => {
         if (isLastItem) {
-          console.log("Last item is in view. Triggering onLastIconRendered."); // Debugging output
           onLastIconRendered();
         }
       });

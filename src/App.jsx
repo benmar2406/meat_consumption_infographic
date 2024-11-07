@@ -16,6 +16,7 @@ import FoodRessourcesOneKg from './components/FoodRessources/FoodRessourcesOneKg
 import EnvironmentalImpact from './components/EnvironmentalImpact/EnvironmentalImpact.jsx'
 import FoodRessourcesConclusion1 from './components/FoodRessources/FoodRessourcesConclusion1/FoodRessourcesConclusion1.jsx'
 import FoodRessourcesConclusion2 from './components/FoodRessources/FoodRessourcesConclusion2/FoodRessourcesConclusion2.jsx'
+import Sources from './components/Sources/Sources.jsx'
 
 
 

@@ -19,12 +19,12 @@ const FoodRessources = () => {
         {name: "soy", tonnes: "380 mio.", numberOfIcons: 10, usedForMeat: 8, percentageForMeat: 80, displayWhen: stepOne, displayMeatWhen: stepFour }
     ]
 
-    const article1 = '<p>A large faction of food produced worldwide is consumed through livestock breeding.</p>'
-    const article2 = "<p>​20% of all wheat produced worldwide is used by the meat industry indirectly as animal food.</p>"
-    const article3 = "<p>For corn the picture is different: 65% of all corn produced worldwide is used to feed animals.</p>"
-    const article4 = "<p>For soy it is even more crass: 80% of soy is consumed through livestock breeding</p>"
-    const article5 = "<p>Food used for meat production is not available to be directly consumed by humans.</p><p>Producing meat is inefficient compared to eating plant-based foods directly. </p>"
-    const steps = [[10, article1], [20, article2], [30, article3], [40, article4], [50, article5], [60, "placeholder"]]; // Last step is not displayed and only used for controlling behaviour after last actual step 
+    const article1 = '<p>A significant portion of food produced globally is used in livestock farming.</p>';
+    const article2 = "<p>​Around 20% of all wheat grown worldwide goes indirectly to the meat industry as animal feed.</p>";
+    const article3 = "<p>The numbers are higher for corn: 65% of the global corn production is used for animal feed.</p>";
+    const article4 = "<p>For soy, the impact is even greater: 80% of all soy produced is consumed through livestock farming.</p>";
+
+    const steps = [[10, article1], [20, article2], [30, article3], [40, article4], [50, "placeholder"]]; // Last step is not displayed and only used for controlling behaviour after last actual step 
     const lastStep = steps[steps.length - 1][0];
     const [currentStep, setCurrentStep] = useState(null);
     
@@ -45,7 +45,7 @@ const FoodRessources = () => {
     return(
         <section className='food-ressources'>
             <Element name='food-ressources'>
-                <h2 className='food-usage-title'>Food ressources: factions consumed by the meat industry</h2>
+                <h2 className='food-usage-title'>How Much of Our Food Fuels Meat Production?</h2>
                 <div className='food-ressources-scroll-container'>
                         <div className='scroller-food-ressources'>
                             <Scrollama

@@ -4,7 +4,7 @@ import './FoodRessourcesConclusion1.css';
 import useAnimateTitleOnView from '../../hooks/useAnimateTitleOnView';
 
 const FoodRessourcesConclusion1 = () => {
-    const headline = "Food used for meat production is not available to be directly consumed by humans.";
+    const headline = "Food used for meat production isn’t available for direct human consumption.";
 
     const inViewRef = useRef(null);
 

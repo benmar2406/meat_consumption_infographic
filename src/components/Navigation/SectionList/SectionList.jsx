@@ -9,13 +9,14 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
 
     sectionsToNavigate = [
         {title: 'Environmental Impacts', link: 'environmental-impacts'},
-        {title: 'impact on soil', link: 'soil-impact'},
-        {title: 'impacts on water quality', link: 'water-pollution'},
+        {title: 'Impact on soil', link: 'soil-impact'},
+        {title: 'Impacts on water quality', link: 'water-pollution'},
         {title: 'Production: historical developement', link: 'development-production'},   
         {title: 'Where is meat consumed?', link: 'comparison-rich-poor-countries'},
-        {title: 'ressources: 1kg', link: 'ressources-intro'},
-        {title: 'ressource: water', link: 'water-ressources'},
-        {title: 'ressource: food', link: 'food-ressources'},
+        {title: 'Ressources: 1kg', link: 'ressources-intro'},
+        {title: 'Ressource: water', link: 'water-ressources'},
+        {title: 'Ressource: food', link: 'food-ressources'},
+        {title: 'sources', link: '<a href="https://example.com" target="_blank" rel="noopener noreferrer"></a>'},
     ]
 
     const controls = useAnimation();

@@ -28,11 +28,11 @@ function WaterPollution() {
                 {steps.map(value => {
 
                   const stepText = value === 10 
-                    ? "<p>Meat production is a major global contributor to water pollution. It discharges large amounts of pollutants into water systems each year. <p>These pollutants include manure, chemicals, and antibiotics from industrial farming practices. The pollution exacerbates water-quality degradation, threatening ecosystems and human health.</p>"
+                    ? "<p>Meat production is a major contributor to water pollution worldwide, dumping tons of pollutants into rivers and lakes every year.</p><p>These pollutants include manure, chemicals, and antibiotics from industrial farming practices. The pollution exacerbates water-quality degradation, threatening ecosystems and human health.</p>"
                     : value === 20 
-                    ? "<pOne of the main sources of this water pollution comes from livestock waste, which contaminates nearby water bodies.</p><p>For example, runoff from industrial farms leads to nutrient pollution that can cause harmful algal blooms, which reduce oxygen levels in water and harm aquatic life.</p>"
+                    ? "<p>For instance, farm runoff leads to nutrient pollution that triggers algal blooms, reducing oxygen in the water and endangering aquatic life.</p>"
                     : value === 30 
-                    ? "<p>The scale of pollution linked to meat production has severe implications for global water security, with efforts to reduce these impacts remaining insufficient.</p>"
+                    ? "<p>The sheer scale of pollution from meat production threatens global water security—and efforts to tackle it just aren’t keeping up.</p>"
                     : "";
 
                   return (
