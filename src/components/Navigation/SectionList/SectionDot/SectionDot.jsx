@@ -6,7 +6,7 @@ const SectionDot = ({ index }) => {
         <div 
             className='section-dot'
             style={{ 
-                top: `${40 + (index * 37)}px`,
+                top: `${40 + (index * 36)}px`,
                 backgroundColor: '#e3e3e3',
                 transition: 'all 0.7s ease'
             }}

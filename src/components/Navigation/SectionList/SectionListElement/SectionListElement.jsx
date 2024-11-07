@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
-const SectionListElement = ({ title, link, index, onLinkClick, clickedIndex }) => {
+const SectionListElement = ({ title, link, index, onLinkClick }) => {
 
+    const isRouteLink = link.startsWith('/');
     
     return(
         <div 
@@ -10,14 +11,24 @@ const SectionListElement = ({ title, link, index, onLinkClick, clickedIndex }) =
             style={{
                 top: `${90 + (index * 35)}px`,
             }}>
-            <Link 
-                className='navigation-link'
-                to={link}
-                spy={true}
-                smooth={true}
-                duration={700}
-                onClick={() => onLinkClick(index)}
-            >{title}</Link>
+            {isRouteLink ? (<a
+                    href={link}
+                    className='navigation-link'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {title}
+                </a>
+                ) : (
+                <Link 
+                    className='navigation-link'
+                    to={link}
+                    spy={true}
+                    smooth={true}
+                    duration={700}
+                    onClick={() => onLinkClick(index)}
+                >{title}</Link>
+                )}
         </div>
     )
 

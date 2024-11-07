@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import DevelopmentProductionCharts from './components/DevelopmentProductionCharts/DevelopmentProductionCharts';
 import ComparisonPoorRichGraphic from './components/ComparisonPoorRichGraphic/ComparisonPoorRichGraphic';
@@ -16,7 +17,8 @@ import FoodRessourcesOneKg from './components/FoodRessources/FoodRessourcesOneKg
 import EnvironmentalImpact from './components/EnvironmentalImpact/EnvironmentalImpact.jsx'
 import FoodRessourcesConclusion1 from './components/FoodRessources/FoodRessourcesConclusion1/FoodRessourcesConclusion1.jsx'
 import FoodRessourcesConclusion2 from './components/FoodRessources/FoodRessourcesConclusion2/FoodRessourcesConclusion2.jsx'
-import Sources from './components/Sources/Sources.jsx'
+import Sources from './components/Sources/Sources'
+import Imprint from './components/Imprint/Imprint'
 
 
 
@@ -24,22 +26,41 @@ function App() {
 
   return (
     <>
-      <Navigation />
-      <MeatProducedGraphic />
-      <Intro />
-      <EnvironmentalImpact />
-      <Soil />
-      <WaterPollution />
-      <ProductionTimeline data={data}/>
-      <DevelopmentProductionCharts />
-      <ComparisonPoorRichGraphic />
-      <RessourcesIntro />
-      <WaterRessources />
-      <WaterRessourcesOneKg />
-      <FoodRessources />
-      <FoodRessourcesConclusion1 />
-      <FoodRessourcesOneKg />
-      <FoodRessourcesConclusion2 />
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Navigation />
+                <MeatProducedGraphic />
+                <Intro />
+                <EnvironmentalImpact />
+                <Soil />
+                <WaterPollution />
+                <ProductionTimeline data={data}/>
+                <DevelopmentProductionCharts />
+                <ComparisonPoorRichGraphic />
+                <RessourcesIntro />
+                <WaterRessources />
+                <WaterRessourcesOneKg />
+                <FoodRessources />
+                <FoodRessourcesConclusion1 />
+                <FoodRessourcesOneKg />
+                <FoodRessourcesConclusion2 />
+              </>
+            } 
+          />
+          <Route
+            path="/sources"
+            element={<Sources />}
+          />
+          <Route
+            path="/imprint"
+            element={<Imprint />}
+          />
+        </Routes>
+      </Router>
     </>
   )
 }
