@@ -21,10 +21,22 @@ const Navigation = () => {
         }, [navIsOpen]);
 
 
+
     const toggleNavigation = (event) => {
         event.stopPropagation(); 
         setNavIsOpen((prevState) => !prevState); 
     }
+
+    //Handler for "Enter" and "Space" keys
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            if (navIsOpen === false) {
+                setNavIsOpen(true)
+            } else {
+                setNavIsOpen(false)
+            }
+        }
+    };
 
 
     return(
@@ -33,6 +45,7 @@ const Navigation = () => {
                 <NavigationButton  
                     onClick={toggleNavigation}
                     navIsOpen={navIsOpen}
+                    onKeyDown={handleKeyDown}
                 />
                 <SectionList 
                     navIsOpen={navIsOpen}

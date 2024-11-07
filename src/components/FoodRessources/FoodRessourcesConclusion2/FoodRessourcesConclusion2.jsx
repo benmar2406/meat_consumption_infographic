@@ -5,7 +5,7 @@ import useAnimateTitleOnView from '../../hooks/useAnimateTitleOnView';
 
 const FoodRessourcesConclusion2 = () => {
     const headline1 = "The resources needed for 1 kg of beef could feed 36 times more people if consumed directly.";
-    const headline2 = "Producing meat is far less efficient than eating plant-based foods directly.";
+    const headline2 = "Meat production is much less efficient than directly consuming plant-based foods.";
 
     const inViewRef = useRef(null);
 

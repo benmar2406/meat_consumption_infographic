@@ -1,17 +1,20 @@
 import React from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
-const SectionListElement = ({ title, link, index, onLinkClick }) => {
-
+const SectionListElement = ({ title, link, index }) => {
     const isRouteLink = link.startsWith('/');
-    
-    return(
+
+    return (
         <div 
             className='section-list-element' 
             style={{
                 top: `${90 + (index * 35)}px`,
-            }}>
-            {isRouteLink ? (<a
+            }}
+            tabIndex="0"   
+            role="button" 
+        >
+            {isRouteLink ? (
+                <a
                     href={link}
                     className='navigation-link'
                     target="_blank"
@@ -19,20 +22,20 @@ const SectionListElement = ({ title, link, index, onLinkClick }) => {
                 >
                     {title}
                 </a>
-                ) : (
-                <Link 
+            ) : (
+                <Link a
                     className='navigation-link'
                     to={link}
                     spy={true}
                     smooth={true}
                     duration={700}
-                    onClick={() => onLinkClick(index)}
-                >{title}</Link>
-                )}
+                    
+                >
+                    {title}
+                </Link>
+            )}
         </div>
-    )
-
+    );
 }
 
 export default SectionListElement;
-

@@ -51,6 +51,13 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
         setClickedIndex(index)
     }
 
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            onLinkClick(index); 
+        }
+    };
+
 
     return(
         <motion.div 
@@ -82,6 +89,7 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
                         link={section.link}
                         clickedIndex={clickedIndex}
                         onLinkClick={handleIndexClick}
+                        onKeyDown={handleKeyDown}
                     />)
             })}
         </motion.div>
