@@ -7,7 +7,7 @@ import './DevelopmentProductionCharts.css';
 
 function DevelopmentProductionCharts() {
   const [data, setData] = useState(0);
-  const [chartOpacity, setChartOpacity] = useState(1); 
+  const [chartOpacity] = useState(1); 
   const [textOpacity, setTextOpacity] = useState(0);
   const [displayEuropeChart, setDisplayEuropeChart] = useState(false);
 

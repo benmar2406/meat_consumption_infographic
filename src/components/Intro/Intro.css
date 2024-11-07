@@ -47,6 +47,7 @@
 
 .intro-subtitle {
     color: #ff3e2c;
+    text-align: left;
 }
 
 @media screen and (max-width: 650px) {

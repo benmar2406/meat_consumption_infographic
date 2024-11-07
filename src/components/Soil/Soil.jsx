@@ -27,13 +27,13 @@ const Soil = () => {
       requiredPercentage: 40,   
       requiredPercentageArticle: 70, 
       fullWidthValue: 0.9, 
-      scrollEffectDirection: ["100%", "25%"],
+      scrollEffectDirection: ["100%", "20%"],
       headline: 'Soil degradation', 
       backgroundImage: `linear-gradient(rgba(255, 62, 44, 0.5), rgba(255, 62, 44, 0.5)), url(${soilDegradation})`,
       backgroundColor: "rgba(168, 213, 186, 0.8)",
       meatWidth: '100%',
       chartText: '',
-      chartText2: 'Around 75% percent of soil degradation caused<br /> by farming is caused by meat production.',
+      chartText2: 'Around 80% percent of amazonas deforestation caused<br /> is caused by cattle ranching.',
       altText: 'corroded soil',
       article: '<p>Every agricultural usage has its impact on the land. But especially animal farming is taking its toll on soil.</p>'
     }

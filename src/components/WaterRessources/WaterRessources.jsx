@@ -30,6 +30,7 @@ const WaterRessources = () => {
     return(
         <section className='water-ressources'>
             <Element name='water-ressources'>
+            <h2>Water consumption</h2>
                 <div className='water-ressources-scroll-container'>
                         <div className='scroller-water-ressources'>
                             <Scrollama

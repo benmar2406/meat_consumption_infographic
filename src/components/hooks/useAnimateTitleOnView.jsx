@@ -1,27 +1,28 @@
 import { useEffect } from 'react';
 import { useAnimation, useInView } from 'framer-motion';
 
-const useAnimateTitleOnView = (elementToAnimate) => {
-    const options = { once: true }
-    const isInView = useInView(elementToAnimate, options);
+const useAnimateTitleOnView = (triggerRef , delay) => {
+    const options = { once: true };
+    const isInView = useInView(triggerRef, options);
     const inViewControls = useAnimation();
-    const initial = { opacity: 0, scale: 0.8 };
-
+    
     useEffect(() => {
         if (isInView) {
             inViewControls.start({
-                scale: 1,
                 opacity: 1,
+                scale: 1,
+                x: 0, 
                 transition: {
                     type: 'spring',
-                    stiffness: 600,
-                    damping: 20,
+                    stiffness: 200,
+                    damping: 30,
+                    delay: 1 * delay
                 },
             });
         }
     }, [inViewControls, isInView]);
 
-    return { inViewControls, initial };
+    return { inViewControls, isInView };
 };
 
 export default useAnimateTitleOnView;

@@ -1,10 +1,9 @@
 import React, { useRef, useEffect } from 'react'; 
 import { Element } from 'react-scroll';
-import { useAnimation, motion, useInView } from 'framer-motion'; 
+import { useAnimation, useInView } from 'framer-motion'; 
 import './ComparisonPoorRichGraphic.css';
 import DevelopingConsumptionChart from './DevelopingConsumptionChart/DevelopingConsumptionChart';
 import IndustrializedConsumptionChart from './IndustrializedConsumptionChart/IndustrializedConsumptionChart';
-import SectionButton from '../SectionButton/SectionButton';
 
 const ComparisonPoorRichGraphic = () => {
   const buttonRef = useRef(null); 
@@ -25,6 +24,7 @@ const ComparisonPoorRichGraphic = () => {
     
       <section className="comparison-rich-poor-countries">
         <Element name='comparison-rich-poor-countries'>
+          <h2>Where is meat consumed?</h2>
           <div className="scroll-container"> 
             <div className="sticky-container">
               <div className="chart-container">
@@ -36,23 +36,7 @@ const ComparisonPoorRichGraphic = () => {
             </div>
             <span className="sr-only">In the high and higher income countries on average around 5 times more meat is consumed than in low and lower income countries</span>
           </div>
-          <motion.div 
-            animate={buttonControls} 
-            ref={buttonRef}
-            style={{
-              width: '100%', 
-              maxWidth: '400px', 
-              overflow: 'hidden',
-              margin: '0 auto', 
-            }}
-          >
-            <SectionButton 
-              buttonText="What does it cost?"
-              sectionLink="ressources-intro"
-              buttonColor="#ff3e2c"
-            />
-          </motion.div>
-          </Element>
+        </Element>
       </section>
   );
 };

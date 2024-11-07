@@ -3,7 +3,6 @@ import { Element } from 'react-scroll';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import './RessourcesIntro.css';
 import MeatIcon from '../../assets/img/icons/meat_large.png';
-import SectionButton from '../SectionButton/SectionButton';
 
 const RessourcesIntro = () => {
     const ressourceInfoRef = useRef();
@@ -53,8 +52,8 @@ const RessourcesIntro = () => {
     }, [buttonIsInView, buttonControls]);
 
     return (
-        <section className="ressources-intro-container"> 
-            <Element name="ressources-intro">
+        <Element name="ressources-intro">
+            <section className="ressources-intro-container"> 
                 <div className="ressources-intro">
                     <div className="ressources-graphic-container">
                         <motion.img
@@ -82,31 +81,10 @@ const RessourcesIntro = () => {
                     >
                         What does it cost?
                     </motion.h2>
-                    <motion.ul
-                        initial={{ opacity: 0, y: 200 }}
-                        animate={listControls}
-                        className="ressources-list"
-                        role="presentation"
-                    >
-                        <li className="ressources-list-item">water</li>
-                        <li className="ressources-list-item">food</li>
-                        <li className="ressources-list-item">land</li>
-                        <li className="ressources-list-item">environment</li>
-                    </motion.ul>
-                </div>
-        
-                <motion.div 
-                    animate={buttonControls} 
-                    ref={buttonRef}>
-                    <SectionButton 
-                        buttonText="Water" 
-                        sectionLink="water-ressources"
-                        buttonColor="#a2d3e2" 
-                    />
-                </motion.div>
-                    
-            </Element>
-        </section>
+                </div>            
+            </section>
+        </Element>
+
     );
 }
 

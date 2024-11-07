@@ -1,0 +1,21 @@
+.conclusions-headline-section-2 {
+    margin-top: 0;
+}
+
+.conclusions-headline-container-2 {
+    width: 70%;
+    height: 60vh;
+    word-wrap: break-word;
+    margin: auto;
+    margin-top: 0;
+    text-align: center;
+
+}
+
+.food-conclusion-headline-2 {
+    color: white;
+    transform: translate(-50%, -50%);
+    margin: 10vh auto;
+    margin-top: 0;
+    
+}

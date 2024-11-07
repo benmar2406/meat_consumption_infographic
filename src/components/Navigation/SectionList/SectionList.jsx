@@ -8,12 +8,14 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
     const [clickedIndex, setClickedIndex] = useState(null)
 
     sectionsToNavigate = [
-        {title: 'production: historical developement', link: 'development-production'},
+        {title: 'Environmental Impacts', link: 'environmental-impacts'},
+        {title: 'impact on soil', link: 'soil-impact'},
+        {title: 'impacts on water quality', link: 'water-pollution'},
+        {title: 'Production: historical developement', link: 'development-production'},   
         {title: 'Where is meat consumed?', link: 'comparison-rich-poor-countries'},
         {title: 'ressources: 1kg', link: 'ressources-intro'},
         {title: 'ressource: water', link: 'water-ressources'},
         {title: 'ressource: food', link: 'food-ressources'},
-        {title: 'impact on soil', link: 'soil-impact'}
     ]
 
     const controls = useAnimation();

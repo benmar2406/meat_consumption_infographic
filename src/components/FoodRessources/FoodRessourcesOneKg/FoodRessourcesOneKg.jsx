@@ -45,7 +45,6 @@
 
       return (
           <section className="food-usage-1kg">
-              <h2 className='food-usage-chart-title'>Food required to produce 1kg of meat</h2>
               <motion.div 
                 initial={initial}
                 animate={inViewControls}
