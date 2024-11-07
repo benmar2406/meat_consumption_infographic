@@ -6,12 +6,7 @@
 }
 
 .sources-list a {
-    color: white;
     font-size: 1.3rem;
     font-family: 'PTSerif-Bold';
 }
 
-.sources-list a:hover {
-    color: #ff3e2c;
-    text-decoration: underline;
-}

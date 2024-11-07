@@ -46,12 +46,13 @@
 
 a {
   font-weight: 500;
-  color: #ff3e2c;
+  color: #e3e3e3;
   text-decoration: inherit;
 }
 
 a:hover {
   color: #ff3e2c;
+  text-decoration: underline;
 }
 
 body {
