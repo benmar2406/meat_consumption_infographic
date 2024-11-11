@@ -66,6 +66,7 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
             initial={{ opacity: 0, height: 0, display: 'none' }}
             animate={controls}
             role='presentation'
+            aria-label='All navigation links are reachable on this page by scrolling'
         >
             
             <div className='nav-line'>
