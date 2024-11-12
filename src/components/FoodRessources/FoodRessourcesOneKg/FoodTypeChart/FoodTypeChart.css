@@ -1,5 +1,6 @@
 .food-ressources-chart-container {
     min-width: 348px;
+    
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -68,7 +69,7 @@
 
 @media screen and (max-width: 810px) {
     .food-chart-container {
-        width: 100%;
+        width: 90%;
         min-width: auto;
         max-width: none;
     }

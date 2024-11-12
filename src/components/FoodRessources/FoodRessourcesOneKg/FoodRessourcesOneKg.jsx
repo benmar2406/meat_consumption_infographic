@@ -15,7 +15,7 @@
 
   const infoCircles = [
     {type: 'meat', color: '#ff3e2c', text: 'feeds', marginTop: '0'},
-    {type: 'vegetarian', color: '#a8d5ba', text: 'feed', marginTop: '0'},
+    {type: 'vegetarian', color: '#a8d5ba', text: 'could feed', marginTop: '0'},
   ]
 
   const FoodRessourcesOneKg = () => {

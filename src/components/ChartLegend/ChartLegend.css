@@ -1,0 +1,14 @@
+.legend-container {
+    display: flex;
+    border: 3px solid #e3e3e3;
+    width:fit-content;
+    padding: 10px;
+    margin: auto;
+}
+
+.legend-container p {
+    color: #e3e3e3;
+    font-family: "PTSerif-Bold";
+    padding: 0 10px;
+}
+

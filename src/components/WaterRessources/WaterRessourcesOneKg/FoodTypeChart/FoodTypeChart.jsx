@@ -1,22 +1,21 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import useAnimateOnView from '../../../hooks/useAnimateOnView';
-import WaterIconContainer from '../../../WaterIconContainer/WaterIconContainer';
+import BathtubIconContainer from '../../../BathtubIconContainer/BathtubIconContainer';
 import './FoodTypeChart.css'
 
 
-const FoodTypeChart = ({ food, chartIndex }) => {
+const FoodTypeChart = ({ food }) => {
 
-    const dropWidth = '35%'
-    const dropHeight = '35%'
-    const mindropHeight = '25px'
-    const mindropWidth = '25px'
-    const maxdropHeight = '50px'
-    const maxdropWidth  = '50px'
-    const altText = '1 litre of water'
-    const dropFill = '#a2d3e2'
+    const bathtubWidth = '50%'
+    const bathtubHeight = '50%'
+    const minbathtubHeight = '30px'
+    const minbathtubWidth = '30px'
+    const maxdbathtubHeight = '80px'
+    const maxbathtubWidth  = '80px'
+    const bathtubAltText = 'one filled bathtub'
 
-    const waterDropProps = { dropWidth, dropHeight, mindropHeight, mindropWidth, maxdropHeight, maxdropWidth, altText, dropFill };
+    const bathtubProps = { bathtubWidth, bathtubHeight, minbathtubHeight, minbathtubWidth, maxdbathtubHeight, maxbathtubWidth, bathtubAltText };
 
     const gridRef = useRef();
 
@@ -43,12 +42,12 @@ const FoodTypeChart = ({ food, chartIndex }) => {
                 aria-hidden="true"
                 ref={gridRef}
             >
-            {Array.from({ length: food.numberOfDrops }, (_ ,index) => {
+            {Array.from({ length: food.numberOfBathtubs }, (_ ,index) => {
                 return(
-                    <WaterIconContainer 
+                    <BathtubIconContainer 
                         key={index}
-                        {...waterDropProps}
-                        alt={altText}
+                        {...bathtubProps}
+                        alt={bathtubAltText}
                         aria-hidden="true"
                     />
                 )
@@ -58,7 +57,8 @@ const FoodTypeChart = ({ food, chartIndex }) => {
                 className='water-used-for-1kg'
                 aria-hidden="true"
                 >
-                <h3 className='food-type-title'>{food.waterUsage} ltrs</h3>
+                <h3 className='food-type-title'>{food.numberOfBathtubs} bathtubs</h3>
+                <p>{food.waterUsage} ltrs</p>
             </div>
         </motion.div>
     )

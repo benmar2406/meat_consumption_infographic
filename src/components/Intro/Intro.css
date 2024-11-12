@@ -23,14 +23,13 @@
 }
 
 .intro-container {
-    max-width: 1280px;
+    max-width: 1400px;
 }
 
 .intro {
     background-color: #e3e3e3;
     width: 50%;
     min-width: 550px;
-    max-width: 800px;
     text-align: left;
     padding: 20px;
     height: fit-content;
@@ -52,8 +51,9 @@
 
 @media screen and (max-width: 650px) {
     .intro {
-        width: 80%;
+        width: 90%;
         min-width: auto;
+        max-width: 1000px
     }
     
 }

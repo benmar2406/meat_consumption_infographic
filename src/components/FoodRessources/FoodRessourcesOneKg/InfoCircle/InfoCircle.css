@@ -1,12 +1,17 @@
 .info-circle {
     width: 80px;
     height: 80px;
-    border-radius: 80px;
+    border-radius: 100%;
     margin: 10vh auto;
     border: solid 3px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .info-circle p {
     font-family: 'Poppins-Bold';
     text-align: center;
+    font-size: 1.2rem;
+    
 }

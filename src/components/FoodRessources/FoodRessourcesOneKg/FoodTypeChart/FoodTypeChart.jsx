@@ -17,7 +17,7 @@ const FoodTypeChart = forwardRef(({ ressource }, ref) => {
         <div
             className="food-consumed-chart-container"
             aria-labelledby="chart-title"
-            ref={ref} // Forwarding the ref to this container
+            ref={ref} 
         >
             <div className="animal-icon-container">
                 <img className="type-animal-icon" src={ressource.AnimalIcon} alt={`${ressource.type}-icon`} />
