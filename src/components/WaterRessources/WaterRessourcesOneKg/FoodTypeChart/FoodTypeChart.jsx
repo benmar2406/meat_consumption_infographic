@@ -7,8 +7,8 @@ import './FoodTypeChart.css'
 
 const FoodTypeChart = ({ food }) => {
 
-    const bathtubWidth = '50%'
-    const bathtubHeight = '50%'
+    const bathtubWidth = '30px'
+    const bathtubHeight = '30px'
     const minbathtubHeight = '30px'
     const minbathtubWidth = '30px'
     const maxdbathtubHeight = '80px'
@@ -46,7 +46,6 @@ const FoodTypeChart = ({ food }) => {
                 return(
                     <BathtubIconContainer 
                         key={index}
-                        {...bathtubProps}
                         alt={bathtubAltText}
                         aria-hidden="true"
                     />
