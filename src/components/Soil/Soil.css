@@ -54,7 +54,7 @@
 
 .text-second-chart {
     font-family: "PTSerif-Bold";
-    color: #352f36; 
+    color: #e3e3e3; 
     font-size: 1.5rem; 
     position: absolute; 
     top: 50%;
@@ -93,8 +93,8 @@
 
 @media screen and (max-width: 730px) {
     .landuse-chart-fill-text {
-        word-wrap: break-word; /* Ensures long words break to the next line */
-        overflow-wrap: break-word; /* Ensures text breaks when it overflows */
+        word-wrap: break-word; 
+        overflow-wrap: break-word; 
         white-space: normal; 
     }
 
@@ -110,8 +110,8 @@
 @media screen and (max-width: 840px) {
     .text-second-chart {
         left: 72%;
-        word-wrap: break-word; /* Ensures long words break to the next line */
-        overflow-wrap: break-word; /* Ensures text breaks when it overflows */
+        word-wrap: break-word; 
+        overflow-wrap: break-word; 
         white-space: normal; 
     }
 }
