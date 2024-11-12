@@ -1,5 +1,5 @@
 import React from 'react';
-import './bathtubIconContainer.css';
+import './BathtubIconContainer.css';
 import bathtubIcon from '../../assets/img/icons/bathtub.png'
 
 const BathtubIconContainer = ({
