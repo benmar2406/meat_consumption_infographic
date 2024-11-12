@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import useAnimateOnView from '../../../hooks/useAnimateOnView';
 import BathtubIconContainer from '../../../BathtubIconContainer/BathtubIconContainer';
+import MeatIconContainer from '../../../MeatIconContainer/MeatIconContainer'
 import './FoodTypeChart.css'
 
 
@@ -26,17 +27,21 @@ const FoodTypeChart = ({ food }) => {
             className='food-chart-container' 
             initial={initial}
             animate={inViewControls}
-            aria-description={`Producing 1kg of ${food.type} requires ${food.waterUsage} litres of water.`}
+            aria-description={`Producing 1kg of ${food.name} requires ${food.waterUsage} litres of water.`}
         >
             <div 
                 className={food.cssSelector} 
             >
-                <img className='type-water-ressources-icon' src={food.icon} alt={`${food.type}-icon`}/>
+                <img className='type-water-ressources-icon' src={food.icon} alt={`${food.name}-icon`}/>
             </div>
-            <h2 
-                aria-hidden="true"
-                className='food-type-water-usage'>1kg of {food.type}
-            </h2>
+            <div className='food-type-indicator'>
+                {food.meat && <MeatIconContainer/>}
+                <h2 
+                    aria-hidden="true"
+                    className='food-type-water-usage'
+                    >1kg of {food.name}
+                </h2>
+            </div>
             <div className='grid-water-usage-1kg'
                 role="img" 
                 aria-hidden="true"

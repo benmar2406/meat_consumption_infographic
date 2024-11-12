@@ -13,12 +13,12 @@ import ChartLegend from '../../ChartLegend/ChartLegend'
 const WaterRessourcesOneKg = ( ) => {
    
     const foods = [
-        {type: "beef", waterUsage: "15,400", numberOfDrops: 154, numberOfBathtubs: 93, icon: cowIcon, cssSelector: "type-meat-water-container" },
-        {type: "pig", waterUsage: "6,000", numberOfDrops: 60, numberOfBathtubs: 36, icon: pigIcon , cssSelector: "type-meat-water-container"  },
-        {type: "chicken", waterUsage: "4,300", numberOfDrops: 43, numberOfBathtubs: 26, icon: chickenIcon, cssSelector: "type-meat-water-container"  },
-        {type: "soy", waterUsage: "2,150", numberOfDrops: 22, numberOfBathtubs: 13, icon: soyIcon, cssSelector: "type-non-meat-water-container"  },
-        {type: "wheat", waterUsage: "1,600", numberOfDrops: 16, numberOfBathtubs: 9, icon: wheatIcon, cssSelector: "type-non-meat-water-container" },
-        {type: "vegetables", waterUsage: "322", numberOfDrops: 3, numberOfBathtubs: 2, icon: vegetablesIcon, cssSelector: "type-non-meat-water-container"  }
+        {meat: true, name: "beef", waterUsage: "15,400", numberOfDrops: 154, numberOfBathtubs: 93, icon: cowIcon, cssSelector: "type-meat-water-container" },
+        {meat: true, name: "pig", waterUsage: "6,000", numberOfDrops: 60, numberOfBathtubs: 36, icon: pigIcon , cssSelector: "type-meat-water-container"  },
+        {meat: true, name: "chicken",  waterUsage: "4,300", numberOfDrops: 43, numberOfBathtubs: 26, icon: chickenIcon, cssSelector: "type-meat-water-container"  },
+        {meat: false, name: "soy", waterUsage: "2,150", numberOfDrops: 22, numberOfBathtubs: 13, icon: soyIcon, cssSelector: "type-non-meat-water-container"  },
+        {meat: false, name: "wheat", waterUsage: "1,600", numberOfDrops: 16, numberOfBathtubs: 9, icon: wheatIcon, cssSelector: "type-non-meat-water-container" },
+        {meat: false, name: "vegetables", waterUsage: "322", numberOfDrops: 3, numberOfBathtubs: 2, icon: vegetablesIcon, cssSelector: "type-non-meat-water-container"  }
     ]
 
     

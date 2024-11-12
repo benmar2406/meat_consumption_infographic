@@ -14,14 +14,14 @@
     grid-template-columns: repeat(10, minmax(20px, 1fr));
     justify-content: center;
     gap: 10px;
-    padding: 10px;
+    padding: 15px;
     border: solid 3px white;
     box-sizing: border-box;
     width: 100%;
 }
 
-.water-icon-container {
-    justify-self: center;
+.food-type-indicator {
+    display: flex;
 }
 
 .water-used-for-1kg {
