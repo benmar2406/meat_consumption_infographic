@@ -1,0 +1,9 @@
+.leaf-icon-container {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .leaf-icon {
+    max-width: 100%;
+    max-height: 100%;
+  }

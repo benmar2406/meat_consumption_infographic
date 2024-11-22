@@ -60,6 +60,13 @@
     width: 100%;
 }
 
+.food-consumed-chart-container  {
+    width: 70%;
+    margin: auto;
+    font-family: 'PTSerif-Bold';
+}
+   
+
 .food-consumed-chart-container p {
     opacity: 1;
     color: white;

@@ -20,6 +20,7 @@ import FoodRessourcesConclusion2 from './components/FoodRessources/FoodRessource
 import Sources from './components/Sources/Sources'
 import Imprint from './components/Imprint/Imprint'
 import ImprintLink from './components/Imprint/ImprintLink'
+import AirPollution from './components/AirPollution/AirPollution'
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
                 <DevelopmentProductionCharts />
                 <ComparisonPoorRichGraphic />
                 <RessourcesIntro />
+                <AirPollution />
                 <WaterRessources />
                 <WaterRessourcesOneKg />
                 <FoodRessources />

@@ -22,6 +22,7 @@
 
 .food-type-indicator {
     display: flex;
+    margin-bottom: 7px;
 }
 
 .water-used-for-1kg {
@@ -51,8 +52,9 @@
 .food-type-water-usage {
     margin: 10px;
     margin-top: 0;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #ff3e2c;
+    font-family: "Poppins-Bold";
 }
 
 .type-water-ressources-container img {

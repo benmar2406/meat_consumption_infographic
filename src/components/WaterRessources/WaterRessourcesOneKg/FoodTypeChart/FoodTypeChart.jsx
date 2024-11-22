@@ -27,7 +27,7 @@ const FoodTypeChart = ({ food }) => {
             className='food-chart-container' 
             initial={initial}
             animate={inViewControls}
-            aria-description={`Producing 1kg of ${food.name} requires ${food.waterUsage} litres of water.`}
+            aria-description={`Producing 1kg of ${food.name} meat requires ${food.waterUsage} litres of water.`}
         >
             <div 
                 className={food.cssSelector} 
@@ -36,11 +36,11 @@ const FoodTypeChart = ({ food }) => {
             </div>
             <div className='food-type-indicator'>
                 {food.meat && <MeatIconContainer/>}
-                <h2 
+                <span 
                     aria-hidden="true"
                     className='food-type-water-usage'
-                    >1kg of {food.name}
-                </h2>
+                    >producing 1kg uses up:
+                </span>
             </div>
             <div className='grid-water-usage-1kg'
                 role="img" 

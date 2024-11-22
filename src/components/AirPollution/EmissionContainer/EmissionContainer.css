@@ -1,0 +1,52 @@
+.emission-chart-container {
+    display: flex;
+    flex-direction: column;
+    width: 110px;
+    margin-bottom: 10vh;
+}
+
+.emission-chart-container span {
+    font-family: 'Poppins-Bold';
+    font-size: 0.8rem;
+}
+
+.emission-container {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #e3e3e3;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.emission-block {
+    background-color: #ff3e2c;
+    padding: 2px;
+}
+
+.kg-text  {
+    background-color: #e3e3e3;
+    padding: 0;
+    width: 100%;
+    height: 40px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.one-kg-icon  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+    padding-top: 10px;
+    text-align: center;
+    height: 70px;
+}
+
+.kg-text span {
+    color: #352f36;
+    text-align: center;
+}

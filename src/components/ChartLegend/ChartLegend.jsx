@@ -21,7 +21,7 @@ const ChartLegend = () => {
             <BathtubIconContainer
                 {...bathtubProps}
             />
-            <p> fits 165 litres</p>
+            <p> fits 165 litres of water</p>
         </div>
     )
 }

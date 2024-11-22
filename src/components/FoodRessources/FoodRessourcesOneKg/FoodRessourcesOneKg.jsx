@@ -1,5 +1,5 @@
   import React, { useRef, useEffect, useState } from 'react';
-  import { motion, useAnimation, useInView } from 'framer-motion'
+  import { motion } from 'framer-motion'
   import FoodTypeChart from './FoodTypeChart/FoodTypeChart';
   import useDrawPath from '../../hooks/useDrawPath';
   import useAnimateOnView from '../../hooks/useAnimateOnView';

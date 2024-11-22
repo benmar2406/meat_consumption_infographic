@@ -1,4 +1,3 @@
-// FoodTypeChart.jsx
 import React, { forwardRef } from 'react';
 import CornIconContainer from '../../../CornIconContainer/CornIconContainer';
 import './FoodTypeChart.css';
@@ -22,7 +21,7 @@ const FoodTypeChart = forwardRef(({ ressource }, ref) => {
             <div className="animal-icon-container">
                 <img className="type-animal-icon" src={ressource.AnimalIcon} alt={`${ressource.type}-icon`} />
             </div>
-            <p>{`The amount of food required to produce one kg of meat (${ressource.type}):`}</p>
+            <p>{`For each kilogram of ${ressource.type} produced, 20–25 kg of feed is consumed over the animal's lifetime.`}</p>
             <div
                 className="grid-food-usage-1kg"
                 role="img"
