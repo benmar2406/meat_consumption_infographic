@@ -11,14 +11,15 @@
 
 .grid-water-usage-1kg {
     display: grid;
-    grid-template-columns: repeat(10, minmax(20px, 1fr));
-    justify-content: center;
-    gap: 10px;
+    grid-template-columns: repeat(10, minmax(20px, 1fr)); /* Adjust number of columns */
+    gap: 10px; /* Space between grid items */
     padding: 15px;
     border: solid 3px white;
     box-sizing: border-box;
     width: 100%;
+    height: auto;
 }
+
 
 .food-type-indicator {
     display: flex;
@@ -42,7 +43,6 @@
     margin-bottom: 1.2vh;
     color: #a2d3e2;
     font-family: "Poppins-Bold";
-
 }
 
 .food-type-title {
@@ -79,8 +79,6 @@
     display: block;
     margin: auto;
 }
-
-
 
 @media screen and (max-width: 810px) {
     .food-chart-container {

@@ -8,15 +8,7 @@ import './FoodTypeChart.css'
 
 const FoodTypeChart = ({ food }) => {
 
-    const bathtubWidth = '30px'
-    const bathtubHeight = '30px'
-    const minbathtubHeight = '30px'
-    const minbathtubWidth = '30px'
-    const maxdbathtubHeight = '80px'
-    const maxbathtubWidth  = '80px'
     const bathtubAltText = 'one filled bathtub'
-
-    const bathtubProps = { bathtubWidth, bathtubHeight, minbathtubHeight, minbathtubWidth, maxdbathtubHeight, maxbathtubWidth, bathtubAltText };
 
     const gridRef = useRef();
 
@@ -47,15 +39,15 @@ const FoodTypeChart = ({ food }) => {
                 aria-hidden="true"
                 ref={gridRef}
             >
-            {Array.from({ length: food.numberOfBathtubs }, (_ ,index) => {
-                return(
-                    <BathtubIconContainer 
-                        key={index}
-                        alt={bathtubAltText}
-                        aria-hidden="true"
-                    />
-                )
-            })}
+                {Array.from({ length: food.numberOfBathtubs }, (_ ,index) => {
+                    return(
+                        <BathtubIconContainer 
+                            key={index}
+                            alt={bathtubAltText}
+                            aria-hidden="true"
+                        />
+                    )
+                })}
             </div>
             <div 
                 className='water-used-for-1kg'
