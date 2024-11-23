@@ -1,3 +1,5 @@
+import React from 'react'
+import LazyLoad from 'react-lazyload';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import DevelopmentProductionCharts from './components/DevelopmentProductionCharts/DevelopmentProductionCharts';
@@ -6,8 +8,8 @@ import MeatProducedGraphic from './components/MeatProducedGraphic/MeatProducedGr
 import ProductionTimeline from './components/ProductionTimeline/ProductionTimeline'
 import data from './data/production_global.json';
 import Soil from './components/Soil/Soil';
-import WaterPollution from './components/WaterPollution/WaterPollution'
-import WaterRessources from './components/WaterRessources/WaterRessources'
+import WaterPollution from './components/WaterPollution/WaterPollution';
+import WaterRessources from './components/WaterRessources/WaterRessources';
 import RessourcesIntro from './components/RessourcesIntro/RessourcesIntro';
 import WaterRessourcesOneKg from './components/WaterRessources/WaterRessourcesOneKg/WaterRessourcesOneKg';
 import Intro from './components/Intro/Intro';
@@ -43,7 +45,9 @@ function App() {
                 <ComparisonPoorRichGraphic />
                 <RessourcesIntro />
                 <AirPollution />
-                <WaterRessources />
+                <LazyLoad height={400} offset={100} once>
+                  <WaterRessources />
+                </LazyLoad>
                 <WaterRessourcesOneKg />
                 <FoodRessources />
                 <FoodRessourcesConclusion1 />
