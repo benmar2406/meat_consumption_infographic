@@ -1,5 +1,4 @@
 import React from 'react'
-import LazyLoad from 'react-lazyload';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import DevelopmentProductionCharts from './components/DevelopmentProductionCharts/DevelopmentProductionCharts';
@@ -45,9 +44,7 @@ function App() {
                 <ComparisonPoorRichGraphic />
                 <RessourcesIntro />
                 <AirPollution />
-                <LazyLoad height={400} offset={100} once>
-                  <WaterRessources />
-                </LazyLoad>
+                <WaterRessources />
                 <WaterRessourcesOneKg />
                 <FoodRessources />
                 <FoodRessourcesConclusion1 />

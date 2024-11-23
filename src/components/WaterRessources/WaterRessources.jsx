@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Element } from 'react-scroll'
 import { Scrollama, Step } from 'react-scrollama';
+import LazyLoad from 'react-lazyload';
 import WaterRessourcesGraphic from './WaterRessourcesGraphic/WaterRessourcesGraphic';
 import './WaterRessources.css'
 
@@ -59,7 +60,9 @@ const WaterRessources = () => {
                             </Scrollama>
                         </div>
                     <div className='water-ressources-chart'>
-                        <WaterRessourcesGraphic displayAgrUsage={displayAgrUsage} displayMeatUsage={displayMeatUsage}/>
+                        <LazyLoad height={400} offset={100}>
+                            <WaterRessourcesGraphic displayAgrUsage={displayAgrUsage} displayMeatUsage={displayMeatUsage}/>
+                        </LazyLoad>
                     </div>
                 </div>
             </Element>

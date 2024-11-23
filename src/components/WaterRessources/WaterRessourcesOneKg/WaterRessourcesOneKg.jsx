@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 import FoodTypeChart from './FoodTypeChart/FoodTypeChart';
 import './WaterRessourcesOneKg.css'
 import cowIcon from '../../../assets/img/icons/cow.png'
@@ -26,16 +27,18 @@ const WaterRessourcesOneKg = ( ) => {
         <section className="water-usage-1kg">
             <h2 className='water-usage-chart-title'>Different foods: water required to produce 1kg</h2>
             <ChartLegend/>
-            <div className='water-usage-1kg-charts'>
-                {foods.map((food, index) => {
-                    return(
-                        <FoodTypeChart 
-                            key={index}
-                            chartIndex={index}
-                            food={food}
-                        />
-                )})}
-            </div>
+            <LazyLoad height="400px" offdet="100px">
+                <div className='water-usage-1kg-charts'>
+                    {foods.map((food, index) => {
+                        return(
+                            <FoodTypeChart 
+                                key={index}
+                                chartIndex={index}
+                                food={food}
+                            />
+                    )})}
+                </div>
+            </LazyLoad>
 
         </section>
     )

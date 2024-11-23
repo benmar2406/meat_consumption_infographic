@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
-import { useInView } from 'framer-motion';  // Ensure you import useInView properly
+import { useInView } from 'framer-motion';  
+import LazyLoad from 'react-lazyload';
 import YearBlock from './YearBlock/YearBlock';
 
 const groupDataByDecade = (data) => {
@@ -25,8 +26,8 @@ const groupDataByDecade = (data) => {
 };
 
 const ProductionTimeline = ({ data }) => {
-  const ref = useRef(null);  // ref should be initialized inside the component
-  const isInView = useInView(ref, { triggerOnce: true });  // Pass the ref to useInView and set options
+  const ref = useRef(null);  
+  const isInView = useInView(ref, { triggerOnce: true });
 
   const groupedData = groupDataByDecade(data);
 
@@ -40,9 +41,11 @@ const ProductionTimeline = ({ data }) => {
     >
         <div className='chart-container-timeline'>
           <h2>Development of meat production over the decades</h2>
-        {groupedData.map((d) => (
-            <YearBlock key={d.decade} year={`${d.decade}s`} production={d.totalProduction} />
-        ))}
+          <LazyLoad height={400} offset={100}>
+            {groupedData.map((d) => (
+                <YearBlock key={d.decade} year={`${d.decade}s`} production={d.totalProduction} />
+            ))}
+          </LazyLoad>
         </div>
     </section>
   );

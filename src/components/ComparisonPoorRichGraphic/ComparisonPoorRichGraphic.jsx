@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react'; 
 import { Element } from 'react-scroll';
+import LazyLoad from 'react-lazyload';
 import { useAnimation, useInView } from 'framer-motion'; 
 import './ComparisonPoorRichGraphic.css';
 import DevelopingConsumptionChart from './DevelopingConsumptionChart/DevelopingConsumptionChart';
@@ -26,7 +27,8 @@ const ComparisonPoorRichGraphic = () => {
         <Element name='comparison-rich-poor-countries'>
           <h2>Where is meat consumed?</h2>
           <div className="scroll-container"> 
-            <div className="sticky-container">
+            <LazyLoad height="400" offset="100px">
+              <div className="sticky-container">
               <div className="chart-container">
                 <DevelopingConsumptionChart />
               </div>
@@ -34,6 +36,7 @@ const ComparisonPoorRichGraphic = () => {
                 <IndustrializedConsumptionChart />
               </div>
             </div>
+            </LazyLoad>
             <span className="sr-only">In the high and higher income countries on average around 5 times more meat is consumed than in low and lower income countries</span>
           </div>
         </Element>
