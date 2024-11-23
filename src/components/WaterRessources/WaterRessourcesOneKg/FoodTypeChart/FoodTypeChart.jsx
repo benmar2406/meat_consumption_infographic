@@ -8,8 +8,6 @@ import './FoodTypeChart.css'
 
 const FoodTypeChart = ({ food }) => {
 
-    const bathtubAltText = 'one filled bathtub'
-
     const gridRef = useRef();
 
     const { initial, inViewControls } = useAnimateOnView(gridRef)
@@ -43,7 +41,6 @@ const FoodTypeChart = ({ food }) => {
                     return(
                         <BathtubIconContainer 
                             key={index}
-                            alt={bathtubAltText}
                             aria-hidden="true"
                         />
                     )
