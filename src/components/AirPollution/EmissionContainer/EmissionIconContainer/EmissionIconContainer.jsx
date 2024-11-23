@@ -24,7 +24,11 @@ const EmissionIconContainer = ({
         maxHeight: maxemissionIconHeight,
       }}
     >
-      <img className='emission-icon' src={meat ? emissionIcon : emissionIconGreen}  />
+      <img 
+        className='emission-icon' 
+        src={meat ? emissionIcon : emissionIconGreen}  
+        alt="1kg of kg CO₂e" 
+      />
     </div>
   );
 };

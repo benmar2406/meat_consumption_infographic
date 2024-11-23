@@ -14,7 +14,11 @@ const HumansFedContainer = forwardRef((props, ref) => {
                 {Array.from({length: props.humansFed}, (_, index) => {
                     return(
                     <div className='human-icon-container'> 
-                            <img src={humanIcon} key={index}/>
+                            <img 
+                            src={humanIcon} 
+                            key={index}
+                            alt="one human"
+                            />
                     </div>
                     )
                 })}
