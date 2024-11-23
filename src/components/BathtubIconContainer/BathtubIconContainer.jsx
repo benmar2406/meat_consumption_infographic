@@ -8,7 +8,8 @@ const BathtubIconContainer = ({
   minbathtubHeight, 
   minbathtubWidth, 
   maxdbathtubHeight, 
-  maxbathtubWidth
+  maxbathtubWidth,
+  alt
 }) => {
   return (
     <div
@@ -22,7 +23,10 @@ const BathtubIconContainer = ({
         maxHeight: maxdbathtubHeight,
       }}
     >
-      <img className='bathtub-icon' src={bathtubIcon}  />
+      <img 
+        className='bathtub-icon' 
+        src={bathtubIcon} 
+        alt={alt} />
     </div>
   );
 };
