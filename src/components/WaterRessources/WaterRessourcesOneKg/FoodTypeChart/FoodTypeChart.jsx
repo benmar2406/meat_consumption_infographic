@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import useAnimateOnView from '../../../hooks/useAnimateOnView';
 import BathtubIconContainer from '../../../BathtubIconContainer/BathtubIconContainer';
 import MeatIconContainer from '../../../MeatIconContainer/MeatIconContainer'
+import LeafIconContainer from '../../../LeafIconContainer/LeafIconContainer'
 import './FoodTypeChart.css'
 
 
@@ -25,11 +26,11 @@ const FoodTypeChart = ({ food }) => {
                 <img className='type-water-ressources-icon' src={food.icon} alt={`${food.name}-icon`}/>
             </div>
             <div className='food-type-indicator'>
-                {food.meat && <MeatIconContainer/>}
+                {food.meat ? <MeatIconContainer/> : <LeafIconContainer />}
                 <span 
                     aria-hidden="true"
                     className='food-type-water-usage'
-                    >producing 1kg uses up:
+                    >producing 1kg of {food.name}:
                 </span>
             </div>
             <div className='grid-water-usage-1kg'

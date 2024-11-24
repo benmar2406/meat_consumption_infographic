@@ -20,7 +20,7 @@ const FoodRessources = () => {
     ]
 
     const article1 = '<p>A significant portion of food produced globally is used in livestock farming.</p>';
-    const article2 = "<p>​Around 20% of all wheat grown worldwide goes indirectly to the meat industry as animal feed.</p>";
+    const article2 = "<p>​Around <span>20% of all wheat</span> grown worldwide goes indirectly to the meat industry as animal feed.</p>";
     const article3 = "<p>The numbers are higher for corn: 65% of the global corn production is used for animal feed.</p>";
     const article4 = "<p>For soy, the impact is even greater: 80% of all soy produced is consumed through livestock farming.</p>";
 
