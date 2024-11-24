@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import './FoodRessourcesConclusion2.css';
+import '../../Conclusion/Conclusion.css';
 import useAnimateTitleOnView from '../../hooks/useAnimateTitleOnView';
 
 const FoodRessourcesConclusion2 = () => {
@@ -20,18 +20,18 @@ const FoodRessourcesConclusion2 = () => {
     const { inViewControls } = useAnimateTitleOnView(inViewRef);
 
     return (
-        <section className='conclusions-headline-section-2'>
-            <div className='conclusions-headline-container-2'>  
+        <section className='conclusions-headline-section'>
+            <div className='conclusions-headline-container'>  
                 {headlines.map((headline, index) => (
-                    <motion.h2 
-                        className='food-conclusion-headline-2'
+                    <motion.p 
+                        className='conclusion-headline'
                         key={'headline-' + index}
                         initial={headline.initial}   
                         animate={inViewControls}   
                         style={{ transformOrigin: 'center' }}
                     >
                         {headline.text}
-                    </motion.h2>
+                    </motion.p>
                 ))}
                 <div className='placeholder' ref={inViewRef}></div>
             </div>

@@ -192,9 +192,7 @@
             }
             `}
         </style>
-
-            </section>
-        );
-    };
+      </section>
+      )};
 
   export default FoodRessourcesOneKg;

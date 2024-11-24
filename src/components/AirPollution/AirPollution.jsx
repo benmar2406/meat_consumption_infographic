@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
-import { useAnimation, useInView } from 'framer-motion';
+import { useInView } from 'framer-motion';
 import './AirPollution.css';
 import EmissionContainer from './EmissionContainer/EmissionContainer';
-import CarContainer from './CarContainter/CarContainer';
+import CarContainer from './CarContainer/CarContainer';
 import Conclusion from '../Conclusion/Conclusion'
 
 const conclusionText = "The amount of CO2 produced per kilogram, expressed as equivalent kilometres driven by car:"
@@ -29,7 +29,8 @@ const AirPollution = () => {
             <div className="emission-charts-container">
                 {foodEmissionsData.map((foodData, index) => (
                     <EmissionContainer 
-                    key={`emission-container-${index}`} food={foodData} />
+                    key={`emission-container-${index}`} 
+                    food={foodData} />
                 ))}
             </div>
             <Conclusion conclusionText={conclusionText}/>

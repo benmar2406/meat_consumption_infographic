@@ -3,6 +3,7 @@ import { Scrollama, Step } from 'react-scrollama';
 import { Element } from 'react-scroll';
 import FoodRessourcesGraphic from './FoodRessourcesGraphic/FoodRessourcesGraphic'
 import './FoodRessources.css'
+import Conclusion from '../Conclusion/Conclusion'
 
 
 const FoodRessources = () => {
@@ -11,7 +12,6 @@ const FoodRessources = () => {
     const [stepTwo, setStepTwo] = useState(false);
     const [stepThree, setStepThree] = useState(false);
     const [stepFour, setStepFour] = useState(false);
-
 
     const foodRessources = [
         {name: "wheat", tonnes: "780 mio.", numberOfIcons: 20, usedForMeat: 4, percentageForMeat: 20, displayWhen: stepOne, displayMeatWhen: stepTwo },
@@ -23,6 +23,8 @@ const FoodRessources = () => {
     const article2 = "<p>​Around 20% of all wheat grown worldwide goes indirectly to the meat industry as animal feed.</p>";
     const article3 = "<p>The numbers are higher for corn: 65% of the global corn production is used for animal feed.</p>";
     const article4 = "<p>For soy, the impact is even greater: 80% of all soy produced is consumed through livestock farming.</p>";
+
+    const conclusionText = "Food used for meat production isn’t available for direct human consumption."
 
     const steps = [[10, article1], [20, article2], [30, article3], [40, article4], [50, "placeholder"]]; // Last step is not displayed and only used for controlling behaviour after last actual step 
     const lastStep = steps[steps.length - 1][0];
@@ -95,6 +97,7 @@ const FoodRessources = () => {
                                 
                     </div>
                 </div>
+                <Conclusion conclusionText={conclusionText} />
             </Element>
         </section>
 

@@ -14,13 +14,13 @@ const FoodRessourcesConclusion1 = ({ conclusionText }) => {
     return (
         <section className='conclusions-headline-section'>
             <div className='conclusions-headline-container'>  
-                <motion.h2 
+                <motion.p 
                     className='conclusion-headline'
                     initial={initial}   
                     animate={inViewControls}   
                     style={{ transformOrigin: 'center' }}
                 >{conclusionText}
-                </motion.h2>
+                </motion.p>
                 <div className='placeholder' ref={inViewRef}></div>
             </div>
         </section>

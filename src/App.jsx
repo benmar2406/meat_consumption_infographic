@@ -16,7 +16,6 @@ import Navigation from './components/Navigation/Navigation';
 import FoodRessources from './components/FoodRessources/FoodRessources';
 import FoodRessourcesOneKg from './components/FoodRessources/FoodRessourcesOneKg/FoodRessourcesOneKg'; 
 import EnvironmentalImpact from './components/EnvironmentalImpact/EnvironmentalImpact.jsx'
-import FoodRessourcesConclusion1 from './components/FoodRessources/FoodRessourcesConclusion1/FoodRessourcesConclusion1.jsx'
 import FoodRessourcesConclusion2 from './components/FoodRessources/FoodRessourcesConclusion2/FoodRessourcesConclusion2.jsx'
 import Sources from './components/Sources/Sources'
 import Imprint from './components/Imprint/Imprint'
@@ -47,7 +46,6 @@ function App() {
                 <WaterRessources />
                 <WaterRessourcesOneKg />
                 <FoodRessources />
-                <FoodRessourcesConclusion1 />
                 <FoodRessourcesOneKg />
                 <FoodRessourcesConclusion2 />
                 <ImprintLink/>

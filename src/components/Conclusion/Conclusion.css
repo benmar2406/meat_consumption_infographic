@@ -4,16 +4,18 @@
 }
 
 .conclusions-headline-container {
-    width: 80%;
+    width: 65%;
     word-wrap: break-word;
     margin: auto;
     margin-top: 0;
     text-align: center;
+    font-family: 'PTSerif-Bold';
+    
 }
 
 .conclusion-headline {
     color: white;
     transform: translate(-50%, -50%);
     margin: 10vh auto;
-    
+    font-size: 2rem;
 }

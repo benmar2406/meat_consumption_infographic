@@ -1,5 +1,5 @@
 import React from 'react';
-import LeafIcon from '../../assets/img/icons/leaf.png'
+import LeafIcon from '../../assets/img/icons/leaf_icon.png'
 import './LeafIconContainer.css'
 
 const MeatIconContainer = () => {

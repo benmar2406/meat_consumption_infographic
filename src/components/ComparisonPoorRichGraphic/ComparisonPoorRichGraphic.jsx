@@ -4,6 +4,9 @@ import { useAnimation, useInView } from 'framer-motion';
 import './ComparisonPoorRichGraphic.css';
 import DevelopingConsumptionChart from './DevelopingConsumptionChart/DevelopingConsumptionChart';
 import IndustrializedConsumptionChart from './IndustrializedConsumptionChart/IndustrializedConsumptionChart';
+import Conclusion from '../Conclusion/Conclusion'
+
+const conclusionText = "On avergage meat consumption is higher in rich countries compared to poor countries, reflecting disparities in income and access to resources."
 
 const ComparisonPoorRichGraphic = () => {
   const buttonRef = useRef(null); 
@@ -36,6 +39,7 @@ const ComparisonPoorRichGraphic = () => {
             </div>
             <span className="sr-only">In the high and higher income countries on average around 5 times more meat is consumed than in low and lower income countries</span>
           </div>
+          <Conclusion conclusionText={conclusionText}/>
         </Element>
       </section>
   );
