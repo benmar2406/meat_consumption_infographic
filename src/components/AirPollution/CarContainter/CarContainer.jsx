@@ -1,22 +1,32 @@
-import React from 'react';
-import { motion } from 'framer-motion'
+import React, { forwardRef, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion'
 import './CarContainer.css'
 import carIcon from '../../../assets/img/icons/car.png'
 
-const CarContainer = () => {
+const CarContainer = forwardRef(({ food, isInView }, ref) => {
+
+    const controls = useAnimation();
+
+    useEffect(() => {
+        if (isInView) {
+            controls.start({ width: food.kmPercentage, opacity: 1 }); 
+        }
+    }, [isInView, controls]);
+
 
     return(
         <div className='car-chart-container'>
-            <div className='car-distance-container'>
+            <div className='car-food-type'><span>{food.name}</span></div>
+            <div className='car-distance-container' ref={ref}>
                 <motion.div 
                     className='car-distance'
                     initial={{width: '0', opacity: 0}}
-                    animate={{width: '100%', opacity: 1}}
+                    animate={controls}
                     transition={{ 
                         width: { duration: 1, ease: "linear" },
                         opacity: { duration: 1, ease: "easeIn" } }}
                     >
-                 <span>212km</span>
+                 <span>{food.carKm}km</span>
                 </motion.div>
                 <div className='car-container'>
                     <img src={carIcon} />
@@ -24,5 +34,6 @@ const CarContainer = () => {
             </div>
         </div>
     )
-}
+})
+
 export default CarContainer; 

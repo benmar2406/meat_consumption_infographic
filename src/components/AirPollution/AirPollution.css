@@ -16,3 +16,9 @@
     justify-content: space-around;
     align-items: end;
 }
+
+.car-charts-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}

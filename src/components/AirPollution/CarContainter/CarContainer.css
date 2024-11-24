@@ -1,23 +1,35 @@
 .car-chart-container {
     width: 90%;
-    height: 10vh;
+    height: fit-content;
+    margin-bottom: 4vh;
+}
+
+.car-food-type {
+    padding: 10px;
+    padding-bottom: 0;
+    margin: 0;
+    
+}
+
+.car-food-type span {
+    font-family: "PTSerif-Bold";
+    margin: 0;
+    padding: 0;
 }
 
 .car-distance-container {
-    height: 10vh;
+    height: 50px;   
     display: flex;
     align-items: center;
 }
 
-
-
 .car-distance {
-    height: 35%;
-    background: linear-gradient(90deg, #ff3e2c, #cc321f); /* Verlauf von Hellrot zu einem dunkleren Rot */
-    border-radius: 8px; /* Runde Ecken für weicheres Design */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
-    position: relative; /* Für zusätzliche Effekte */
-    transition: width 0.5s ease-in-out; /* Smooth Breitenänderung */
+    height: 60%;
+    background: linear-gradient(90deg, #ff3e2c, #cc321f); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: width 0.5s ease-in-out;
     text-align: right;
     display: flex;
     align-items: center;
@@ -25,9 +37,10 @@
 }
 
 .car-distance span {
- padding-right: 10px;
+    padding-right: 10px;
+    font-family: "Poppins-Bold";
+    font-size: 0.8rem;
 }
-
 
 .car-container {
     flex-basis: 20%;
