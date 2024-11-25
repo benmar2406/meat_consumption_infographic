@@ -8,6 +8,7 @@
   import OneKgMeatContainer from './OneKgMeatContainer/OneKgMeatContainer';
   import HumansFedContainer from './HumansFedContainer/HumansFedContainer';
   import InfoCircle from './InfoCircle/InfoCircle';
+  import Accordion from '../../Accordion/Accordion';
 
   const ressourceUsage = [
     { type: "beef", foodUsageKg: 25, AnimalIcon: cowIcon, humansFedwithMeat: 1, humansFedAlternative: 36, cssSelector: "type-meat-water-container" }
@@ -192,6 +193,7 @@
             }
             `}
         </style>
+        <Accordion />
       </section>
       )};
 
