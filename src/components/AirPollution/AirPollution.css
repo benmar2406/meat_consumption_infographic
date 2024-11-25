@@ -1,5 +1,6 @@
 .air-pollution {
-    width: 90%;
+    width: 70%;
+    max-width: 950px;
     margin: auto;
     padding-bottom: 10vh;
 }
