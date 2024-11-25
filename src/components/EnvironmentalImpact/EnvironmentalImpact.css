@@ -1,5 +1,7 @@
 .impact {
     min-height: 100vh;
+    max-width: 2000px;
+    margin: auto;
   }
   
   .environmental-impact-headline {
@@ -114,3 +116,15 @@
     text-align: center;
   }
   
+
+  @media screen and (max-width: 750px) {
+    .impact-cards-grid {
+      display: block;
+      margin: auto;
+    }
+
+    .impact-card {
+      height: 50vh; 
+    }
+  
+  }

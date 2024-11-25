@@ -5,6 +5,7 @@
 
 .conclusions-headline-container {
     width: 65%;
+    max-width: 1200px;
     word-wrap: break-word;
     margin: auto;
     margin-top: 0;

@@ -3,7 +3,7 @@ import { RiArrowDropDownLine } from 'react-icons/ri';
 import '../Accordion.css';
 
 const AccordionItem = ({ isOpen, onClick, question, answer }) => {
-  const answerRef = useRef(null); // Ref to access the content height
+  const answerRef = useRef(null); 
 
   const dynamicStyle = isOpen
     ? {

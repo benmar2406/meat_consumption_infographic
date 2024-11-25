@@ -55,5 +55,10 @@
         min-width: auto;
         max-width: 1000px
     }
+
+    .background{
+        height: auto;
+    }
+    
     
 }

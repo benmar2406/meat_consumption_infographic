@@ -17,6 +17,7 @@
     top: 0;
     left: 0;
     overflow: visible;
+    max-width: 1355px;
 }
 
 .landuse-headline {
@@ -33,6 +34,7 @@
     height: 60vh;
     border-radius: 20px;
     overflow: hidden; 
+    margin: auto;
 }
 
 .landuse-chart-meat {

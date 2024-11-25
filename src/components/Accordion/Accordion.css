@@ -30,9 +30,6 @@
     font-size: 0.9rem;
   }
   
-  .wrapper .question-container:hover {
-  }
-  
   .wrapper .arrow {
     font-size: 2rem;
     transition: .5s ease-in-out;

@@ -1,5 +1,7 @@
-.food-ressource {
+.food-ressources {
     height: fit-content;
+    max-width: 1920px;
+    margin: auto;
 }
 
 .food-ressources-scroll-container {

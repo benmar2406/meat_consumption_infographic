@@ -1,5 +1,7 @@
     .water-ressources {
         height: auto;
+        max-width: 2020px;
+        margin: auto;
     }
 
     .water-ressources-scroll-container {
