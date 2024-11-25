@@ -90,8 +90,5 @@
     }
 
     @media screen and (min-width: 1530px) {
-        .water-ressources-icon-grid {
-            height: auto;
-            max-width: 890px;
-        }
+        
     }

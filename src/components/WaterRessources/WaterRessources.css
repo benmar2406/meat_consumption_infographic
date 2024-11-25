@@ -1,6 +1,6 @@
     .water-ressources {
         height: auto;
-        max-width: 2020px;
+        max-width: 1920px;
         margin: auto;
     }
 
@@ -65,5 +65,29 @@
             height: auto;
             max-width: 890px;
         }
+    
+        
+    @media screen and (max-width: 800px) {
+        .water-ressources-icon-grid {
+            display: none;
+            width: 0;
+        }
+
+        .water-ressources-scroll-container {
+            display: block;
+        }
+
+        .scroller-water-ressources {
+            flex-basis: 100%;
+        }
+
+        .water-ressources-chart {    
+            height: auto;
+        }
+
+        .step-water-ressources {
+        padding: 80px 0;
+        }
+    }   
     }
     
