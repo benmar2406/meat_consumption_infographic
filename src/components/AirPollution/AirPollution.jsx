@@ -5,7 +5,7 @@ import EmissionContainer from './EmissionContainer/EmissionContainer';
 import CarContainer from './CarContainer/CarContainer';
 import Conclusion from '../Conclusion/Conclusion'
 
-const conclusionText = "The amount of CO2 produced per kilogram, expressed as equivalent kilometres driven by car:"
+const conclusionText = "The amount of CO2 produced per kilogram, equals in kilometres driven by car:"
 const conclusionText2 = "The production of meat generates significantly higher greenhouse gas emissions compared to plant-based foods."
 
 const foodEmissionsData = [
