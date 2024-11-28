@@ -5,10 +5,14 @@ an interactive web app with scrollytelling elements which informs about the impa
 Creative approaches are used to visualize data beyond typical visualization methods.
 Created with React (Vite) and several libraries.
 
-## Libraries
+## Visualization & Animation Libraries
 * D3.js
 * Framer Motion
 * Scrollama
+
+## Features
+* language support based on browser setting
+* german and english (default), can be expanded to further languages
 
 ## Installation and setup
 
