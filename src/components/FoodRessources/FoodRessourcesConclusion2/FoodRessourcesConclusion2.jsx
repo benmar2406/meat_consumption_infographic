@@ -1,11 +1,12 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import '../../Conclusion/Conclusion.css';
 import useAnimateTitleOnView from '../../hooks/useAnimateTitleOnView';
 
 const FoodRessourcesConclusion2 = () => {
-    const headline1 = "The ressources required for 1 kg of beef could feed 36 times more people if consumed directly.";
-    const headline2 = "Meat production is much less efficient than directly consuming plant-based foods.";
+
+    const { t, i18n } = useTranslation();
 
     const inViewRef = useRef(null);
 
@@ -13,8 +14,8 @@ const FoodRessourcesConclusion2 = () => {
     const initial2 = { opacity: 0, scale: 0.8, x: "200px" };
 
     const headlines = [
-        { text: headline1, initial: initial1, delay: 1 },
-        { text: headline2, initial: initial2, delay: 2 },
+        { text: t('foodConsumption.conclusion2'), initial: initial1, delay: 1 },
+        { text: t('foodConsumption.conclusion3'), initial: initial2, delay: 2 },
     ];
 
     const { inViewControls } = useAnimateTitleOnView(inViewRef);

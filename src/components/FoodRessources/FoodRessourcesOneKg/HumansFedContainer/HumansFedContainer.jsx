@@ -1,8 +1,11 @@
 import React, { forwardRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import './HumansFedContainer.css'
 import humanIcon from '../../../../assets/img/icons/human_grey.png'
 
 const HumansFedContainer = forwardRef((props, ref) => {
+
+    const { t, i18n } = useTranslation();
 
     return(
         <>
@@ -17,13 +20,13 @@ const HumansFedContainer = forwardRef((props, ref) => {
                             <img 
                             src={humanIcon} 
                             key={index}
-                            alt="one human"
+                            alt={t('foodConsumption.altHuman')}
                             />
                     </div>
                     )
                 })}
             </div>
-            <p className='humans-fed-text'>{props.humansFed} {props.humansFed === 1 ? 'human' : 'humans'} for 1 day</p>
+            <p className='humans-fed-text'>{props.humansFed} {props.humansFed === 1 ? t('foodConsumption.human') : t('foodConsumption.humans')} + {t('foodConsumption.day')}</p>
         </>
     )
 

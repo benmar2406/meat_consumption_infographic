@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './BathtubIconContainer.css';
 import bathtubIcon from '../../assets/img/icons/bathtub.png'
 
@@ -10,6 +11,9 @@ const BathtubIconContainer = ({
   maxdbathtubHeight, 
   maxbathtubWidth
 }) => {
+
+  const { t, i18n } = useTranslation();
+
   return (
     <div
       className="bathtub-icon-container"
@@ -25,7 +29,7 @@ const BathtubIconContainer = ({
       <img 
         className='bathtub-icon' 
         src={bathtubIcon} 
-        alt="one bathtub filled with water" />
+        alt={t('waterConsumption.alt')} />
     </div>
   );
 };

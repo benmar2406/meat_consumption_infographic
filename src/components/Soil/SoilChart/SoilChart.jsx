@@ -103,7 +103,7 @@ const SoilChart = ({
           
         </div>
         <article 
-            className='landuse-text'
+            className='landuse-article'
             style={{
               opacity: displayArticleText ? 1 : 0,
               transition: "opacity 0.5s ease-in-out",

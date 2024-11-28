@@ -3,20 +3,24 @@ import { motion, useAnimation } from 'framer-motion'
 import SectionListElement from './SectionListElement/SectionListElement'
 import SectionDot from './SectionDot/SectionDot';
 
+import { useTranslation } from 'react-i18next';
+
 const SectionList = ({ sectionsToNavigate, navIsOpen }) => {  
+
+    const { t, i18n } = useTranslation();
     
     const [clickedIndex, setClickedIndex] = useState(null)
 
     sectionsToNavigate = [
-        {title: 'Environmental Impacts', link: 'environmental-impacts'},
-        {title: 'Impact on soil', link: 'soil-impact'},
-        {title: 'Impacts on water quality', link: 'water-pollution'},
-        {title: 'Production: historical developement', link: 'development-production'},   
-        {title: 'Where is meat consumed?', link: 'comparison-rich-poor-countries'},
-        {title: 'Ressources: 1kg', link: 'ressources-intro'},
-        {title: 'Ressource: water', link: 'water-ressources'},
-        {title: 'Ressource: food', link: 'food-ressources'},
-        {title: 'Sources', link: '/sources'},
+        {title: t('navigation.title1'), link: 'environmental-impacts'},
+        {title: t('navigation.title2'), link: 'soil-impact'},
+        {title: t('navigation.title3'), link: 'water-pollution'},
+        {title: t('navigation.title4'), link: 'development-production'},   
+        {title: t('navigation.title5'), link: 'comparison-rich-poor-countries'},
+        {title: t('navigation.title6'), link: 'ressources-intro'},
+        {title: t('navigation.title7'), link: 'water-ressources'},
+        {title: t('navigation.title8'), link: 'food-ressources'},
+        {title: t('navigation.title9'), link: '/sources'},
     ]
 
     const controls = useAnimation();
@@ -66,7 +70,7 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
             initial={{ opacity: 0, height: 0, display: 'none' }}
             animate={controls}
             role='presentation'
-            aria-label='All navigation links are reachable on this page by scrolling'
+            aria-label={t('navigation.ariaLabel')}
         >
             
             <div className='nav-line'>

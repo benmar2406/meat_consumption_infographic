@@ -1,11 +1,14 @@
 import React from 'react';
 import { Element } from 'react-scroll';
+import { useTranslation } from 'react-i18next';
 import './Soil.css';
 import SoilChart from './SoilChart/SoilChart';
 import farmingImg from '../../assets/img/farming.jpg';
 import soilDegradation from '../../assets/img/soil_degradation.jpg';
 
 const Soil = () => {
+
+  const { t, i18n } = useTranslation();
   
   const soilChartsData = [
     { 
@@ -13,14 +16,14 @@ const Soil = () => {
       requiredPercentageArticle: 80, 
       fullWidthValue: 0.9, 
       scrollEffectDirection: ["0%", "100%"],
-      headline: 'Allocation of farmland (European Union)', 
+      title: t('soil.title1'), 
       backgroundImage: `linear-gradient(rgba(168, 213, 186, 0.5), rgba(168, 213, 186, 0.5)), url(${farmingImg})`,
       backgroundColor: "rgba(255, 62, 44, 0.8)",
       meatWidth: '70%',
-      chartText: 'Between 60% and 70% of farmland<br /> are utilized for meat production.',
+      chartText: t('soil.chartText1'),
       chartText2: '',
-      altText: 'aerial view of farmland',
-      article: "<p>Meat production is taking alot of space of available farming land. This land isn't available for other agricultural usages which could produce more food with less ressources.</p>",
+      altText:  t('soil.alt1'),
+      article: t('soil.article1')
     },  
 
     { 
@@ -28,14 +31,14 @@ const Soil = () => {
       requiredPercentageArticle: 90, 
       fullWidthValue: 0.9, 
       scrollEffectDirection: ["100%", "20%"],
-      headline: 'Soil degradation', 
+      title: t('soil.title2'), 
       backgroundImage: `linear-gradient(rgba(255, 62, 44, 0.5), rgba(255, 62, 44, 0.5)), url(${soilDegradation})`,
       backgroundColor: "rgba(168, 213, 186, 0.8)",
       meatWidth: '100%',
       chartText: '',
-      chartText2: 'Around 80% of deforestation in the<br/> Amazon is driven by cattle ranching.',
-      altText: 'corroded soil',
-      article: '<p>All types of agriculture impact the land, but animal farming is especially hard on the soil.</p>'
+      chartText2: t('soil.chartText2'),
+      altText: t('soil.alt2'),
+      article:  t('soil.article2')
     }
     
   ]
@@ -49,7 +52,7 @@ const Soil = () => {
             key={index}
             requiredPercentage={soilChart.requiredPercentage}
             fullWidthValue={soilChart.fullWidthValue}
-            headline={soilChart.headline}
+            headline={soilChart.title}
             backgroundImage={soilChart.backgroundImage}
             backgroundColor={soilChart.backgroundColor}
             chartText={soilChart.chartText}

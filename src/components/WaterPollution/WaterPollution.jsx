@@ -1,9 +1,12 @@
 import React, { useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Element } from 'react-scroll';
 import { Scrollama, Step } from 'react-scrollama';
 import './WaterPollution.css';
 
 function WaterPollution() {
+
+  const { t, i18n } = useTranslation();
 
   const [data, setData] = useState(0);
   const scrollRef = useRef(null)
@@ -21,18 +24,18 @@ function WaterPollution() {
       <section id="scroll" className="water-scroll-section" ref={scrollRef} alt="polluted water">
         <Element name='water-pollution'>
             <div className="water-scroller">
-              <h3 className="water-impacts-headline">Impacts on water quality</h3>
+              <h3 className="water-impacts-headline">{t('waterPollution.title')}</h3>
               <Scrollama 
                 onStepEnter={onStepEnter} 
               >
                 {steps.map(value => {
 
                   const stepText = value === 10 
-                    ? "<p>Meat production is a major contributor to water pollution worldwide, dumping tons of pollutants into rivers and lakes every year.</p><p>These pollutants include manure, chemicals, and antibiotics from industrial farming practices. The pollution exacerbates water-quality degradation, threatening ecosystems and human health.</p>"
+                    ? t('waterPollution.article1')
                     : value === 20 
-                    ? "<p>For instance, farm runoff leads to nutrient pollution that triggers algal blooms, reducing oxygen in the water and endangering aquatic life.</p>"
+                    ? t('waterPollution.article2')
                     : value === 30 
-                    ? "<p>The sheer scale of pollution from meat production threatens global water security—and efforts to tackle it just aren’t keeping up.</p>"
+                    ? t('waterPollution.article3')
                     : "";
 
                   return (

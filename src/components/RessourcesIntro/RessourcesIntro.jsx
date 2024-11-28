@@ -1,19 +1,22 @@
 import React, { useRef, useEffect } from 'react';
 import { Element } from 'react-scroll';
 import { motion, useAnimation, useInView } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import './RessourcesIntro.css';
 import MeatIcon from '../../assets/img/icons/meat_large.png';
 
 const RessourcesIntro = () => {
+
+    const { t, i18n } = useTranslation();
+
     const ressourceInfoRef = useRef();
-    const buttonRef = useRef(); // Ref for SectionButton
+    const buttonRef = useRef(); 
     const containerIsInView = useInView(ressourceInfoRef);
-    const buttonIsInView = useInView(buttonRef); // Detect if button is in view
+    const buttonIsInView = useInView(buttonRef); 
     const controls = useAnimation();
     const listControls = useAnimation();
     const buttonControls = useAnimation();
 
-    // Controls for the container
     useEffect(() => {
         if (containerIsInView) {
             controls.start({
@@ -79,7 +82,7 @@ const RessourcesIntro = () => {
                         initial={{ opacity: 0, x: -200 }}
                         animate={controls}
                     >
-                        What does it cost?
+                        {t('OneKgIntro.subTitle')}
                     </motion.h2>
                 </div>            
             </section>

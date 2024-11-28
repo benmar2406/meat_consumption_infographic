@@ -1,16 +1,16 @@
 import React, { useRef } from 'react';
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 import '../FoodRessources.css';
 import FoodIconContainer from './FoodIconContainer/FoodIconContainer';
 import useAnimateOnView from '../../hooks/useAnimateOnView';
 
 const FoodRessourcesGraphic = ({ name, numberOfIcons, tonnes, displayMeatWhen, usedForMeat, percentageForMeat }) => {
 
+    const { t, i18n } = useTranslation();
+
     const ref = useRef();
-    
-    const { inViewControls, initial } = useAnimateOnView(
-        ref
-      )
+    const { inViewControls, initial } = useAnimateOnView(ref)
 
     return (
         <motion.div 
@@ -38,14 +38,14 @@ const FoodRessourcesGraphic = ({ name, numberOfIcons, tonnes, displayMeatWhen, u
                         minWheatWidth="10px"
                         maxWheatHeight="50px"
                         maxWheatWidth="50px"
-                        altText={`40 million tonnes of ${name}`}
+                        altText={t('foodConsumption.altFoodIcons') + name}
                         name={name}
                         meatColor={meatColor}
                     />
                 );
                 })}
             </div>
-            <p className='food-ressources-text' aria-hidden="true"> {tonnes} tonnes produced worldwide</p>
+            <p className='food-ressources-text' aria-hidden="true"> {tonnes + t('foodConsumption.tonnesProduced')}</p>
         </motion.div>
     );
 };

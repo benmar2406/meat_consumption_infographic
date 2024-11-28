@@ -79,14 +79,14 @@
     pointer-events: none; 
 }
 
-.landuse-text  {
-    width: 70%;
+.landuse-article  {
+    width: 90%;
     min-width: 640px;
     max-width: 950px;
     background-color: transparent;
 }
 
-.landuse-text p {
+.landuse-article p {
     color: #e3e3e3;
     font-family: "PTSerif-Bold";
     margin-top: 0;
@@ -100,7 +100,7 @@
         white-space: normal; 
     }
 
-    .landuse-text  {
+    .landuse-article  {
         width: 100%;
         min-width: auto;
         max-width: auto;

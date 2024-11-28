@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 import { Element } from 'react-scroll';
+import { useTranslation } from 'react-i18next';
 import FoodRessourcesGraphic from './FoodRessourcesGraphic/FoodRessourcesGraphic'
 import './FoodRessources.css'
 import Conclusion from '../Conclusion/Conclusion'
 
 
 const FoodRessources = () => {
+
+    const { t, i18n } = useTranslation();
     
     const [stepOne, setStepOne] = useState(false);
     const [stepTwo, setStepTwo] = useState(false);
@@ -14,17 +17,15 @@ const FoodRessources = () => {
     const [stepFour, setStepFour] = useState(false);
 
     const foodRessources = [
-        {name: "wheat", tonnes: "780 mio.", numberOfIcons: 20, usedForMeat: 4, percentageForMeat: 20, displayWhen: stepOne, displayMeatWhen: stepTwo },
-        {name: "corn", tonnes: "1.2 bn", numberOfIcons: 30, usedForMeat: 20, percentageForMeat: 65, displayWhen: stepOne, displayMeatWhen: stepThree },
-        {name: "soy", tonnes: "380 mio.", numberOfIcons: 10, usedForMeat: 8, percentageForMeat: 80, displayWhen: stepOne, displayMeatWhen: stepFour }
+        {name: t('types.wheat'), tonnes: "780 mio.", numberOfIcons: 20, usedForMeat: 4, percentageForMeat: 20, displayWhen: stepOne, displayMeatWhen: stepTwo },
+        {name: t('types.corn'), tonnes: "1.2 bn", numberOfIcons: 30, usedForMeat: 20, percentageForMeat: 65, displayWhen: stepOne, displayMeatWhen: stepThree },
+        {name: t('types.soy'), tonnes: "380 mio.", numberOfIcons: 10, usedForMeat: 8, percentageForMeat: 80, displayWhen: stepOne, displayMeatWhen: stepFour }
     ]
 
-    const article1 = '<p>A significant portion of food produced globally is used in livestock farming.</p>';
-    const article2 = "<p>​Around <span>20% of all wheat</span> grown worldwide goes indirectly to the meat industry as animal feed.</p>";
-    const article3 = "<p>The numbers are higher for corn: <span>65% of the global corn production</span> is used for animal feed.</p>";
-    const article4 = "<p>For soy, the impact is even greater: <span>80% of all soy produced</span> is consumed through livestock farming.</p>";
-
-    const conclusionText = "Food used for meat production isn’t available for direct human consumption."
+    const article1 = t('foodConsumption.article1');
+    const article2 = t('foodConsumption.article2');
+    const article3 = t('foodConsumption.article3');
+    const article4 = t('foodConsumption.article4');
 
     const steps = [[10, article1], [20, article2], [30, article3], [40, article4], [50, "placeholder"]]; // Last step is not displayed and only used for controlling behaviour after last actual step 
     const lastStep = steps[steps.length - 1][0];
@@ -47,7 +48,7 @@ const FoodRessources = () => {
     return(
         <section className='food-ressources'>
             <Element name='food-ressources'>
-                <h2 className='food-usage-title'>How Much of Our Food Fuels Meat Production?</h2>
+                <h2 className='food-usage-title'>{t('foodConsumption.title')}</h2>
                 <div className='food-ressources-scroll-container'>
                         <div className='scroller-food-ressources'>
                             <Scrollama
@@ -97,7 +98,7 @@ const FoodRessources = () => {
                                 
                     </div>
                 </div>
-                <Conclusion conclusionText={conclusionText} />
+                <Conclusion conclusionText={t('foodConsumption.conclusionText1')} />
             </Element>
         </section>
 

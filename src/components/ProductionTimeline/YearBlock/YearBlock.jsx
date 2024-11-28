@@ -1,7 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import '../ProductionTimeline.css'; 
 
 const YearBlock = ({ year, production }) => {
+
+  const { t, i18n } = useTranslation();
+
   const circleCount = Math.floor(production / 10000000);
 
   return (
@@ -13,7 +17,7 @@ const YearBlock = ({ year, production }) => {
         ))}
       </div>
       <div className="productionLabel">
-        {production.toLocaleString()} tonnes
+        {production.toLocaleString()} {t('developmentProduction.tonnes')}
       </div>
       <div className="separator"></div>
     </div>

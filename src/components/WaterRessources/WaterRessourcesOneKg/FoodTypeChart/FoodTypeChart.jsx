@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import useAnimateOnView from '../../../hooks/useAnimateOnView';
 import BathtubIconContainer from '../../../BathtubIconContainer/BathtubIconContainer';
 import MeatIconContainer from '../../../MeatIconContainer/MeatIconContainer'
@@ -8,6 +9,8 @@ import './FoodTypeChart.css'
 
 
 const FoodTypeChart = ({ food }) => {
+
+    const { t, i18n } = useTranslation();
 
     const gridRef = useRef();
 
@@ -30,7 +33,7 @@ const FoodTypeChart = ({ food }) => {
                 <span 
                     aria-hidden="true"
                     className='food-type-water-usage'
-                    >producing 1kg of {food.name}:
+                    >{t('waterConsumption.producing')} {food.name}:
                 </span>
             </div>
             <div className='grid-water-usage-1kg'
@@ -51,8 +54,8 @@ const FoodTypeChart = ({ food }) => {
                 className='water-used-for-1kg'
                 aria-hidden="true"
                 >
-                <h3 className='food-type-title'>{food.numberOfBathtubs} bathtubs</h3>
-                <p>{food.waterUsage} ltrs</p>
+                <h3 className='food-type-title'>{food.numberOfBathtubs} {t('waterConsumption.bathtubs')}</h3>
+                <p>{food.waterUsage} {t('waterConsumption.ltrs')}</p>
             </div>
         </motion.div>
     )

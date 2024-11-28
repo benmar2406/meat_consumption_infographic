@@ -7,6 +7,7 @@ import KgConsumed from '../KgConsumed/KgConsumed';
 const kgConsumed = 76;
 
 const IndustrializedConsumptionChart = (isInView) => {
+  
   const [isLastIconRendered, setIsLastIconRendered] = useState(false);
 
   return (

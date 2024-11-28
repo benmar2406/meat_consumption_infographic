@@ -1,14 +1,16 @@
 import React, { useRef, useEffect } from 'react'; 
 import { Element } from 'react-scroll';
 import { useAnimation, useInView } from 'framer-motion'; 
+import { useTranslation } from 'react-i18next';
 import './ComparisonPoorRichGraphic.css';
 import DevelopingConsumptionChart from './DevelopingConsumptionChart/DevelopingConsumptionChart';
 import IndustrializedConsumptionChart from './IndustrializedConsumptionChart/IndustrializedConsumptionChart';
 import Conclusion from '../Conclusion/Conclusion'
 
-const conclusionText = "On avergage meat consumption is higher in rich countries compared to poor countries, reflecting disparities in income and access to resources."
-
 const ComparisonPoorRichGraphic = () => {
+
+  const { t, i18n } = useTranslation();
+
   const buttonRef = useRef(null); 
   const buttonIsInView = useInView(buttonRef);  
   const buttonControls = useAnimation();  
@@ -27,7 +29,7 @@ const ComparisonPoorRichGraphic = () => {
     
       <section className="comparison-rich-poor-countries">
         <Element name='comparison-rich-poor-countries'>
-          <h2>Where is meat consumed?</h2>
+          <h2>{t('comparisonPoorRich.title')}</h2>
           <div className="scroll-container"> 
               <div className="sticky-container">
               <div className="chart-container">
@@ -37,9 +39,9 @@ const ComparisonPoorRichGraphic = () => {
                 <IndustrializedConsumptionChart />
               </div>
             </div>
-            <span className="sr-only">In the high and higher income countries on average around 5 times more meat is consumed than in low and lower income countries</span>
+            <span className="sr-only">{t('comparisonPoorRich.srOnly')}</span>
           </div>
-          <Conclusion conclusionText={conclusionText}/>
+          <Conclusion conclusionText={t('comparisonPoorRich.conclusionText')}/>
         </Element>
       </section>
   );

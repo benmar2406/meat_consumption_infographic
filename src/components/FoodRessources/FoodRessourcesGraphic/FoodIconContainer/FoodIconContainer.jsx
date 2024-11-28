@@ -21,17 +21,17 @@ const FoodIconContainer = ({
 
     let url = null
 
-  if (name === 'wheat' && meatColor === false) {
+  if ((name === 'wheat' || name === 'Weizen' ) && meatColor === false) {
     url = WheatIcon
-  } else if(name === 'corn' && meatColor === false) {
+  } else if((name === 'corn' || name === 'Mais') && meatColor === false) {
     url = CornIcon
-  } else if(name === 'soy' && meatColor === false) {
+  } else if((name === 'soy' || name === 'Soja') && meatColor === false) {
     url = soyIcon
-  } else if(name === 'wheat' && meatColor === true) {
+  } else if((name === 'wheat' || name === 'Weizen') && meatColor === true) {
     url = WheatIconRed
-  } else if(name === 'corn' && meatColor === true) {
+  } else if((name === 'corn' || name === 'Mais') && meatColor === true) {
     url = CornIconRed
-  } else if(name === 'soy' && meatColor === true) {
+  } else if((name === 'soy'|| name === 'Soja') && meatColor === true) {
     url = soyIconRed
   } 
  

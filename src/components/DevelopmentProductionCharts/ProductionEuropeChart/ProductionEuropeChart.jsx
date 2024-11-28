@@ -1,9 +1,13 @@
 import React, { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
+import { useTranslation } from 'react-i18next';
 import './ProductionEuropeChart.css';
 import meatProductionDataEurope from '../../../data/production_western_europe.json';
 
 export default function ProductionWorldWideChart() {
+
+  const { t, i18n } = useTranslation();
+
   const chartRef = useRef(null);
 
   useEffect(() => {
@@ -18,15 +22,14 @@ export default function ProductionWorldWideChart() {
       .attr("preserveAspectRatio", "xMinYMin meet");
 
     function redraw() {
-      // Get the dimensions of the parent element
       const width = parentDiv.clientWidth;
       const height = parentDiv.clientHeight;
 
       const margin = { top: 20, right: 30, bottom: 30, left: 40 };
-      const innerWidth = 800 - margin.left - margin.right;  // Based on viewBox
-      const innerHeight = 400 - margin.top - margin.bottom;  // Based on viewBox
+      const innerWidth = 800 - margin.left - margin.right;  
+      const innerHeight = 400 - margin.top - margin.bottom;  
 
-      svg.selectAll("*").remove(); // Clear previous content
+      svg.selectAll("*").remove(); 
 
       const x = d3.scaleLinear()
         .domain(d3.extent(meatProductionDataEurope, d => d.Year))
@@ -45,7 +48,7 @@ export default function ProductionWorldWideChart() {
         .attr("y", margin.top)
         .attr("text-anchor", "middle")
         .attr("class", "chart-dark-bg")
-        .text("Western Europe: Meat Production Over Time (tonnes)");
+        .text(t('developmentCharts.chartTitle2'));
 
       svg.append("path")
         .datum(meatProductionDataEurope)

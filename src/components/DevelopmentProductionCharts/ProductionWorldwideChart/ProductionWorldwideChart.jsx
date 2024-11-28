@@ -1,9 +1,13 @@
 import React, { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
+import { useTranslation } from 'react-i18next';
 import './ProductionWorldwideChart.css';
 import meatProductionData from '../../../data/production_global.json';
 
 export default function ProductionWorldWideChart() {
+
+  const { t, i18n } = useTranslation();
+
   const chartRef = useRef(null);
 
   useEffect(() => {
@@ -44,7 +48,7 @@ export default function ProductionWorldWideChart() {
         .attr("y", margin.top)
         .attr("text-anchor", "middle")
         .attr("class", "chart-dark-bg")
-        .text("Global Meat Production Over Time (tonnes)");
+        .text(t('developmentCharts.chartTitle1'));
 
       svg.append("path")
         .datum(meatProductionData)

@@ -1,7 +1,8 @@
 
-import React from 'react'
-import './ChartLegend.css'
-import BathtubIconContainer from '../BathtubIconContainer/BathtubIconContainer'
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import './ChartLegend.css';
+import BathtubIconContainer from '../BathtubIconContainer/BathtubIconContainer';
 
 const bathtubWidth = '35%'
     const bathtubHeight = '35%'
@@ -15,13 +16,16 @@ const bathtubWidth = '35%'
 
 
 const ChartLegend = () => {
+
+    const { t, i18n } = useTranslation();
+
     return(
         <div className='legend-container'>
             <p>1 </p>
             <BathtubIconContainer
                 {...bathtubProps}
             />
-            <p> fits 165 litres of water</p>
+            <p> {t('waterConsumption.chartLegend')}</p>
         </div>
     )
 }

@@ -1,5 +1,6 @@
-  import React, { useRef, useEffect, useState } from 'react';
-  import { motion } from 'framer-motion'
+  import React, { useRef } from 'react';
+  import { motion } from 'framer-motion';
+  import { useTranslation } from 'react-i18next';
   import FoodTypeChart from './FoodTypeChart/FoodTypeChart';
   import useDrawPath from '../../hooks/useDrawPath';
   import useAnimateOnView from '../../hooks/useAnimateOnView';
@@ -10,16 +11,21 @@
   import InfoCircle from './InfoCircle/InfoCircle';
   import Accordion from '../../Accordion/Accordion';
 
-  const ressourceUsage = [
-    { type: "beef", foodUsageKg: 25, AnimalIcon: cowIcon, humansFedwithMeat: 1, humansFedAlternative: 36, cssSelector: "type-meat-water-container" }
-];
-
-  const infoCircles = [
-    {type: 'meat', color: '#ff3e2c', text: 'feeds', marginTop: '0'},
-    {type: 'vegetarian', color: '#a8d5ba', text: 'could feed', marginTop: '0'},
-  ]
 
   const FoodRessourcesOneKg = () => {
+
+      const { t, i18n } = useTranslation();
+
+      const ressourceUsage = [
+        { type: t('types.beef'), foodUsageKg: 25, AnimalIcon: cowIcon, humansFedwithMeat: 1, humansFedAlternative: 36, cssSelector: "type-meat-water-container" }
+      ];
+    
+      const infoCircles = [
+        {type: 'meat', color: '#ff3e2c', text: t('foodConsumption.feeds'), marginTop: '0'},
+        {type: 'vegetarian', color: '#a8d5ba', text: t('foodConsumption.feeds'), marginTop: '0'},
+      ]
+
+      const accordionText = {question: t('foodConsumption.calculatedQuestion'), answer: t('foodConsumption.calculatedAnswer')}
 
       const foodUsageRef = useRef(null)
       const chartRef = useRef(null);
@@ -42,6 +48,7 @@
       const { inViewControls, initial } = useAnimateOnView(
         foodUsageRef
       )
+
 
 
       return (
@@ -193,7 +200,7 @@
             }
             `}
         </style>
-        <Accordion />
+        <Accordion accordion={accordionText}/>
       </section>
       )};
 

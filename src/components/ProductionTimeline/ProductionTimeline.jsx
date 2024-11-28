@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { useInView } from 'framer-motion';  
 import LazyLoad from 'react-lazyload';
+import { useTranslation } from 'react-i18next';
 import YearBlock from './YearBlock/YearBlock';
 
 const groupDataByDecade = (data) => {
@@ -26,6 +27,9 @@ const groupDataByDecade = (data) => {
 };
 
 const ProductionTimeline = ({ data }) => {
+  
+  const { t, i18n } = useTranslation();
+
   const ref = useRef(null);  
   const isInView = useInView(ref, { triggerOnce: true });
 
@@ -40,10 +44,10 @@ const ProductionTimeline = ({ data }) => {
       }}
     >
         <div className='chart-container-timeline'>
-          <h2>Development of meat production over the decades</h2>
+          <h2>{t('developmentProduction.title')}</h2>
           <LazyLoad height={400} offset={100}>
             {groupedData.map((d) => (
-                <YearBlock key={d.decade} year={`${d.decade}s`} production={d.totalProduction} />
+                <YearBlock key={d.decade} year={d.decade + t('developmentProduction.decade')}  production={d.totalProduction} />
             ))}
           </LazyLoad>
         </div>

@@ -1,8 +1,12 @@
 import React, { forwardRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import CornIconContainer from '../../../CornIconContainer/CornIconContainer';
 import './FoodTypeChart.css';
 
 const FoodTypeChart = forwardRef(({ ressource }, ref) => {
+    
+    const { t, i18n } = useTranslation();
+    
     const cornWidth = "27px";
     const cornHeight = "27px";
     const minCornHeight = "20px";
@@ -21,7 +25,7 @@ const FoodTypeChart = forwardRef(({ ressource }, ref) => {
             <div className="animal-icon-container">
                 <img className="type-animal-icon" src={ressource.AnimalIcon} alt={`${ressource.type}-icon`} />
             </div>
-            <p>{`For each kilogram of ${ressource.type} produced, 20–25 kg of feed is consumed over the animal's lifetime.`}</p>
+            <p>{t('foodConsumption.chartDescription')}</p>
             <div
                 className="grid-food-usage-1kg"
                 role="img"
@@ -32,8 +36,8 @@ const FoodTypeChart = forwardRef(({ ressource }, ref) => {
                 ))}
             </div>
             <div className="food-used-for-1kg">
-                <h3 className="food-consumed-title" aria-label={`Amount of food required for producing 1kg of`}>
-                    {ressource.foodUsageKg} kg of food
+                <h3 className="food-consumed-title">
+                    {t('foodConsumption.25Kg')}
                 </h3>
             </div>
         </div>

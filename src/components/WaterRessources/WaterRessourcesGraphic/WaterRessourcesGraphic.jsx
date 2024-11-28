@@ -1,9 +1,13 @@
 import React, { useRef } from 'react';
 import { useInView, motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 import '../WaterRessources.css'
 import WaterIconContainer from '../../WaterIconContainer/WaterIconContainer'
 
 const WaterRessourcesGraphic = ( {displayAgrUsage, displayMeatUsage} ) => {
+
+    const { t, i18n } = useTranslation();
+
     const WaterGraphicRef = useRef()
     const isInView = useInView(WaterGraphicRef)
     
@@ -20,7 +24,7 @@ const WaterRessourcesGraphic = ( {displayAgrUsage, displayMeatUsage} ) => {
     const mindropWidth = '20px';
     const maxdropHeight = '60px';
     const maxdropWidth = '60px';
-    const altText = '11.43 billion cubic meters of water'
+    const altText = t('waterConsumption.alt')
     const waterDropProps = { dropWidth, dropHeight, mindropHeight, mindropWidth, maxdropHeight, maxdropWidth, altText, defaultDropFill, agriculturalDropFill, meatDropFill };
 
     return(

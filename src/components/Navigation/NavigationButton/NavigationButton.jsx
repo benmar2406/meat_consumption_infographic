@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const NavigationButton = ({ onClick, navIsOpen, onKeyDown }) => {
+
+    const { t, i18n } = useTranslation();
     
     return(
         <div 
@@ -8,7 +11,7 @@ const NavigationButton = ({ onClick, navIsOpen, onKeyDown }) => {
             onClick={onClick}
             role="button"
             tabIndex="0"
-            aria-label={navIsOpen ? 'Click to close navigation' : 'Click to open navigation'}
+            aria-label={navIsOpen ? t('navigation.ariaOpen') : t('navigation.ariaClose')}
             aria-controls='section-list'
             onKeyDown={onKeyDown}
         >
