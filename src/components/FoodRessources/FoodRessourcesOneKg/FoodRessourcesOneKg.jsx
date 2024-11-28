@@ -17,7 +17,7 @@
       const { t, i18n } = useTranslation();
 
       const ressourceUsage = [
-        { type: t('types.beef'), foodUsageKg: 25, AnimalIcon: cowIcon, humansFedwithMeat: 1, humansFedAlternative: 36, cssSelector: "type-meat-water-container" }
+        { type: t('meatIcon'), foodUsageKg: 25, AnimalIcon: cowIcon, humansFedwithMeat: 1, humansFedAlternative: 36, cssSelector: "type-meat-water-container" }
       ];
     
       const infoCircles = [

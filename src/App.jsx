@@ -1,5 +1,7 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import './App.css';
 import DevelopmentProductionCharts from './components/DevelopmentProductionCharts/DevelopmentProductionCharts';
 import ComparisonPoorRichGraphic from './components/ComparisonPoorRichGraphic/ComparisonPoorRichGraphic';
@@ -24,8 +26,13 @@ import Emissions from './components/Emissions/Emissions'
 
 function App() {
 
+  const { t, i18n } = useTranslation();
+
   return (
     <>
+      <Helmet>
+          <title>{t('intro.subtitle')}</title>
+      </Helmet>
       <Router>
         <Routes>
           <Route
