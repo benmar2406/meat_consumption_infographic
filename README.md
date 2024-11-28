@@ -17,7 +17,7 @@ Created with React (Vite) and several libraries.
 ## Installation and setup
 
 ### Prerequisites
-* Node.js and npm installed on your machine
+* Node.js and npm installed
 
 ### Start server and client locally
 * Navigate to main directory
