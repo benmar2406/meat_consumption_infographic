@@ -26,7 +26,7 @@ const HumansFedContainer = forwardRef((props, ref) => {
                     )
                 })}
             </div>
-            <p className='humans-fed-text'>{props.humansFed} {props.humansFed === 1 ? t('foodConsumption.human') : t('foodConsumption.humans')} + {t('foodConsumption.day')}</p>
+            <p className='humans-fed-text'>{props.humansFed} {props.humansFed === 1 ? t('foodConsumption.human') : t('foodConsumption.humans')} {t('foodConsumption.day')}</p>
         </>
     )
 
