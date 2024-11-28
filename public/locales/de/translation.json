@@ -142,7 +142,7 @@
     "calculatedQuestion": "Wie wurde das berechnet?",
     "calculatedAnswer": "<p>Die Berechnungen dieser Aussagen basierten auf dem erforderlichen Kalorienbedarf und den Kalorien, die im Futter und in 1 kg Fleisch enthalten sind.</p><ul><li>Die Produktion von 1 kg Rindfleisch erfordert etwa 25 kg Futter, einschließlich Getreide wie Mais und Soja, das den Rindern über ihre Lebenszeit verfüttert wird.</li><li>Dieses 1 kg Rindfleisch liefert etwa 2.500 Kalorien, was ausreicht, um den täglichen Kalorienbedarf einer Person zu decken.</li><li>Die gleichen 25 kg Futter, die für die Produktion des Rindfleischs verwendet werden, enthalten jedoch etwa 95.000 Kalorien. Wenn diese direkt als Getreide oder Soja konsumiert würden, könnten sie den täglichen Kalorienbedarf von 38 Personen decken.</li></ul>",
     "conclusion2": "Die Ressourcen, die für 1 kg Rindfleisch benötigt werden, könnten 36-mal mehr Menschen ernähren, wenn sie direkt konsumiert würden.",
-    "conclusion3": "Die Fleischproduktion ist viel weniger effizient als der direkte Verzehr pflanzlicher Lebensmittel."
+    "conclusion3": "Die Fleischproduktion ist ineffizienter als der direkte Verzehr pflanzlicher Lebensmittel."
   }
 }
 
