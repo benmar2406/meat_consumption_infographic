@@ -118,7 +118,6 @@ button {
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto #ff3e2c;
   cursor: pointer;
 }
 
