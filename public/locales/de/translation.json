@@ -1,4 +1,6 @@
 {
+  "mobileWarning": "<p>Bitte öffne die Seite auf einem Desktopgerät oder Laptop.</p><p>Die Seite befindet sich noch im Aufbau.</p><p>Aktuell sind die Grafiken für die optimale User Experience für größere Geräte optimiert.</p>",
+
   "meatIcon": "1kg Fleisch",
 
   "types": {
@@ -57,11 +59,11 @@
     "title1" : "Verteilung der landwirtschaftlichen Flächen (Europäische Union)",
     "chartText1": "Zwischen 60% und 70% werden<br /> für die Fleischproduktion genutzt.",
     "alt1": "Luftaufnahme von landwirtschaftlichen Flächen",
-    "article1": "<p>Die Fleischproduktion beansprucht einen Großteil der verfügbaren landwirtschaftlichen Flächen.</p><p>Diese Flächen stehen nicht für andere landwirtschaftliche Nutzungen zur Verfügung, die mit weniger Ressourcen mehr Nahrungsmittel produzieren könnten.</p>",
+    "article1": "<p>Die Fleischproduktion beansprucht einen Großteil der verfügbaren landwirtschaftlichen Flächen. Diese Flächen stehen nicht für andere landwirtschaftliche Nutzungen zur Verfügung, die mit weniger Ressourcen mehr Nahrungsmittel produzieren könnten.</p>",
     "title2": "Verschlechterung der Bodenqualität",
     "chartText2": "Rund 80 % der Abholzung im Amazonasgebiet<br/> werden durch Rinderzucht verursacht.",
     "alt2": "erodierter Boden",
-    "article2": "<p>Alle Arten der Landwirtschaft wirken sich auf das Land aus, aber die Tierhaltung belastet den Boden besonders stark.</p>"
+    "article2": "<p>Alle Arten der Landwirtschaft wirken sich auf das Land aus, aber die Tierhaltung belastet den Boden besonders stark. Durch die Abholzung wird die Bodenstruktur zerstört. Dies fördert Erosion und die Nährstoffspeicherfähigkeit des Bodens wird erheblich vermindert.</p>"
   },
 
   "waterPollution": {

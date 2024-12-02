@@ -13,8 +13,8 @@ const Soil = () => {
   const soilChartsData = [
     { 
       requiredPercentage: 40, 
-      requiredPercentageArticle: 80, 
-      fullWidthValue: 0.9, 
+      requiredPercentageArticle: 100, 
+      fullWidthValue: 1, 
       scrollEffectDirection: ["0%", "100%"],
       title: t('soil.title1'), 
       backgroundImage: `linear-gradient(rgba(168, 213, 186, 0.5), rgba(168, 213, 186, 0.5)), url(${farmingImg})`,
@@ -28,11 +28,11 @@ const Soil = () => {
 
     { 
       requiredPercentage: 70,   
-      requiredPercentageArticle: 90, 
-      fullWidthValue: 0.9, 
+      requiredPercentageArticle: 100, 
+      fullWidthValue: 1, 
       scrollEffectDirection: ["100%", "20%"],
       title: t('soil.title2'), 
-      backgroundImage: `linear-gradient(rgba(255, 62, 44, 0.5), rgba(255, 62, 44, 0.5)), url(${soilDegradation})`,
+      backgroundImage: `linear-gradient(rgba(255, 62, 44, 0.8), rgba(255, 62, 44, 0.8)), url(${soilDegradation})`,
       backgroundColor: "rgba(168, 213, 186, 0.8)",
       meatWidth: '100%',
       chartText: '',

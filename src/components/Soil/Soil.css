@@ -2,7 +2,7 @@
 
 .landuse-scroll-container {
     position: relative;   
-    height: 600vh; 
+    height: 400vh; 
     overflow-y: auto; 
     padding-top: 0; 
     overflow: visible; 
@@ -54,9 +54,19 @@
     position: relative;
 }
 
+.landuse-chart-fill-text {
+    font-family: "PTSerif-Bold";
+    font-size: 1.5rem; 
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap; 
+    pointer-events: none; 
+}
+
 .text-second-chart {
     font-family: "PTSerif-Bold";
-    color: #e3e3e3; 
     font-size: 1.5rem; 
     position: absolute; 
     top: 50%;
@@ -67,30 +77,23 @@
     z-index: 10;
 }
 
-.landuse-chart-fill-text {
-    font-family: "PTSerif-Bold";
-    color: #352f36; 
-    font-size: 1.5rem; 
-    position: absolute; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap; 
-    pointer-events: none; 
+.text-second-chart p {
+    color: #e3e3e3; 
 }
 
+
 .landuse-article  {
+    font-family: "PTSerif-Bold";
     width: 90%;
     min-width: 640px;
     max-width: 950px;
     background-color: transparent;
 }
 
-.landuse-article p {
-    color: #e3e3e3;
-    font-family: "PTSerif-Bold";
-    margin-top: 0;
-
+.landuse-article p  {
+   padding-top: 0.1rem;
+   margin-top: 0.0;
+   color: #e3e3e3; 
 }
 
 @media screen and (max-width: 730px) {
@@ -117,3 +120,11 @@
         white-space: normal; 
     }
 }
+
+@media screen and (max-width: 800px) {
+    .landuse-scroll-container {
+        display: none;
+    }
+}
+
+

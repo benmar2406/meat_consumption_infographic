@@ -56,3 +56,13 @@
 
     }
   }
+
+  @media screen and (max-width: 600px) {
+    .graphic {
+      display: none;
+    }
+
+    .scroller {
+      flex-basis: 100%;
+    }
+  }

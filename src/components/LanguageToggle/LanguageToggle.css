@@ -1,0 +1,30 @@
+.language-toggle-container {
+    margin: 0.5rem;
+    position: absolute;
+}
+
+.language-button {
+    background-color: transparent;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-button:hover {
+    color:#ff3e2c;
+    text-decoration-line: underline;
+    border-color: #ff3e2c;
+    cursor: pointer;
+}
+
+.language-button:focus {
+    outline-color: #ff3e2c;
+}
+
+.language-button.active {
+    color: #ff3e2c;
+}
+
+.language-button.active:hover {
+    border-color: transparent;
+}

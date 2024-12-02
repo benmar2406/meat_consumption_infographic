@@ -1,0 +1,22 @@
+.mobile-headline-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.mobile-headline-container {
+    width: 85%;
+    margin: auto;
+}
+
+.mobile-headline-container p {
+    text-align: center;
+    font-family: 'PTSerif-Bold';
+    color: #e3e3e3
+}
+
+.mobile-headline {
+    color: white;
+    font-size: 2rem;
+}

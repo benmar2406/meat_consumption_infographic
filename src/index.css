@@ -59,6 +59,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #352f36;
+  hyphens: auto; /* Aktiviert die Silbentrennung */
+  word-break: normal; /* Verhindert willkürliche Worttrennung */
+  overflow-wrap: normal;
 }
 
 nav {
@@ -116,13 +119,10 @@ button {
   transition: border-color 0.25s;
 }
 
-button:hover {
-  border-color: #646cff;
-}
-
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto #ff3e2c;
+  cursor: pointer;
 }
 
 .highlight {
@@ -132,4 +132,11 @@ button:focus-visible {
 
 section {
   margin: 100px 0;
+}
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+  }
 }

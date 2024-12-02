@@ -4,7 +4,7 @@
 }
 
 .conclusions-headline-container {
-    width: 70%;
+    width: 85%;
     max-width: 1200px;
     word-wrap: break-word;
     margin: auto;
@@ -20,3 +20,10 @@
     margin: 10vh auto;
     font-size: 2rem;
 }
+
+@media screen and (min-width: 1800px) {
+    .conclusions-headline-container {
+        width: 75%;
+        
+    }
+  }

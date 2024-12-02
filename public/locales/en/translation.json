@@ -1,4 +1,6 @@
 {
+"mobileWarning": "<p>Please open the page on a desktop device or laptop.</p><p>The page is still under development.</p><p>Currently, the graphics are optimized for larger devices to ensure the best user experience.</p>",
+
   "meatIcon": "1kg of meat",
 
   "types": {
@@ -61,7 +63,7 @@
     "title2": "Soil degradation",
     "chartText2": "<p>Around 80% of deforestation in the<br/> Amazon is driven by cattle ranching.</p>",
     "alt2": "corroded soil",
-    "article2": "<p>All types of agriculture impact the land, but animal farming is especially hard on the soil.</p>"
+    "article2": "<p>All types of agriculture impact the land, but animal farming is especially hard on the soil. Deforestation disrupts the soil structure, promotes erosion, and significantly reduces the soil's capacity to retain nutrients.</p>"
   },
 
   "waterPollution": {

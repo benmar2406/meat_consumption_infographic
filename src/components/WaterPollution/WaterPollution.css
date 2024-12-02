@@ -24,6 +24,7 @@
 .water-scroller {
   width: 100%;
   margin: auto;
+  box-sizing: border-box;
 }
 
 .water-step {
@@ -41,3 +42,10 @@
   background-color: #e3e3e3;
 }
   
+@media screen and (max-width: 800px) {
+  .water-step {
+    width: 80%;
+    min-width:auto;
+    box-sizing: border-box;
+  }
+}
