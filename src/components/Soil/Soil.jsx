@@ -12,9 +12,9 @@ const Soil = () => {
   
   const soilChartsData = [
     { 
-      requiredPercentage: 40, 
-      requiredPercentageArticle: 100, 
-      fullWidthValue: 1, 
+      requiredPercentage: 65, 
+      requiredPercentageArticle: 95, 
+      fullWidthValue: 0.9, 
       scrollEffectDirection: ["0%", "100%"],
       title: t('soil.title1'), 
       backgroundImage: `linear-gradient(rgba(168, 213, 186, 0.5), rgba(168, 213, 186, 0.5)), url(${farmingImg})`,
@@ -27,7 +27,7 @@ const Soil = () => {
     },  
 
     { 
-      requiredPercentage: 70,   
+      requiredPercentage: 90,   
       requiredPercentageArticle: 100, 
       fullWidthValue: 1, 
       scrollEffectDirection: ["100%", "20%"],

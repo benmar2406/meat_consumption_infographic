@@ -81,7 +81,7 @@
 
   "developmentCharts": {
     "article1": "<p>Since the 1960s, global meat production has been steadily increasing.</p><p>This growth is closely linked to the rise of mass meat production and the expansion of the fast food industry.</p>",
-    "article2": "<p>In Western Europe and many industrialized regions meat production and consumption are declining for the last few years.</p><aside><p>he short-term downturn in the 1990s and 2000s in the popularity of meat cravings was due to to increasing health, ethical and sustainable awareness, but also to the outbreak of BSE.</p><p>The subsequent increase can be related to marketing strategies and new (to-go) products/snacks, globalization effects and thus increased availability.</p>",
+    "article2": "<p>In Western Europe and many industrialized regions meat production and consumption are declining for the last few years.</p><aside><p>he short-term downturn in the 1990s and 2000s in the popularity of meat products was due to to increasing health, ethical and sustainable awareness, but also to the outbreak of BSE.</p><p>The subsequent increase can be related to marketing strategies and new (to-go) products/snacks, globalization effects and thus increased availability.</p>",
     "article3": "<p>But the decline in meat consumption in industrialized regions doesn't mean that rich countries have given up meat, nor that developing countries are now the primary consumers of it...</p>",
     "chartTitle1": "Global Meat Production Over Time (tonnes)",
     "chartTitle2": "Western Europe: Meat Production Over Time (tonnes)"
@@ -127,9 +127,9 @@
     "article3": "<p>The numbers are higher for corn: <span>65% of the global corn production</span> is used for animal feed.</p>",
     "article4": "<p>For soy, the impact is even greater: <span>80% of all soy produced</span> is consumed through livestock farming.</p>",
     "altDrop": "11.43 billion cubic meters of water",
-    "780": "780 mio.",
-    "1.2": "1.2 bn.",
-    "380": "380 mio.",
+    "780": "780 mio. ",
+    "1.2": "1.2 bn. ",
+    "380": "380 mio. ",
     "tonnesProduced": "tonnes produced worldwide",
     "altFoodIcons": "40 million tonnes of ",
     "conclusionText1": "Food used for meat production isn’t available for direct human consumption.",

@@ -56,7 +56,7 @@
   },
 
   "soil": {
-    "title1" : "Verteilung der landwirtschaftlichen Flächen (Europäische Union)",
+    "title1" : "Verteilung der landwirtschaftlichen Flächen</br> (Europäische Union)",
     "chartText1": "Zwischen 60% und 70% werden<br /> für die Fleischproduktion genutzt.",
     "alt1": "Luftaufnahme von landwirtschaftlichen Flächen",
     "article1": "<p>Die Fleischproduktion beansprucht einen Großteil der verfügbaren landwirtschaftlichen Flächen. Diese Flächen stehen nicht für andere landwirtschaftliche Nutzungen zur Verfügung, die mit weniger Ressourcen mehr Nahrungsmittel produzieren könnten.</p>",
@@ -81,7 +81,7 @@
 
   "developmentCharts": {
     "article1": "<p>Seit den 1960er Jahren nimmt die weltweite Fleischproduktion stetig zu.</p><p>Dieses Wachstum hängt eng mit dem Aufstieg der Massenproduktion von Fleisch und der Expansion der Fast-Food-Industrie zusammen.</p>",
-    "article2": "<p>In Westeuropa und vielen industrialisierten Regionen nimmt die Fleischproduktion und der Konsum in den letzten Jahren ab.</p><aside><p>Der kurzfristige Rückgang in den 1990er und 2000er Jahren bei der Beliebtheit von Fleischgelüsten war auf steigendes Gesundheits-, ethisches und nachhaltiges Bewusstsein zurückzuführen, aber auch auf den Ausbruch von BSE.</p><p>Der anschließende Anstieg lässt sich auf Marketingstrategien und neue (to-go) Produkte/Snacks, Globalisierungseffekte und damit erhöhte Verfügbarkeit zurückführen.</p>",
+    "article2": "<p>In Westeuropa und vielen industrialisierten Regionen nimmt die Fleischproduktion und der Konsum in den letzten Jahren ab.</p><aside><p>Der kurzfristige Rückgang in den 1990er und 2000er Jahren der Beliebtheit von Fleischprodukten war auf steigendes Gesundheits-, ethisches und nachhaltiges Bewusstsein zurückzuführen, aber auch auf den Ausbruch von BSE.</p><p>Der anschließende Anstieg lässt sich auf Marketingstrategien und neue (to-go) Produkte/Snacks, Globalisierungseffekte und damit erhöhte Verfügbarkeit zurückführen.</p>",
     "article3": "<p>Aber der Rückgang des Fleischkonsums in industrialisierten Regionen bedeutet nicht, dass reiche Länder auf Fleisch verzichten, noch dass Entwicklungsländer jetzt die Hauptkonsumenten sind...</p>",
     "chartTitle1": "Globale Fleischproduktion über die Zeit (Tonnen)",
     "chartTitle2": "Westeuropa: Fleischproduktion über die Zeit (Tonnen)"
@@ -127,9 +127,9 @@
     "article3": "<p>Bei Mais sind die Zahlen höher: <span>65% der weltweiten Maisproduktion</span> werden für Viehfutter verwendet.</p>",
     "article4": "<p>Bei Soja ist die Auswirkung noch größer: <span>80% der gesamten Sojaproduktion</span> wird durch Viehhaltung verbraucht.</p>",
     "altDrop": "11,43 Milliarden Kubikmeter Wasser",
-    "780": "780 Mio.",
-    "1.2": "1,2 Mrd.",
-    "380": "380 Mio.",
+    "780": "780 Mio. ",
+    "1.2": "1,2 Mrd. ",
+    "380": "380 Mio. ",
     "tonnesProduced": "weltweit produzierte Tonnen",
     "altFoodIcons": "40 Millionen Tonnen ",
     "conclusionText1": "Lebensmittel, die für die Fleischproduktion verwendet werden, stehen nicht für den direkten menschlichen Konsum zur Verfügung.",

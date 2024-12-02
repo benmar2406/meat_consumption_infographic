@@ -17,9 +17,9 @@ const FoodRessources = () => {
     const [stepFour, setStepFour] = useState(false);
 
     const foodRessources = [
-        {name: t('types.wheat'), tonnes: "780 mio.", numberOfIcons: 20, usedForMeat: 4, percentageForMeat: 20, displayWhen: stepOne, displayMeatWhen: stepTwo },
-        {name: t('types.corn'), tonnes: "1.2 bn", numberOfIcons: 30, usedForMeat: 20, percentageForMeat: 65, displayWhen: stepOne, displayMeatWhen: stepThree },
-        {name: t('types.soy'), tonnes: "380 mio.", numberOfIcons: 10, usedForMeat: 8, percentageForMeat: 80, displayWhen: stepOne, displayMeatWhen: stepFour }
+        {name: t('types.wheat'), tonnes: t('foodConsumption.780'), numberOfIcons: 20, usedForMeat: 4, percentageForMeat: 20, displayWhen: stepOne, displayMeatWhen: stepTwo },
+        {name: t('types.corn'), tonnes: t('foodConsumption.1.2'), numberOfIcons: 30, usedForMeat: 20, percentageForMeat: 65, displayWhen: stepOne, displayMeatWhen: stepThree },
+        {name: t('types.soy'), tonnes: t('foodConsumption.380'), numberOfIcons: 10, usedForMeat: 8, percentageForMeat: 80, displayWhen: stepOne, displayMeatWhen: stepFour }
     ]
 
     const article1 = t('foodConsumption.article1');
