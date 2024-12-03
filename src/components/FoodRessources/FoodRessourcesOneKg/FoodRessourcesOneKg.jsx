@@ -93,10 +93,12 @@
                 </div>
 
                 <div className="plant-based-container">
+                  <div className='info-circle-container-2'>                  
                     <InfoCircle 
                       infoCircle={infoCircles[1]} 
                       ref={infoCircle2Ref}
-                />
+                    />
+                  </div>  
                 <div className='humans-fed-container-2'>
                     <HumansFedContainer 
                       humansFed={ressourceUsage[0].humansFedAlternative}
