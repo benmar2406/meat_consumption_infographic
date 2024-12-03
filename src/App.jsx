@@ -12,7 +12,7 @@ function App() {
 
   const { t, i18n } = useTranslation();
 
-  useEffect(() => {
+  /*useEffect(() => {
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
 
@@ -31,7 +31,7 @@ function App() {
 
     useEffect(() => {
       setNotDesktop(screenWidth < 900);
-    }, [screenWidth])
+    }, [screenWidth])*/
 
   return (
     <>
@@ -44,8 +44,8 @@ function App() {
             path="/"
             element={
               <>
-               {!notDesktop && <DesktopVersion />}
-               {notDesktop && <MobileVersion />}
+               {/*!notDesktop && */<DesktopVersion />}
+               {/*notDesktop && <MobileVersion />*/}
               </>
             } 
           />
