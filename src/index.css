@@ -139,10 +139,8 @@ section {
   }
 
   body {
-    hyphens: auto; /* Keeps hyphenation but allows you to control breakpoints */
-    word-break: keep-all; /* Prevents word breaks unless absolutely necessary */
-    overflow-wrap: break-word; /* Allows breaking only if a word overflows the container */
-    line-break: loose; /* Makes line-breaking rules looser, allowing fewer breaks */
+    hyphens: auto;
+    word-break: break-word;
   }
 
 }

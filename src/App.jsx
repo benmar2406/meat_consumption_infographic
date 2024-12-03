@@ -12,10 +12,11 @@ function App() {
 
   const { t, i18n } = useTranslation();
 
-  /*useEffect(() => {
+  useEffect(() => {
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
 
+  /*
   //check if desktpop or mobile width
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [notDesktop, setNotDesktop] = useState();

@@ -115,7 +115,7 @@
 @media screen and (max-width: 800px) {
   .charts-container-comp {
     display: block;
-    width: 90%;
+    width: 85%;
     max-width: auto;
     min-width: auto;
     margin: 0 auto;

@@ -29,7 +29,8 @@
 
 @media screen and (max-width: 800px) {
     .conclusions-headline-section {
-        width: 95%;
+        width: 90%;
+        margin: auto;
     }
 
     .conclusions-headline-container {
