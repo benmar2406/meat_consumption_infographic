@@ -18,7 +18,7 @@ function App() {
 
   //check if desktpop or mobile width
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const [desktop, setDesktop] = useState();
+  const [notDesktop, setNotDesktop] = useState();
 
     useEffect(() => {
         const handleResize = () =>  {
@@ -30,7 +30,7 @@ function App() {
     }, []);
 
     useEffect(() => {
-       setDesktop(screenWidth > 900);
+      setNotDesktop(screenWidth < 900);
     }, [screenWidth])
 
   return (
@@ -44,8 +44,8 @@ function App() {
             path="/"
             element={
               <>
-               {desktop && <DesktopVersion />}
-               {!desktop && <MobileVersion />}
+               {!notDesktop && <DesktopVersion />}
+               {notDesktop && <MobileVersion />}
               </>
             } 
           />
