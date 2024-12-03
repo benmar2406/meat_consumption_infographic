@@ -40,6 +40,13 @@
     justify-content: space-evenly;
 }
 
+.info-circle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
 .plant-based-container {
     display: flex;
     flex-basis: 40%;

@@ -76,7 +76,7 @@
                       <OneKgMeatContainer ref={meatIconRef}/>
                   </div>
 
-                  <div>
+                  <div className='info-circle-container'>
                     <InfoCircle 
                       infoCircle={infoCircles[0]}
                       ref={infoCircle1Ref}
