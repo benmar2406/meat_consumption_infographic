@@ -142,7 +142,7 @@
     "day": "for 1 day",
     "altHuman": "icon one human",
     "calculatedQuestion": "How was this calculated?",
-    "calculationAnswer": "<p>Calculations of these statements were based on required caloric intake and the calories included in fed food and in 1kg of meat.</p><ul><li>Producing 1 kg of beef requires about 25 kg of feed, including grains like corn and soy, which are fed to cattle over their lifetime.</li><li>This 1 kg of beef provides around 2,500 calories, which is enough to meet the daily calorie needs of 1 person.</li><li>However, the same 25 kg of feed used to produce the beef contains around 95,000 calories. If consumed directly as grains or soy, it could meet the daily calorie needs of 38 people.</li></ul>",
+    "calculatedAnswer": "<p>Calculations of these statements were based on required caloric intake and the calories included in fed food and in 1kg of meat.</p><ul><li>Producing 1 kg of beef requires about 25 kg of feed, including grains like corn and soy, which are fed to cattle over their lifetime.</li><li>This 1 kg of beef provides around 2,500 calories, which is enough to meet the daily calorie needs of 1 person.</li><li>However, the same 25 kg of feed used to produce the beef contains around 95,000 calories. If consumed directly as grains or soy, it could meet the daily calorie needs of 38 people.</li></ul>",
     "conclusion2": "The ressources required for 1 kg of beef could feed 36 times more people if consumed directly.",
     "conclusion3": "Meat production is much less efficient than directly consuming plant-based foods."
   },

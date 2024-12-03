@@ -119,6 +119,8 @@ button {
 button:focus,
 button:focus-visible {
   cursor: pointer;
+  outline: 4px auto #ff3e2c;
+
 }
 
 .highlight {

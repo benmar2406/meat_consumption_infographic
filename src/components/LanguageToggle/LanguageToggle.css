@@ -18,7 +18,7 @@
 }
 
 .language-button:focus {
-    outline-color: #ff3e2c;
+    outline: 4px auto #ff3e2c;
 }
 
 .language-button.active {
