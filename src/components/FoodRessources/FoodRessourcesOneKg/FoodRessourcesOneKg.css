@@ -65,15 +65,14 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    align-content: center;
     width: 100%;
 }
 
 .humans-fed-container-2 {
     margin: 0;
     width: 70%;
+    min-width: 400px;
     
 }
 
