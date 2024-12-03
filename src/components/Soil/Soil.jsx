@@ -27,8 +27,8 @@ const Soil = () => {
     },  
 
     { 
-      requiredPercentage: 90,   
-      requiredPercentageArticle: 100, 
+      requiredPercentage: 80,   
+      requiredPercentageArticle: 90, 
       fullWidthValue: 1, 
       scrollEffectDirection: ["100%", "20%"],
       title: t('soil.title2'), 
