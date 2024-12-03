@@ -31,7 +31,7 @@ function App() {
 
     useEffect(() => {
       setNotDesktop(screenWidth < 900);
-    }, [screenWidth])*/
+    }, [screenWidth]) */
 
   return (
     <>

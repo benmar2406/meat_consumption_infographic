@@ -23,3 +23,14 @@
     max-width: 1200px;
     margin: auto;
 }
+
+@media screen and (max-width: 800px) {
+    .emission-charts-container {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .air-pollution {
+        width: 90%;
+    }
+}

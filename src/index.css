@@ -132,9 +132,17 @@ section {
   margin: 100px 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   h2 {
     font-size: 1.7rem;
     line-height: 2.2rem;
   }
+
+  body {
+    hyphens: auto; /* Keeps hyphenation but allows you to control breakpoints */
+    word-break: keep-all; /* Prevents word breaks unless absolutely necessary */
+    overflow-wrap: break-word; /* Allows breaking only if a word overflows the container */
+    line-break: loose; /* Makes line-breaking rules looser, allowing fewer breaks */
+  }
+
 }

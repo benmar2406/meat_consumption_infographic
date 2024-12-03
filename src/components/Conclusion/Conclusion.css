@@ -24,6 +24,20 @@
 @media screen and (min-width: 1800px) {
     .conclusions-headline-container {
         width: 75%;
-        
     }
-  }
+}
+
+@media screen and (max-width: 800px) {
+    .conclusions-headline-section {
+        width: 95%;
+    }
+
+    .conclusions-headline-container {
+        width: 100%;
+    }
+
+    .conclusion-headline {
+        font-size: 1.7rem;
+        line-height: 2.2rem;
+      }
+}

@@ -25,6 +25,16 @@
     color: #ff3e2c;
 }
 
-.language-button.active:hover {
+.language-button.active:hover { 
     border-color: transparent;
+}
+
+@media screen and (max-width: 800px) {
+    .language-button {
+        color: #352f36
+    }
+
+    .language-toggle-container span {
+        color: #352f36
+    }
 }

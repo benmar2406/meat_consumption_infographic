@@ -50,3 +50,10 @@
     color: #352f36;
     text-align: center;
 }
+
+
+@media screen and (max-width: 800px) {
+    .emission-chart-container {
+        flex-basis: 30%;
+    }
+}

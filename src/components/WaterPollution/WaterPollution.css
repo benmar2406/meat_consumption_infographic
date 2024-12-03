@@ -43,6 +43,11 @@
 }
   
 @media screen and (max-width: 800px) {
+  
+  .water-scroll-section {
+    height: fit-content;
+}
+  
   .water-step {
     width: 80%;
     min-width:auto;
