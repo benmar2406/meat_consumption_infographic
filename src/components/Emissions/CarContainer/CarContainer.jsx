@@ -16,7 +16,7 @@ const CarContainer = forwardRef(({ food, isInView }, ref) => {
 
     return(
         <div className='car-chart-container'>
-            <div className='car-food-type'><span>{food.name}</span></div>
+            <div className='car-food-type'><span>{food.name}</span><span className="mobile-version">: {food.carKm}km</span></div>
             <div className='car-distance-container' ref={ref}>
                 <motion.div 
                     className='car-distance'
@@ -26,7 +26,7 @@ const CarContainer = forwardRef(({ food, isInView }, ref) => {
                         width: { duration: 1, ease: "linear" },
                         opacity: { duration: 1, ease: "easeIn" } }}
                     >
-                 <span>{food.carKm}km</span>
+                 <span className="desktop-version">{food.carKm}km</span>
                 </motion.div>
                 <div className='car-container'>
                     <img src={carIcon} />
