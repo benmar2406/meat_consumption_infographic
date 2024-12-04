@@ -58,30 +58,47 @@
         }  
     }
 
-    @media screen and (min-width: 1530px) {
-        .water-ressources-icon-grid {
-            height: auto;
-            max-width: 890px;
-        }
-    }
-        
     @media screen and (max-width: 800px) {
         .water-ressources-scroll-container {
             display: block;
-            height: 200vh;
+            position: relative; 
             width: 100%;
-            position: relative;
+            height: 130vh; 
+            z-index: 1;
         }
-        
+    
         .scroller-water-ressources {
-            position: relative;
-            width: 100%;
-        }
-
-        .water-ressources-chart {
-            position: sticky;
+            position: absolute; 
+            top: 0;
             left: 0;
-            top: 10px;
+            width: 100%;
+            height: 100%; 
+            z-index: 2; 
         }
-    } 
+    
+        .water-ressources-chart {
+            position: absolute; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; 
+            z-index: 1; 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+
+    
+        .step-water-ressources {
+            padding: 10px 0;
+            width: 80%;
+            margin: auto;
+        }
+    
+        .water-ressources-article {
+            color: black;
+        }
+    }
+    
     

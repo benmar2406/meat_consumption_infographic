@@ -7,7 +7,7 @@ import WaterRessourcesGraphic from './WaterRessourcesGraphic/WaterRessourcesGrap
 import './WaterRessources.css'
 
 
-const WaterRessources = () => {
+const WaterRessources = ({ mobile }) => {
 
     const { t, i18n } = useTranslation();
 
@@ -64,7 +64,7 @@ const WaterRessources = () => {
                     </div>
                     <div className='water-ressources-chart'>
                         <LazyLoad height={400} offset={100}>
-                            <WaterRessourcesGraphic displayAgrUsage={displayAgrUsage} displayMeatUsage={displayMeatUsage}/>
+                            <WaterRessourcesGraphic displayAgrUsage={displayAgrUsage} displayMeatUsage={displayMeatUsage} mobile={mobile}/>
                         </LazyLoad>
                     </div>
                 </div>

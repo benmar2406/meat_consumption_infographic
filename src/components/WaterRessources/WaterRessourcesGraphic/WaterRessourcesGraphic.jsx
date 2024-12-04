@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import '../WaterRessources.css'
 import WaterIconContainer from '../../WaterIconContainer/WaterIconContainer'
 
-const WaterRessourcesGraphic = ( {displayAgrUsage, displayMeatUsage} ) => {
+const WaterRessourcesGraphic = ({ displayAgrUsage, displayMeatUsage, mobile }) => {
 
     const { t, i18n } = useTranslation();
 
@@ -42,10 +42,10 @@ const WaterRessourcesGraphic = ( {displayAgrUsage, displayMeatUsage} ) => {
                 {Array.from({ length: totalNumberDrops }, (_, index) => {
                     
                     let fillColor = defaultDropFill;
-                    if (displayAgrUsage && index < agriculturalNumberDrops) {
+                    if ((displayAgrUsage && index < agriculturalNumberDrops) || mobile) {
                         fillColor = agriculturalDropFill;
                     }
-                    if (displayMeatUsage && index < meatNumberDrops) {
+                    if ((displayMeatUsage && index < meatNumberDrops) || mobile) {
                         fillColor = meatDropFill;
                     }
 

@@ -16,7 +16,7 @@ function App() {
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
 
-  /*
+
   //check if desktpop or mobile width
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [notDesktop, setNotDesktop] = useState();
@@ -32,7 +32,7 @@ function App() {
 
     useEffect(() => {
       setNotDesktop(screenWidth < 900);
-    }, [screenWidth]) */
+    }, [screenWidth]) 
 
   return (
     <>
