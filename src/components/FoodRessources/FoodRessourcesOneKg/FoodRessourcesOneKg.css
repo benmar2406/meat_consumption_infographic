@@ -82,3 +82,16 @@
     justify-content: center;
     justify-self:flex-start;
 }
+
+@media screen and (max-width: 800px) {
+
+    .humans-fed-container-2 {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .food-consumed-chart-container {
+        width: auto;
+    }
+
+}

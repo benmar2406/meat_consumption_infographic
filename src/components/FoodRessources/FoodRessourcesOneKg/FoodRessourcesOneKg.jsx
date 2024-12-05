@@ -14,7 +14,7 @@
 
   const FoodRessourcesOneKg = () => {
 
-      const { t, i18n } = useTranslation();
+      const { t } = useTranslation();
 
       const ressourceUsage = [
         { type: t('meatIcon'), foodUsageKg: 25, AnimalIcon: cowIcon, humansFedwithMeat: 1, humansFedAlternative: 36, cssSelector: "type-meat-water-container" }

@@ -20,7 +20,7 @@
 
     //check if desktpop or mobile width
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const { notDesktop, setNotDesktop } = useContext(DeviceContext);
+    const { setNotDesktop } = useContext(DeviceContext);
 
 
       useEffect(() => {
