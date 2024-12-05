@@ -42,10 +42,10 @@ const WaterRessourcesGraphic = ({ displayAgrUsage, displayMeatUsage, mobile }) =
                 {Array.from({ length: totalNumberDrops }, (_, index) => {
                     
                     let fillColor = defaultDropFill;
-                    if ((displayAgrUsage && index < agriculturalNumberDrops) || mobile) {
+                    if ((displayAgrUsage && index < agriculturalNumberDrops) || (index < agriculturalNumberDrops && mobile)) {
                         fillColor = agriculturalDropFill;
                     }
-                    if ((displayMeatUsage && index < meatNumberDrops) || mobile) {
+                    if ((displayMeatUsage && index < meatNumberDrops) || (index < meatNumberDrops && mobile)) {
                         fillColor = meatDropFill;
                     }
 

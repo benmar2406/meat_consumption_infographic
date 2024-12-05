@@ -27,7 +27,7 @@ const WaterRessourcesOneKg = ( ) => {
     
     return(
         <section className="water-usage-1kg">
-            <h2 className='water-usage-chart-title'>{t('waterConsumption.title')}</h2>
+            <h2 className='water-usage-chart-title'>{t('waterConsumption.title2')}</h2>
             <ChartLegend/>
             <LazyLoad height="400px" offdet="100px">
                 <div className='water-usage-1kg-charts'>

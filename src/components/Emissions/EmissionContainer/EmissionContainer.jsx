@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion'
-import useAnimateOnView from '../../hooks/useAnimateOnView';
+import useAnimateOnView from '../../../hooks/useAnimateOnView';
 import './EmissionContainer.css'
 import EmissionIconContainer from './EmissionIconContainer/EmissionIconContainer';
 import MeatIconContainer from '../../MeatIconContainer/MeatIconContainer';

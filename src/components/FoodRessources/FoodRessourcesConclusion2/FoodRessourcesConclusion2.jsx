@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import '../../Conclusion/Conclusion.css';
-import useAnimateTitleOnView from '../../hooks/useAnimateTitleOnView';
+import useAnimateTitleOnView from '../../../hooks/useAnimateTitleOnView';
 
 const FoodRessourcesConclusion2 = () => {
 

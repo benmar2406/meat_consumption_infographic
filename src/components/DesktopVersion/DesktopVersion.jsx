@@ -36,7 +36,7 @@ const DesktopVersion = ({ mobile })  => {
         <ComparisonPoorRichGraphic />
         <RessourcesIntro />
         <Emissions />
-        <WaterRessources />
+        <WaterRessources mobile={mobile}/>
         <WaterRessourcesOneKg />
         <FoodRessources />
         <FoodRessourcesOneKg />

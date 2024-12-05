@@ -45,7 +45,7 @@ function App() {
             path="/"
             element={
               <>
-               {/*!notDesktop && */<DesktopVersion />}
+               {/*!notDesktop && */<DesktopVersion mobile={notDesktop} />}
                {/*notDesktop && <MobileVersion />*/}
               </>
             } 
