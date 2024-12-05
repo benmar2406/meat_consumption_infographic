@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Element } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
+import { DeviceContext } from "../../context/deviceContext";
 import './Soil.css';
 import SoilChart from './SoilChart/SoilChart';
 import farmingImg from '../../assets/img/farming.jpg';
@@ -9,12 +10,14 @@ import soilDegradation from '../../assets/img/soil_degradation.jpg';
 const Soil = () => {
 
   const { t, i18n } = useTranslation();
+
+  const { notDesktop } = useContext(DeviceContext)
   
   const soilChartsData = [
     { 
       requiredPercentage: 65, 
       requiredPercentageArticle: 95, 
-      fullWidthValue: 0.9, 
+      fullWidthValue: notDesktop ? 0 : 0.9, 
       scrollEffectDirection: ["0%", "100%"],
       title: t('soil.title1'), 
       backgroundImage: `linear-gradient(rgba(168, 213, 186, 0.5), rgba(168, 213, 186, 0.5)), url(${farmingImg})`,
@@ -27,9 +30,9 @@ const Soil = () => {
     },  
 
     { 
-      requiredPercentage: 80,   
-      requiredPercentageArticle: 90, 
-      fullWidthValue: 1, 
+      requiredPercentage: notDesktop ? 0 : 80,   
+      requiredPercentageArticle: notDesktop ? 0 : 90, 
+      fullWidthValue:  notDesktop ? 0 : 1, 
       scrollEffectDirection: ["100%", "20%"],
       title: t('soil.title2'), 
       backgroundImage: `linear-gradient(rgba(255, 62, 44, 0.8), rgba(255, 62, 44, 0.8)), url(${soilDegradation})`,
@@ -45,7 +48,7 @@ const Soil = () => {
 
   return (
     
-    <section className='soil-section'>
+    <section className='soil'>
       <Element name='soil-impact'>
         {soilChartsData.map((soilChart, index) => (
           <SoilChart 

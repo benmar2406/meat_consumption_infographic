@@ -117,7 +117,7 @@
   }
   
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 800px) {
     .impact-cards-grid {
       display: block;
       margin: auto;
@@ -125,6 +125,20 @@
 
     .impact-card {
       height: 100vh; 
+    }
+  
+  }
+
+
+  @media screen and (min-width: 800px) and (max-width: 1150px) {
+    .impact-cards-grid {
+      display: block;
+      margin: auto;
+    }
+  
+
+    .impact-card {
+      height: 50vh; 
     }
   
   }

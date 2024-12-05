@@ -1,5 +1,5 @@
 .language-toggle-container {
-    margin: 0.5rem;
+    margin: 0.7rem;
     position: absolute;
 }
 
@@ -36,5 +36,9 @@
 
     .language-toggle-container span {
         color: #352f36
+    }
+
+    .language-toggle-container {
+        left: 2%;
     }
 }

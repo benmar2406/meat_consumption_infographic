@@ -1,5 +1,7 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useContext } from 'react';
 import { useScroll, useTransform, motion, useInView } from "framer-motion";
+import { DeviceContext } from "../../../context/deviceContext";
+
 import '../Soil.css';
 
 const SoilChart = ({ 
@@ -16,6 +18,9 @@ const SoilChart = ({
   chartText2,
   altText
 }) => {
+
+  const { notDesktop } = useContext(DeviceContext)
+
   const refScrollContainer = useRef(null);
   const isInView = useInView(refScrollContainer, { once: true });
 
@@ -31,6 +36,12 @@ const SoilChart = ({
   const [displayChartTextTwo, setDisplayChartTextTwo] = useState(false);
 
   useEffect(() => {
+    console.log(notDesktop)
+    if (notDesktop) {
+        setDisplayChartText(true);
+        setDisplayChartTextTwo(true);
+        setDisplayArticleText(true);
+    } else {
     const unsubscribe = percentage.on("change", (latestPercentage) => {
       if (latestPercentage >= requiredPercentage) { 
         setDisplayChartText(true);
@@ -45,9 +56,10 @@ const SoilChart = ({
         setDisplayArticleText(false);
       }
     });
-  
     return () => unsubscribe(); 
-  }, [percentage]);
+  }
+  
+  }, [percentage, notDesktop]);
 
   return (
     <div className='landuse-scroll-container' ref={refScrollContainer}>
