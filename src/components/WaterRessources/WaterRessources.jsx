@@ -64,7 +64,7 @@ const WaterRessources = ({ mobile }) => {
                     </div>
                     <div className='water-ressources-chart'>
                         <LazyLoad height={400} offset={100}>
-                            <WaterRessourcesGraphic displayAgrUsage={displayAgrUsage} displayMeatUsage={displayMeatUsage} mobile={mobile}/>
+                            <WaterRessourcesGraphic displayAgrUsage={displayAgrUsage} displayMeatUsage={displayMeatUsage} />
                         </LazyLoad>
                     </div>
                 </div>

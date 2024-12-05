@@ -50,7 +50,7 @@
     text-align: left;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
     .intro {
         width: 90%;
         min-width: auto;
@@ -59,6 +59,11 @@
 
     .background{
         height: auto;
+    }
+
+    .background-overlay {
+        align-items: start;
+        width: 100%;
     }
     
     
