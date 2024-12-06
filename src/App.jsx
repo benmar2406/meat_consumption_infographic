@@ -17,7 +17,8 @@ function App() {
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
 
-  const { notDesktop } = useGetDeviceWidth;
+  const { notDesktop } = useGetDeviceWidth();
+  console.log(notDesktop)
 
 
   return (

@@ -1,15 +1,22 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
-const DeviceContext = createContext(0); 
+export const DeviceContext = createContext();
 
-const DeviceProvider = ({ children }) => {
-    const [notDesktop, setNotDesktop] = useState(false);
+export const DeviceProvider = ({ children }) => {
+    const [notDesktop, setNotDesktop] = useState(window.innerWidth < 900);
 
-  return (
-    <DeviceContext.Provider value={{ notDesktop, setNotDesktop }}>
-      {children}
-    </DeviceContext.Provider>
-  );
+    useEffect(() => {
+        const handleResize = () => {
+            setNotDesktop(window.innerWidth < 900);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [window.innerWidth]);
+
+    return (
+        <DeviceContext.Provider value={{ notDesktop, setNotDesktop }}>
+            {children}
+        </DeviceContext.Provider>
+    );
 };
-
-export { DeviceContext, DeviceProvider };
