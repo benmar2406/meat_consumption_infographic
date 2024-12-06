@@ -8,18 +8,13 @@ import Imprint from './components/Imprint/Imprint';
 import DesktopVersion from "./components/DesktopVersion/DesktopVersion";
 import MobileVersion from "./components/MobileVersion/MobileVersion";
 import useGetDeviceWidth from "./hooks/useGetDeviceWidth";
+import { useSetLanguage } from "./hooks/useSetLanguage";
 
 function App() {
 
-  const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    document.documentElement.lang = i18n.language;
-  }, [i18n.language]);
-
   const { notDesktop } = useGetDeviceWidth();
-  console.log(notDesktop)
 
+  const { t } = useTranslation();
 
   return (
     <>
