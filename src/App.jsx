@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -7,6 +7,7 @@ import Sources from './components/Sources/Sources'
 import Imprint from './components/Imprint/Imprint'
 import DesktopVersion from "./components/DesktopVersion/DesktopVersion";
 import MobileVersion from "./components/MobileVersion/MobileVersion";
+import useGetDeviceWidth from "./hooks/useGetDeviceWidth";
 
 function App() {
 
@@ -15,6 +16,8 @@ function App() {
   useEffect(() => {
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
+
+  const { notDesktop } = useGetDeviceWidth();
 
   /*
   //check if desktpop or mobile width
