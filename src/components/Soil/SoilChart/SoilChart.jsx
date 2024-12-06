@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect, useContext } from 'react';
 import { useScroll, useTransform, motion, useInView } from "framer-motion";
-import { DeviceContext } from "../../../context/deviceContext";
-
+import useGetDeviceWidth from '../../../hooks/useGetDeviceWidth';
 import '../Soil.css';
 
 const SoilChart = ({ 
@@ -19,7 +18,7 @@ const SoilChart = ({
   altText
 }) => {
 
-  const { notDesktop } = useContext(DeviceContext)
+  const { notDesktop } = useGetDeviceWidth();
 
   const refScrollContainer = useRef(null);
   const isInView = useInView(refScrollContainer, { once: true });
