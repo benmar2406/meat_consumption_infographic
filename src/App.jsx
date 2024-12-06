@@ -7,6 +7,7 @@ import Sources from './components/Sources/Sources';
 import Imprint from './components/Imprint/Imprint';
 import DesktopVersion from "./components/DesktopVersion/DesktopVersion";
 import MobileVersion from "./components/MobileVersion/MobileVersion";
+import useGetDeviceWidth from "./hooks/useGetDeviceWidth";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
 
+  const { notDesktop } = useGetDeviceWidth;
 
 
   return (

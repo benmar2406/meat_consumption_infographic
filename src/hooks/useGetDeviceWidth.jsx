@@ -20,6 +20,6 @@ const useGetDeviceWidth = () => {
 
     return { notDesktop };
 }
-
-
-export default useGetDeviceWidth;
+        }, [screenWidth]);
+  
+}export default useGetDeviceWidth;
