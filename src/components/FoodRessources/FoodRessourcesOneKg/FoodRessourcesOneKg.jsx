@@ -2,8 +2,8 @@
   import { motion } from 'framer-motion';
   import { useTranslation } from 'react-i18next';
   import FoodTypeChart from './FoodTypeChart/FoodTypeChart';
-  import useDrawPath from '../../hooks/useDrawPath';
-  import useAnimateOnView from '../../hooks/useAnimateOnView';
+  import useDrawPath from '../../../hooks/useDrawPath';
+  import useAnimateOnView from '../../../hooks/useAnimateOnView';
   import './FoodRessourcesOneKg.css';
   import cowIcon from '../../../assets/img/icons/cow.png';
   import OneKgMeatContainer from './OneKgMeatContainer/OneKgMeatContainer';
@@ -14,7 +14,7 @@
 
   const FoodRessourcesOneKg = () => {
 
-      const { t, i18n } = useTranslation();
+      const { t } = useTranslation();
 
       const ressourceUsage = [
         { type: t('meatIcon'), foodUsageKg: 25, AnimalIcon: cowIcon, humansFedwithMeat: 1, humansFedAlternative: 36, cssSelector: "type-meat-water-container" }

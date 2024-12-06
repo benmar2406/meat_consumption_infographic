@@ -55,8 +55,9 @@ const RessourcesIntro = () => {
     }, [buttonIsInView, buttonControls]);
 
     return (
-        <Element name="ressources-intro">
-            <section className="ressources-intro-container"> 
+        
+        <section className="ressources-intro-container"> 
+            <Element name="ressources-intro">
                 <div className="ressources-intro">
                     <div className="ressources-graphic-container">
                         <motion.img
@@ -84,9 +85,9 @@ const RessourcesIntro = () => {
                     >
                         {t('OneKgIntro.subTitle')}
                     </motion.h2>
-                </div>            
-            </section>
-        </Element>
+                </div> 
+            </Element>           
+        </section>
 
     );
 }

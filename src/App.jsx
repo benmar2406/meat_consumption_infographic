@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import './App.css';
-import Sources from './components/Sources/Sources'
-import Imprint from './components/Imprint/Imprint'
+import Sources from './components/Sources/Sources';
+import Imprint from './components/Imprint/Imprint';
 import DesktopVersion from "./components/DesktopVersion/DesktopVersion";
 import MobileVersion from "./components/MobileVersion/MobileVersion";
 import useGetDeviceWidth from "./hooks/useGetDeviceWidth";
@@ -32,8 +32,8 @@ function App() {
             path="/"
             element={
               <>
-               {!notDesktop && <DesktopVersion />}
-               {notDesktop && <MobileVersion />}
+                  {/*!notDesktop && */<DesktopVersion />}
+                  {/*notDesktop && <MobileVersion />*/}
               </>
             } 
           />

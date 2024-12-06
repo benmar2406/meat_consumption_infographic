@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 import '../FoodRessources.css';
 import FoodIconContainer from './FoodIconContainer/FoodIconContainer';
-import useAnimateOnView from '../../hooks/useAnimateOnView';
+import useAnimateOnView from '../../../hooks/useAnimateOnView';
 
 const FoodRessourcesGraphic = ({ name, numberOfIcons, tonnes, displayMeatWhen, usedForMeat, percentageForMeat }) => {
 

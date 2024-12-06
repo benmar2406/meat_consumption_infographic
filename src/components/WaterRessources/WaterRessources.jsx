@@ -7,7 +7,7 @@ import WaterRessourcesGraphic from './WaterRessourcesGraphic/WaterRessourcesGrap
 import './WaterRessources.css'
 
 
-const WaterRessources = () => {
+const WaterRessources = ({ mobile }) => {
 
     const { t, i18n } = useTranslation();
 
@@ -36,35 +36,35 @@ const WaterRessources = () => {
             <Element name='water-ressources'>
             <h2>{t('waterConsumption.title')}</h2>
                 <div className='water-ressources-scroll-container'>
-                        <div className='scroller-water-ressources'>
-                            <Scrollama
-                                onStepEnter={handleStepEnter}
-                            >
-                            {steps.map((step) => {
-                                let isVisible;
-                                if(currentStep === step[0] && currentStep !== lastStep) {
-                                    isVisible = true
-                                } else {
-                                    isVisible = false
-                                }
-                                
-                                return(
-                                <Step data={step[0]} key={step[0]}>
-                                    <div 
-                                        className='step-water-ressources'
-                                        style={{opacity: isVisible ? "1" : "0", transition: 'opacity 1s ease-in-out'}}
-                                    >
-                                        <article 
-                                            className='water-ressources-article'
-                                            dangerouslySetInnerHTML={{__html: step[1]}}>
-                                        </article>
-                                    </div>
-                                </Step>)})}
-                            </Scrollama>
-                        </div>
+                    <div className='scroller-water-ressources'>
+                        <Scrollama
+                            onStepEnter={handleStepEnter}
+                        >
+                        {steps.map((step) => {
+                            let isVisible;
+                            if(currentStep === step[0] && currentStep !== lastStep) {
+                                isVisible = true
+                            } else {
+                                isVisible = false
+                            }
+                            
+                            return(
+                            <Step data={step[0]} key={step[0]}>
+                                <div 
+                                    className='step-water-ressources'
+                                    style={{opacity: isVisible ? "1" : "0", transition: 'opacity 1s ease-in-out'}}
+                                >
+                                    <article 
+                                        className='water-ressources-article'
+                                        dangerouslySetInnerHTML={{__html: step[1]}}>
+                                    </article>
+                                </div>
+                            </Step>)})}
+                        </Scrollama>
+                    </div>
                     <div className='water-ressources-chart'>
                         <LazyLoad height={400} offset={100}>
-                            <WaterRessourcesGraphic displayAgrUsage={displayAgrUsage} displayMeatUsage={displayMeatUsage}/>
+                            <WaterRessourcesGraphic displayAgrUsage={displayAgrUsage} displayMeatUsage={displayMeatUsage} />
                         </LazyLoad>
                     </div>
                 </div>

@@ -1,12 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef, useContext } from 'react';
 import { useInView, motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
+import { DeviceContext } from "../../../context/deviceContext";
 import '../WaterRessources.css'
 import WaterIconContainer from '../../WaterIconContainer/WaterIconContainer'
 
-const WaterRessourcesGraphic = ( {displayAgrUsage, displayMeatUsage} ) => {
+const WaterRessourcesGraphic = ({ displayAgrUsage, displayMeatUsage, mobile }) => {
 
     const { t, i18n } = useTranslation();
+
+    const { notDesktop } = useContext(DeviceContext);
 
     const WaterGraphicRef = useRef()
     const isInView = useInView(WaterGraphicRef)
@@ -42,10 +45,10 @@ const WaterRessourcesGraphic = ( {displayAgrUsage, displayMeatUsage} ) => {
                 {Array.from({ length: totalNumberDrops }, (_, index) => {
                     
                     let fillColor = defaultDropFill;
-                    if (displayAgrUsage && index < agriculturalNumberDrops) {
+                    if ((displayAgrUsage && index < agriculturalNumberDrops) || (index < agriculturalNumberDrops && notDesktop)) {
                         fillColor = agriculturalDropFill;
                     }
-                    if (displayMeatUsage && index < meatNumberDrops) {
+                    if ((displayMeatUsage && index < meatNumberDrops) || (index < meatNumberDrops && notDesktop)) {
                         fillColor = meatDropFill;
                     }
 

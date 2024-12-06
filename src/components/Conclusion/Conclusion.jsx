@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import './Conclusion.css';
-import useAnimateTitleOnView from '../hooks/useAnimateTitleOnView';
+import useAnimateTitleOnView from '../../hooks/useAnimateTitleOnView';
 
 const FoodRessourcesConclusion1 = ({ conclusionText }) => {
 
