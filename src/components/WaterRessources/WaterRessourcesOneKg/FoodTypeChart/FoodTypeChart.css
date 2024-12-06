@@ -90,7 +90,7 @@
     margin: auto;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 800px) {
     .food-chart-container {
         min-width: auto;
         max-width: none;
@@ -109,6 +109,10 @@
 @media screen and (max-width: 1530px) {
     .grid-water-usage-1kg {
         grid-template-columns: repeat(8, minmax(20px, 1fr));
+    }
+
+    .food-chart-container {
+        margin-bottom: 5vh;
     }
     
 }

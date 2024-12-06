@@ -17,7 +17,7 @@ i18n
       loadPath: '/locales/{{lng}}/{{ns}}.json', // Translation files path
     },
     detection: {
-      order: ['querystring', 'cookie', 'localStorage', 'navigator'],
+      order: ['navigator'],
       caches: ['cookie'],
     },
   });

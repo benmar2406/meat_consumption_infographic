@@ -96,35 +96,54 @@
    color: #e3e3e3; 
 }
 
-@media screen and (max-width: 730px) {
-    .landuse-chart-fill-text {
-        word-wrap: break-word; 
-        overflow-wrap: break-word; 
-        white-space: normal; 
+@media screen and (max-width: 950px) {
+    .landuse-scroll-container {
+        height: auto; 
+        width: 90%;
+        margin: auto;
+    }
+
+    .landuse-chart-container {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .landuse-chart {
+        width: 100%;
+        height: 100vh;
     }
 
     .landuse-article  {
-        width: 100%;
+        width: 90%;
         min-width: auto;
         max-width: auto;
     }
 
-    
-}
+    .landuse-chart-fill-text {
+        font-size: 1.3rem;
+        white-space: normal; /* Allow text to wrap */
+        overflow-wrap: break-word; /* Enable breaking for long words */
+        word-break: break-word; /* Ensure words break at appropriate points */
+        width: 85%;
+        max-width: 100%; /* Constrain width to prevent overflow */
+    }
 
-@media screen and (max-width: 840px) {
     .text-second-chart {
-        left: 72%;
-        word-wrap: break-word; 
-        overflow-wrap: break-word; 
-        white-space: normal; 
+        left: 88%;
+        font-size: 1.3rem; 
+        white-space: normal; /* Allow text to wrap */
+
+        overflow-wrap: break-word; /* Enable breaking for long words */
+        word-break: break-word; /* Ensure words break at appropriate points */
+        width: 75%;
+        max-width: 100%; /* Constrain width to prevent overflow */
+        text-align: right;
     }
+
+
 }
 
-@media screen and (max-width: 800px) {
-    .landuse-scroll-container {
-        display: none;
-    }
-}
 
 

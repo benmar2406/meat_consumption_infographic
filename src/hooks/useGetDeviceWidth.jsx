@@ -1,15 +1,13 @@
-  import React, { useState, useEffect } from 'react';
+import { useEffect, useState, useContext } from "react";
+import { DeviceContext } from "../context/deviceContext";
   
-  const useGetDeviceWidth = () => {
-  
+const useGetDeviceWidth = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const [notDesktop, setNotDesktop] = useState();
-    
-    console.log(notDesktop)
+    const { notDesktop, setNotDesktop } = useContext(DeviceContext);
 
     useEffect(() => {
 
-        setNotDesktop(screenWidth < 900);
+        setNotDesktop(window.innerWidth < 900);
 
         const handleResize = () =>  {
             setScreenWidth(window.innerWidth);
@@ -18,8 +16,10 @@
         window.addEventListener('resize', handleResize);
 
         return () => window.removeEventListener('resize', handleResize);
+    }, [screenWidth]);
+
+    return { notDesktop };
+}
         }, [screenWidth]);
   
-}
-
-export default useGetDeviceWidth;
+}export default useGetDeviceWidth;

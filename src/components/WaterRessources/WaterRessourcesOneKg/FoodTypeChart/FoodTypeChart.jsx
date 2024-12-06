@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import useAnimateOnView from '../../../hooks/useAnimateOnView';
+import useAnimateOnView from '../../../../hooks/useAnimateOnView';
 import BathtubIconContainer from '../../../BathtubIconContainer/BathtubIconContainer';
 import MeatIconContainer from '../../../MeatIconContainer/MeatIconContainer'
 import LeafIconContainer from '../../../LeafIconContainer/LeafIconContainer'

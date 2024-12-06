@@ -2,16 +2,7 @@
   margin-bottom: 20vh;
 }
 
-.scroll-container {
-  margin: auto;
-  position: relative;
-  height: auto; 
-  min-height: 100vh; 
-}
-
-.sticky-container {
-  height: fit-content; 
-  position: sticky;
+.charts-container-comp  {
   top: 0; 
   display: flex;
   justify-content: center;
@@ -29,13 +20,6 @@
   background-color: rgba(53, 47, 54, 0.8); 
   align-items: center;
   justify-content: center;
-}
-
-.chart-container {
-  display: block;
-  width: 100%; 
-  margin-top: 60px;
-  margin-bottom: 40px;
 }
 
 .meat-icon-grid {
@@ -128,6 +112,49 @@
   border: 0;
 }
 
+@media screen and (max-width: 800px) {
+  .charts-container-comp {
+    display: block;
+    width: 85%;
+    max-width: auto;
+    min-width: auto;
+    margin: 0 auto;
+    border: 0;
+    padding: 0;
+  }
 
+  .chart-container {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5vh auto;
+  }
+
+  .info-container {
+    background-color: #352f36;
+    text-align: center;
+    width: 100%; 
+    margin: auto;
+    box-sizing: border-box;
+
+  }
+
+  .info-box {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .info-text {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .meat-icon-grid {
+    width: 85%;
+    margin: 1vh auto;
+    justify-items: center;
+    gap: 20px;
+  }
+
+}
 
 

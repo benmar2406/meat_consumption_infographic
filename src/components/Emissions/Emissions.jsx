@@ -10,6 +10,9 @@ import Conclusion from '../Conclusion/Conclusion';
 const Emissions = () => {
 
     const { t, i18n } = useTranslation();
+    const inViewRef = useRef(null);
+    const isInView = useInView(inViewRef);
+   
 
     const foodEmissionsData = [
         { meat: true, name: t('types.beef'), emissions: "25,5", numberOfIcons: 26, carKm: 212, kmPercentage: "100%" },
@@ -20,11 +23,8 @@ const Emissions = () => {
         { meat: false, name: t('types.corn'), emissions: "1,2", numberOfIcons: 1, carKm: 10, kmPercentage: "4.72%" },
     ];
 
-
     const lastItemIndex = foodEmissionsData.length - 1;
-    const inViewRef = useRef(null);
-    const isInView = useInView(inViewRef);
-   
+
     return (
         <section className="air-pollution">
             <h2 dangerouslySetInnerHTML={{ __html: t('emissions.title') }}></h2>

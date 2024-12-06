@@ -19,7 +19,7 @@ import FoodRessourcesConclusion2 from '../FoodRessources/FoodRessourcesConclusio
 import ImprintLink from '../Imprint/ImprintLink'
 import Emissions from '../Emissions/Emissions'
 
-const DesktopVersion = ()  => {
+const DesktopVersion = ({ mobile })  => {
 
 
     return(

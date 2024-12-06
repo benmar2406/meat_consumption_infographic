@@ -12,3 +12,15 @@
     padding: 0 10px;
 }
 
+
+@media screen and (max-width: 800px) {
+    .legend-container {
+        width: 75%;
+        margin-bottom: 5vh;
+    }
+
+    .legend-container p {
+        font-size: 0.9rem;
+    }
+    
+}

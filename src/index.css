@@ -132,9 +132,15 @@ section {
   margin: 100px 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   h2 {
     font-size: 1.7rem;
     line-height: 2.2rem;
   }
+
+  body {
+    hyphens: auto;
+    word-break: break-word;
+  }
+
 }
