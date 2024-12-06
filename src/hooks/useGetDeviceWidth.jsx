@@ -8,6 +8,9 @@
     console.log(notDesktop)
 
     useEffect(() => {
+
+        setNotDesktop(screenWidth < 900);
+
         const handleResize = () =>  {
             setScreenWidth(window.innerWidth);
             setNotDesktop(screenWidth < 900);
