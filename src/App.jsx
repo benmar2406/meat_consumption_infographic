@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -12,9 +12,10 @@ import { useSetLanguage } from "./hooks/useSetLanguage";
 
 function App() {
 
-  const { notDesktop } = useGetDeviceWidth();
-
+  useSetLanguage();
   const { t } = useTranslation();
+
+  const { notDesktop } = useGetDeviceWidth();
 
   return (
     <>
