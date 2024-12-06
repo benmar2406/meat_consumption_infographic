@@ -6,9 +6,12 @@ const useGetDeviceWidth = () => {
     const { notDesktop, setNotDesktop } = useContext(DeviceContext);
 
     useEffect(() => {
+
+        setNotDesktop(window.innerWidth < 900);
+
         const handleResize = () =>  {
-        setScreenWidth(window.innerWidth);
-        setNotDesktop(screenWidth < 900);
+            setScreenWidth(window.innerWidth);
+            setNotDesktop(screenWidth < 900);
         }
         window.addEventListener('resize', handleResize);
 
