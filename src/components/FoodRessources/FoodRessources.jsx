@@ -6,10 +6,9 @@ import FoodRessourcesGraphic from './FoodRessourcesGraphic/FoodRessourcesGraphic
 import './FoodRessources.css'
 import Conclusion from '../Conclusion/Conclusion'
 
-
 const FoodRessources = () => {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     
     const [stepOne, setStepOne] = useState(false);
     const [stepTwo, setStepTwo] = useState(false);
@@ -50,33 +49,33 @@ const FoodRessources = () => {
             <Element name='food-ressources'>
                 <h2 className='food-usage-title'>{t('foodConsumption.title')}</h2>
                 <div className='food-ressources-scroll-container'>
-                        <div className='scroller-food-ressources'>
-                            <Scrollama
-                                onStepEnter={handleStepEnter}
-                            >
-                            {steps.map((step) => {
-                                let isVisible;
-                                if(currentStep === step[0] && currentStep !== lastStep) {
-                                    isVisible = true
-                                } else {
-                                    isVisible = false
-                                }
-                                
-                                
-                                return(
-                                <Step data={step[0]} key={step[0]}>
-                                    <div 
-                                        className='step-food-ressources'
-                                        style={{opacity: isVisible ? "1" : "0", transition: 'opacity 1s ease-in-out'}}
-                                    >
-                                        <article 
-                                            className='food-ressources-article'
-                                            dangerouslySetInnerHTML={{__html: step[1]}}>
-                                        </article>
-                                    </div>
-                                </Step>)})}
-                            </Scrollama>
-                        </div>
+                    <div className='scroller-food-ressources'>
+                        <Scrollama
+                            onStepEnter={handleStepEnter}
+                        >
+                        {steps.map((step) => {
+                            let isVisible;
+                            if(currentStep === step[0] && currentStep !== lastStep) {
+                                isVisible = true
+                            } else {
+                                isVisible = false
+                            }
+                            
+                            
+                            return(
+                            <Step data={step[0]} key={step[0]}>
+                                <div 
+                                    className='step-food-ressources'
+                                    style={{opacity: isVisible ? "1" : "0", transition: 'opacity 1s ease-in-out'}}
+                                >
+                                    <article 
+                                        className='food-ressources-article'
+                                        dangerouslySetInnerHTML={{__html: step[1]}}>
+                                    </article>
+                                </div>
+                            </Step>)})}
+                        </Scrollama>
+                    </div>
                     <div 
                         className='food-ressources-chart'
                     >   

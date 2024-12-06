@@ -4,9 +4,13 @@ import { useTranslation } from 'react-i18next';
 import '../FoodRessources.css';
 import FoodIconContainer from './FoodIconContainer/FoodIconContainer';
 import useAnimateOnView from '../../../hooks/useAnimateOnView';
+import useGetDeviceWidth from '../../../hooks/useGetDeviceWidth';
+
 
 const FoodRessourcesGraphic = ({ name, numberOfIcons, tonnes, displayMeatWhen, usedForMeat, percentageForMeat }) => {
 
+    const { notDesktop} = useGetDeviceWidth()
+    
     const { t, i18n } = useTranslation();
 
     const ref = useRef();
@@ -32,8 +36,8 @@ const FoodRessourcesGraphic = ({ name, numberOfIcons, tonnes, displayMeatWhen, u
                 return (
                     <FoodIconContainer 
                         key={index}
-                        wheatWidth="30px"
-                        wheatHeight="30px"
+                        wheatWidth={notDesktop ? "25px" : "30px"}
+                        wheatHeight={notDesktop ? "25px" : "30px"}
                         minWheatHeight="10px"
                         minWheatWidth="10px"
                         maxWheatHeight="50px"
