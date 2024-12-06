@@ -26,15 +26,12 @@
       useEffect(() => {
           const handleResize = () =>  {
             setScreenWidth(window.innerWidth);
+            setNotDesktop(screenWidth < 900);
           }
           window.addEventListener('resize', handleResize);
 
           return () => window.removeEventListener('resize', handleResize);
-      }, []);
-
-      useEffect(() => {
-        setNotDesktop(screenWidth < 900);
-      }, [screenWidth, setNotDesktop]) 
+      }, [screenWidth, setNotDesktop]);
 
 
     return (
