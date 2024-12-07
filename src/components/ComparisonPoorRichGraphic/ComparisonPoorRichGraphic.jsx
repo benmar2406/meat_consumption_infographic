@@ -9,7 +9,7 @@ import Conclusion from '../Conclusion/Conclusion'
 
 const ComparisonPoorRichGraphic = () => {
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const buttonRef = useRef(null); 
   const buttonIsInView = useInView(buttonRef);  

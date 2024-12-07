@@ -9,7 +9,7 @@ import soilDegradation from '../../assets/img/soil_degradation.jpg';
 
 const Soil = () => {
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const { notDesktop } = useContext(DeviceContext)
   

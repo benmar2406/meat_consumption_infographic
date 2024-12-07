@@ -11,7 +11,6 @@ const DevelopingConsumptionChart = () => {
 
   const handleLastIconRendered = () => {
     if (!isLastIconRendered) {
-      console.log("Setting isLastIconRendered to true"); // Debugging output
       setIsLastIconRendered(true);
     }
   };
@@ -24,7 +23,7 @@ const DevelopingConsumptionChart = () => {
           <MeatIconWrapper 
             key={index} 
             index={index} 
-            onLastIconRendered={handleLastIconRendered} // Use handler function
+            onLastIconRendered={handleLastIconRendered} 
             kgConsumed={kgConsumed}
           />
         ))}

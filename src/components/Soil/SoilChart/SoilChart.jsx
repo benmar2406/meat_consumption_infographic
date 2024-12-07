@@ -35,7 +35,6 @@ const SoilChart = ({
   const [displayChartTextTwo, setDisplayChartTextTwo] = useState(false);
 
   useEffect(() => {
-    console.log(notDesktop)
     if (notDesktop) {
         setDisplayChartText(true);
         setDisplayChartTextTwo(true);
