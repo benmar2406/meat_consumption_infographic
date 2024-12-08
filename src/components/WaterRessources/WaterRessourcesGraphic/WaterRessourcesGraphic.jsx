@@ -24,7 +24,7 @@ const WaterRessourcesGraphic = ({ displayAgrUsage, displayMeatUsage, mobile }) =
     const mindropWidth = '20px';
     const maxdropHeight = '60px';
     const maxdropWidth = '60px';
-    const altText = t('waterConsumption.alt')
+    const altText = t('waterConsumption.alt');
     const waterDropProps = { dropWidth, dropHeight, mindropHeight, mindropWidth, maxdropHeight, maxdropWidth, altText, defaultDropFill, agriculturalDropFill, meatDropFill };
 
     return(
