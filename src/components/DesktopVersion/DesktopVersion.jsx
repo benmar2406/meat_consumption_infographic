@@ -33,13 +33,16 @@ const DesktopVersion = ({ mobile })  => {
         <WaterPollution />
         <ProductionTimeline data={data}/>
         <DevelopmentProductionCharts />
+        
         <ComparisonPoorRichGraphic />
         <RessourcesIntro />
         <Emissions />
         <WaterRessources />
+        
         <WaterRessourcesOneKg />
         <FoodRessources />
         <FoodRessourcesOneKg />
+        
         <FoodRessourcesConclusion2 />
         <ImprintLink/>
     </>

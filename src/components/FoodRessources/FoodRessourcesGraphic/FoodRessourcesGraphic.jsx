@@ -1,17 +1,16 @@
-import React, { useRef } from 'react';
+import React, { useRef, useContext } from 'react';
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 import '../FoodRessources.css';
 import FoodIconContainer from './FoodIconContainer/FoodIconContainer';
 import useAnimateOnView from '../../../hooks/useAnimateOnView';
-import useGetDeviceWidth from '../../../hooks/useGetDeviceWidth';
-
+import { DeviceContext } from '../../../context/deviceContext';
 
 const FoodRessourcesGraphic = ({ name, numberOfIcons, tonnes, displayMeatWhen, usedForMeat, percentageForMeat }) => {
 
-    const { notDesktop} = useGetDeviceWidth()
+    const { mobile} = useContext(DeviceContext)
     
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const ref = useRef();
     const { inViewControls, initial } = useAnimateOnView(ref)
@@ -36,8 +35,8 @@ const FoodRessourcesGraphic = ({ name, numberOfIcons, tonnes, displayMeatWhen, u
                 return (
                     <FoodIconContainer 
                         key={index}
-                        wheatWidth={notDesktop ? "25px" : "30px"}
-                        wheatHeight={notDesktop ? "25px" : "30px"}
+                        wheatWidth={mobile ? "25px" : "30px"}
+                        wheatHeight={mobile ? "25px" : "30px"}
                         minWheatHeight="10px"
                         minWheatWidth="10px"
                         maxWheatHeight="50px"

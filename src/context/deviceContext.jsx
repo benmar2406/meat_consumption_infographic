@@ -3,7 +3,7 @@ import React, { createContext, useState, useEffect } from "react";
 export const DeviceContext = createContext();
 
 export const DeviceProvider = ({ children }) => {
-    const [notDesktop, setNotDesktop] = useState(window.innerWidth < 900);
+    const [mobile, setMobile] = useState(window.innerWidth < 900);
 
     useEffect(() => {
         const handleResize = () => {
@@ -15,7 +15,7 @@ export const DeviceProvider = ({ children }) => {
     }, [window.innerWidth]);
 
     return (
-        <DeviceContext.Provider value={{ notDesktop, setNotDesktop }}>
+        <DeviceContext.Provider value={{ mobile, setMobile }}>
             {children}
         </DeviceContext.Provider>
     );

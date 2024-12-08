@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Element } from 'react-scroll'
 import { Scrollama, Step } from 'react-scrollama';
 import LazyLoad from 'react-lazyload';
 import { useTranslation } from 'react-i18next';
 import WaterRessourcesGraphic from './WaterRessourcesGraphic/WaterRessourcesGraphic';
+import { DeviceContext } from '../../context/deviceContext';
 import './WaterRessources.css'
 
 
-const WaterRessources = ({ mobile }) => {
+const WaterRessources = () => {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
+
+    const { mobile } = useContext(DeviceContext)
 
     const article1 = t('waterConsumption.article1')
     const article2 = t('waterConsumption.article2')
@@ -64,7 +67,10 @@ const WaterRessources = ({ mobile }) => {
                     </div>
                     <div className='water-ressources-chart'>
                         <LazyLoad height={400} offset={100}>
-                            <WaterRessourcesGraphic displayAgrUsage={displayAgrUsage} displayMeatUsage={displayMeatUsage} />
+                            <WaterRessourcesGraphic 
+                                displayAgrUsage={displayAgrUsage} 
+                                displayMeatUsage={displayMeatUsage} 
+                                mobile={mobile}/>
                         </LazyLoad>
                     </div>
                 </div>

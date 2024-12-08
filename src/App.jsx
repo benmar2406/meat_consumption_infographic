@@ -15,8 +15,6 @@ function App() {
   useSetLanguage();
   const { t } = useTranslation();
 
-  const { notDesktop } = useGetDeviceWidth();
-
   return (
     <>
       <Helmet>

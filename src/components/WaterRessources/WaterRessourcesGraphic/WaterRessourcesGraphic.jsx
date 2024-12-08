@@ -1,15 +1,12 @@
-import React, { useRef, useContext } from 'react';
+import React, { useRef } from 'react';
 import { useInView, motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-import { DeviceContext } from "../../../context/deviceContext";
 import '../WaterRessources.css'
 import WaterIconContainer from '../../WaterIconContainer/WaterIconContainer'
 
 const WaterRessourcesGraphic = ({ displayAgrUsage, displayMeatUsage, mobile }) => {
 
-    const { t, i18n } = useTranslation();
-
-    const { notDesktop } = useContext(DeviceContext);
+    const { t } = useTranslation();
 
     const WaterGraphicRef = useRef()
     const isInView = useInView(WaterGraphicRef)
@@ -37,18 +34,18 @@ const WaterRessourcesGraphic = ({ displayAgrUsage, displayMeatUsage, mobile }) =
                 className='water-ressources-icon-grid' 
                 ref={WaterGraphicRef}
                 style={{
-                    transform: isInView ? "none" : "translateX(100px)", 
-                    opacity: isInView ? 1 : 0,
+                    transform: isInView || mobile ? "none" : "translateX(100px)", 
+                    opacity: isInView || mobile ? 1 : 0,
                     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                 }}
                 >
                 {Array.from({ length: totalNumberDrops }, (_, index) => {
                     
                     let fillColor = defaultDropFill;
-                    if ((displayAgrUsage && index < agriculturalNumberDrops) || (index < agriculturalNumberDrops && notDesktop)) {
+                    if ((displayAgrUsage && index < agriculturalNumberDrops) || (index < agriculturalNumberDrops && mobile)) {
                         fillColor = agriculturalDropFill;
                     }
-                    if ((displayMeatUsage && index < meatNumberDrops) || (index < meatNumberDrops && notDesktop)) {
+                    if ((displayMeatUsage && index < meatNumberDrops) || (index < meatNumberDrops && mobile)) {
                         fillColor = meatDropFill;
                     }
 

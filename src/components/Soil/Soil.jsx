@@ -11,13 +11,13 @@ const Soil = () => {
 
   const { t } = useTranslation();
 
-  const { notDesktop } = useContext(DeviceContext)
+  const { mobile } = useContext(DeviceContext)
   
   const soilChartsData = [
     { 
       requiredPercentage: 65, 
       requiredPercentageArticle: 95, 
-      fullWidthValue: notDesktop ? 0 : 0.9, 
+      fullWidthValue: mobile ? 0 : 0.9, 
       scrollEffectDirection: ["0%", "100%"],
       title: t('soil.title1'), 
       backgroundImage: `linear-gradient(rgba(168, 213, 186, 0.5), rgba(168, 213, 186, 0.5)), url(${farmingImg})`,
@@ -30,9 +30,9 @@ const Soil = () => {
     },  
 
     { 
-      requiredPercentage: notDesktop ? 0 : 80,   
-      requiredPercentageArticle: notDesktop ? 0 : 90, 
-      fullWidthValue:  notDesktop ? 0 : 1, 
+      requiredPercentage: mobile ? 0 : 80,   
+      requiredPercentageArticle: mobile ? 0 : 90, 
+      fullWidthValue:  mobile ? 0 : 1, 
       scrollEffectDirection: ["100%", "20%"],
       title: t('soil.title2'), 
       backgroundImage: `linear-gradient(rgba(255, 62, 44, 0.8), rgba(255, 62, 44, 0.8)), url(${soilDegradation})`,
