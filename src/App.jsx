@@ -27,10 +27,7 @@ function App() {
           <Route
             path="/"
             element={
-              <>
-                  {/*!notDesktop && */<DesktopVersion />}
-                  {/*notDesktop && <MobileVersion />*/}
-              </>
+               <DesktopVersion />
             } 
           />
           <Route
