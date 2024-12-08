@@ -16,11 +16,12 @@ const HumansFedContainer = forwardRef((props, ref) => {
                 >
                 {Array.from({length: props.humansFed}, (_, index) => {
                     return(
-                    <div className='human-icon-container'> 
+                    <div 
+                        className='human-icon-container'
+                        key={"icon-" + index}> 
                             <img 
-                            src={humanIcon} 
-                            key={index}
-                            alt={t('foodConsumption.altHuman')}
+                                src={humanIcon} 
+                                alt={t('foodConsumption.altHuman')}
                             />
                     </div>
                     )

@@ -61,7 +61,7 @@
               >
                   {ressourceUsage.map((ressource, index) => (
                       <FoodTypeChart 
-                        key={index} 
+                        key={'food-chart-' + index} 
                         ressource={ressource}  
                         ref={chartRef} 
                       />

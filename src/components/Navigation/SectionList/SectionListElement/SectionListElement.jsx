@@ -23,7 +23,7 @@ const SectionListElement = ({ title, link, index }) => {
                     {title}
                 </a>
             ) : (
-                <Link a
+                <Link
                     className='navigation-link'
                     to={link}
                     spy={true}
