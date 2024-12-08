@@ -26,6 +26,10 @@
     margin-bottom: 7px;
 }
 
+.food-type-indicator img {
+    width: 30px;
+}
+
 .food-type-indicator div {
     object-fit: contain;
     max-height: 100%;
@@ -75,7 +79,7 @@
 
 .type-meat-water-container img {
     object-fit: contain;
-    height: 80px;
+    height: 0px;
     margin: 0;
 }
 

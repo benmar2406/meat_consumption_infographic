@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import LazyLoad from 'react-lazyload';
 import FoodTypeChart from './FoodTypeChart/FoodTypeChart';
 import { useTranslation } from 'react-i18next';
+import { DeviceContext } from '../../../context/deviceContext';
 import './WaterRessourcesOneKg.css'
 import cowIcon from '../../../assets/img/icons/cow.png'
 import pigIcon from '../../../assets/img/icons/pig.png'
@@ -13,7 +14,10 @@ import ChartLegend from '../../ChartLegend/ChartLegend'
 
 
 const WaterRessourcesOneKg = ( ) => {
-    const { t, i18n } = useTranslation();
+    
+    const { t } = useTranslation();
+
+    const { mobile } = useContext(DeviceContext)
    
     const foods = [
         {meat: true, name: t('types.beef'), waterUsage: "15,400", numberOfDrops: 154, numberOfBathtubs: 93, icon: cowIcon, cssSelector: "type-meat-water-container" },
@@ -37,6 +41,7 @@ const WaterRessourcesOneKg = ( ) => {
                                 key={index}
                                 chartIndex={index}
                                 food={food}
+                                mobile={mobile}
                             />
                     )})}
                 </div>

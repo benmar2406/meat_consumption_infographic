@@ -1,6 +1,9 @@
-
+.meat-icon-container {
+  display: flex;
+}
   
   .meat-icon {
+    display: flex;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;

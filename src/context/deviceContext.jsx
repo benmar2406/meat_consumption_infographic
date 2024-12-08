@@ -7,7 +7,7 @@ export const DeviceProvider = ({ children }) => {
 
     useEffect(() => {
         const handleResize = () => {
-            setNotDesktop(window.innerWidth < 900);
+            setMobile(window.innerWidth < 900);
         };
 
         window.addEventListener('resize', handleResize);

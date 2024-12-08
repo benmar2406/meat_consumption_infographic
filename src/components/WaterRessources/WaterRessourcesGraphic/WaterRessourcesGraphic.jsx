@@ -19,7 +19,7 @@ const WaterRessourcesGraphic = ({ displayAgrUsage, displayMeatUsage, mobile }) =
     const agriculturalDropFill = '#00ADEF'; 
     const meatDropFill = '#FF5733'; 
     const dropWidth = '100%';
-    const dropHeight = '100%';
+    const dropHeight = '100%'
     const mindropHeight = '20px';
     const mindropWidth = '20px';
     const maxdropHeight = '60px';

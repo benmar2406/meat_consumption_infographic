@@ -5,7 +5,7 @@ import './MeatIconContainer.css'
 
 const MeatIconContainer = () => {
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className='meat-icon-container'>

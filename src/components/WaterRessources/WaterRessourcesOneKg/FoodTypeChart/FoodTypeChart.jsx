@@ -8,9 +8,9 @@ import LeafIconContainer from '../../../LeafIconContainer/LeafIconContainer'
 import './FoodTypeChart.css'
 
 
-const FoodTypeChart = ({ food }) => {
+const FoodTypeChart = ({ food, mobile }) => {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const gridRef = useRef();
 
@@ -28,7 +28,9 @@ const FoodTypeChart = ({ food }) => {
             >
                 <img className='type-water-ressources-icon' src={food.icon} alt={`${food.name}-icon`}/>
             </div>
-            <div className='food-type-indicator'>
+            <div 
+            className='food-type-indicator'
+            style={mobile ? {display: "none"} : {display: "flex"}}>
                 {food.meat ? <MeatIconContainer/> : <LeafIconContainer />}
                 <span 
                     aria-hidden="true"
