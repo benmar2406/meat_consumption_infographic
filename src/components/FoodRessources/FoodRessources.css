@@ -94,19 +94,19 @@
 
         .food-ressources-scroll-container {
             display: block;
-            position: relative;
-            height: 250vh;
+            position: sticky;
         }
 
         .scroller-food-ressources {
             position: absolute;
             left: 0;
-            top: 10px;
+            top: 0;
             z-index: 10;
         }
 
         .food-ressources-chart {
-            position: sticky;
+            height: auto; 
+
         }
 
         .food-icon-grid {

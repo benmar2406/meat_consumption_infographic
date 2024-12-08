@@ -79,21 +79,21 @@ const FoodRessources = () => {
                     <div 
                         className='food-ressources-chart'
                     >   
-                    {foodRessources.map((foodType, index) => {
-                    return(
-                        <FoodRessourcesGraphic 
-                            key={index}
-                            index={index}
-                            name={foodType.name}
-                            numberOfIcons={foodType.numberOfIcons}
-                            displayWhen={foodType.displayWhen}
-                            tonnes={foodType.tonnes}
-                            icon={foodType.icon}
-                            displayMeatWhen={foodType.displayMeatWhen}
-                            usedForMeat={foodType.usedForMeat}
-                            percentageForMeat={foodType.percentageForMeat}
-                        />
-                    )})}
+                        {foodRessources.map((foodType, index) => {
+                        return(
+                            <FoodRessourcesGraphic 
+                                key={index}
+                                index={index}
+                                name={foodType.name}
+                                numberOfIcons={foodType.numberOfIcons}
+                                displayWhen={foodType.displayWhen}
+                                tonnes={foodType.tonnes}
+                                icon={foodType.icon}
+                                displayMeatWhen={foodType.displayMeatWhen}
+                                usedForMeat={foodType.usedForMeat}
+                                percentageForMeat={foodType.percentageForMeat}
+                            />
+                        )})}
                                 
                     </div>
                 </div>
