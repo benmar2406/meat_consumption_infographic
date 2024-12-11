@@ -107,6 +107,10 @@
         grid-template-columns: repeat(5, minmax(60px, 1fr));
     }
 
+    .water-used-for-1kg p {
+        margin-bottom: 0;
+    }
+
     
 }
 
@@ -117,10 +121,6 @@
 
     .food-chart-container {
         margin-bottom: 5vh;
-    }
-
-    .water-used-for-1kg p {
-        margin-bottom: 0;
     }
     
 }

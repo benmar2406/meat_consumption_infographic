@@ -44,7 +44,12 @@
 
 .food-type-description {
     color: #e3e3e3;
-    font-family: 'Poppins-Bold';;
+    font-family: 'Poppins-Bold';
+    margin-bottom: 0.7rem;
+}
+
+.humans-fed-text {
+    margin-top: 5px;
 }
 
 
