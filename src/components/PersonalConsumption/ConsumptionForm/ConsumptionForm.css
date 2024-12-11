@@ -1,0 +1,9 @@
+
+.consumption-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    width: 100%;
+}

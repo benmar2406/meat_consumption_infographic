@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { useInView, motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
-import '../WaterRessources.css'
 import WaterIconContainer from '../../WaterIconContainer/WaterIconContainer'
 
 const WaterRessourcesGraphic = ({ displayAgrUsage, displayMeatUsage, mobile }) => {

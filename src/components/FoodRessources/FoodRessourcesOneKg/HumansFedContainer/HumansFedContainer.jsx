@@ -14,16 +14,16 @@ const HumansFedContainer = forwardRef((props, ref) => {
                 ref={ref}
                 style={{display: props.display}}
                 >
-                {Array.from({length: props.humansFed}, (_, index) => {
+                {Array.from({ length: props.humansFed }, (_, index) => {
                     return(
-                    <div 
-                        className='human-icon-container'
-                        key={"icon-" + index}> 
-                            <img 
-                                src={humanIcon} 
-                                alt={t('foodConsumption.altHuman')}
-                            />
-                    </div>
+                        <div 
+                            className='human-icon-container'
+                            key={"icon-" + index}> 
+                                <img 
+                                    src={humanIcon} 
+                                    alt={t('foodConsumption.altHuman')}
+                                />
+                        </div>
                     )
                 })}
             </div>

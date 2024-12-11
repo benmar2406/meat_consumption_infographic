@@ -2,11 +2,11 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useSetLanguage } from "./hooks/useSetLanguage";
 import './App.css';
 import Sources from './components/Sources/Sources';
 import Imprint from './components/Imprint/Imprint';
 import DesktopVersion from "./components/DesktopVersion/DesktopVersion";
-import { useSetLanguage } from "./hooks/useSetLanguage";
 
 function App() {
 

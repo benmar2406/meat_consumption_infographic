@@ -1,0 +1,130 @@
+.food-chart-container {
+    width: 30%;
+    min-width: 348px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    margin: 2vw auto;
+}
+
+.grid-water-usage-1kg {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(20px, 1fr)); 
+    gap: 10px; 
+    padding: 15px;
+    border: solid 3px white;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+}
+
+.food-type-indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.food-type-indicator img {
+    width: 30px;
+}
+
+.food-type-indicator div {
+    object-fit: contain;
+    max-height: 100%;
+}
+
+
+.food-type-indicator span {
+    margin: 0;
+    margin-left: 4px;
+}
+
+.water-used-for-1kg {
+    color: #a2d3e2;
+}
+
+.water-used-for-1kg p {
+    color: #e3e3e3;
+    text-align: center;
+    font-family: 'PTSerif-Bold';
+    margin-top: 1vh;
+}
+
+.food-type-title {
+    text-align: center;
+    margin-top: 1.5vh;
+    margin-bottom: 1.2vh;
+    color: #a2d3e2;
+    font-family: "Poppins-Bold";
+}
+
+.food-type-title {
+    color: #a2d3e2;
+}
+
+.food-type-water-usage {
+    margin: 10px;
+    margin-top: 0;
+    font-size: 1.2rem;
+    font-family: "Poppins-Bold";
+}
+
+.type-water-ressources-container img {
+    object-fit: contain;
+    height: 60px;
+    margin: 10px;
+}
+
+.type-meat-water-container img {
+    object-fit: contain;
+    height: 0px;
+    margin: 0;
+}
+
+.type-non-meat-water-container img {
+    object-fit: contain;
+    height: 60px;
+    margin: 10px;
+}
+
+.type-water-ressources-icon {
+    display: block;
+    margin: auto;
+}
+
+@media screen and (max-width: 800px) {
+    .food-chart-container {
+        min-width: auto;
+        max-width: none;
+        width: 90%;
+    }
+
+    .grid-water-usage-1kg {
+        width: 90%;
+        margin: 20px;
+        grid-template-columns: repeat(5, minmax(60px, 1fr));
+    }
+
+    
+}
+
+@media screen and (max-width: 1530px) {
+    .grid-water-usage-1kg {
+        grid-template-columns: repeat(8, minmax(20px, 1fr));
+    }
+
+    .food-chart-container {
+        margin-bottom: 5vh;
+    }
+
+    .water-used-for-1kg p {
+        margin-bottom: 0;
+    }
+    
+}
+
+
+
+

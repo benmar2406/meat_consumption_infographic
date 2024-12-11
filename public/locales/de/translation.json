@@ -156,7 +156,28 @@
     "source3": "Emissionen",
     "source4": "Ressourcen: Wasser",
     "source5": "Ressourcen: Nahrung"
-  } 
+  },
 
+  "personalConsumption": {
+    "mainTitle": "Persönlicher Konsum: Was sind die Kosten?",
+    "subTitleForm": "Gebe deine monatlich konsumierte Menge ein:",
+    "subTitleYearlyConsumption": "Im Jahr konsumiertes Fleisch:",
+    "youConsume": "Du konsumierst",
+    "less": "weniger",
+    "more": "mehr",
+    "average": "als die durchschnittliche Person in Ländern mit hohem und höherem Einkommen.",
+    "subTitleEmissions": "Die entstandenen Emissionen:",
+    "equalCarKm": "entsprechen gefahrenen Autokilometern:",
+    "subTitleWater": "Wasserverbrauch in einem Jahr:",
+    "subTitle": "Wieviele Ressourcen wurden genutzt:",
+    "kgFodder": "kg Futterressourcen verbraucht",
+    "fodderComparison1": "Die von dir jährlich konsumierte Menge an Fleisch enthält circa",
+    "calories": "Kalorien",
+    "fodderComparison2": "Das Futter zur Produktion dieser Fleischmenge, wie Soja, Weizen, Mais usw., enthält geschätzt",
+    "fodderComparison3": "Das bedeutet, mehr Menschen könnten ernährt werden, wenn Ressourcen für die Fleischproduktion direkt konsumiert würden.",
+    "subTitleFed": "Wie viele Menschen können ernährt werden:",
+    "ofMeat": " Fleisch",
+    "ofFoodRessources": "Ressourcen direkt"
+  }
 }
 

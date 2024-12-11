@@ -14,10 +14,11 @@ import Intro from '../Intro/Intro';
 import Navigation from '../Navigation/Navigation';
 import FoodRessources from '../FoodRessources/FoodRessources';
 import FoodRessourcesOneKg from '../FoodRessources/FoodRessourcesOneKg/FoodRessourcesOneKg'; 
-import EnvironmentalImpact from '../EnvironmentalImpact/EnvironmentalImpact'
-import FoodRessourcesConclusion2 from '../FoodRessources/FoodRessourcesConclusion2/FoodRessourcesConclusion2'
-import ImprintLink from '../Imprint/ImprintLink'
-import Emissions from '../Emissions/Emissions'
+import EnvironmentalImpact from '../EnvironmentalImpact/EnvironmentalImpact';
+import FoodRessourcesConclusion2 from '../FoodRessources/FoodRessourcesConclusion2/FoodRessourcesConclusion2';
+import ImprintLink from '../Imprint/ImprintLink';
+import Emissions from '../Emissions/Emissions';
+import PersonalConsumption from '../PersonalConsumption/PersonalConsumption'
 
 const DesktopVersion = ({ mobile })  => {
 
@@ -25,6 +26,7 @@ const DesktopVersion = ({ mobile })  => {
     return(
     <>
         <Navigation />
+        <PersonalConsumption />
         <LanguageToggle/>
         <MeatProducedGraphic />
         <Intro />
@@ -33,7 +35,6 @@ const DesktopVersion = ({ mobile })  => {
         <WaterPollution />
         <ProductionTimeline data={data}/>
         <DevelopmentProductionCharts />
-        
         <ComparisonPoorRichGraphic />
         <RessourcesIntro />
         <Emissions />

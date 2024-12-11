@@ -1,10 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import '../ComparisonPoorRichGraphic.css'
 
 const KgConsumed = ({ kgConsumed, color }) => {
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className='info-container box-tonnes-produced-rich' style={{ borderColor: color }}>

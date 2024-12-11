@@ -1,5 +1,4 @@
 import React from 'react';
-import '../EnvironmentalImpact.css';
 
 const ImpactCard = ({ backgroundImage, topic, onClick, isFlipped, details, alt }) => {
   return (

@@ -11,7 +11,7 @@ const CarContainer = forwardRef(({ food, isInView }, ref) => {
         if (isInView) {
             controls.start({ width: food.kmPercentage, opacity: 1 }); 
         }
-    }, [isInView, controls]);
+    }, [isInView, food]);
 
 
     return(

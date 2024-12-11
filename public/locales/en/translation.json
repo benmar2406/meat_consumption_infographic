@@ -156,5 +156,28 @@
     "source3": "Emissions",
     "source4": "Ressources: Water related data",
     "source5": "Ressources: Food related data"
-  } 
+  },
+
+  "personalConsumption": {
+    "mainTitle": "Personal consumption: what are the costs?",
+    "subTitleForm": "Enter your monthly consumption in kg:",
+    "subTitleYearlyConsumption": "Meat consumed in one year:",
+    "youConsume": "You consume",
+    "less": "less",
+    "more": "more",
+    "average": "than the average person in high and higher income countries.",
+    "subTitleEmissions": "The resulting CO2 emissions:",
+    "equalCarKm": "equal in km driven by car:",
+    "subTitleWater": "Water used up in one year:",
+    "subTitle": "How many ressources were used:",
+    "kgFodder": "kg fodder ressources used",
+    "fodderComparison1": "The amount of meat you consume annually on average contains",
+    "calories": "calories",
+    "fodderComparison2": "The fodder required to produce this amount of meat, such as soy, wheat, corn, etc., is estimated to contain",
+    "fodderComparison3": "This means more people could be fed if ressources required for meat production would be consumed directly.",
+    "subTitleFed": "How many people can be fed:",
+    "with": "with ",
+    "ofMeat": " of meat", 
+    "ofFoodRessources": "ressources directly:"
+  }
 }

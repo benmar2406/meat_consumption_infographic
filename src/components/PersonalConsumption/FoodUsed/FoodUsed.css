@@ -1,0 +1,78 @@
+.food-consumed-container {
+    flex-basis: 61%;
+    height: fit-content;
+}
+
+.text-container {
+    display: flex;
+    gap: 3vw;
+
+}
+
+.number-displayed-container {
+    flex-basis: 35%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.number-displayed-container p {
+    color: #e3e3e3;
+    font-family: 'Poppins-Bold';
+    margin-top: 0;
+}
+
+.personal-ressources-article {
+    background-color: transparent;
+    padding: 0.8rem;
+    flex-basis: 65%;
+}
+
+.personal-ressources-article p {
+    color: #e3e3e3;
+}
+
+.charts-container-personal-fed {
+    display: flex;
+    gap: 5vw;
+}
+
+.charts-container-personal-fed > * {
+    flex-basis: 45%;
+}
+
+.food-type-description {
+    color: #e3e3e3;
+    font-family: 'Poppins-Bold';;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .text-container {
+        display: block;
+    }
+
+    .number-displayed-container {
+        padding: 0.8rem;
+    }
+
+    .charts-container-personal-fed {
+        display: block;  
+    }
+
+    .personal-fed-container {
+        padding: 10px 0;
+    }
+
+    .food-type-description {
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+    }
+
+    .humans-fed-text {
+        margin-top: 2px;
+    }
+
+}

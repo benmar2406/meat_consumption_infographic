@@ -4,7 +4,7 @@ import '../ProductionTimeline.css';
 
 const YearBlock = ({ year, production }) => {
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const circleCount = Math.floor(production / 10000000);
 

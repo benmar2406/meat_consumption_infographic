@@ -1,5 +1,4 @@
 import React from 'react';
-import '../MeatProducedGraphic.css';
 import MeatIcon from "/src/assets/img/icons/meat.png"
 
 const MeatGridContainer = ({ itemsPerContainer }) => {

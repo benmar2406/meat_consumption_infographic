@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect, useContext } from 'react';
 import { useScroll, useTransform, motion, useInView } from "framer-motion";
 import { DeviceContext } from "../../../context/deviceContext";
-import '../Soil.css';
 
 const SoilChart = ({ 
   requiredPercentage, 

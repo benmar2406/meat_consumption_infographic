@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { RiArrowDropDownLine } from 'react-icons/ri';
-import '../Accordion.css';
 
 const AccordionItem = ({ isOpen, onClick, question, answer }) => {
   const answerRef = useRef(null); 
