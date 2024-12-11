@@ -26,7 +26,6 @@ const DesktopVersion = ({ mobile })  => {
     return(
     <>
         <Navigation />
-        <PersonalConsumption />
         <LanguageToggle/>
         <MeatProducedGraphic />
         <Intro />
@@ -39,12 +38,11 @@ const DesktopVersion = ({ mobile })  => {
         <RessourcesIntro />
         <Emissions />
         <WaterRessources />
-        
         <WaterRessourcesOneKg />
         <FoodRessources />
         <FoodRessourcesOneKg />
-        
         <FoodRessourcesConclusion2 />
+        <PersonalConsumption />
         <ImprintLink/>
     </>
     )
