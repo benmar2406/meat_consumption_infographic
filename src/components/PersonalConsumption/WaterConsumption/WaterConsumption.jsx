@@ -1,7 +1,7 @@
 import React from 'react';
 import WaterConsumptionChart from './WaterConsumptionChart/WaterConsumptionChart';
 
-const WaterConsumption = ({ ltrsUsed, numberOfBathtubs, t }) => {
+const WaterConsumption = ({ ltrsUsed, numberOfBathtubs, t, numberOfBathtubsDisplay }) => {
     
     
     return (
@@ -11,6 +11,7 @@ const WaterConsumption = ({ ltrsUsed, numberOfBathtubs, t }) => {
                 <WaterConsumptionChart 
                     ltrsUsed={ltrsUsed} 
                     numberOfBathtubs={numberOfBathtubs} 
+                    numberOfBathtubsDisplay={numberOfBathtubsDisplay}
                     t={t}
                 />
             </div>

@@ -3,7 +3,7 @@ import BathtubIconContainer from '../../../BathtubIconContainer/BathtubIconConta
 import './WaterConsumptionChart.css'
 
 
-const WaterConsumptionChart = ({ numberOfBathtubs, ltrsUsed, t }) => {
+const WaterConsumptionChart = ({ numberOfBathtubs, ltrsUsed, t, numberOfBathtubsDisplay }) => {
 
 
     return(
@@ -14,7 +14,7 @@ const WaterConsumptionChart = ({ numberOfBathtubs, ltrsUsed, t }) => {
                 className='water-used-for-1kg'
                 aria-hidden="true"
                 >
-                <h3 className='food-type-title'>{numberOfBathtubs} {t('waterConsumption.bathtubs')}</h3>
+                <h3 className='food-type-title'>{numberOfBathtubsDisplay} {t('waterConsumption.bathtubs')}</h3>
                 <p>{ltrsUsed} {t('waterConsumption.ltrs')}</p>
             </div>
 

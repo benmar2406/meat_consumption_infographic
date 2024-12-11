@@ -27,6 +27,7 @@ const PersonalConsumption = () => {
         isInView,
         ltrsUsed,
         numberOfBathtubs,
+        numberOfBathtubsDisplay,
         numberHumansFedMeat, 
         numberHumansFedVeg, 
         kgFodderUsed,
@@ -62,7 +63,11 @@ const PersonalConsumption = () => {
                     kmPercentage={kmPercentage} 
                     isInView={isInView} 
                     t={t} />
-                <WaterConsumption ltrsUsed={ltrsUsed} numberOfBathtubs={numberOfBathtubs} t={t} />
+                <WaterConsumption 
+                    ltrsUsed={ltrsUsed} 
+                    numberOfBathtubs={numberOfBathtubs} 
+                    t={t}
+                    numberOfBathtubsDisplay={numberOfBathtubsDisplay} />
                 <FoodUsed 
                     numberHumansFedMeat={numberHumansFedMeat} 
                     numberHumansFedVeg={numberHumansFedVeg} 
