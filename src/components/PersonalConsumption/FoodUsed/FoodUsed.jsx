@@ -28,7 +28,7 @@ const FoodUsed = ({
                     </div>
                     <article className='personal-ressources-article'>
                         <p>{t('personalConsumption.fodderComparison1')} {calories} {t('personalConsumption.calories')}.</p>
-                        <p>{t('personalConsumption.fodderComparison2')} {calories} {t('personalConsumption.calories')}.</p>
+                        <p>{t('personalConsumption.fodderComparison2')} {caloriesFodder} {t('personalConsumption.calories')}.</p>
                         <p>{t('personalConsumption.fodderComparison3')}</p>
                     </article>
                 </div>
