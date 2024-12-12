@@ -1,12 +1,11 @@
-import { useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useMemo, useContext } from 'react';
+import { TranslationContext } from '../context/TranslateContext';
 
 const usePersonalConsumptionCalculations = (meatTypesConsumed) => {
-    const { i18n } = useTranslation(); // Access the current language
-    const language = i18n.language;
+    const { language } = useContext(TranslationContext)
 
     const formatNumber = (value) => {
-        return new Intl.NumberFormat(language).format(value); // Locale-aware formatting
+        return new Intl.NumberFormat(language).format(value); 
     };
 
     const averageConsumption = 76;
