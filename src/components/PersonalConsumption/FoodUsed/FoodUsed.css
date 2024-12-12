@@ -7,7 +7,6 @@
     display: flex;
     gap: 3vw;
     margin-bottom: 5rem;
-
 }
 
 .number-displayed-container {
@@ -43,15 +42,19 @@
     flex-basis: 45%;
 }
 
+.personal-fed-container {
+    text-align: center;
+}
+
 .food-type-description {
     color: #e3e3e3;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.4rem;
 }
 
 .humans-fed-text {
-    margin-top: 5px;
     font-family: 'Poppins-Bold';
-
+    margin-top: 0.4rem;
+    margin-bottom: 0.8rem;
 }
 
 

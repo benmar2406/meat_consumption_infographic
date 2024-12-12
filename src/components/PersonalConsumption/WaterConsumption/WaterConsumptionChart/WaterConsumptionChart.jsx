@@ -11,11 +11,11 @@ const WaterConsumptionChart = ({ numberOfBathtubs, ltrsUsed, t, numberOfBathtubs
             className='food-chart-container' 
         >
             <div 
-                className='water-used-for-1kg'
+                className='personal-water-used'
                 aria-hidden="true"
                 >
-                <h3 className='food-type-title'>{numberOfBathtubsDisplay} {t('waterConsumption.bathtubs')}</h3>
-                <p>{ltrsUsed} {t('waterConsumption.ltrs')}</p>
+                <p className='amount-litres-info'>{ltrsUsed} {t('waterConsumption.ltrs')}</p>
+                <p className='number-of-bathtubs'>{numberOfBathtubsDisplay} {t('waterConsumption.bathtubs')}</p>
             </div>
 
             <div 

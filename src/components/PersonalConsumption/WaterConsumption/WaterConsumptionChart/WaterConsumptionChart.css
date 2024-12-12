@@ -40,15 +40,12 @@
     margin-left: 4px;
 }
 
-.water-used-for-1kg {
-    color: #a2d3e2;
-}
 
-.water-used-for-1kg p {
+.amount-litres-info {
     color: #e3e3e3;
     text-align: center;
     font-family: 'PTSerif-Bold';
-    margin-top: 1vh;
+    margin-bottom: 0.4rem;    
 }
 
 .food-type-title {
@@ -59,8 +56,12 @@
     font-family: "Poppins-Bold";
 }
 
-.food-type-title {
+.number-of-bathtubs {
     color: #a2d3e2;
+    text-align: center;
+    font-family: "Poppins-Bold";
+    margin-top: 0.4rem;
+    margin-bottom: 0.8rem;    
 }
 
 .food-type-water-usage {
@@ -106,11 +107,14 @@
         grid-template-columns: repeat(5, minmax(60px, 1fr));
     }
 
-    .water-used-for-1kg p {
+    .amount-litres-info {
         margin-bottom: 10px;
     }
 
-    
+    .number-of-bathtubs {
+        font-size: 1.6rem;
+        margin-bottom: 0;
+    } 
 }
 
 @media screen and (max-width: 1530px) {
@@ -123,6 +127,7 @@
     }
     
 }
+
 
 
 
