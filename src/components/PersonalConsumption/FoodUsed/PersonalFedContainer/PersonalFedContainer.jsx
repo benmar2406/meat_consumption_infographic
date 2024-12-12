@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import humanIcon from '../../../../assets/img/icons/human_grey.png'
 
 const PersonalFedContainer = ({ humansFed, foodTypeDescription, t }) => {

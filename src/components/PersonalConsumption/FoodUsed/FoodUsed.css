@@ -6,6 +6,7 @@
 .text-container {
     display: flex;
     gap: 3vw;
+    margin-bottom: 5rem;
 
 }
 
@@ -25,7 +26,7 @@
 
 .personal-ressources-article {
     background-color: transparent;
-    padding: 0.8rem;
+    padding: 0;
     flex-basis: 65%;
 }
 
@@ -44,12 +45,13 @@
 
 .food-type-description {
     color: #e3e3e3;
-    font-family: 'Poppins-Bold';
     margin-bottom: 0.7rem;
 }
 
 .humans-fed-text {
     margin-top: 5px;
+    font-family: 'Poppins-Bold';
+
 }
 
 
@@ -57,10 +59,7 @@
 
     .text-container {
         display: block;
-    }
-
-    .number-displayed-container {
-        padding: 0.8rem;
+        
     }
 
     .charts-container-personal-fed {

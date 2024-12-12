@@ -22,7 +22,7 @@
 }
 
 .content-container h3 {
-   margin-bottom: 0; 
+   margin: 1rem auto; 
 }
 
 .content-container span {
@@ -33,6 +33,8 @@
     font-size: 6rem;
     line-height: 9rem;
 }
+
+
 
 
 

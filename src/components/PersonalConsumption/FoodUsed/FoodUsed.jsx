@@ -19,7 +19,7 @@ const FoodUsed = ({
     
     return (
         <>
-            <div className='food-consumed-container'>
+            <div className='food-consumed-container content-box'>
                 <h3>{t('personalConsumption.subTitle')}</h3>
                 <div className='text-container'>
                     <div className='number-displayed-container'>
