@@ -23,8 +23,6 @@ export default function ProductionWorldWideChart({ t }) {
       const innerWidth = 800 - margin.left - margin.right;  
       const innerHeight = 400 - margin.top - margin.bottom;  
 
-      svg.selectAll("*").remove(); 
-
       const x = d3.scaleTime()
         .domain(d3.extent(meatProductionDataEurope, d => d.Year))
         .range([margin.left, innerWidth]);
