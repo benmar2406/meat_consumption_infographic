@@ -35,7 +35,6 @@
     max-height: 100%;
 }
 
-
 .food-type-indicator span {
     margin: 0;
     margin-left: 4px;
@@ -98,17 +97,17 @@
     .food-chart-container {
         min-width: auto;
         max-width: none;
-        width: 90%;
+        width: 100%;
     }
 
     .grid-water-usage-1kg {
-        width: 90%;
-        margin: 20px;
+        width: 100%;
+        margin: auto;
         grid-template-columns: repeat(5, minmax(60px, 1fr));
     }
 
     .water-used-for-1kg p {
-        margin-bottom: 0;
+        margin-bottom: 10px;
     }
 
     

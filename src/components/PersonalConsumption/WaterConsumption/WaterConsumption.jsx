@@ -18,6 +18,6 @@ const WaterConsumption = ({ ltrsUsed, numberOfBathtubs, t, numberOfBathtubsDispl
         </>    
             
     );
-    };
+};
 
 export default WaterConsumption;
