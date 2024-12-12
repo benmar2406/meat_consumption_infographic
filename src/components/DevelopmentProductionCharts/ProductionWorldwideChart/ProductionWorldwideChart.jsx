@@ -9,7 +9,7 @@ export default function ProductionWorldWideChart({ t }) {
 
   useEffect(() => {
     const parentDiv = chartRef.current;
-
+  
     const svg = d3.select(parentDiv).selectAll('svg').data([null])
       .join('svg')
       .attr("class", "chart-dark-bg")
@@ -17,58 +17,46 @@ export default function ProductionWorldWideChart({ t }) {
       .attr("height", "100%")
       .attr("viewBox", "0 0 800 400")
       .attr("preserveAspectRatio", "xMinYMin meet");
-
-    function redraw() {
-
-      const margin = { top: 20, right: 30, bottom: 30, left: 40 };
-      const innerWidth = 800 - margin.left - margin.right;  
-      const innerHeight = 400 - margin.top - margin.bottom;  
-
-      svg.selectAll("*").remove(); 
-
-      const x = d3.scaleLinear()
-        .domain(d3.extent(meatProductionData, d => d.Year))
-        .range([margin.left, innerWidth]);
-
-      const y = d3.scaleLinear()
-        .domain([0, d3.max(meatProductionData, d => d['Total Meat production (tonnes)'])])
-        .range([innerHeight, margin.top]);
-
-      const line = d3.line()
-        .x(d => x(d.Year))
-        .y(d => y(d['Total Meat production (tonnes)']));
-
-      svg.append("text")
-        .attr("x", 400) 
-        .attr("y", margin.top)
-        .attr("text-anchor", "middle")
-        .attr("class", "chart-dark-bg")
-        .text(t('developmentCharts.chartTitle1'));
-
-      svg.append("path")  
-        .datum(meatProductionData)
-        .attr("fill", "none")
-        .attr("stroke", "#ff6347")
-        .attr("stroke-width", 4)
-        .attr("d", line);
-
-      svg.append("g")
-        .attr("transform", `translate(0,${innerHeight})`)
-        .call(d3.axisBottom(x).ticks(10).tickFormat(d3.format("d")));
-
-      svg.append("g")
-        .attr("transform", `translate(${margin.left},0)`)
-        .call(d3.axisLeft(y).tickFormat(d3.format(".2s")));  
-    }
-
-    redraw();
-
-    window.addEventListener('resize', redraw);
-
-    return () => {
-      window.removeEventListener('resize', redraw);
-    };
+  
+    const margin = { top: 20, right: 30, bottom: 30, left: 40 };
+    const innerWidth = 800 - margin.left - margin.right;  
+    const innerHeight = 400 - margin.top - margin.bottom;   
+  
+    const x = d3.scaleTime()
+      .domain(d3.extent(meatProductionData, d => d.Year))
+      .range([margin.left, innerWidth]);
+  
+    const y = d3.scaleLinear()
+      .domain([0, d3.max(meatProductionData, d => d['Total Meat production (tonnes)'])])
+      .range([innerHeight, margin.top]);
+  
+    const line = d3.line()
+      .x(d => x(d.Year))
+      .y(d => y(d['Total Meat production (tonnes)']));
+  
+    svg.append("text")
+      .attr("x", 400) 
+      .attr("y", margin.top)
+      .attr("text-anchor", "middle")
+      .attr("class", "chart-dark-bg")
+      .text(t('developmentCharts.chartTitle1'));
+  
+    svg.append("path")  
+      .datum(meatProductionData)
+      .attr("fill", "none")
+      .attr("stroke", "#ff6347")
+      .attr("stroke-width", 4)
+      .attr("d", line);
+  
+    svg.append("g")
+      .attr("transform", `translate(0,${innerHeight})`)
+      .call(d3.axisBottom(x).ticks(10).tickFormat(d3.format("d")));
+  
+    svg.append("g")
+      .attr("transform", `translate(${margin.left},0)`)
+      .call(d3.axisLeft(y).tickFormat(d3.format(".2s")));  
   }, []);
+  
 
   return (
     <div 

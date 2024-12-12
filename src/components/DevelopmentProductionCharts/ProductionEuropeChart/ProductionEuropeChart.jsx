@@ -18,9 +18,6 @@ export default function ProductionWorldWideChart({ t }) {
       .attr("viewBox", "0 0 800 400")
       .attr("preserveAspectRatio", "xMinYMin meet");
 
-    function redraw() {
-      const width = parentDiv.clientWidth;
-      const height = parentDiv.clientHeight;
 
       const margin = { top: 20, right: 30, bottom: 30, left: 40 };
       const innerWidth = 800 - margin.left - margin.right;  
@@ -28,7 +25,7 @@ export default function ProductionWorldWideChart({ t }) {
 
       svg.selectAll("*").remove(); 
 
-      const x = d3.scaleLinear()
+      const x = d3.scaleTime()
         .domain(d3.extent(meatProductionDataEurope, d => d.Year))
         .range([margin.left, innerWidth]);
 
@@ -61,16 +58,8 @@ export default function ProductionWorldWideChart({ t }) {
       svg.append("g")
         .attr("transform", `translate(${margin.left},0)`)
         .call(d3.axisLeft(y).tickFormat(d3.format(".2s")));
-    }
+    })
 
-    redraw();
-
-    window.addEventListener('resize', redraw);
-
-    return () => {
-      window.removeEventListener('resize', redraw);
-    };
-  }, []);
 
   return (
     <div 
