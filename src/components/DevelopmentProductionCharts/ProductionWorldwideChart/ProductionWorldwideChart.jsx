@@ -1,12 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useContext } from 'react';
 import * as d3 from 'd3';
-import { useTranslation } from 'react-i18next';
 import './ProductionWorldwideChart.css';
 import meatProductionData from '../../../data/production_global.json';
 
-export default function ProductionWorldWideChart() {
-
-  const { t, i18n } = useTranslation();
+export default function ProductionWorldWideChart({ t }) {
 
   const chartRef = useRef(null);
 
@@ -22,8 +19,6 @@ export default function ProductionWorldWideChart() {
       .attr("preserveAspectRatio", "xMinYMin meet");
 
     function redraw() {
-      const width = parentDiv.clientWidth;
-      const height = parentDiv.clientHeight;
 
       const margin = { top: 20, right: 30, bottom: 30, left: 40 };
       const innerWidth = 800 - margin.left - margin.right;  
@@ -50,7 +45,7 @@ export default function ProductionWorldWideChart() {
         .attr("class", "chart-dark-bg")
         .text(t('developmentCharts.chartTitle1'));
 
-      svg.append("path")
+      svg.append("path")  
         .datum(meatProductionData)
         .attr("fill", "none")
         .attr("stroke", "#ff6347")

@@ -1,12 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
-import { useTranslation } from 'react-i18next';
 import './ProductionEuropeChart.css';
 import meatProductionDataEurope from '../../../data/production_western_europe.json';
 
-export default function ProductionWorldWideChart() {
-
-  const { t, i18n } = useTranslation();
+export default function ProductionWorldWideChart({ t }) {
 
   const chartRef = useRef(null);
 

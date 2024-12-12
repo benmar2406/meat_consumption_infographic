@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Element } from 'react-scroll';
 import { Scrollama, Step } from 'react-scrollama';
-import { useTranslation } from 'react-i18next';
+import { TranslationContext } from '../../context/TranslateContext';
 import ProductionWorldwideChart from './ProductionWorldwideChart/ProductionWorldwideChart';
 import ProductionEuropeChart from './ProductionEuropeChart/ProductionEuropeChart'
 import './DevelopmentProductionCharts.css';
 
 function DevelopmentProductionCharts() {
 
-  const { t, i18n } = useTranslation();
+  const { t } = useContext(TranslationContext);
 
   const [data, setData] = useState(0);
   const [chartOpacity] = useState(1); 
@@ -84,8 +84,8 @@ function DevelopmentProductionCharts() {
               style={{ opacity: chartOpacity, transition: 'opacity 1s ease-in-out' }} 
               aria-description="Two charts the depicting the increase of meat production globally and in Western Europe over the decades."
             >
-              {!displayEuropeChart &&<ProductionWorldwideChart />}
-              {displayEuropeChart && <ProductionEuropeChart />}
+              {!displayEuropeChart &&<ProductionWorldwideChart t={t} />}
+              {displayEuropeChart && <ProductionEuropeChart t={t} />}
               
             </div>
           </div>
