@@ -143,4 +143,15 @@
         top: 7px;
         left: 95%;
     }
+
+    .section-list-element {
+        position: absolute;
+        font-size: 0.8rem;
+        text-align: right;
+        right: 15px;
+        width: fit-content;
+        padding: 5px 7px;
+        padding-right: 5px;
+        background-color: RGB(53, 47, 54, 0.7);
+    }
 }
