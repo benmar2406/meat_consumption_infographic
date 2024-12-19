@@ -29,8 +29,7 @@ const FoodTypeChart = ({ food, mobile }) => {
                 <img className='type-water-ressources-icon' src={food.icon} alt={`${food.name}-icon`}/>
             </div>
             <div 
-            className='food-type-indicator'
-            style={mobile ? {display: "none"} : {display: "flex"}}>
+            className='food-type-indicator'>
                 {food.meat ? <MeatIconContainer/> : <LeafIconContainer />}
                 <span 
                     aria-hidden="true"
