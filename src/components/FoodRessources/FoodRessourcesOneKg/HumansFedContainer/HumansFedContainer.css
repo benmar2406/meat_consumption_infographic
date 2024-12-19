@@ -18,3 +18,9 @@
 .humans-fed-text {
     color:#e3e3e3;
 }
+
+@media screen and (max-width: 800px) {
+    .human-icon-grid {
+        justify-content: center;  
+    }
+}
