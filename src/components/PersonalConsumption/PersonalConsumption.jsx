@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { Element } from 'react-scroll';
 import { TranslationContext } from '../../context/TranslateContext'; 
 import usePersonalConsumptionCalculations from '../../hooks/usePersonalConsumptionCalculations';
 import './PersonalConsumption.css'
@@ -46,39 +47,41 @@ const PersonalConsumption = () => {
     
 
   return (
-        <section className='personal-consumption'>
-            <h2>{t('personalConsumption.mainTitle')}</h2>
-            <div className='content-container'>
-                <ConsumptionForm 
-                    onConsumptionChange={handleConsumptionChange} 
-                    values={meatTypesConsumed} 
-                    t={t} />
-                <YearlyConsumption 
-                    yearlyConsumption={yearlyConsumption} 
-                    difference={differencePercentage} 
-                    t={t} />
-                <PersonalEmission 
-                    emissions={totalEmissions} 
-                    carKm={totalCarKm} 
-                    kmPercentage={kmPercentage} 
-                    isInView={isInView} 
-                    t={t} />
-                <WaterConsumption 
-                    ltrsUsed={ltrsUsed} 
-                    numberOfBathtubs={numberOfBathtubs} 
-                    t={t}
-                    numberOfBathtubsDisplay={numberOfBathtubsDisplay} />
-                <FoodUsed 
-                    numberHumansFedMeat={numberHumansFedMeat} 
-                    numberHumansFedVeg={numberHumansFedVeg} 
-                    kgFodderUsed={kgFodderUsed} 
-                    calories={calories}
-                    caloriesFodder={caloriesFodder}
-                    yearlyConsumption={yearlyConsumption}
-                    t={t}
-                    />
-            </div>
-        </section>
+        <Element name='personal-consumption-dashboard'>
+            <section className='personal-consumption'>
+                <h2>{t('personalConsumption.mainTitle')}</h2>
+                <div className='content-container'>
+                    <ConsumptionForm 
+                        onConsumptionChange={handleConsumptionChange} 
+                        values={meatTypesConsumed} 
+                        t={t} />
+                    <YearlyConsumption 
+                        yearlyConsumption={yearlyConsumption} 
+                        difference={differencePercentage} 
+                        t={t} />
+                    <PersonalEmission 
+                        emissions={totalEmissions} 
+                        carKm={totalCarKm} 
+                        kmPercentage={kmPercentage} 
+                        isInView={isInView} 
+                        t={t} />
+                    <WaterConsumption 
+                        ltrsUsed={ltrsUsed} 
+                        numberOfBathtubs={numberOfBathtubs} 
+                        t={t}
+                        numberOfBathtubsDisplay={numberOfBathtubsDisplay} />
+                    <FoodUsed 
+                        numberHumansFedMeat={numberHumansFedMeat} 
+                        numberHumansFedVeg={numberHumansFedVeg} 
+                        kgFodderUsed={kgFodderUsed} 
+                        calories={calories}
+                        caloriesFodder={caloriesFodder}
+                        yearlyConsumption={yearlyConsumption}
+                        t={t}
+                        />
+                </div>
+            </section>
+        </Element>
   );
 };
 

@@ -36,17 +36,21 @@
 
 .meat-type-range::-webkit-slider-thumb {
     -webkit-appearance: none; 
-    appearance: none;
+    appearance: none; 
     height: 15px;
     width: 15px;
+    background-color: #ff3e2c;
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.2s ease, background-color 0.2s ease; 
 }
 
 .meat-type-range::-webkit-slider-thumb:hover {
-    background-color: #ff3e2c;
+    background-color: #ff5722;
+    transform: scale(1.1); 
 }
+
 
 .meat-type-range::-moz-range-thumb {
     height: 15px;
@@ -76,7 +80,6 @@
   margin: 0;
 }
 
-/* Firefox */
 .meat-type-number {
   -moz-appearance: textfield;
 }

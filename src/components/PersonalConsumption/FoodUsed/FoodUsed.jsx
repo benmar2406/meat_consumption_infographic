@@ -13,8 +13,8 @@ const FoodUsed = ({
 }) => {
 
     const foodData = [
-        {text: `${yearlyConsumption}kg ${t('personalConsumption.ofMeat')}:`, humansFed: numberHumansFedMeat},
-        {text: `${kgFodderUsed}kg ${t('personalConsumption.ofFoodRessources')}:`, humansFed: numberHumansFedVeg}
+        {text: `${yearlyConsumption} kg ${t('personalConsumption.ofMeat')}:`, humansFed: numberHumansFedMeat},
+        {text: `${kgFodderUsed} kg ${t('personalConsumption.ofFoodRessources')}:`, humansFed: numberHumansFedVeg}
     ]
     
     return (
