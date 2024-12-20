@@ -1,27 +1,17 @@
-.legend-container {
-    display: flex;
-    border: 3px solid #e3e3e3;
-    width:fit-content;
-    padding: 10px;
-    margin: auto;
+
+.sources-list {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    line-height: 2.7rem;
+    margin-bottom: 4.5rem;
+}
+.sources-title {
+    margin-bottom: 1rem;
 }
 
-.legend-container p {
-    color: #e3e3e3;
-    font-family: "PTSerif-Bold";
-    padding: 0 10px;
+.sources-list a {
+    font-size: 1.3rem;
+    font-family: 'PTSerif-Bold';
 }
 
-
-@media screen and (max-width: 800px) {
-    .legend-container {
-        width: 90%;
-        margin-bottom: 5vh;
-        box-sizing: border-box;
-    }
-
-    .legend-container p {
-        font-size: 0.9rem;
-    }
-    
-}

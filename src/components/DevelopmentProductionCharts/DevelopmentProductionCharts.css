@@ -1,68 +1,77 @@
 .production-development-scroll-section {
-    padding: 3vh 0;
-    margin: 0 auto;
-    max-width: 3000px;
+  padding: 3vh 0;
+  margin: 0 auto;
+  max-width: 3000px;
+}
+
+.graphic-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.graphic {
+  width: 100%;
+  flex-basis: 60%;
+  position: sticky;
+  top: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out; 
+}
+
+.graphic.visible {
+  opacity: 1; 
+}
+
+.graphic.hidden {
+  opacity: 0; 
+}
+
+.scroller {
+  flex-basis: 40%;
+  z-index: 10;
+}
+
+.step {
+  margin: 0 auto;
+  margin-left: 40px;
+  padding: 100px 10px;
+  text-align: center;
+}
+
+.step-text {
+  opacity: 0;
+  background-color: #e3e3e3
+}
+
+
+@media screen and (min-width: 1920px) {
+  .scroller {
+    max-width: 800px;
+    justify-self: right;
   }
-  
+}
+
+@media screen and (max-width: 800px) {
   .graphic-container {
-    display: flex;
-    justify-content: center;
+    display: block;
+    position: relative;
+    height: 250vh;
+  }
+
+  .scroller {
+    position: absolute;
+    top: 0;
+    left: 0;
     margin: auto;
   }
-  
-  .graphic {
-    width: 100%;
-    flex-basis: 60%;
-    position: sticky;
-    top: 20vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60vh;
-    opacity: 0; 
-    transition: opacity 0.5s ease-in-out; 
-  }
-  
-  .graphic.visible {
-    opacity: 1; 
-  }
-  
-  .graphic.hidden {
-    opacity: 0; 
-  }
-  
-  .scroller {
-    flex-basis: 40%;
-  }
-  
+
   .step {
-    margin: 0 auto 3rem;
-    margin-left: 40px;
-    padding: 100px 10px;
-    border: 1px solid #333;
-    text-align: center;
+    margin-left: auto;
+    width: 90%;
   }
-  
-  .step-text {
-    opacity: 0;
-    background-color: #e3e3e3
-  }
-
-
-  @media screen and (min-width: 1920px) {
-    .scroller {
-      max-width: 800px;
-      justify-self: right;
-
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    .graphic-container {
-      display: none;
-    }
-
-    .scroller {
-      flex-basis: 100%;
-    }
-  }
+}

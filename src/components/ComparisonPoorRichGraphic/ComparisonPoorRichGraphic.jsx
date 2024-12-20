@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next';
 import './ComparisonPoorRichGraphic.css';
 import DevelopingConsumptionChart from './DevelopingConsumptionChart/DevelopingConsumptionChart';
 import IndustrializedConsumptionChart from './IndustrializedConsumptionChart/IndustrializedConsumptionChart';
-import Conclusion from '../Conclusion/Conclusion'
+import Conclusion from '../Conclusion/Conclusion';
+import MeatConsumedMap from './MeatConsumedMap/MeatConsumedMap';
 
 const ComparisonPoorRichGraphic = () => {
 

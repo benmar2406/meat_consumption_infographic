@@ -15,14 +15,14 @@ export default function ProductionWorldWideChart({ t }) {
       .attr("class", "chart-dark-bg")
       .attr("width", "100%")
       .attr("height", "100%")
-      .attr("viewBox", "0 0 800 400")
+      .attr("viewBox", "0 0 800 600")
       .attr("preserveAspectRatio", "xMinYMin meet");
   
     const margin = { top: 20, right: 30, bottom: 30, left: 40 };
     const innerWidth = 800 - margin.left - margin.right;  
-    const innerHeight = 400 - margin.top - margin.bottom;   
+    const innerHeight = 600 - margin.top - margin.bottom;   
   
-    const x = d3.scaleTime()
+    const x = d3.scaleLinear()
       .domain(d3.extent(meatProductionData, d => d.Year))
       .range([margin.left, innerWidth]);
   

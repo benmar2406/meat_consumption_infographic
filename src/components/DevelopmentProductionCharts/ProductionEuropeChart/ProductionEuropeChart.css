@@ -3,7 +3,6 @@
 }
 
 .chart-dark-bg {
-    font-family: 'Poppins-Bold', sans-serif;
+    font-family: 'Poppins-Bold';
     fill: white; 
-    font-weight: bold;
 }

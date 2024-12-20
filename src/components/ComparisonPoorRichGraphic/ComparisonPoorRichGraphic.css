@@ -1,5 +1,6 @@
 .comparison-rich-poor-countries {
-  margin-bottom: 20vh;
+  margin: 20vh auto;
+  width: 95%;
 }
 
 .charts-container-comp  {
@@ -133,7 +134,7 @@
     background-color: #352f36;
     text-align: center;
     width: 100%; 
-    margin: auto;
+    margin: 20px auto;
     box-sizing: border-box;
 
   }
