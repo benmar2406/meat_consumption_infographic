@@ -1,144 +1,149 @@
 .impact {
-    min-height: 100vh;
-    max-width: 2000px;
-    margin: auto;
-  }
-  
-  .environmental-impact-headline {
-    margin: 0 5vw;
-    padding: 40px 0;
-    color: #e3e3e3;
-  }
+  min-height: 100vh;
+  max-height: 1040px;
+  max-width: 2000px;
+  margin: auto;
+}
 
+.environmental-impact-headline {
+  margin: 0 5vw;
+  padding: 40px 0;
+  color: #e3e3e3;
+}
+
+.impact-cards-grid {
+  margin: 0 5vw;
+  padding-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.impact-card {
+  perspective: 600px;
+  cursor: pointer;
+  flex: 1 1 33%;
+  position: relative;
+  height: 40vh; 
+  margin: 10px;
+  overflow: hidden; 
+  border-radius: 10px;
+}
+
+
+.card-inner {
+  position: relative;
+  text-align: center;
+  transition: transform 1.3s;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+}
+
+.impact-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.front-impact-card, .back-impact-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px; 
+  box-sizing: border-box;
+}
+
+.front-impact-card {
+  display: flex;
+  z-index: 2;
+  transform: rotateY(0deg);
+  transition: transform 0.5s ease-in-out; 
+  align-items: center;
+  justify-content: center;
+}
+
+.front-impact-card:hover, .front-impact-card:focus {
+  transform: scale(1.1); 
+
+}
+
+.environmental-card-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.5s ease-in-out; 
+}
+
+.environmental-card-overlay:hover {
+  background-color: rgba(255, 62, 4, 0.7); ;
+}
+
+.environmental-impact-card-headline {
+  font-size: 3rem;
+  color: #a8d5ba;
+  text-align: center; 
+  transition: transform 0.5s ease-in-out; 
+}
+
+.front-impact-card:hover .environmental-impact-card-headline,
+.front-impact-card:focus .environmental-impact-card-headline {
+  transform: scale(1); 
+}
+
+.back-impact-card {
+  transform: rotateY(180deg);
+  z-index: 1;
+  background-color: #e3e3e3;
+}
+
+.back-impact-card h3, .back-impact-card p {
+  margin: 0;
+  padding: 0;
+  color: #352f36; 
+  text-align: center;
+}
+
+
+@media screen and (max-width: 800px) {
+  
+  .impact {
+    max-height: none;
+  }
   
   .impact-cards-grid {
-    margin: 0 5vw;
-    padding-bottom: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    gap: 10px;
+    display: block;
+    margin: auto;
   }
-  
+
   .impact-card {
-    perspective: 600px;
-    cursor: pointer;
-    flex: 1 1 33%;
-    position: relative;
-    height: 40vh; 
-    margin: 10px;
-    overflow: hidden; 
-    border-radius: 10px;
+    height: 100vh; 
   }
 
-  
-  .card-inner {
-    position: relative;
-    text-align: center;
-    transition: transform 1.3s;
-    transform-style: preserve-3d;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .impact-card.flipped .card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .front-impact-card, .back-impact-card {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 10px; 
-    box-sizing: border-box;
-  }
-  
-  .front-impact-card {
-    display: flex;
-    z-index: 2;
-    transform: rotateY(0deg);
-    transition: transform 0.5s ease-in-out; 
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .front-impact-card:hover, .front-impact-card:focus {
-    transform: scale(1.1); 
+}
 
-  }
 
-  .environmental-card-overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    transition: background-color 0.5s ease-in-out; 
-  }
-
-  .environmental-card-overlay:hover {
-    background-color: rgba(255, 62, 4, 0.7); ;
-  }
-  
-  .environmental-impact-card-headline {
-    font-size: 3rem;
-    color: #a8d5ba;
-    text-align: center; 
-    transition: transform 0.5s ease-in-out; 
-  }
-  
-  .front-impact-card:hover .environmental-impact-card-headline,
-  .front-impact-card:focus .environmental-impact-card-headline {
-    transform: scale(1); 
-  }
-  
-  .back-impact-card {
-    transform: rotateY(180deg);
-    z-index: 1;
-    background-color: #e3e3e3;
-  }
-
-  .back-impact-card h3, .back-impact-card p {
-    margin: 0;
-    padding: 0;
-    color: #352f36; 
-    text-align: center;
-  }
-  
-
-  @media screen and (max-width: 800px) {
-    .impact-cards-grid {
-      display: block;
-      margin: auto;
-    }
-
-    .impact-card {
-      height: 100vh; 
-    }
-  
+@media screen and (min-width: 800px) and (max-width: 1150px) {
+  .impact-cards-grid {
+    display: block;
+    margin: auto;
   }
 
 
-  @media screen and (min-width: 800px) and (max-width: 1150px) {
-    .impact-cards-grid {
-      display: block;
-      margin: auto;
-    }
-  
-
-    .impact-card {
-      height: 50vh; 
-    }
-  
+  .impact-card {
+    height: 50vh; 
   }
+
+}
