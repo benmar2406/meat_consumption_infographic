@@ -20,7 +20,8 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
         {title: t('navigation.title6'), link: 'ressources-intro'},
         {title: t('navigation.title7'), link: 'water-ressources'},
         {title: t('navigation.title8'), link: 'food-ressources'},
-        {title: t('navigation.title9'), link: '/sources'},
+        {title: t('navigation.title9'), link: 'personal-consumption-dashboard'},
+        {title: t('navigation.title10'), link: '/sources'},
     ]
 
     const controls = useAnimation();
