@@ -25,7 +25,8 @@
     "title6": "Ressourcen: 1kg",
     "title7": "Ressource: Wasser",
     "title8": "Ressource: Nahrung",
-    "title9": "Quellen"
+    "title9": "Dashboard: Persönlicher Konsum",
+    "title10": "Quellen & Credits"
   },
   
   "counter": {
@@ -155,7 +156,8 @@
     "source2": "Produktion und Konsum",
     "source3": "Emissionen",
     "source4": "Ressourcen: Wasser",
-    "source5": "Ressourcen: Nahrung"
+    "source5": "Ressourcen: Nahrung",
+    "source6": "Emissionen"
   },
 
   "personalConsumption": {
