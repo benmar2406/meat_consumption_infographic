@@ -1,55 +1,55 @@
 .water-scroll-section {
-    margin: 0;
-    padding: 0;
-    height: 250vh;
-    background:
-      linear-gradient(to bottom, rgba(53, 47, 54, 0) 70%, rgba(53, 47, 54, 1) 100%),
-      url("../../assets/img/water.jpg") no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed; 
+  margin: 0;
+  padding: 0;
+  height: 250vh;
+  background:
+    linear-gradient(to bottom, rgba(53, 47, 54, 0) 70%, rgba(53, 47, 54, 1) 100%),
+    url("../../assets/img/water.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; 
 }
 
 .water-impacts-headline {
-  position: sticky;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 20px;
-  top: 20px;
-  left: 250px;
-  color: #e3e3e3;
-  z-index: 0;
+position: sticky;
+text-align: center;
+margin: 0 auto;
+padding-top: 20px;
+top: 20px;
+left: 250px;
+color: #e3e3e3;
+z-index: 0;
 }
 
 .water-scroller {
-  width: 100%;
-  margin: auto;
-  box-sizing: border-box;
+width: 90%;
+margin: auto;
+box-sizing: border-box;
 }
 
 .water-step {
-  position: relative;
-  margin: 0 auto;
-  border: 0;
-  z-index: 100;
-  width: 40vw;
-  min-width: 600px;
-  padding: 100px 10px;
-  margin: 100px auto;
+position: relative;
+margin: 0 auto;
+border: 0;
+z-index: 100;
+width: 40vw;
+min-width: 600px;
+padding: 100px 10px;
+margin: 100px auto;
 }
-  
+
 .water-step-text {  
-  background-color: #e3e3e3;
+background-color: #e3e3e3;
 }
-  
+
 @media screen and (max-width: 800px) {
-  
-  .water-scroll-section {
-    height: fit-content;
+
+.water-scroll-section {
+  height: fit-content;
 }
-  
-  .water-step {
-    width: 80%;
-    min-width:auto;
-    box-sizing: border-box;
-  }
+
+.water-step {
+  width: 100%;
+  min-width:auto;
+  box-sizing: border-box;
+}
 }

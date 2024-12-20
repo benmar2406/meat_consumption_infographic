@@ -16,7 +16,7 @@ const Soil = () => {
   const soilChartsData = [
     { 
       requiredPercentage: 65, 
-      requiredPercentageArticle: 95, 
+      requiredPercentageArticle: 90, 
       fullWidthValue: mobile ? 0 : 0.9, 
       scrollEffectDirection: ["0%", "100%"],
       title: t('soil.title1'), 

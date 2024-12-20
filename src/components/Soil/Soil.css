@@ -123,22 +123,22 @@
 
     .landuse-chart-fill-text {
         font-size: 1.3rem;
-        white-space: normal; /* Allow text to wrap */
-        overflow-wrap: break-word; /* Enable breaking for long words */
-        word-break: break-word; /* Ensure words break at appropriate points */
+        white-space: normal; 
+        overflow-wrap: break-word; 
+        word-break: break-word;
         width: 85%;
-        max-width: 100%; /* Constrain width to prevent overflow */
+        max-width: 100%; 
     }
 
     .text-second-chart {
         left: 88%;
         font-size: 1.3rem; 
-        white-space: normal; /* Allow text to wrap */
+        white-space: normal; 
 
-        overflow-wrap: break-word; /* Enable breaking for long words */
-        word-break: break-word; /* Ensure words break at appropriate points */
+        overflow-wrap: break-word; 
+        word-break: break-word; 
         width: 75%;
-        max-width: 100%; /* Constrain width to prevent overflow */
+        max-width: 100%; 
         text-align: right;
     }
 
