@@ -6,7 +6,6 @@ import './ComparisonPoorRichGraphic.css';
 import DevelopingConsumptionChart from './DevelopingConsumptionChart/DevelopingConsumptionChart';
 import IndustrializedConsumptionChart from './IndustrializedConsumptionChart/IndustrializedConsumptionChart';
 import Conclusion from '../Conclusion/Conclusion';
-import MeatConsumedMap from './MeatConsumedMap/MeatConsumedMap';
 
 const ComparisonPoorRichGraphic = () => {
 

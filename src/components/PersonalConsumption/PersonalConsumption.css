@@ -35,10 +35,11 @@
 }
 
 
-
-
-
 @media screen and (max-width: 800px) {
+    .personal-consumption {
+        width: 90%;
+    }
+
     .content-container {
         display: block;
     }
