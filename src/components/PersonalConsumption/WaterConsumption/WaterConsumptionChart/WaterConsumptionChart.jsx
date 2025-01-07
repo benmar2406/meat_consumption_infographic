@@ -5,7 +5,6 @@ import './WaterConsumptionChart.css'
 
 const WaterConsumptionChart = ({ numberOfBathtubs, ltrsUsed, t, numberOfBathtubsDisplay }) => {
 
-
     return(
         <div 
             className='food-chart-container' 

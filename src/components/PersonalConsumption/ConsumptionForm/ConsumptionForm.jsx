@@ -1,8 +1,10 @@
 import React from 'react';
-import './ConsumptionForm.css'
+import './ConsumptionForm.css';
+
 import MeatType from './MeatType/MeatType';
 
-const ConsumptionForm = ( { onConsumptionChange, values, t } ) => {
+const ConsumptionForm = ({ onConsumptionChange, values, t }) => {
+  
   const meatTypes = [
     { name: 'beef', translation: t('types.beef') },
     { name: 'pig', translation: t('types.pig') },
@@ -18,7 +20,6 @@ const ConsumptionForm = ( { onConsumptionChange, values, t } ) => {
                 <MeatType 
                   key={index} 
                   meatType={meatType}
-                  meatTypeTranslation={meatType.translation}
                   onConsumptionChange={onConsumptionChange} 
                   value={values[meatType.name]}
                   onValueChange={(newValue) => onConsumptionChange(meatType.name, newValue)}

@@ -11,6 +11,7 @@ const usePersonalConsumptionCalculations = (meatTypesConsumed) => {
     const averageConsumption = 76;
 
     return useMemo(() => {
+        
         const { beef, pig, chicken } = meatTypesConsumed;
 
         // Yearly consumption sum and difference from average

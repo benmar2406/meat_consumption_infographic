@@ -17,7 +17,7 @@ const bathtubWidth = '35%'
 
 const ChartLegend = () => {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     return(
         <div className='legend-container'>
