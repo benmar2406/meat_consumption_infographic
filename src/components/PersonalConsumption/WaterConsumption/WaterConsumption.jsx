@@ -3,7 +3,6 @@ import WaterConsumptionChart from './WaterConsumptionChart/WaterConsumptionChart
 
 const WaterConsumption = ({ ltrsUsed, numberOfBathtubs, t, numberOfBathtubsDisplay }) => {
     
-    
     return (
         <>
             <div className='water-consumed-container'>
