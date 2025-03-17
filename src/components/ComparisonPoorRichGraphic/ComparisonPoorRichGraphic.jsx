@@ -28,7 +28,7 @@ const ComparisonPoorRichGraphic = () => {
 
   return (
     
-      <section className="comparison-rich-poor-countries">
+      <section id="comparison-rich-poor-countries" className="comparison-rich-poor-countries">
         <Element name='comparison-rich-poor-countries'>
           <h2>{t('comparisonPoorRich.title')}</h2>
           <AccordionMap />
