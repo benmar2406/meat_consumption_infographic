@@ -18,6 +18,7 @@
     "i18next-browser-languagedetector": "^8.0.0",
     "i18next-http-backend": "^3.0.1",
     "install": "^0.13.0",
+    "mapbox-gl": "^3.10.0",
     "npm": "^10.8.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

@@ -6,6 +6,7 @@ import './ComparisonPoorRichGraphic.css';
 import DevelopingConsumptionChart from './DevelopingConsumptionChart/DevelopingConsumptionChart';
 import IndustrializedConsumptionChart from './IndustrializedConsumptionChart/IndustrializedConsumptionChart';
 import Conclusion from '../Conclusion/Conclusion';
+import AccordionMap from './GlobalConsumptionMap/AccordionMap';
 
 const ComparisonPoorRichGraphic = () => {
 
@@ -30,13 +31,14 @@ const ComparisonPoorRichGraphic = () => {
       <section className="comparison-rich-poor-countries">
         <Element name='comparison-rich-poor-countries'>
           <h2>{t('comparisonPoorRich.title')}</h2>
-              <div className="charts-container-comp">
-                <div className="chart-container">
-                  <DevelopingConsumptionChart />
-                </div>
-                <div className="chart-container">
-                  <IndustrializedConsumptionChart />
-                </div>
+          <AccordionMap />
+            <div className="charts-container-comp">
+              <div className="chart-container">
+                <DevelopingConsumptionChart />
+              </div>
+              <div className="chart-container">
+                <IndustrializedConsumptionChart />
+            </div>
             </div>
             <span className="sr-only">{t('comparisonPoorRich.srOnly')}</span>
           <Conclusion conclusionText={t('comparisonPoorRich.conclusionText')}/>
