@@ -12,7 +12,7 @@ function GlobalConsumptionMap() {
 
     useEffect(() => {
 
-        mapboxgl.accessToken = 'pk.eyJ1IjoiYmVubWFyYmUiLCJhIjoiY203eGI1NnJ2MDNxdDJrc2NneWYzNmgxNSJ9.3Mmxh-ikK_Mfh6hLHGiaGg';  // Use your Mapbox access token
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYmVubWFyYmUiLCJhIjoiY204ZGdqbmk2MjIxcjJrczd5cjhnOWc5ZiJ9.aNWSLi175awDsnHX7mZIlQ';  // Use your Mapbox access token
 
         mapRef.current = new mapboxgl.Map({
             container: mapContainerRef.current,
