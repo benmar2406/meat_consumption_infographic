@@ -96,6 +96,12 @@
       "consumedPerCapita": "consumed per capita (2021)",
       "conclusionText": "On average meat consumption is higher in rich countries compared to poor countries, reflecting disparities in income and access to resources."
     },
+
+    "consumptionMap": {
+      "showMap": "Show global consumption map",
+      "consumedInfo": "kg of meat consumed per capita (2021)",
+       "noData": "No data available"
+    },
   
     "OneKgIntro": {
       "subTitle": "What does it cost?"

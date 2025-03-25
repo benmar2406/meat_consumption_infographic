@@ -97,6 +97,12 @@
     "conclusionText": "Im Durchschnitt ist der Fleischkonsum in reichen Ländern höher als in armen Ländern, was Einkommensunterschiede und Ressourcenverfügbarkeiten widerspiegelt."
   },
 
+  "consumptionMap": {
+      "showMap": "Zeige Karte zum globalen Konsum",
+      "consumedInfo": "kg Fleisch pro Kopf konsumiert (2021)",
+       "noData": "Keine Daten vorhanden"
+    },
+
   "OneKgIntro": {
     "subTitle": "Was sind die Kosten?"
   },

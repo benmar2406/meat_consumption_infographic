@@ -1,13 +1,13 @@
 import { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
-
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { useTranslation } from 'react-i18next';
 
 function GlobalConsumptionMap() {
     
     const mapRef = useRef();
     const mapContainerRef = useRef(); 
-
+    const { t } = useTranslation();
 
     useEffect(() => {
 
@@ -49,12 +49,15 @@ function GlobalConsumptionMap() {
 
             if (features.length > 0) {
                 const feature = features[0];  
-                const countryName = feature.properties.ADMIN || 'No data available'; 
-                const meatConsumption = feature.properties["Kilograms of Meat consumed per capita/year"].toFixed(0) || 'No data available';  
+                const countryName = feature.properties.ADMIN; 
+                const rawConsumption = feature.properties["Kilograms of Meat consumed per capita/year"];
+                const meatConsumption = rawConsumption ? rawConsumption.toFixed(0) : '';
+                const message = meatConsumption ? t('consumptionMap.consumedInfo') : t('consumptionMap.noData');
+
 
                 // Set the popup content and position
                 popup.setLngLat(e.lngLat)
-                    .setHTML(`<div id="popup-text"><p id="popup-country">${countryName}:</p><p id="popup-consumption">${meatConsumption} kg of meat consumed per capita (2021).</p></div>`)
+                    .setHTML(`<div id="popup-text"><p id="popup-country">${countryName}:</p><p id="popup-consumption">${meatConsumption} ${message}.</p></div>`)
                     .addTo(mapRef.current);
             } else {
                 popup.remove();  
@@ -71,6 +74,8 @@ function GlobalConsumptionMap() {
             if (mapRef.current) {
                 mapRef.current.remove();
             }
+            popup.remove();
+
         };
     }, []);
 
