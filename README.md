@@ -18,6 +18,8 @@ Created with React (Vite) and several libraries.
 
 ### Prerequisites
 * Node.js and npm installed
+* Mapbox API Key
+* Mapbox Style
 
 ### Start server and client locally
 * Navigate to main directory
