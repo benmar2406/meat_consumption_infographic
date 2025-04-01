@@ -1,8 +1,11 @@
 import React from 'react';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import GlobalConsumptionMap from './GlobalConsumptionMap';
+import { useTranslation } from 'react-i18next';
 
 const AccordionItem = ({ isOpen, onClick }) => {
+
+  const { t } = useTranslation();
 
   const dynamicStyle = isOpen
     ? {
@@ -21,7 +24,7 @@ const AccordionItem = ({ isOpen, onClick }) => {
         className={`question-container ${isOpen ? 'active' : ''}`}
         onClick={onClick}
       >
-        <p className="question-content">Show global consumption map</p>
+        <p className="question-content">{t('consumptionMap.showMap')}</p>
         <RiArrowDropDownLine className={`arrow ${isOpen ? 'active' : ''}`} />
       </button>
 
