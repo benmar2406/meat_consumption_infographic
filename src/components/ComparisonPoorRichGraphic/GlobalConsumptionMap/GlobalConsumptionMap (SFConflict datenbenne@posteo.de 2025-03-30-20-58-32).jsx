@@ -1,5 +1,6 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import mapboxgl from 'mapbox-gl';
+import MapboxLanguage from '@mapbox/mapbox-gl-language';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useTranslation } from 'react-i18next';
 
@@ -7,7 +8,7 @@ function GlobalConsumptionMap() {
     
     const mapRef = useRef();
     const mapContainerRef = useRef(); 
-    const { t } = useTranslation();
+    const { i18n, t } = useTranslation();
 
     useEffect(() => {
 
@@ -29,6 +30,13 @@ function GlobalConsumptionMap() {
 
         // cursor
         mapRef.current.getCanvas().style.cursor = 'default';
+
+        // Set language based on your app's i18n
+        const mapLangControl = new MapboxLanguage({
+            defaultLanguage: i18n.language || 'en'
+        });
+        
+        mapRef.current.addControl(mapLangControl);
 
         // Handle map resizing
         const handleResize = () => {

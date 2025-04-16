@@ -98,6 +98,7 @@
     },
 
     "consumptionMap": {
+      "showMap": "Show global consumption map",
       "consumedInfo": "kg of meat consumed per capita (2021)",
        "noData": "No data available"
     },
