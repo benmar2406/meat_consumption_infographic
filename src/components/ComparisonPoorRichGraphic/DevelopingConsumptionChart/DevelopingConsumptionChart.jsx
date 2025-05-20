@@ -18,13 +18,14 @@ const DevelopingConsumptionChart = () => {
   return (
     <>
       <HumanDevelopingCountries />
-      <div className="meat-icon-grid" aria-hidden="true">
+      <div className="meat-icon-grid" role="group" aria-label="Depicts">
         {Array.from({ length: kgConsumed }).map((_, index) => (
           <MeatIconWrapper 
             key={index} 
             index={index} 
             onLastIconRendered={handleLastIconRendered} 
             kgConsumed={kgConsumed}
+            aria-hidden="true"
           />
         ))}
       </div>

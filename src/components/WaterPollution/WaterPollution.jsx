@@ -26,9 +26,9 @@ function WaterPollution() {
   return (
 
       <section id="scroll" className="water-scroll-section" ref={scrollRef} alt="polluted water">
+        <h2 className="water-impacts-headline">{t('waterPollution.title')}</h2>
         <Element name='water-pollution'>
             <div className="water-scroller">
-              <h3 className="water-impacts-headline">{t('waterPollution.title')}</h3>
               <Scrollama 
                 onStepEnter={onStepEnter} 
               >

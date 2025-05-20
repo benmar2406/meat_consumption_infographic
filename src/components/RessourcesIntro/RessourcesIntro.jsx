@@ -56,7 +56,7 @@ const RessourcesIntro = () => {
 
     return (
         
-        <section className="ressources-intro-container"> 
+        <div className="ressources-intro-container"> 
             <Element name="ressources-intro">
                 <div className="ressources-intro">
                     <div className="ressources-graphic-container">
@@ -67,7 +67,6 @@ const RessourcesIntro = () => {
                             initial={{ opacity: 0, x: -200, rotate: 180 }}
                             animate={controls}
                             ref={ressourceInfoRef} 
-                            aria-label="One kilogramm of meat"
                         />
                         <motion.h1
                             className="ressources-1kg-title"
@@ -87,7 +86,7 @@ const RessourcesIntro = () => {
                     </motion.h2>
                 </div> 
             </Element>           
-        </section>
+        </div>
 
     );
 }

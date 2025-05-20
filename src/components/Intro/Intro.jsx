@@ -1,18 +1,18 @@
-import react, { useRef } from 'react';
+import { useRef } from 'react';
 import { useInView } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 import './Intro.css'
 
 function Intro() {
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const ref = useRef(null)
   const isInView = useInView(ref, {once: true})
 
 
   return (
-    <section className='background' alt="photography of a butchers place">
+    <section className='background'>
         <div className='background-overlay'>
           <div className='intro-container'>
             <article className='intro' 
@@ -25,7 +25,7 @@ function Intro() {
                 <hr className='title-line'/>
                 <div dangerouslySetInnerHTML={{__html: t('intro.article'), }}></div>
                 <hr className='title-line'/>
-          </article>
+            </article>
         </div>
       </div>
     </section>

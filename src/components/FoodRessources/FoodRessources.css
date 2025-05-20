@@ -4,6 +4,11 @@
     margin: auto;
 }
 
+.food-usage-title {
+    width: 70%;
+    max-width: 1000px;
+}
+
 .food-ressources-scroll-container {
     display: flex;
     width: 100%;

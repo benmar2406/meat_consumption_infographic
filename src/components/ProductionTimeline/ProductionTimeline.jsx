@@ -42,9 +42,9 @@ const ProductionTimeline = ({ data }) => {
           opacity: isInView ? 1 : 0,
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
       }}
-    >
+    > 
+        <h2>{t('developmentProduction.title')}</h2>
         <div className='chart-container-timeline'>
-          <h2>{t('developmentProduction.title')}</h2>
           <LazyLoad height={400} offset={100}>
             {groupedData.map((d) => (
                 <YearBlock key={d.decade} year={d.decade + t('developmentProduction.decade')}  production={d.totalProduction} />

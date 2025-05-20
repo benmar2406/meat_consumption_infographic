@@ -18,7 +18,7 @@ const LanguageToggle = () => {
                 disabled={i18n.language === 'en'}
                 >EN
             </button> 
-            <span> / </span>    
+            <span aria-hide="true"> / </span>    
             <button 
                 className={`language-button ${i18n.language === 'de' ? 'active' : ''}`}
                 onClick={() => changeLanguage('de')}

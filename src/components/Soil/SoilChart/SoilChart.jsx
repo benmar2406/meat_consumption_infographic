@@ -59,9 +59,11 @@ const SoilChart = ({
   }, [percentage, mobile]);
 
   return (
+    <>
+    <h2 className='landuse-headline' dangerouslySetInnerHTML={{__html: headline}}></h2>
+
     <div className='landuse-scroll-container' ref={refScrollContainer}>
       <div className='landuse-chart-container'>
-      <h2 className='landuse-headline' dangerouslySetInnerHTML={{__html: headline}}></h2>
         <div 
           className='landuse-chart'
           style={{
@@ -122,6 +124,7 @@ const SoilChart = ({
           </article>
       </div>
     </div>
+    </>
   );
 }
 

@@ -11,13 +11,13 @@ const AccordionMap = () => {
     }
 
     return(
-        <div className="accordion-container-map">
+        <figure className="accordion-container-map">
             <AccordionItem 
                 isOpen={isOpen}
                 onClick={handleClick}
             />
                     
-        </div>
+        </figure>
     )
 }
 

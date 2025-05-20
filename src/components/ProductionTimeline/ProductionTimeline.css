@@ -1,3 +1,10 @@
+.production-timeline h2 {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
 .chart-container-timeline {
     width: 630px;
     text-align: center;

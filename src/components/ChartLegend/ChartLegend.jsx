@@ -20,13 +20,13 @@ const ChartLegend = () => {
     const { t } = useTranslation();
 
     return(
-        <div className='legend-container'>
+        <figcaption className='legend-container'>
             <p>1 </p>
             <BathtubIconContainer
                 {...bathtubProps}
             />
             <p> {t('waterConsumption.chartLegend')}</p>
-        </div>
+        </figcaption>
     )
 }
 
