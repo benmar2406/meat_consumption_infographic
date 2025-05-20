@@ -5,6 +5,10 @@
   margin-bottom: 3rem;
 }
 
+.production-timeline {
+  margin-bottom: 15rem;
+}
+
 .chart-container-timeline {
     width: 630px;
     text-align: center;

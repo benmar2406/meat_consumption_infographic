@@ -132,6 +132,8 @@ section {
   margin: 100px 0;
 }
 
+*:focus { outline: 1px solid #ff3e2c; } 
+
 @media screen and (max-width: 800px) {
   h2 {
     font-size: 1.7rem;

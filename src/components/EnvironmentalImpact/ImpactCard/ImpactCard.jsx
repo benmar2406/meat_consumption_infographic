@@ -1,8 +1,15 @@
-import React from 'react';
 
-const ImpactCard = ({ backgroundImage, topic, onClick, isFlipped, details, alt }) => {
+const ImpactCard = ({ backgroundImage, topic, handleCardClick, isFlipped, details, alt }) => {
+  
   return (
-    <div className={`impact-card ${isFlipped ? 'flipped' : ''}`} onClick={onClick}>
+    <div 
+      className={`impact-card ${isFlipped ? 'flipped' : ''}`} 
+      onClick={handleCardClick} tabindex="0"
+      onKeyDown={(e) => {
+        if (e.key === "Enter")
+            handleCardClick();
+        }}
+>
       <div className="card-inner">
         <article 
           className="front-impact-card" 
