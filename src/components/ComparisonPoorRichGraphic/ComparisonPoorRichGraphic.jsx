@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'; 
+import { useRef, useEffect } from 'react'; 
 import { Element } from 'react-scroll';
 import { useAnimation, useInView } from 'framer-motion'; 
 import { useTranslation } from 'react-i18next';
