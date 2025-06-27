@@ -44,6 +44,7 @@ const ComparisonPoorRichGraphic = () => {
           <Conclusion conclusionText={t('comparisonPoorRich.conclusionText')}/>
         </Element>
       </section>
+      
   );
 };
 
