@@ -8,13 +8,13 @@ i18n
   .use(LanguageDetector) // Detect the user's language
   .use(initReactI18next) // Bind with React
   .init({
-    fallbackLng: 'en', // Default language
-    supportedLngs: ['en', 'de'], // Supported languages
+    fallbackLng: 'en', 
+    supportedLngs: ['en', 'de'], 
     interpolation: {
-      escapeValue: false, // React already escapes strings
+      escapeValue: false, 
     },
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json', // Translation files path
+      loadPath: '/locales/{{lng}}/{{ns}}.json', 
     },
     detection: {
       order: ['navigator'],
