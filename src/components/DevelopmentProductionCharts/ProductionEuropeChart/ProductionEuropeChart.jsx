@@ -30,10 +30,31 @@ export default function ProductionWorldWideChart({ t }) {
         .domain([0, d3.max(meatProductionDataEurope, d => d['Total Meat production (tonnes)'])])
         .range([innerHeight, margin.top]);
 
-      const line = d3.line()
+ 
+      const area = d3.area()
         .x(d => x(d.Year))
-        .y(d => y(d['Total Meat production (tonnes)']))
-        .curve(d3.curveNatural);
+        .y0(innerHeight)
+        .y1(d => y(d['Total Meat production (tonnes)']));
+          
+          const defs = svg.append("defs");
+      
+          const gradient = defs.append("linearGradient")
+            .attr("id", "areaGradient")
+            .attr("x1", "0%")
+            .attr("y1", "0%")
+            .attr("x2", "0%")
+            .attr("y2", "100%");
+      
+          gradient.append("stop")
+            .attr("offset", "20%")
+            .attr("stop-color", "#ff6347") // top: tomato red
+            .attr("stop-opacity", 0.8);
+      
+          gradient.append("stop")
+            .attr("offset", "100%")
+            .attr("stop-color", "#352f36") // bottom: background color (or dark gray)
+            .attr("stop-opacity", 0.1);
+      
 
       svg.append("text")
         .attr("x", 400) 
@@ -44,10 +65,10 @@ export default function ProductionWorldWideChart({ t }) {
 
       svg.append("path")
         .datum(meatProductionDataEurope)
-        .attr("fill", "none")
-        .attr("stroke", "#ff6347")
-        .attr("stroke-width", 4)
-        .attr("d", line)
+        .attr("fill", "url(#areaGradient)")
+        .attr("stroke", "none")
+        .attr("stroke-width", 0)
+        .attr("d", area)
 
       svg.append("g")
         .attr("transform", `translate(0,${innerHeight})`)

@@ -7,3 +7,7 @@
     fill: white; 
     font-weight: bold;
 }
+
+.area-fill {
+  stroke: none !important;
+}

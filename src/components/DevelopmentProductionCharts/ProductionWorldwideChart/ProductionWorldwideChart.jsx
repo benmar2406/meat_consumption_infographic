@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from 'react';
+import  { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
 import './ProductionWorldwideChart.css';
 import meatProductionData from '../../../data/production_global.json';
@@ -30,9 +30,30 @@ export default function ProductionWorldWideChart({ t }) {
       .domain([0, d3.max(meatProductionData, d => d['Total Meat production (tonnes)'])])
       .range([innerHeight, margin.top]);
   
-    const line = d3.line()
+    const area = d3.area()
       .x(d => x(d.Year))
-      .y(d => y(d['Total Meat production (tonnes)']));
+      .y0(innerHeight)
+      .y1(d => y(d['Total Meat production (tonnes)']));
+    
+    const defs = svg.append("defs");
+
+    const gradient = defs.append("linearGradient")
+      .attr("id", "areaGradient")
+      .attr("x1", "0%")
+      .attr("y1", "0%")
+      .attr("x2", "0%")
+      .attr("y2", "100%");
+
+    gradient.append("stop")
+      .attr("offset", "20%")
+      .attr("stop-color", "#ff6347") // top: tomato red
+      .attr("stop-opacity", 0.8);
+
+    gradient.append("stop")
+      .attr("offset", "100%")
+      .attr("stop-color", "#352f36") // bottom: background color (or dark gray)
+      .attr("stop-opacity", 0.1);
+
   
     svg.append("text")
       .attr("x", 400) 
@@ -41,12 +62,13 @@ export default function ProductionWorldWideChart({ t }) {
       .attr("class", "chart-dark-bg")
       .text(t('developmentCharts.chartTitle1'));
   
-    svg.append("path")  
+    svg.append("path")
       .datum(meatProductionData)
-      .attr("fill", "none")
-      .attr("stroke", "#ff6347")
-      .attr("stroke-width", 4)
-      .attr("d", line);
+      .attr("fill", "url(#areaGradient)")
+      .attr("stroke", "none")
+      .attr("stroke-width", 0)
+      .attr("d", area)
+      .attr("class", "area-fill");
   
     svg.append("g")
       .attr("transform", `translate(0,${innerHeight})`)
