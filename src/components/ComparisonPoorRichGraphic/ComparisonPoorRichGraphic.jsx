@@ -31,7 +31,6 @@ const ComparisonPoorRichGraphic = () => {
       <section id="comparison-rich-poor-countries" className="comparison-rich-poor-countries">
         <h2>{t('comparisonPoorRich.title')}</h2>
         <Element name='comparison-rich-poor-countries'>
-          <AccordionMap />
             <div className="charts-container-comp">
               <div className="chart-container">
                 <DevelopingConsumptionChart />
@@ -39,8 +38,9 @@ const ComparisonPoorRichGraphic = () => {
               <div className="chart-container">
                 <IndustrializedConsumptionChart />
             </div>
-            </div>
-            <span className="sr-only">{t('comparisonPoorRich.srOnly')}</span>
+          </div>
+          <span className="sr-only">{t('comparisonPoorRich.srOnly')}</span>
+          <AccordionMap />
           <Conclusion conclusionText={t('comparisonPoorRich.conclusionText')}/>
         </Element>
       </section>
