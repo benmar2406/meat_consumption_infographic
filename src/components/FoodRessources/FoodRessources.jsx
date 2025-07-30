@@ -78,28 +78,29 @@ const FoodRessources = () => {
                             </Step>)})}
                         </Scrollama>
                     </div>
-                    <LazyLoad height={800} offset={400}>
                         <div 
                             className='food-ressources-chart'
                         >   
-                            {foodRessources.map((foodType, index) => {
-                            return(
-                                <FoodRessourcesGraphic 
-                                    key={index}
-                                    index={index}
-                                    name={foodType.name}
-                                    numberOfIcons={foodType.numberOfIcons}
-                                    displayWhen={foodType.displayWhen}
-                                    tonnes={foodType.tonnes}
-                                    icon={foodType.icon}
-                                    displayMeatWhen={foodType.displayMeatWhen}
-                                    usedForMeat={foodType.usedForMeat}
-                                    percentageForMeat={foodType.percentageForMeat}
-                                />
-                            )})}
-                                    
+                            <LazyLoad height={800} offset={400}>
+                                {foodRessources.map((foodType, index) => {
+                                return(
+                                    <FoodRessourcesGraphic 
+                                        key={index}
+                                        index={index}
+                                        name={foodType.name}
+                                        numberOfIcons={foodType.numberOfIcons}
+                                        displayWhen={foodType.displayWhen}
+                                        tonnes={foodType.tonnes}
+                                        icon={foodType.icon}
+                                        displayMeatWhen={foodType.displayMeatWhen}
+                                        usedForMeat={foodType.usedForMeat}
+                                        percentageForMeat={foodType.percentageForMeat}
+                                    />
+                                )})}
+                            </LazyLoad>
+
                         </div>
-                    </LazyLoad>
+
                 </div>
                 <Conclusion conclusionText={t('foodConsumption.conclusionText1')} />
             </Element>
