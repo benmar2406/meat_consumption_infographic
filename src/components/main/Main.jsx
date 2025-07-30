@@ -1,4 +1,3 @@
-import React from "react";
 import LanguageToggle from '../LanguageToggle/LanguageToggle'
 import DevelopmentProductionCharts from '../DevelopmentProductionCharts/DevelopmentProductionCharts';
 import ComparisonPoorRichGraphic from '../ComparisonPoorRichGraphic/ComparisonPoorRichGraphic';
@@ -20,7 +19,7 @@ import ImprintLink from '../Imprint/ImprintLink';
 import Emissions from '../Emissions/Emissions';
 import PersonalConsumption from '../PersonalConsumption/PersonalConsumption'
 
-const Main = ({ mobile })  => {
+const Main = ()  => {
 
 
     return(

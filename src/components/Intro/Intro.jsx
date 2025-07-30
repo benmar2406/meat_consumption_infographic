@@ -1,4 +1,6 @@
 import { useRef } from 'react';
+import { useContext } from 'react';
+import { DeviceContext } from "../../context/deviceContext";
 import { useInView } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 
@@ -7,10 +9,9 @@ import './Intro.css'
 function Intro() {
 
   const { t } = useTranslation();
-
-  const ref = useRef(null)
-  const isInView = useInView(ref, {once: true})
-
+  const { mobile } = useContext(DeviceContext)
+  const ref = useRef(null);
+  const isInView = useInView(ref, {once: true});
 
   return (
     <section className='background'>
@@ -18,7 +19,7 @@ function Intro() {
           <div className='intro-container'>
             <article className='intro' 
               ref={ref} 
-              style={{opacity: isInView ? 1 : 0,
+              style={{opacity: isInView || mobile ? 1 : 0,
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"}}
               >
                 <h1>{t('intro.title')}</h1>
