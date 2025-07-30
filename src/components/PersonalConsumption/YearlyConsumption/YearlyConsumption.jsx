@@ -1,4 +1,3 @@
-import React from 'react';
 import './YearlyConsumption.css'
 
 const YearlyConsumption = ({ yearlyConsumption, difference, t }) => {

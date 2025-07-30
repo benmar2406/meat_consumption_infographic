@@ -1,4 +1,3 @@
-import React from 'react';
 import WaterConsumptionChart from './WaterConsumptionChart/WaterConsumptionChart';
 
 const WaterConsumption = ({ ltrsUsed, numberOfBathtubs, t, numberOfBathtubsDisplay }) => {

@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { Element } from 'react-scroll';
+import LazyLoad from 'react-lazyload';
 import { useTranslation } from 'react-i18next';
 import { DeviceContext } from "../../context/deviceContext";
 import './Soil.css';
@@ -50,23 +51,25 @@ const Soil = () => {
     
     <section className='soil'>
       <Element name='soil-impact'>
-        {soilChartsData.map((soilChart, index) => (
-          <SoilChart 
-            key={index}
-            requiredPercentage={soilChart.requiredPercentage}
-            fullWidthValue={soilChart.fullWidthValue}
-            headline={soilChart.title}
-            backgroundImage={soilChart.backgroundImage}
-            backgroundColor={soilChart.backgroundColor}
-            chartText={soilChart.chartText}
-            article={soilChart.article}
-            requiredPercentageArticle={soilChart.requiredPercentageArticle}
-            scrollEffectDirection={soilChart.scrollEffectDirection}
-            meatWidth={soilChart.meatWidth}
-            chartText2={soilChart.chartText2}
-          />
-        ))}
-        </Element>
+        <LazyLoad height={800} offset={200}>
+          {soilChartsData.map((soilChart, index) => (
+            <SoilChart 
+              key={index}
+              requiredPercentage={soilChart.requiredPercentage}
+              fullWidthValue={soilChart.fullWidthValue}
+              headline={soilChart.title}
+              backgroundImage={soilChart.backgroundImage}
+              backgroundColor={soilChart.backgroundColor}
+              chartText={soilChart.chartText}
+              article={soilChart.article}
+              requiredPercentageArticle={soilChart.requiredPercentageArticle}
+              scrollEffectDirection={soilChart.scrollEffectDirection}
+              meatWidth={soilChart.meatWidth}
+              chartText2={soilChart.chartText2}
+            />
+          ))}
+        </LazyLoad>
+      </Element>
     </section>
   
   );    

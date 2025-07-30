@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './LanguageToggle.css'
 
@@ -16,13 +15,17 @@ const LanguageToggle = () => {
                 className={`language-button ${i18n.language === 'en' ? 'active' : ''}`}
                 onClick={() => changeLanguage('en')}
                 disabled={i18n.language === 'en'}
+                aria-pressed={i18n.language === 'en' ? true : false}
+                aria-label='Language: English'
                 >EN
             </button> 
-            <span aria-hide="true"> / </span>    
+            <span aria-hidden="true"> / </span>    
             <button 
                 className={`language-button ${i18n.language === 'de' ? 'active' : ''}`}
                 onClick={() => changeLanguage('de')}
                 disabled={i18n.language === 'de'}
+                aria-pressed={i18n.language === 'de' ? true : false}
+                aria-label='Sprache: Deutsch'
                 >DE
             </button>
         </div>

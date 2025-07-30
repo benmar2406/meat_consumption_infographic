@@ -2,6 +2,7 @@ import{ useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Element } from 'react-scroll';
 import { Scrollama, Step } from 'react-scrollama';
+import LazyLoad from 'react-lazyload';
 import './WaterPollution.css';
 
 function WaterPollution() {
@@ -25,6 +26,7 @@ function WaterPollution() {
       <section id="scroll" className="water-scroll-section" ref={scrollRef} alt="polluted water">
         <h2 className="water-impacts-headline">{t('waterPollution.title')}</h2>
         <Element name='water-pollution'>
+          <LazyLoad height={800} offset={200}>
             <div className="water-scroller">
               <Scrollama 
                 onStepEnter={onStepEnter} 
@@ -51,7 +53,7 @@ function WaterPollution() {
                 })}
               </Scrollama>
             </div>
-      
+          </LazyLoad>      
         </Element>
       </section>
   );

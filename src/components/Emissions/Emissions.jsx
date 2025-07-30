@@ -9,7 +9,7 @@ import Conclusion from '../Conclusion/Conclusion';
 
 const Emissions = () => {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const inViewRef = useRef(null);
     const isInView = useInView(inViewRef);
    

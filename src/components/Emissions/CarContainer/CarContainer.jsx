@@ -29,7 +29,7 @@ const CarContainer = forwardRef(({ food, isInView }, ref) => {
                  <span className="desktop-version">{food.carKm}km</span>
                 </motion.div>
                 <div className='car-container'>
-                    <img src={carIcon} />
+                    <img src={carIcon}  alt='car'/>
                 </div>
             </div>
         </div>

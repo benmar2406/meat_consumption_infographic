@@ -1,4 +1,5 @@
-import { useRef, useEffect } from 'react'; 
+import { useRef, useEffect } from 'react';
+import LazyLoad from 'react-lazyload';
 import { Element } from 'react-scroll';
 import { useAnimation, useInView } from 'framer-motion'; 
 import { useTranslation } from 'react-i18next';
@@ -31,17 +32,19 @@ const ComparisonPoorRichGraphic = () => {
       <section id="comparison-rich-poor-countries" className="comparison-rich-poor-countries">
         <h2>{t('comparisonPoorRich.title')}</h2>
         <Element name='comparison-rich-poor-countries'>
-            <div className="charts-container-comp">
-              <div className="chart-container">
-                <DevelopingConsumptionChart />
+            <LazyLoad height={800} offset={200}>
+              <div className="charts-container-comp">
+                <div className="chart-container">
+                  <DevelopingConsumptionChart />
+                </div>
+                <div className="chart-container">
+                  <IndustrializedConsumptionChart />
+                </div>
               </div>
-              <div className="chart-container">
-                <IndustrializedConsumptionChart />
-            </div>
-          </div>
-          <span className="sr-only">{t('comparisonPoorRich.srOnly')}</span>
-          <AccordionMap />
-          <Conclusion conclusionText={t('comparisonPoorRich.conclusionText')}/>
+            <span className="sr-only">{t('comparisonPoorRich.srOnly')}</span>
+            <AccordionMap />
+            <Conclusion conclusionText={t('comparisonPoorRich.conclusionText')}/>
+          </LazyLoad>
         </Element>
       </section>
       

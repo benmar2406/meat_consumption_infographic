@@ -1,4 +1,5 @@
   import { useState, useRef }  from 'react';
+  import LazyLoad from 'react-lazyload';
   import { useInView } from "framer-motion";
   import { Element } from 'react-scroll';
   import { useTranslation } from 'react-i18next';
@@ -38,21 +39,23 @@
             }}
           >{t('environmentalImpacts.title')}</h2>
         <Element name={'environmental-impacts'}>
-          <div className="impact-cards-grid">
-            {impactTopics.map((impact, index) => (
-              <ImpactCard
-                key={index}
-                handleCardClick={() => handleCardClick(index)}
-                isFlipped={flippedCardIndex === index} 
-                topic={impact.topic}
-                backgroundImage={impact.image}
-                details={impact.details}
-                aria-label={`Click to open article about ${impact.topic}`}
-                alt={``}
-              />
-            ))}
-          </div>
-          </Element>
+          <LazyLoad height={800} offset={200}>
+            <div className="impact-cards-grid">
+              {impactTopics.map((impact, index) => (
+                <ImpactCard
+                  key={index}
+                  handleCardClick={() => handleCardClick(index)}
+                  isFlipped={flippedCardIndex === index} 
+                  topic={impact.topic}
+                  backgroundImage={impact.image}
+                  details={impact.details}
+                  aria-label={`Click to open article about ${impact.topic}`}
+                  alt={``}
+                />
+              ))}
+            </div>
+          </LazyLoad>
+        </Element>
       </section>
     );
   };

@@ -6,7 +6,6 @@ const EmissionIconContainer = ({
   emissionIconWidth, 
   emissionIconHeight, 
   minemissionIconbHeight, 
-  minemissionIconWidth, 
   maxemissionIconHeight, 
   maxemissionIconWidth,
   meat
