@@ -1,10 +1,9 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Human from '../../../../assets/img/icons/human.png'
+import Human from '/assets/img/icons/human.png'
 
 const HumanDevelopingCountries = () => {
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <figcaption className="info-box">

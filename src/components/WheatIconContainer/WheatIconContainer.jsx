@@ -1,5 +1,4 @@
-import React from 'react';
-import WheatIcon from '../../assets/img/icons/wheat_color.png'
+import WheatIcon from '/assets/img/icons/wheat_color.png'
 import './WheatIconContainer.css';
 
 

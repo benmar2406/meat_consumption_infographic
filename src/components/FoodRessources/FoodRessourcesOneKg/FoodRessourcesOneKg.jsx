@@ -1,11 +1,11 @@
-  import React, { useRef } from 'react';
+  import { useRef } from 'react';
   import { motion } from 'framer-motion';
   import { useTranslation } from 'react-i18next';
   import FoodTypeChart from './FoodTypeChart/FoodTypeChart';
   import useDrawPath from '../../../hooks/useDrawPath';
   import useAnimateOnView from '../../../hooks/useAnimateOnView';
   import './FoodRessourcesOneKg.css';
-  import cowIcon from '../../../assets/img/icons/cow.png';
+  import cowIcon from '/assets/img/icons/cow.png';
   import OneKgMeatContainer from './OneKgMeatContainer/OneKgMeatContainer';
   import HumansFedContainer from './HumansFedContainer/HumansFedContainer';
   import InfoCircle from './InfoCircle/InfoCircle';

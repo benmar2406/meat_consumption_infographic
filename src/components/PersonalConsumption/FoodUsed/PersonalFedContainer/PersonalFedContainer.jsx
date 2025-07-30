@@ -1,5 +1,4 @@
-import React from 'react';
-import humanIcon from '../../../../assets/img/icons/human_grey.png'
+import humanIcon from '/assets/img/icons/human_grey.png'
 
 const PersonalFedContainer = ({ humansFed, foodTypeDescription, t }) => {
 

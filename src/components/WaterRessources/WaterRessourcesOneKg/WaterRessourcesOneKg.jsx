@@ -1,15 +1,15 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import LazyLoad from 'react-lazyload';
 import FoodTypeChart from './FoodTypeChart/FoodTypeChart';
 import { useTranslation } from 'react-i18next';
 import { DeviceContext } from '../../../context/deviceContext';
 import './WaterRessourcesOneKg.css'
-import cowIcon from '../../../assets/img/icons/cow.png'
-import pigIcon from '../../../assets/img/icons/pig.png'
-import chickenIcon from '../../../assets/img/icons/chicken.png'
-import soyIcon from '../../../assets/img/icons/soy.png'
-import wheatIcon from '../../../assets/img/icons/wheat.png'
-import vegetablesIcon from '../../../assets/img/icons/vegetables.png'
+import cowIcon from '/assets/img/icons/cow.png'
+import pigIcon from '/assets/img/icons/pig.png'
+import chickenIcon from '/assets/img/icons/chicken.png'
+import soyIcon from '/assets/img/icons/soy.png'
+import wheatIcon from '/assets/img/icons/wheat.png'
+import vegetablesIcon from '/assets/img/icons/vegetables.png'
 import ChartLegend from '../../ChartLegend/ChartLegend'
 
 

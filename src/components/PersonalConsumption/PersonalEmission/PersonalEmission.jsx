@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import CarContainer from '../../Emissions/CarContainer/CarContainer';
 
 const PersonalEmission = ({ emissions, carKm, kmPercentage, t }) => {

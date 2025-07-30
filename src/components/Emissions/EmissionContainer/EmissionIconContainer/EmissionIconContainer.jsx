@@ -1,7 +1,6 @@
-import React from 'react';
 import './EmissionIconContainer.css';
-import emissionIcon from '../../../../assets/img/icons/cloud.png'
-import emissionIconGreen from '../../../../assets/img/icons/cloud_green.png'
+import emissionIcon from '/assets/img/icons/cloud.png'
+import emissionIconGreen from '/assets/img/icons/cloud_green.png'
 
 const EmissionIconContainer = ({
   emissionIconWidth, 

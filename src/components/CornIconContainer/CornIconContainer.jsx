@@ -1,5 +1,4 @@
-import React from 'react';
-import CornIcon from '../../assets/img/icons/corn_color.png'
+import CornIcon from '/assets/img/icons/corn_color.png'
 import './CornIconContainer.css';
 
 

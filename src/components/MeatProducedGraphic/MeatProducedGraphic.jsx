@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 import MeatGridContainer from './MeatGridContainer/MeatGridContainer';
 import Counter from './Counter/Counter';

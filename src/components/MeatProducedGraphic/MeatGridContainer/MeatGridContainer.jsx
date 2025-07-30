@@ -1,5 +1,4 @@
-import React from 'react';
-import MeatIcon from "/src/assets/img/icons/meat.png"
+import MeatIcon from "/assets/img/icons/meat.png"
 
 const MeatGridContainer = ({ itemsPerContainer }) => {
   const iconWidth = '40px';

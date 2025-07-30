@@ -1,4 +1,3 @@
-import React from 'react';
 import { Element } from 'react-scroll';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';

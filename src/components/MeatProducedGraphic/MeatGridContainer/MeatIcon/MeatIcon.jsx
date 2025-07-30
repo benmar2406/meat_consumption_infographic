@@ -1,7 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import meatRed from '../../../../assets/img/icons/meat.png';
-import meatGrey from '../../../../assets/img/icons/meat_grey.png';
+import meatRed from '/assets/img/icons/meat.png';
 import '../../MeatProducedChart.css';
 
 const MeatIcon = ({ index }) => {

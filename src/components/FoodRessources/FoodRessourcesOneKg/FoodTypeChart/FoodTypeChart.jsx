@@ -1,11 +1,11 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import CornIconContainer from '../../../CornIconContainer/CornIconContainer';
 import './FoodTypeChart.css';
 
 const FoodTypeChart = forwardRef(({ ressource }, ref) => {
     
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     
     const cornWidth = "27px";
     const cornHeight = "27px";

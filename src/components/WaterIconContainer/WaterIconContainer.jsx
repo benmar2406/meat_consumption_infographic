@@ -1,4 +1,3 @@
-import React from 'react';
 import './WaterIconContainer.css';
 
 const WaterIconContainer = ({

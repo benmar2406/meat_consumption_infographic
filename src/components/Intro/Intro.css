@@ -9,7 +9,7 @@
     height: 100vh;
     background: 
       linear-gradient(to bottom, rgba(53, 47, 54, 0) 70%, rgba(53, 47, 54, 1) 100%), 
-      url("../../assets/img/intro_background.jpg") no-repeat center top;
+      url("/assets/img/intro_background.jpg") no-repeat center top;
     background-size: cover;
 }
 
@@ -60,12 +60,6 @@
 
     .background{
         height: auto;
-    }
-
-    .background-overlay {
-        align-items: start;
-        width: 100%;
-    }
-    
-    
+        background: none;
+    }    
 }

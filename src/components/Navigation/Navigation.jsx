@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import './Navigation.css';
 import NavigationButton from "./NavigationButton/NavigationButton";
 import SectionList from './SectionList/SectionList'

@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from 'react';
+import { useRef, useContext } from 'react';
 import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 import '../FoodRessources.css';

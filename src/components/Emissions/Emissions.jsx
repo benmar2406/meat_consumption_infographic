@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import './Emissions.css';

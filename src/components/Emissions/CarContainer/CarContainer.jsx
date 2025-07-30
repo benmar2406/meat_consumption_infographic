@@ -1,7 +1,7 @@
-import React, { forwardRef, useEffect } from 'react';
+import { forwardRef, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion'
 import './CarContainer.css'
-import carIcon from '../../../assets/img/icons/car.png'
+import carIcon from '/assets/img/icons/car.png'
 
 const CarContainer = forwardRef(({ food, isInView }, ref) => {
 

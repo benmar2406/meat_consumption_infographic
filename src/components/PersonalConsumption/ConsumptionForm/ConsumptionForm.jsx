@@ -1,4 +1,3 @@
-import React from 'react';
 import './ConsumptionForm.css';
 
 import MeatType from './MeatType/MeatType';

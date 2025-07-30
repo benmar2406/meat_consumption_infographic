@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion'
 import SectionListElement from './SectionListElement/SectionListElement'
 import SectionDot from './SectionDot/SectionDot';
@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 const SectionList = ({ sectionsToNavigate, navIsOpen }) => {  
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     
     const [clickedIndex, setClickedIndex] = useState(null)
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import BathtubIconContainer from '../../../BathtubIconContainer/BathtubIconContainer';
 import './WaterConsumptionChart.css'
 

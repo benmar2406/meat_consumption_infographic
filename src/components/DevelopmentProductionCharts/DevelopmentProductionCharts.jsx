@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { Element } from 'react-scroll';
 import { Scrollama, Step } from 'react-scrollama';
 import { TranslationContext } from '../../context/TranslateContext';

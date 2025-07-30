@@ -1,6 +1,5 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Human from '../../../../assets/img/icons/human_rich.png'
+import Human from '/assets/img/icons/human_rich.png'
 
 const HumanIndustrializedCountries = () => {
 

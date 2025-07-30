@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 import { Element } from 'react-scroll';
 import { useTranslation } from 'react-i18next';

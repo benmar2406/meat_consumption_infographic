@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { useInView } from "framer-motion";
 import { useTranslation } from 'react-i18next';
+
 import './Intro.css'
 
 function Intro() {

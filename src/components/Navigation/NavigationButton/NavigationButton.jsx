@@ -1,9 +1,8 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const NavigationButton = ({ onClick, navIsOpen, onKeyDown }) => {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     
     return(
         <div 

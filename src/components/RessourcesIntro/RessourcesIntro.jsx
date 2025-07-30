@@ -1,13 +1,13 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { Element } from 'react-scroll';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import './RessourcesIntro.css';
-import MeatIcon from '../../assets/img/icons/meat_large.png';
+import MeatIcon from '/assets/img/icons/meat_large.png';
 
 const RessourcesIntro = () => {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const ressourceInfoRef = useRef();
     const buttonRef = useRef(); 

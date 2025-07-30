@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { Element } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import { DeviceContext } from "../../context/deviceContext";
 import './Soil.css';
 import SoilChart from './SoilChart/SoilChart';
-import farmingImg from '../../assets/img/farming.jpg';
-import soilDegradation from '../../assets/img/soil_degradation.jpg';
+import farmingImg from '/assets/img/farming.jpg';
+import soilDegradation from '/assets/img/soil_degradation.jpg';
 
 const Soil = () => {
 

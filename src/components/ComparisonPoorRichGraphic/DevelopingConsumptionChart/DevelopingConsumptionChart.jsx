@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import HumanDevelopingCountries from './HumanDevelopingCountries/HumanDevelopingCountries';
 import KgConsumed from '../KgConsumed/KgConsumed';

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import { Element } from 'react-scroll'
 import { Scrollama, Step } from 'react-scrollama';
 import LazyLoad from 'react-lazyload';

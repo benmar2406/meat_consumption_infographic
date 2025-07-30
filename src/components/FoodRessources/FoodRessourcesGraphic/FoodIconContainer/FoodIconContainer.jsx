@@ -1,10 +1,9 @@
-import React from 'react';
-import WheatIcon from '../../../../assets/img/icons/wheat_color.png';
-import CornIcon from '../../../../assets/img/icons/corn_color.png';
-import soyIcon from '../../../../assets/img/icons/soy_color.png';
-import WheatIconRed from '../../../../assets/img/icons/wheat_color_red.png';
-import CornIconRed from '../../../../assets/img/icons/corn_color_red.png';
-import soyIconRed from '../../../../assets/img/icons/soy_color_red.png';
+import WheatIcon from '/assets/img/icons/wheat_color.png';
+import CornIcon from '/assets/img/icons/corn_color.png';
+import soyIcon from '/assets/img/icons/soy_color.png';
+import WheatIconRed from '/assets/img/icons/wheat_color_red.png';
+import CornIconRed from '/assets/img/icons/corn_color_red.png';
+import soyIconRed from '/assets/img/icons/soy_color_red.png';
 import './FoodIconContainer.css';
 
 const FoodIconContainer = ({

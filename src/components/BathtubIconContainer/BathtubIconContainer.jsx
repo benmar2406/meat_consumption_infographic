@@ -1,7 +1,6 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './BathtubIconContainer.css';
-import bathtubIcon from '../../assets/img/icons/bathtub.png'
+import bathtubIcon from '/assets/img/icons/bathtub.png'
 
 const BathtubIconContainer = ({
   bathtubWidth, 

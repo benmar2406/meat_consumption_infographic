@@ -1,5 +1,4 @@
-import React from 'react';
-import MeatIcon from '../../../assets/img/icons/meat.png'
+import MeatIcon from '/assets/img/icons/meat.png'
 import './MeatIconContainer.css'
 
 const MeatIconContainer = () => {

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
 import './ProductionEuropeChart.css';
 import meatProductionDataEurope from '../../../data/production_western_europe.json';

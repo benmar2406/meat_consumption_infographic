@@ -1,27 +1,24 @@
-import React, { useState, useRef, useContext } from 'react';
+import{ useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Element } from 'react-scroll';
 import { Scrollama, Step } from 'react-scrollama';
-import { DeviceContext } from '../../context/deviceContext';
 import './WaterPollution.css';
 
 function WaterPollution() {
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const [data, setData] = useState(0);
   const scrollRef = useRef(null)
 
   const steps = [10, 20, 30];
 
-  const {mobile} = useContext(DeviceContext)
-
   const onStepEnter = ({ data, data: stepData }) => {
     setData(data);
   
   };
 
- 
+
 
   return (
 

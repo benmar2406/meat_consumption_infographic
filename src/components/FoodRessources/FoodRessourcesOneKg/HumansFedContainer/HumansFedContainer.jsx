@@ -1,11 +1,11 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import './HumansFedContainer.css'
-import humanIcon from '../../../../assets/img/icons/human_grey.png'
+import humanIcon from '/assets/img/icons/human_grey.png'
 
 const HumansFedContainer = forwardRef((props, ref) => {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     return(
         <>

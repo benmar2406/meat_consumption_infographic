@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import './InfoCircle.css'
 
 const InfoCircle =  forwardRef(({ infoCircle }, ref) => {

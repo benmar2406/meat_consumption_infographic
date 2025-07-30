@@ -1,4 +1,4 @@
-import cowImg from '../../assets/img/icons/cow.png'
+import cowImg from '/assets/img/icons/cow.png'
 
 const alt = "cow"
 

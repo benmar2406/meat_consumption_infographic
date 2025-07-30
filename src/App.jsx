@@ -5,7 +5,8 @@ import { useSetLanguage } from "./hooks/useSetLanguage";
 import './App.css';
 import Sources from './components/Sources/Sources';
 import Imprint from './components/Imprint/Imprint';
-import DesktopVersion from "./components/DesktopVersion/DesktopVersion";
+import Main from "./components/main/Main";
+
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
           <Route
             path="/"
             element={
-               <DesktopVersion />
+               <Main />
             } 
           />
           <Route
