@@ -54,8 +54,8 @@
 @media screen and (max-width: 800px) {
     .intro {
         opacity: 1;
-        width: 90%;
         min-width: auto;
+        width: 90%;
     }
 
     .background{
