@@ -5,10 +5,10 @@
   import { useTranslation } from 'react-i18next';
   import './EnvironmentalImpact.css';
   import ImpactCard from './ImpactCard/ImpactCard';
-  import soil from '/assets/img/soil_degradation.jpg';
-  import water from '/assets/img/water.jpg';
-  import air from '/assets/img/air.jpg';
-  import fire from '/assets/img/fire.jpg';
+  import soil from '/assets/img/soil_degradation.webp';
+  import water from '/assets/img/water.webp';
+  import air from '/assets/img/air.webp';
+  import fire from '/assets/img/fire.webp';
   
   const EnvironmentalImpact = () => {
     const { t } = useTranslation();
