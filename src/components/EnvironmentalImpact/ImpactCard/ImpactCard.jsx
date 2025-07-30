@@ -4,7 +4,7 @@ const ImpactCard = ({ backgroundImage, topic, handleCardClick, isFlipped, detail
   return (
     <div 
       className={`impact-card ${isFlipped ? 'flipped' : ''}`} 
-      onClick={handleCardClick} tabindex="0"
+      onClick={handleCardClick} tabIndex="0"
       onKeyDown={(e) => {
         if (e.key === "Enter")
             handleCardClick();
