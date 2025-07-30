@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next';
 import FoodRessourcesGraphic from './FoodRessourcesGraphic/FoodRessourcesGraphic'
 import './FoodRessources.css'
 import Conclusion from '../Conclusion/Conclusion'
+import LazyLoad from 'react-lazyload';
+
 
 const FoodRessources = () => {
 
@@ -76,26 +78,28 @@ const FoodRessources = () => {
                             </Step>)})}
                         </Scrollama>
                     </div>
-                    <div 
-                        className='food-ressources-chart'
-                    >   
-                        {foodRessources.map((foodType, index) => {
-                        return(
-                            <FoodRessourcesGraphic 
-                                key={index}
-                                index={index}
-                                name={foodType.name}
-                                numberOfIcons={foodType.numberOfIcons}
-                                displayWhen={foodType.displayWhen}
-                                tonnes={foodType.tonnes}
-                                icon={foodType.icon}
-                                displayMeatWhen={foodType.displayMeatWhen}
-                                usedForMeat={foodType.usedForMeat}
-                                percentageForMeat={foodType.percentageForMeat}
-                            />
-                        )})}
-                                
-                    </div>
+                    <LazyLoad height={800} offset={400}>
+                        <div 
+                            className='food-ressources-chart'
+                        >   
+                            {foodRessources.map((foodType, index) => {
+                            return(
+                                <FoodRessourcesGraphic 
+                                    key={index}
+                                    index={index}
+                                    name={foodType.name}
+                                    numberOfIcons={foodType.numberOfIcons}
+                                    displayWhen={foodType.displayWhen}
+                                    tonnes={foodType.tonnes}
+                                    icon={foodType.icon}
+                                    displayMeatWhen={foodType.displayMeatWhen}
+                                    usedForMeat={foodType.usedForMeat}
+                                    percentageForMeat={foodType.percentageForMeat}
+                                />
+                            )})}
+                                    
+                        </div>
+                    </LazyLoad>
                 </div>
                 <Conclusion conclusionText={t('foodConsumption.conclusionText1')} />
             </Element>

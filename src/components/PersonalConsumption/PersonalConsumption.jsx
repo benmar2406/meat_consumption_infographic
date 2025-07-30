@@ -8,6 +8,7 @@ import YearlyConsumption from './YearlyConsumption/YearlyConsumption';
 import PersonalEmission from './PersonalEmission/PersonalEmission';
 import WaterConsumption from './WaterConsumption/WaterConsumption';
 import FoodUsed from './FoodUsed/FoodUsed';
+import LazyLoad from 'react-lazyload';
 
 const PersonalConsumption = () => {
 
@@ -50,36 +51,38 @@ const PersonalConsumption = () => {
         <Element name='personal-consumption-dashboard'>
             <section className='personal-consumption'>
                 <h2>{t('personalConsumption.mainTitle')}</h2>
-                <div className='content-container'>
-                    <ConsumptionForm 
-                        onConsumptionChange={handleConsumptionChange} 
-                        values={meatTypesConsumed} 
-                        t={t} />
-                    <YearlyConsumption 
-                        yearlyConsumption={yearlyConsumption} 
-                        difference={differencePercentage} 
-                        t={t} />
-                    <PersonalEmission 
-                        emissions={totalEmissions} 
-                        carKm={totalCarKm} 
-                        kmPercentage={kmPercentage} 
-                        isInView={isInView} 
-                        t={t} />
-                    <WaterConsumption 
-                        ltrsUsed={ltrsUsed} 
-                        numberOfBathtubs={numberOfBathtubs} 
-                        t={t}
-                        numberOfBathtubsDisplay={numberOfBathtubsDisplay} />
-                    <FoodUsed 
-                        numberHumansFedMeat={numberHumansFedMeat} 
-                        numberHumansFedVeg={numberHumansFedVeg} 
-                        kgFodderUsed={kgFodderUsed} 
-                        calories={calories}
-                        caloriesFodder={caloriesFodder}
-                        yearlyConsumption={yearlyConsumption}
-                        t={t}
-                        />
-                </div>
+                <LazyLoad height={800} offset={200}>
+                    <div className='content-container'>
+                        <ConsumptionForm 
+                            onConsumptionChange={handleConsumptionChange} 
+                            values={meatTypesConsumed} 
+                            t={t} />
+                        <YearlyConsumption 
+                            yearlyConsumption={yearlyConsumption} 
+                            difference={differencePercentage} 
+                            t={t} />
+                        <PersonalEmission 
+                            emissions={totalEmissions} 
+                            carKm={totalCarKm} 
+                            kmPercentage={kmPercentage} 
+                            isInView={isInView} 
+                            t={t} />
+                        <WaterConsumption 
+                            ltrsUsed={ltrsUsed} 
+                            numberOfBathtubs={numberOfBathtubs} 
+                            t={t}
+                            numberOfBathtubsDisplay={numberOfBathtubsDisplay} />
+                        <FoodUsed 
+                            numberHumansFedMeat={numberHumansFedMeat} 
+                            numberHumansFedVeg={numberHumansFedVeg} 
+                            kgFodderUsed={kgFodderUsed} 
+                            calories={calories}
+                            caloriesFodder={caloriesFodder}
+                            yearlyConsumption={yearlyConsumption}
+                            t={t}
+                            />
+                    </div>
+                </LazyLoad>
             </section>
         </Element>
   );
