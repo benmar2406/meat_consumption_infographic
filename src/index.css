@@ -142,6 +142,7 @@ section {
   body {
     hyphens: auto;
     word-break: break-word;
+    max-width: 100vw;
   }
 
 }
