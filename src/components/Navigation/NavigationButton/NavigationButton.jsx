@@ -8,11 +8,11 @@ const NavigationButton = ({ onClick, navIsOpen, onKeyDown }) => {
         <div 
             className={`navigation-button ${navIsOpen ? 'active' : ''}`}
             onClick={onClick}
+            onKeyDown={onKeyDown}
             role="button"
             tabIndex="0"
             aria-label={navIsOpen ? t('navigation.ariaOpen') : t('navigation.ariaClose')}
             aria-controls='section-list'
-            onKeyDown={onKeyDown}
         >
             <div className="menu-bar"></div>
             <div className="menu-bar"></div>
