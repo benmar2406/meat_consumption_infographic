@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState, useLayoutEffect } from 'react';
+import { useMemo, useRef } from 'react';
 import * as d3 from 'd3';
 import './ProductionWorldwideChart.css';
 import meatProductionDataRaw from '../../../data/production_global.json';
