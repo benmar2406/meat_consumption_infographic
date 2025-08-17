@@ -1,91 +1,162 @@
-import  { useRef, useEffect } from 'react';
+import { useMemo, useRef, useState, useLayoutEffect } from 'react';
 import * as d3 from 'd3';
 import './ProductionWorldwideChart.css';
-import meatProductionData from '../../../data/production_global.json';
+import meatProductionDataRaw from '../../../data/production_global.json';
+import { useWidth } from '../../../hooks/useResizeObserver';
 
-export default function ProductionWorldWideChart({ t }) {
 
-  const chartRef = useRef(null);
 
-  useEffect(() => {
-    const parentDiv = chartRef.current;
+export default function ProductionWorldwideChart({ t }) {
   
-    const svg = d3.select(parentDiv).selectAll('svg').data([null])
-      .join('svg')
-      .attr("class", "chart-dark-bg")
-      .attr("width", "100%")
-      .attr("height", "100%")
-      .attr("viewBox", "0 0 800 600")
-      .attr("preserveAspectRatio", "xMinYMin meet");
+  const containerRef = useRef(null);
+  const width = useWidth(containerRef, 600); 
   
-    const margin = { top: 20, right: 30, bottom: 30, left: 40 };
-    const innerWidth = 800 - margin.left - margin.right;  
-    const innerHeight = 600 - margin.top - margin.bottom;   
-  
-    const x = d3.scaleLinear()
-      .domain(d3.extent(meatProductionData, d => d.Year))
-      .range([margin.left, innerWidth]);
-  
-    const y = d3.scaleLinear()
-      .domain([0, d3.max(meatProductionData, d => d['Total Meat production (tonnes)'])])
-      .range([innerHeight, margin.top]);
-  
-    const area = d3.area()
-      .x(d => x(d.Year))
-      .y0(innerHeight)
-      .y1(d => y(d['Total Meat production (tonnes)']));
-    
-    const defs = svg.append("defs");
+  // fixed height
+  const height = 600;
 
-    const gradient = defs.append("linearGradient")
-      .attr("id", "areaGradient")
-      .attr("x1", "0%")
-      .attr("y1", "0%")
-      .attr("x2", "0%")
-      .attr("y2", "100%");
-
-    gradient.append("stop")
-      .attr("offset", "20%")
-      .attr("stop-color", "#ff6347") // top: tomato red
-      .attr("stop-opacity", 0.8);
-
-    gradient.append("stop")
-      .attr("offset", "100%")
-      .attr("stop-color", "#352f36") // bottom: background color (or dark gray)
-      .attr("stop-opacity", 0.1);
-
-  
-    svg.append("text")
-      .attr("x", 400) 
-      .attr("y", margin.top)
-      .attr("text-anchor", "middle")
-      .attr("class", "chart-dark-bg")
-      .text(t('developmentCharts.chartTitle1'));
-  
-    svg.append("path")
-      .datum(meatProductionData)
-      .attr("fill", "url(#areaGradient)")
-      .attr("stroke", "none")
-      .attr("stroke-width", 0)
-      .attr("d", area)
-      .attr("class", "area-fill");
-  
-    svg.append("g")
-      .attr("transform", `translate(0,${innerHeight})`)
-      .call(d3.axisBottom(x).ticks(10).tickFormat(d3.format("d")));
-  
-    svg.append("g")
-      .attr("transform", `translate(${margin.left},0)`)
-      .call(d3.axisLeft(y).tickFormat(d3.format(".2s")));  
+  // data prep
+  const data = useMemo(() => {
+    const cleaned = meatProductionDataRaw.map(d => ({
+      year: +d.Year,
+      total: +d['Total Meat production (tonnes)'],
+    }));
+    return cleaned.sort((a, b) => a.year - b.year);
   }, []);
-  
+
+  // layout (guard width=0 initial)
+  const margin = { top: 40, right: 20, bottom: 40, left: 60 };
+  const innerWidth = Math.max(0, (width || 0) - margin.left - margin.right);
+  const innerHeight = height - margin.top - margin.bottom;
+
+  // scales (only when we have some width)
+  const xScale = useMemo(() => {
+    if (!innerWidth) return null;
+    return d3.scaleTime()
+      .domain(d3.extent(data, d => new Date(d.year, 0, 1)))
+      .range([margin.left, margin.left + innerWidth]);
+  }, [data, innerWidth, margin.left]);
+
+  const yScale = useMemo(() => {
+    if (!innerWidth) return null;
+    const maxY = d3.max(data, d => d.total) || 0;
+    return d3.scaleLinear()
+      .domain([0, maxY])
+      .nice()
+      .range([margin.top + innerHeight, margin.top]);
+  }, [data, innerHeight, innerWidth, margin.top]);
+
+  // ticks (roughly scale with width like Svelte did)
+  const numberTicksX = useMemo(() => {
+    if (!xScale) return 0;
+    // choose about one tick per ~80px, clamped
+    return Math.max(2, Math.min(12, Math.round(innerWidth / 80)));
+  }, [xScale, innerWidth]);
+
+  const numberTicksY = 5;
+  const xTicks = useMemo(() => (xScale ? xScale.ticks(numberTicksX) : []), [xScale, numberTicksX]);
+  const yTicks = useMemo(() => (yScale ? yScale.ticks(numberTicksY) : []), [yScale]);
+
+  const fmtYear = d3.timeFormat('%Y');
+  const fmtY = d3.format('.2s');
+
+  // area path
+  const areaPath = useMemo(() => {
+    if (!xScale || !yScale) return '';
+    const area = d3.area()
+      .x(d => xScale(new Date(d.year, 0, 1)))
+      .y0(yScale(0))
+      .y1(d => yScale(d.total))
+      .curve(d3.curveBasis);
+    return area(data) || '';
+  }, [data, xScale, yScale]);
 
   return (
-    <div 
-      ref={chartRef} 
+    <div
+      ref={containerRef}
       className="production-world-wide-chart"
-      aria-hidden="true"  
+      aria-hidden="true"
     >
+      {/* render once we know width */}
+      <svg width={width || 0} height={height} className="chart-dark-bg" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#ff6347" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="#352f36" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+
+        {/* title */}
+        <text x={(width || 0) / 2} y={margin.top - 12} textAnchor="middle" className="chart-dark-bg">
+          {t('developmentCharts.chartTitle1')}
+        </text>
+
+        {/* X axis */}
+        {xScale && (
+          <g transform={`translate(0,${margin.top + innerHeight})`}>
+            <line
+              x1={margin.left}
+              x2={margin.left + innerWidth}
+              y1={0}
+              y2={0}
+              stroke="currentColor"
+              strokeWidth="1"
+            />
+            {xTicks.map(tick => {
+              const x = xScale(tick);
+              return (
+                <g key={+tick} transform={`translate(${x},0)`}>
+                  <line y2="6" stroke="currentColor" />
+                  <text dy="1.2em" textAnchor="middle" fontSize="10">
+                    {fmtYear(tick)}
+                  </text>
+                </g>
+              );
+            })}
+          </g>
+        )}
+
+        {/* Y axis */}
+        {yScale && (
+          <g transform={`translate(${margin.left},0)`}>
+            <line
+              x1={0}
+              x2={0}
+              y1={margin.top}
+              y2={margin.top + innerHeight}
+              stroke="currentColor"
+              strokeWidth="1"
+            />
+            {yTicks.map(tick => {
+              const y = yScale(tick);
+              return (
+                <g key={tick} transform={`translate(0,${y})`}>
+                  <line x2="-6" stroke="currentColor" />
+                  <text x="-9" dy="0.32em" textAnchor="end" fontSize="10">
+                    {fmtY(tick)}
+                  </text>
+                  <line x1={0} x2={innerWidth} stroke="currentColor" strokeOpacity="0.1" />
+                </g>
+              );
+            })}
+          </g>
+        )}
+
+        {/* baseline */}
+        {yScale && (
+          <line
+            x1={margin.left}
+            x2={margin.left + innerWidth}
+            y1={yScale(0)}
+            y2={yScale(0)}
+            stroke="currentColor"
+            strokeOpacity="0.4"
+            strokeWidth="1"
+          />
+        )}
+
+        {/* area */}
+        <path d={areaPath} fill="url(#areaGradient)" stroke="none" className="area-fill" />
+      </svg>
     </div>
   );
 }

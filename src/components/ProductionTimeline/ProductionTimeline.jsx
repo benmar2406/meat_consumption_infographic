@@ -28,7 +28,7 @@ const groupDataByDecade = (data) => {
 
 const ProductionTimeline = ({ data }) => {
   
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const ref = useRef(null);  
   const isInView = useInView(ref, { triggerOnce: true });
