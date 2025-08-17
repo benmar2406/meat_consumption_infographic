@@ -62,4 +62,8 @@
         height: auto;
         background: none;
     }    
+
+    .background-overlay {
+        display: none;
+    }
 }
