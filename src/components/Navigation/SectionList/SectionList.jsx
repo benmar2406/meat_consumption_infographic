@@ -48,7 +48,6 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
     }, [navIsOpen, controls]);
 
     const handleIndexClick = (index) => {
-        console.log('Clicked index:', index);
         setClickedIndex(index);
     };
 
@@ -85,6 +84,7 @@ const SectionList = ({ sectionsToNavigate, navIsOpen }) => {
                     onLinkClick={handleIndexClick}
                     onKeyDown={handleKeyDown}
                     tabIndex="0"
+
                 />
             ))}
         </motion.div>
