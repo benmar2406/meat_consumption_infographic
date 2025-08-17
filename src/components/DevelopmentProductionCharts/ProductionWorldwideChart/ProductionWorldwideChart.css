@@ -1,5 +1,6 @@
 .production-world-wide-chart {
     width: 90%;
+    max-width: 800px;
 }
 
 .chart-dark-bg {
