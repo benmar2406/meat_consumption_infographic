@@ -26,6 +26,11 @@ const SectionListElement = ({ title, link, index, onKeyDown, onLinkClick }) => {
                     duration={700}
                     onKeyDown={(event) => onKeyDown(event, index)}
                     tabIndex="0"
+                    href={`#${link}`} 
+                    onClick={(e) => {
+                        e.preventDefault();          // Standard-Anker verhindern
+                        onLinkClick?.(index);
+                    }}
                 >
                     {title}
                 </Link>

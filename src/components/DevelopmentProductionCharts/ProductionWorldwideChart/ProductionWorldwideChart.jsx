@@ -8,8 +8,6 @@ export default function ProductionWorldwideChart({ t }) {
   
   const containerRef = useRef(null);
   const width = useWidth(containerRef, 600); 
-
-  // fixed height
   const height = 600;
 
   // data 
