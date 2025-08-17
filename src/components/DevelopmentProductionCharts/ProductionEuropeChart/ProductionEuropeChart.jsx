@@ -6,7 +6,7 @@ import { useWidth } from '../../../hooks/useResizeObserver';
 
 export default function ProductionEuropeChart({ t }) {
   const containerRef = useRef(null);
-  const width = useWidth(containerRef, 800); 
+  const width = useWidth(containerRef, 600); 
   const height = 600;                        
 
   const margin = { top: 20, right: 30, bottom: 30, left: 40 };
@@ -98,7 +98,7 @@ export default function ProductionEuropeChart({ t }) {
               return (
                 <g key={tk} transform={`translate(${x},0)`}>
                   <line y2="6" stroke="currentColor" />
-                  <text dy="1.2em" textAnchor="middle" fontSize="10">
+                  <text dy="1.2rem" textAnchor="middle" fontSize="10">
                     {fmtYear(tk)}
                   </text>
                 </g>
