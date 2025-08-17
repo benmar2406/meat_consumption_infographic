@@ -19,5 +19,8 @@ Allow: /
 User-agent: Qwantify
 Allow: /
 
+User-agent: archive.org_bot
+Allow: /
+
 User-agent: *
 Disallow: /
