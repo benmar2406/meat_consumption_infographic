@@ -6,15 +6,13 @@ import { useWidth } from '../../../hooks/useResizeObserver';
 
 export default function ProductionEuropeChart({ t }) {
   const containerRef = useRef(null);
-  const width = useWidth(containerRef, 800); // dynamic width (container-driven)
-  const height = 600;                        // fixed height (adjust if you want)
+  const width = useWidth(containerRef, 800); 
+  const height = 600;                        
 
-  // margins & inner box
   const margin = { top: 20, right: 30, bottom: 30, left: 40 };
   const innerWidth  = Math.max(0, width - margin.left - margin.right);
   const innerHeight = height - margin.top - margin.bottom;
 
-  // data (ensure numeric + sorted)
   const data = useMemo(() => {
     return meatProductionDataEurope
       .map(d => ({
@@ -24,7 +22,6 @@ export default function ProductionEuropeChart({ t }) {
       .sort((a, b) => a.year - b.year);
   }, []);
 
-  // scales (linear year like your original; switch to scaleTime if you prefer)
   const xScale = useMemo(() => {
     if (!innerWidth) return null;
     return d3.scaleLinear()

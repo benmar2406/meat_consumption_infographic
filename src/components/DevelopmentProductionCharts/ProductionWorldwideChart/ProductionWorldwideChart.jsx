@@ -4,17 +4,15 @@ import './ProductionWorldwideChart.css';
 import meatProductionDataRaw from '../../../data/production_global.json';
 import { useWidth } from '../../../hooks/useResizeObserver';
 
-
-
 export default function ProductionWorldwideChart({ t }) {
   
   const containerRef = useRef(null);
   const width = useWidth(containerRef, 600); 
-  
+
   // fixed height
   const height = 600;
 
-  // data prep
+  // data 
   const data = useMemo(() => {
     const cleaned = meatProductionDataRaw.map(d => ({
       year: +d.Year,
@@ -23,12 +21,12 @@ export default function ProductionWorldwideChart({ t }) {
     return cleaned.sort((a, b) => a.year - b.year);
   }, []);
 
-  // layout (guard width=0 initial)
+  // layout 
   const margin = { top: 40, right: 20, bottom: 40, left: 60 };
   const innerWidth = Math.max(0, (width || 0) - margin.left - margin.right);
   const innerHeight = height - margin.top - margin.bottom;
 
-  // scales (only when we have some width)
+  // scales 
   const xScale = useMemo(() => {
     if (!innerWidth) return null;
     return d3.scaleTime()
@@ -45,10 +43,9 @@ export default function ProductionWorldwideChart({ t }) {
       .range([margin.top + innerHeight, margin.top]);
   }, [data, innerHeight, innerWidth, margin.top]);
 
-  // ticks (roughly scale with width like Svelte did)
   const numberTicksX = useMemo(() => {
     if (!xScale) return 0;
-    // choose about one tick per ~80px, clamped
+
     return Math.max(2, Math.min(12, Math.round(innerWidth / 80)));
   }, [xScale, innerWidth]);
 
@@ -76,7 +73,6 @@ export default function ProductionWorldwideChart({ t }) {
       className="production-world-wide-chart"
       aria-hidden="true"
     >
-      {/* render once we know width */}
       <svg width={width || 0} height={height} className="chart-dark-bg" preserveAspectRatio="none">
         <defs>
           <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
