@@ -76,7 +76,7 @@ export default function ProductionWorldwideChart({ t }) {
       <svg width={width || 0} height={height} className="chart-dark-bg" preserveAspectRatio="none">
         <defs>
           <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#ff6347" stopOpacity="0.6" />
+            <stop offset="40%" stopColor="#ff6347" stopOpacity="0.7" />
             <stop offset="100%" stopColor="#352f36" stopOpacity="0" />
           </linearGradient>
         </defs>
