@@ -102,7 +102,7 @@ export default function ProductionWorldwideChart({ t }) {
               return (
                 <g key={+tick} transform={`translate(${x},0)`}>
                   <line y2="6" stroke="currentColor" />
-                  <text dy="1.2em" textAnchor="middle" fontSize="10">
+                  <text dy="1.2rem" textAnchor="middle" fontSize="10">
                     {fmtYear(tick)}
                   </text>
                 </g>
