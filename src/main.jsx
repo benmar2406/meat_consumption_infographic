@@ -1,5 +1,5 @@
 import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { DeviceProvider } from './context/deviceContext.jsx';
 import { TranslationProvider } from './context/TranslateContext.jsx';
 import App from './App.jsx';
@@ -15,3 +15,9 @@ createRoot(document.getElementById('root')).render(
   </TranslationProvider>
   </DeviceProvider>
 )
+
+if (container.hasChildNodes()) {
+  hydrateRoot(container, app);
+} else {
+  createRoot(container).render(app);
+}

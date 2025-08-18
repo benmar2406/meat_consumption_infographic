@@ -2,13 +2,34 @@
   "name": "meat-consumption-infographic",
   "private": true,
   "version": "0.0.0",
-  "homepage": "http://benediktmartini.de/meat-consumption-infographic",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build  && react-snap",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "reactSnap": {
+    "source": "dist",    
+    "inlineCss": true,
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
+    "crawl": false,                          
+    "include": [
+      "/",                                   
+      "/environmental-impacts",
+      "/soil-impact",
+      "/water-pollution",
+      "/development-production",
+      "/comparison-rich-poor-countries",
+      "/ressources-intro",
+      "/water-ressources",
+      "/food-ressources",
+      "/personal-consumption-dashboard",
+      "/sources"
+    ]
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.3.1",
@@ -45,6 +66,7 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
+    "react-snap": "^1.13.1",
     "vite": "^6.3.5"
   }
 }
