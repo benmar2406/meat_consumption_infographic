@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')).render(
 )
 
 if (container.hasChildNodes()) {
-  hydrateRoot(container, app);
+  hydrateRoot(container, App);
 } else {
-  createRoot(container).render(app);
+  createRoot(container).render(App);
 }
