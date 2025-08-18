@@ -1,4 +1,6 @@
 # Interactive website / infographic: 1kg - Costs of consumption
+<img width="827" height="633" alt="Bildschirmfoto 2025-08-18 um 13 53 43" src="https://github.com/user-attachments/assets/88afadb1-eebe-4d5e-8b11-bdf10c400a53" />
+
 
 ## Overview
 an interactive web app with scrollytelling elements which informs about the impact of meat consumption and production in terms of ressource usage and environmental impact.
