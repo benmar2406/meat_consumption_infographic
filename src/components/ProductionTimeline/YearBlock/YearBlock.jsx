@@ -4,6 +4,8 @@ import '../ProductionTimeline.css';
 
 const YearBlock = ({ year, production }) => {
 
+  const displayProduction = Math.round(production / 1000000);
+
   const { t } = useTranslation();
 
   const circleCount = Math.floor(production / 10000000);
@@ -17,9 +19,9 @@ const YearBlock = ({ year, production }) => {
         ))}
       </div>
       <div className="productionLabel">
-        {production.toLocaleString()} {t('developmentProduction.tonnes')}
-      </div>
-      <div className="separator"></div>
+        <p>{displayProduction.toLocaleString()}</p>
+        <span>{t('developmentProduction.tonnes')}</span>
+      </div>  
     </div>
   );
 };

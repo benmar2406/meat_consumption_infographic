@@ -44,13 +44,17 @@ const ProductionTimeline = ({ data }) => {
       }}
     > 
         <h2>{t('developmentProduction.title')}</h2>
-        <div className='chart-container-timeline'>
-          <LazyLoad height={400} offset={100}>
-            {groupedData.map((d) => (
-                <YearBlock key={d.decade} year={d.decade + t('developmentProduction.decade')}  production={d.totalProduction} />
-            ))}
-          </LazyLoad>
-        </div>
+        <LazyLoad height={400} offset={100}>
+          <div className='chart-container-timeline'>
+              {groupedData.map((d) => (
+                  <YearBlock 
+                    key={d.decade} 
+                    year={d.decade + t('developmentProduction.decade')}  
+                    production={d.totalProduction} 
+                  />
+              ))}
+          </div>
+        </LazyLoad>
     </section>
   );
 };
