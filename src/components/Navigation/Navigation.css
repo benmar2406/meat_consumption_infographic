@@ -137,13 +137,6 @@
 
 
 @media screen and (max-width: 800px) {
-    .navigation {
-        position: fixed;     /* or keep absolute if you prefer */
-        top: 7px;
-        left: 0;
-        right: 0;            /* full width */
-        width: 100%;
-    }
 
     .nav-line {
         display: none;
