@@ -134,7 +134,8 @@ button:focus-visible {
 }
 
 section {
-  margin: 100px 0;
+  margin: 100px auto;
+  max-width: 100vw;
 }
 
 
