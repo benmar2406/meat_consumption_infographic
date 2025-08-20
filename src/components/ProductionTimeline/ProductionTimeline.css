@@ -24,6 +24,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 12%;
   }
 
   .yearLabel {
@@ -43,7 +44,6 @@
     justify-content: center;
     gap: 8px;
     height: fit-content;
-    width: 8rem;
   }
   
   .circle {
@@ -81,7 +81,11 @@
 
   @media screen and (max-width: 750px) {
     .chart-container-timeline {
-      width: 75%;
+      width: 95%;
+      max-width: 100vw;
+  }
+    .yearLabel {
+      padding: 0.2rem;
   }
     }
   
