@@ -1,8 +1,9 @@
-import { useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { useInView } from 'framer-motion';  
 import LazyLoad from 'react-lazyload';
 import { useTranslation } from 'react-i18next';
 import YearBlock from './YearBlock/YearBlock';
+import { DeviceContext } from '../../context/deviceContext';
 
 const groupDataByDecade = (data) => {
   const groupedData = {};
@@ -27,6 +28,8 @@ const groupDataByDecade = (data) => {
 };
 
 const ProductionTimeline = ({ data }) => {
+
+  const { mobile } = useContext(DeviceContext);
   
   const { t } = useTranslation();
 
@@ -46,13 +49,15 @@ const ProductionTimeline = ({ data }) => {
         <h2>{t('developmentProduction.title')}</h2>
         <LazyLoad height={400} offset={100}>
           <div className='chart-container-timeline'>
-              {groupedData.map((d) => (
-                  <YearBlock 
-                    key={d.decade} 
-                    year={d.decade + t('developmentProduction.decade')}  
-                    production={d.totalProduction} 
-                  />
-              ))}
+            {groupedData.map((d, i) => (
+              (!mobile || (i === 0 || i === groupedData.length - 1)) && (
+                <YearBlock
+                  key={d.decade}
+                  year={d.decade + t('developmentProduction.decade')}
+                  production={d.totalProduction}
+                />
+              )
+            ))}
           </div>
         </LazyLoad>
     </section>

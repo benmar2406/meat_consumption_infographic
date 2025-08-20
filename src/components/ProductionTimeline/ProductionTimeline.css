@@ -12,7 +12,6 @@
 .chart-container-timeline {
     text-align: center;
     margin: auto;
-    padding: 10px 20px;
     font-family: 'Poppins-Bold';
     display: flex;
     justify-content: space-around;
@@ -79,13 +78,20 @@
     margin-top: 20px;
   }
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 900px) {
     .chart-container-timeline {
       width: 95%;
-      max-width: 100vw;
+  }
+
+  .yearBlock {
+    width: 35%;
   }
     .yearLabel {
       padding: 0.2rem;
-  }
     }
+
+    .production-timeline {
+      max-width: 100vw;
+    }
+  }
   
