@@ -138,6 +138,10 @@
 
 @media screen and (max-width: 800px) {
 
+    .navigation {
+    right: 10px;
+}
+
     .nav-line {
         display: none;
     }
