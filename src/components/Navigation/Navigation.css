@@ -110,8 +110,7 @@
     cursor: pointer; 
     color: #e3e3e3;
     padding: 3px 7px;
-    padding-right: 5px;
-    
+    padding-right: 5px;   
 }
 
 .navigation-link:hover {
@@ -128,7 +127,7 @@
     width: fit-content;
     padding: 5px 7px;
     padding-right: 5px;
-    background-color: RGB(53, 47, 54, 0.7);
+    background-color: RGB(53, 47, 54, 0.9);
 }
 
 .active {
@@ -139,19 +138,30 @@
 
 @media screen and (max-width: 800px) {
     .navigation {
-        position: absolute;
+        position: fixed;     /* or keep absolute if you prefer */
         top: 7px;
-        left: 95%;
+        left: 0;
+        right: 0;            /* full width */
+        width: 100%;
+    }
+
+    .nav-line {
+        display: none;
+    }
+
+    .section-list-container {
+        width: 100vw;
+        top: 50px;
+        right: auto;               
+        left: 54%;               
+        transform: translateX(-50%);
     }
 
     .section-list-element {
-        position: absolute;
-        font-size: 0.8rem;
-        text-align: right;
-        right: 15px;
-        width: fit-content;
-        padding: 5px 7px;
-        padding-right: 5px;
-        background-color: RGB(53, 47, 54, 0.7);
+        position: static;
+        width: 90%;
+        text-align: left;
+        font-size: 1rem;
+        margin-bottom: 0.1rem;
     }
 }
