@@ -6,26 +6,30 @@ import YearBlock from './YearBlock/YearBlock';
 import { DeviceContext } from '../../context/deviceContext';
 
 const groupDataByDecade = (data) => {
-  const groupedData = {};
+  const decades = {};
 
   data.forEach((item) => {
     const decade = Math.floor(item.Year / 10) * 10;
 
-    if (decade >= 2020) {
-      return;
-    }
+    // Skip decades 2020 and above
+    if (decade >= 2020) return;
 
-    if (!groupedData[decade]) {
-      groupedData[decade] = {
+    // Initialize the decade group if it doesn't exist
+    if (!decades[decade]) {
+      decades[decade] = {
         decade,
         totalProduction: 0,
       };
     }
-    groupedData[decade].totalProduction += item["Total Meat production (tonnes)"];
+
+    // Add the current items production to the decades total
+    decades[decade].totalProduction += item["Total Meat production (tonnes)"];
   });
 
-  return Object.values(groupedData);
+  // Convert the object to an array and return
+  return Object.values(decades);
 };
+
 
 const ProductionTimeline = ({ data }) => {
 
@@ -49,7 +53,8 @@ const ProductionTimeline = ({ data }) => {
         <h2>{t('developmentProduction.title')}</h2>
         <LazyLoad height={400} offset={100}>
           <div className='chart-container-timeline'>
-            {groupedData.map((d, i) => (
+            {groupedData.map((d, i) => (  
+              //for better overview show only first and and last decade on small screens
               (!mobile || (i === 0 || i === groupedData.length - 1)) && (
                 <YearBlock
                   key={d.decade}
