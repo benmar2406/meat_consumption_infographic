@@ -18,9 +18,9 @@ const PersonalConsumption = () => {
         beef: 0,
         pig: 0,
         chicken: 0,
-      });
+    });
 
-      const {
+    const {
         yearlyConsumption,
         differencePercentage,
         totalEmissions,
@@ -35,7 +35,6 @@ const PersonalConsumption = () => {
         kgFodderUsed,
         calories,
         caloriesFodder
-
     } = usePersonalConsumptionCalculations(meatTypesConsumed);
     
 
@@ -43,10 +42,10 @@ const PersonalConsumption = () => {
         setMeatTypesConsumed((prevValues) => ({
         ...prevValues,
         [name]: newValue, 
-        }));
-    };
-    
+    }));
 
+};
+    
   return (
         <Element name='personal-consumption-dashboard'>
             <section className='personal-consumption'>
