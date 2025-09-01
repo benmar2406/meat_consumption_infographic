@@ -1,4 +1,3 @@
-import React from 'react';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import GlobalConsumptionMap from './GlobalConsumptionMap';
 import { useTranslation } from 'react-i18next';

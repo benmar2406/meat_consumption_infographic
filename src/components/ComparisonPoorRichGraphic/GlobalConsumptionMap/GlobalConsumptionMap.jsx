@@ -29,7 +29,7 @@ function GlobalConsumptionMap() {
         mapRef.current.addControl(navControl, 'top-right');
 
         // cursor
-        mapRef.current.getCanvas().style.cursor = 'default';
+        mapRef.current.getCanvas().style.cursor = 'pointer';
 
         // Set language based on your app's i18n
         const mapLangControl = new MapboxLanguage({
@@ -88,9 +88,7 @@ function GlobalConsumptionMap() {
     }, []);
 
     return (
-        <>
-            <div id='map-container' ref={mapContainerRef} />
-        </>
+        <div id='map-container' ref={mapContainerRef} />
     );
 }
 
