@@ -106,17 +106,23 @@
 }
 
 .navigation-link {
-    white-space: nowrap;
     cursor: pointer; 
     color: #e3e3e3;
     padding: 3px 7px;
-    padding-right: 5px;   
+    padding-right: 5px;
+    display: block;
+    width: 100%;
 }
 
 .navigation-link:hover {
     color: #ff3e2c;
     transition: all 0.4s ease;
     text-decoration-line: underline;
+}
+
+    
+.section-list-container {
+    width: 90vw;
 }
 
 .section-list-element {
@@ -128,6 +134,7 @@
     padding: 5px 7px;
     padding-right: 5px;
     background-color: RGB(53, 47, 54, 0.9);
+    width: 100%;
 }
 
 .active {
@@ -139,19 +146,16 @@
 @media screen and (max-width: 800px) {
 
     .navigation {
-    right: 10px;
-}
+        right: 10px;
+    }
 
     .nav-line {
         display: none;
     }
 
     .section-list-container {
-        width: 100vw;
-        top: 50px;
-        right: auto;               
-        left: 54%;               
-        transform: translateX(-50%);
+        right: 2px; 
+        top: 50px;   
     }
 
     .section-list-element {
