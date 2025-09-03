@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import '../../Conclusion/Conclusion.css';
@@ -6,7 +6,7 @@ import useAnimateTitleOnView from '../../../hooks/useAnimateTitleOnView';
 
 const FoodRessourcesConclusion2 = () => {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const inViewRef = useRef(null);
 

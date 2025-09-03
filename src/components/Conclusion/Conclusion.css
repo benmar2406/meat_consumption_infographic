@@ -1,6 +1,7 @@
 .conclusions-headline-section {
     display: flex;
     margin-top: 0;
+    max-width: 100vw;
 }
 
 .conclusions-headline-container {
@@ -11,6 +12,7 @@
     margin-top: 0;
     text-align: center;
     font-family: 'PTSerif-Bold';
+    overflow: hidden;
     
 }
 
