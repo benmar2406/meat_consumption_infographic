@@ -55,19 +55,22 @@
     width: 80%;
 }
 
+.section-list {
+    width: 600px;
+}
+
 .section-list-container {
     position: absolute;
     min-height: 400px;
     height: 100%;
     width: fit-content;
     right: 15px;
-    
 }
 
 .nav-line {
     height: 100%;
     border-left: 1px solid #e3e3e3;
-    left: 50%;  
+    right: 0;  
     top: 55px;
     position: absolute;
     background-color: #e3e3e3;
@@ -110,19 +113,13 @@
     color: #e3e3e3;
     padding: 3px 7px;
     padding-right: 5px;
-    display: block;
-    width: 100%;
+    inline-size: min-content;
 }
 
 .navigation-link:hover {
     color: #ff3e2c;
     transition: all 0.4s ease;
     text-decoration-line: underline;
-}
-
-    
-.section-list-container {
-    width: 90vw;
 }
 
 .section-list-element {
@@ -134,7 +131,6 @@
     padding: 5px 7px;
     padding-right: 5px;
     background-color: RGB(53, 47, 54, 0.9);
-    width: 100%;
 }
 
 .active {
@@ -165,4 +161,9 @@
         font-size: 1rem;
         margin-bottom: 0.1rem;
     }
+
+    .navigation-link {
+        display: block;
+        width: 100%;
+}
 }
