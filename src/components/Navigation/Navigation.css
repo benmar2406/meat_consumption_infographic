@@ -3,7 +3,6 @@
     width: fit-content;
     right: 20px;
     z-index: 1000;
-    height: fit-content;
 }
 
 .navigation.active {
@@ -62,7 +61,6 @@
 .section-list-container {
     position: absolute;
     min-height: 400px;
-    height: 100%;
     width: fit-content;
     right: 15px;
 }

@@ -24,7 +24,8 @@ const Main = ()  => {
 
     return(
     <>
-        <Navigation />
+        
+        {/*<Navigation />*/}
         <LanguageToggle/>
         <MeatProducedGraphic />
         <Intro />
