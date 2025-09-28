@@ -17,15 +17,14 @@ import EnvironmentalImpact from '../EnvironmentalImpact/EnvironmentalImpact';
 import FoodRessourcesConclusion2 from '../FoodRessources/FoodRessourcesConclusion2/FoodRessourcesConclusion2';
 import ImprintLink from '../Imprint/ImprintLink';
 import Emissions from '../Emissions/Emissions';
-import PersonalConsumption from '../PersonalConsumption/PersonalConsumption'
+import PersonalConsumption from '../PersonalConsumption/PersonalConsumption';
 
 const Main = ()  => {
 
 
     return(
     <>
-        
-        <Navigation />  
+        {/*<Navigation />*/} 
         <LanguageToggle/>
         <MeatProducedGraphic />
         <Intro />

@@ -54,14 +54,10 @@
     width: 80%;
 }
 
-.section-list {
-    width: 600px;
-}
-
-.section-list-container {
+#section-list {
+    width: 500px;
     position: absolute;
     min-height: 400px;
-    width: fit-content;
     right: 15px;
 }
 
@@ -140,22 +136,22 @@
 @media screen and (max-width: 800px) {
 
     .navigation {
-        right: 10px;
+       width: 95vw;
+       position: absolute;
+       height: fit-content
     }
 
     .nav-line {
         display: none;
     }
 
-    .section-list-container {
-        right: 2px; 
-        top: 50px;   
+    #section-list {
+        transform: translateX(50%);
+        top: 10px;
     }
 
     .section-list-element {
-        position: static;
         width: 90%;
-        text-align: left;
         font-size: 1rem;
         margin-bottom: 0.1rem;
     }
@@ -163,5 +159,5 @@
     .navigation-link {
         display: block;
         width: 100%;
-}
+    }
 }

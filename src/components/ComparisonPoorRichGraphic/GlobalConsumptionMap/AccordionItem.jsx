@@ -1,5 +1,5 @@
 import { RiArrowDropDownLine } from 'react-icons/ri';
-import GlobalConsumptionMap from './GlobalConsumptionMap';
+import GlobalConsumptionMapBubble from './GlobalConsumptionMapBubble';
 import { useTranslation } from 'react-i18next';
 
 const AccordionItem = ({ isOpen, onClick }) => {
@@ -31,7 +31,7 @@ const AccordionItem = ({ isOpen, onClick }) => {
         className="answer-container"
         style={dynamicStyle}
       >
-        <GlobalConsumptionMap />
+        <GlobalConsumptionMapBubble />
       </div>
     </div>
   );
