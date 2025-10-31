@@ -21,7 +21,6 @@ import PersonalConsumption from '../PersonalConsumption/PersonalConsumption';
 
 const Main = ()  => {
 
-
     return(
     <>
         {/*<Navigation />*/} 
